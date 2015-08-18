@@ -22,6 +22,12 @@
 	* [SCXcodeSwitchExpander](https://github.com/stefanceriu/SCXcodeSwitchExpander)
 	* [ZMDocItemInspector](https://github.com/zolomatok/ZMDocItemInspector)
 
+### 版本控制
+
+* 使用 SourceTree 作为版本控制客户端
+* 提交到版本库中的代码必须可以成功编译
+* 每次提交必须写上说明
+
 ### 架构与规范
 
 本项目：
@@ -31,3 +37,4 @@
 * 使用 `BBUncrustifyPlugin` 进行代码格式化，代码格式化配置文件已在项目中提供
 * 可以搭配 `AppCode` 一起使用，但是需要注意代码格式化的问题 （其实我更喜欢 `AppCode` ，它的重构和代码格式化功能也比 XCode 好，但是考虑到大家可能不用这个，而且对 RAC 的宏展开支持不太好，所以。。。）
 * 鼓励使用第三方开源项目，原则上必须通过 CocoaPods 安装，且不要引入纯 Swift 或以 Swift 为主的项目
+* 尽量避免 warning，如果 warning 来自第三方库，请这么干 `pod 'CocoaLumberjack', :inhibit_warnings => true`
