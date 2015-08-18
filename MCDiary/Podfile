@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+pod 'ReactiveCocoa'
+pod 'CocoaLumberjack', :inhibit_warnings => true
+pod 'HexColors'
+pod 'Masonry'
+pod 'AVOSCloud'

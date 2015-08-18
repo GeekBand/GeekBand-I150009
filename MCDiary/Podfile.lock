@@ -1,0 +1,35 @@
+PODS:
+  - AVOSCloud (3.1.3.3)
+  - CocoaLumberjack (2.0.1):
+    - CocoaLumberjack/Default (= 2.0.1)
+    - CocoaLumberjack/Extensions (= 2.0.1)
+  - CocoaLumberjack/Core (2.0.1)
+  - CocoaLumberjack/Default (2.0.1):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.1):
+    - CocoaLumberjack/Default
+  - HexColors (2.3.0)
+  - Masonry (0.6.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - AVOSCloud
+  - CocoaLumberjack
+  - HexColors
+  - Masonry
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  AVOSCloud: f561a1938da652fa5b112cd45960f1e342a3dca4
+  CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+
+COCOAPODS: 0.38.2
