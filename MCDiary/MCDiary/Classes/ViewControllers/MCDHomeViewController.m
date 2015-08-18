@@ -7,6 +7,7 @@
 //
 
 #import "MCDHomeViewController.h"
+#import "MCDHomeViewModel.h"
 
 @interface MCDHomeViewController ()
 
@@ -14,14 +15,12 @@
 
 @implementation MCDHomeViewController
 
+@dynamic viewModel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.viewModel = [[MCDHomeViewModel alloc] init];
 }
 
 @end

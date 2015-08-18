@@ -7,12 +7,15 @@
 //
 
 #import "MCDBaseViewController.h"
+#import "MCDBaseViewModel.h"
 
 @interface MCDBaseViewController ()
 
 @end
 
 @implementation MCDBaseViewController
+
+@synthesize viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

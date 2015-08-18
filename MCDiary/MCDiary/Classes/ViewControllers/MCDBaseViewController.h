@@ -6,8 +6,10 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class MCDBaseViewModel;
 
 @interface MCDBaseViewController : UIViewController
+
+@property(nonatomic, strong) id viewModel;
 
 @end

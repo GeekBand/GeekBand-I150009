@@ -6,10 +6,12 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MCDBaseViewController.h"
 
-@interface MCDHomeViewController : UIViewController
+@class MCDHomeViewModel;
 
+@interface MCDHomeViewController : MCDBaseViewController
+
+@property(nonatomic, strong) MCDHomeViewModel *viewModel;
 
 @end
-

@@ -14,8 +14,9 @@
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
 		D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D715706813D9823C3B115E79 /* Images.xcassets */; };
 		D71572E576E0BFD6AD669038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71570BA2286D70F7D0625C0 /* Main.storyboard */; };
+		D71574C4BE973368703D4424 /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157BA30D812588333CEFE8 /* MCDHomeViewModel.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
-		D7157B85E5D65C8121233F8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D71573D44677FF89AAE13521 /* Info.plist */; };
+		D7157B6D3F65576FC3AD3124 /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157B8EED265A6D47E8C314 /* MCDBaseViewModel.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
 		D7157DB78A35033627A32CB8 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71578C9770E3A40F4551204 /* MCDHomeViewController.m */; };
 /* End PBXBuildFile section */
@@ -45,11 +46,15 @@
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D71574AF0B05EBC9A8C97BC7 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
+		D715754857168728513949DF /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
 		D71577DF19B78EC2D54508AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		D7157809D8B6D83459DB978B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D71578C9770E3A40F4551204 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D7157B8EED265A6D47E8C314 /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
+		D7157BA30D812588333CEFE8 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		D7157D091202401A4C5895D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +147,8 @@
 				D7157BFEE095CD7BB377F038 /* Global */,
 				D71575A8B01EA09120294002 /* Supporting Files */,
 				D7157B8A08D8F47B13A60E4A /* ViewControllers */,
+				D71579EEAC46D8F6D9BFBDE7 /* ViewModels */,
+				D7157DB86FCFA53F7E37365E /* Models */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -173,6 +180,17 @@
 			path = XIBs;
 			sourceTree = "<group>";
 		};
+		D71579EEAC46D8F6D9BFBDE7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7157B8EED265A6D47E8C314 /* MCDBaseViewModel.m */,
+				D71574AF0B05EBC9A8C97BC7 /* MCDBaseViewModel.h */,
+				D7157BA30D812588333CEFE8 /* MCDHomeViewModel.m */,
+				D715754857168728513949DF /* MCDHomeViewModel.h */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		D7157B8A08D8F47B13A60E4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +209,13 @@
 				D7157D091202401A4C5895D8 /* AppDelegate.h */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		D7157DB86FCFA53F7E37365E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D7157EB9C345959E022160BF /* Resouces */ = {
@@ -284,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7157B85E5D65C8121233F8A /* Info.plist in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
 				D71572E576E0BFD6AD669038 /* Main.storyboard in Resources */,
 				D71571794B2D351EF410693F /* LaunchScreen.xib in Resources */,
@@ -343,6 +367,8 @@
 				D7157C2FED09661163DE707C /* AppDelegate.m in Sources */,
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
 				D7157DB78A35033627A32CB8 /* MCDHomeViewController.m in Sources */,
+				D7157B6D3F65576FC3AD3124 /* MCDBaseViewModel.m in Sources */,
+				D71574C4BE973368703D4424 /* MCDHomeViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +496,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +510,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
