@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E591B83678500E09636 /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E581B83678500E09636 /* MCDBaseViewController.m */; };
+		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
+		24694E5D1B83851400E09636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5B1B83851400E09636 /* Main.storyboard */; };
 		4836C56CA4354C046E01A605 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */; };
-		D71571794B2D351EF410693F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D715741A3131FDC2562211F4 /* LaunchScreen.xib */; };
+		D715704DBE7017E744F43804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157186918912F6DF4E5A22 /* README.md */; };
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
 		D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D715706813D9823C3B115E79 /* Images.xcassets */; };
-		D71572E576E0BFD6AD669038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71570BA2286D70F7D0625C0 /* Main.storyboard */; };
+		D715736FFB49A3047143E091 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157F8AF21E4552000AB895 /* README.md */; };
 		D71574C4BE973368703D4424 /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157BA30D812588333CEFE8 /* MCDHomeViewModel.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
 		D7157B6D3F65576FC3AD3124 /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157B8EED265A6D47E8C314 /* MCDBaseViewModel.m */; };
@@ -39,23 +41,25 @@
 		24694E561B83661C00E09636 /* MCDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPrefixHeader.pch; sourceTree = "<group>"; };
 		24694E571B83678500E09636 /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
 		24694E581B83678500E09636 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
+		24694E5A1B83851400E09636 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		24694E5B1B83851400E09636 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		386926BA5C4366C0166A3B54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6E341D212A6CFFA5C85FF3C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71570080BDC1003072CB2AD /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D71574AF0B05EBC9A8C97BC7 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
 		D715754857168728513949DF /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
-		D71577DF19B78EC2D54508AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		D7157809D8B6D83459DB978B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D71578C9770E3A40F4551204 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D7157B8EED265A6D47E8C314 /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
 		D7157BA30D812588333CEFE8 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		D7157D091202401A4C5895D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7157F8AF21E4552000AB895 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,17 +153,17 @@
 				D7157B8A08D8F47B13A60E4A /* ViewControllers */,
 				D71579EEAC46D8F6D9BFBDE7 /* ViewModels */,
 				D7157DB86FCFA53F7E37365E /* Models */,
+				D715715F72DFFD1BC6D87436 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		D71575499F5FE9B149D4D8DB /* Base.lproj */ = {
+		D715715F72DFFD1BC6D87436 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D71570BA2286D70F7D0625C0 /* Main.storyboard */,
-				D715741A3131FDC2562211F4 /* LaunchScreen.xib */,
+				D7157186918912F6DF4E5A22 /* README.md */,
 			);
-			path = Base.lproj;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D71575A8B01EA09120294002 /* Supporting Files */ = {
@@ -175,7 +179,8 @@
 		D71577FDE33B4B96199BEB93 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				D71575499F5FE9B149D4D8DB /* Base.lproj */,
+				24694E5A1B83851400E09636 /* LaunchScreen.xib */,
+				24694E5B1B83851400E09636 /* Main.storyboard */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 		D7157DB86FCFA53F7E37365E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7157F8AF21E4552000AB895 /* README.md */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,10 +315,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
-				D71572E576E0BFD6AD669038 /* Main.storyboard in Resources */,
-				D71571794B2D351EF410693F /* LaunchScreen.xib in Resources */,
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
+				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
+				D715704DBE7017E744F43804 /* README.md in Resources */,
+				D715736FFB49A3047143E091 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,25 +397,6 @@
 			targetProxy = 24694E441B83390300E09636 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D71570BA2286D70F7D0625C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D71577DF19B78EC2D54508AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D715741A3131FDC2562211F4 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7157809D8B6D83459DB978B /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		24694E4B1B83390300E09636 /* Debug */ = {
