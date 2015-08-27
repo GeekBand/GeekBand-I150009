@@ -1,6 +1,15 @@
 platform :ios, '8.0'
+use_frameworks!
+
+link_with 'MCDiary', 'MCDiaryKit'
+
 pod 'ReactiveCocoa'
 pod 'CocoaLumberjack', :inhibit_warnings => true
 pod 'HexColors'
 pod 'Masonry'
-pod 'AVOSCloud'
+pod 'AVOSCloudDynamic'
+pod 'AVOSCloudIMDynamic'
+pod 'AVOSCloudCrashReportingDynamic'
+pod 'RegExCategories'
+
+
