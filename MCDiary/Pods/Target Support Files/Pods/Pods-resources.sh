@@ -58,10 +58,14 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "AVOSCloud/iOS/release-v3.1.3.3/AVOSCloud.framework/AVOSCloud.bundle"
+  install_resource "AVOSCloudCrashReportingDynamic/iOS/release-v3.1.3.4/AVOSCloudCrashReporting/Dynamic/AVOSCloudCrashReporting.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.1.3.4/AVOSCloud/Dynamic/AVOSCloud.framework"
+  install_resource "AVOSCloudIMDynamic/iOS/release-v3.1.3.4/AVOSCloudIM/Dynamic/AVOSCloudIM.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "AVOSCloud/iOS/release-v3.1.3.3/AVOSCloud.framework/AVOSCloud.bundle"
+  install_resource "AVOSCloudCrashReportingDynamic/iOS/release-v3.1.3.4/AVOSCloudCrashReporting/Dynamic/AVOSCloudCrashReporting.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.1.3.4/AVOSCloud/Dynamic/AVOSCloud.framework"
+  install_resource "AVOSCloudIMDynamic/iOS/release-v3.1.3.4/AVOSCloudIM/Dynamic/AVOSCloudIM.framework"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -7,20 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B012C1B8F1E95004C7D2C /* User.storyboard */; };
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
 		24694E5D1B83851400E09636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5B1B83851400E09636 /* Main.storyboard */; };
-		4836C56CA4354C046E01A605 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */; };
+		249BEBD61B8F4ABA00C2A3CF /* MCDiaryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBD51B8F4ABA00C2A3CF /* MCDiaryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249BEBDC1B8F4ABA00C2A3CF /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; };
+		249BEBE51B8F4ABB00C2A3CF /* MCDiaryKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */; };
+		249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; };
+		249BEBE91B8F4ABB00C2A3CF /* MCDiaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		249BEBF11B8F4AF100C2A3CF /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */; };
+		249BEBF41B8F4B6F00C2A3CF /* MCDButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */; };
+		249BEBF51B8F4B6F00C2A3CF /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */; };
+		249BEBF81B8F50D000C2A3CF /* MCDCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */; };
+		249BEBF91B8F50D000C2A3CF /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */; };
+		249BEBFB1B8F52E000C2A3CF /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */; };
+		249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFC1B8F537100C2A3CF /* Images.xcassets */; };
+		249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */; };
+		249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */; };
+		30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260165B44A98B3B1828B07C /* libPods-MCDiary.a */; };
+		667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */; };
 		D715704DBE7017E744F43804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157186918912F6DF4E5A22 /* README.md */; };
 		D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715702E68F282071E4ED827 /* MCDHomeViewModel.m */; };
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
 		D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D715706813D9823C3B115E79 /* Images.xcassets */; };
-		D715736FFB49A3047143E091 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157F8AF21E4552000AB895 /* README.md */; };
+		D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */; };
 		D715748D8283647564751954 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157599303790267B230DF1 /* MCDHomeViewController.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
 		D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */; };
 		D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
+		D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +50,47 @@
 			remoteGlobalIDString = 24694E291B83390300E09636;
 			remoteInfo = MCDiary;
 		};
+		249BEBDD1B8F4ABA00C2A3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24694E221B83390300E09636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 249BEBD01B8F4ABA00C2A3CF;
+			remoteInfo = MCDiaryKit;
+		};
+		249BEBDF1B8F4ABA00C2A3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24694E221B83390300E09636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24694E291B83390300E09636;
+			remoteInfo = MCDiary;
+		};
+		249BEBE61B8F4ABB00C2A3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24694E221B83390300E09636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 249BEBD01B8F4ABA00C2A3CF;
+			remoteInfo = MCDiaryKit;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		240B01521B8F295D004C7D2C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				249BEBE91B8F4ABB00C2A3CF /* MCDiaryKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2260165B44A98B3B1828B07C /* libPods-MCDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		240B012C1B8F1E95004C7D2C /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		245140461B8F40AD009DE3F4 /* MCDiaryKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCDiaryKit.framework; path = "MCDiaryKit/build/Debug-iphoneos/MCDiaryKit.framework"; sourceTree = "<group>"; };
 		24694E2A1B83390300E09636 /* MCDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E431B83390300E09636 /* MCDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E481B83390300E09636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,9 +98,25 @@
 		24694E561B83661C00E09636 /* MCDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPrefixHeader.pch; sourceTree = "<group>"; };
 		24694E5A1B83851400E09636 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		24694E5B1B83851400E09636 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		386926BA5C4366C0166A3B54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		6E341D212A6CFFA5C85FF3C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MCDiaryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		249BEBD41B8F4ABA00C2A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		249BEBD51B8F4ABA00C2A3CF /* MCDiaryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDiaryKit.h; sourceTree = "<group>"; };
+		249BEBDB1B8F4ABA00C2A3CF /* MCDiaryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		249BEBE31B8F4ABB00C2A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryKitTests.m; sourceTree = "<group>"; };
+		249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
+		249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
+		249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
+		249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
+		249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
+		249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
+		249BEBFC1B8F537100C2A3CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
+		249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
+		40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7D062F7380464731C18E59AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCDiaryKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D715702E68F282071E4ED827 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
@@ -51,15 +124,18 @@
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7157599303790267B230DF1 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
+		D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
+		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D7157C182BA005319D29D099 /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
 		D7157C7390DB2C2C0EA3D6E7 /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
 		D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
 		D7157D091202401A4C5895D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7157D737AA85AC4E15D00E1 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
-		D7157F8AF21E4552000AB895 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +143,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4836C56CA4354C046E01A605 /* libPods.a in Frameworks */,
+				249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */,
+				34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */,
+				667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +153,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		249BEBCD1B8F4ABA00C2A3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */,
+				30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		249BEBD81B8F4ABA00C2A3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249BEBDC1B8F4ABA00C2A3CF /* MCDiaryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +181,8 @@
 			children = (
 				24694E2C1B83390300E09636 /* MCDiary */,
 				24694E461B83390300E09636 /* MCDiaryTests */,
+				249BEBD21B8F4ABA00C2A3CF /* MCDiaryKit */,
+				249BEBE11B8F4ABA00C2A3CF /* MCDiaryKitTests */,
 				24694E2B1B83390300E09636 /* Products */,
 				D7157AAAC68C65C7FDC816BC /* Podfile */,
 				335B55BEEB488F4458D01302 /* Pods */,
@@ -98,6 +195,8 @@
 			children = (
 				24694E2A1B83390300E09636 /* MCDiary.app */,
 				24694E431B83390300E09636 /* MCDiaryTests.xctest */,
+				249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */,
+				249BEBDB1B8F4ABA00C2A3CF /* MCDiaryKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,11 +227,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		249BEBD21B8F4ABA00C2A3CF /* MCDiaryKit */ = {
+			isa = PBXGroup;
+			children = (
+				249BEBD51B8F4ABA00C2A3CF /* MCDiaryKit.h */,
+				249BEBD31B8F4ABA00C2A3CF /* Supporting Files */,
+				249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */,
+				249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */,
+				249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */,
+				249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */,
+				249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */,
+				249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */,
+				249BEBFC1B8F537100C2A3CF /* Images.xcassets */,
+				249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */,
+				249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */,
+			);
+			path = MCDiaryKit;
+			sourceTree = "<group>";
+		};
+		249BEBD31B8F4ABA00C2A3CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				249BEBD41B8F4ABA00C2A3CF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		249BEBE11B8F4ABA00C2A3CF /* MCDiaryKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */,
+				249BEBE21B8F4ABB00C2A3CF /* Supporting Files */,
+			);
+			path = MCDiaryKitTests;
+			sourceTree = "<group>";
+		};
+		249BEBE21B8F4ABB00C2A3CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				249BEBE31B8F4ABB00C2A3CF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		335B55BEEB488F4458D01302 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				386926BA5C4366C0166A3B54 /* Pods.debug.xcconfig */,
-				6E341D212A6CFFA5C85FF3C6 /* Pods.release.xcconfig */,
+				449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */,
+				40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -140,7 +282,10 @@
 		4BE136B7BEC3F63C1DFCF35F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */,
+				245140461B8F40AD009DE3F4 /* MCDiaryKit.framework */,
+				2260165B44A98B3B1828B07C /* libPods-MCDiary.a */,
+				D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */,
+				7D062F7380464731C18E59AC /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +353,7 @@
 			children = (
 				24694E5A1B83851400E09636 /* LaunchScreen.xib */,
 				24694E5B1B83851400E09636 /* Main.storyboard */,
+				240B012C1B8F1E95004C7D2C /* User.storyboard */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -217,6 +363,7 @@
 			children = (
 				D71576C64FB0C513DF655B21 /* Home */,
 				D71574F9A119CD26E0679463 /* Base */,
+				D7157FFACE73C03FB8038424 /* User */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +373,7 @@
 			children = (
 				D7157759040A99FEE3E85DB7 /* Home */,
 				D7157F30A59A548E3BEE45AD /* Base */,
+				D7157F6EE5C6C6E3C86BB32A /* User */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -242,7 +390,6 @@
 		D7157DB86FCFA53F7E37365E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D7157F8AF21E4552000AB895 /* README.md */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,22 +412,57 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		D7157F6EE5C6C6E3C86BB32A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */,
+				D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D7157FFACE73C03FB8038424 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */,
+				D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		249BEBCE1B8F4ABA00C2A3CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249BEBF81B8F50D000C2A3CF /* MCDCustomView.h in Headers */,
+				249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */,
+				249BEBF41B8F4B6F00C2A3CF /* MCDButtonView.h in Headers */,
+				249BEBD61B8F4ABA00C2A3CF /* MCDiaryKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		24694E291B83390300E09636 /* MCDiary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24694E4D1B83390300E09636 /* Build configuration list for PBXNativeTarget "MCDiary" */;
 			buildPhases = (
-				A1AC605AA03A469C874E7C86 /* Check Pods Manifest.lock */,
+				2D55A16707D17257D1843947 /* Check Pods Manifest.lock */,
 				24694E261B83390300E09636 /* Sources */,
 				24694E271B83390300E09636 /* Frameworks */,
 				24694E281B83390300E09636 /* Resources */,
 				B635FC8089E9BD4A167C6640 /* Copy Pods Resources */,
+				240B01521B8F295D004C7D2C /* Embed Frameworks */,
+				A75416B5BE45F716518B3EC5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				249BEBE71B8F4ABB00C2A3CF /* PBXTargetDependency */,
 			);
 			name = MCDiary;
 			productName = MCDiary;
@@ -305,6 +487,45 @@
 			productReference = 24694E431B83390300E09636 /* MCDiaryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		249BEBD01B8F4ABA00C2A3CF /* MCDiaryKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 249BEBEA1B8F4ABB00C2A3CF /* Build configuration list for PBXNativeTarget "MCDiaryKit" */;
+			buildPhases = (
+				C0B508A8EA3428350DEC6659 /* Check Pods Manifest.lock */,
+				249BEBCC1B8F4ABA00C2A3CF /* Sources */,
+				249BEBCD1B8F4ABA00C2A3CF /* Frameworks */,
+				249BEBCE1B8F4ABA00C2A3CF /* Headers */,
+				249BEBCF1B8F4ABA00C2A3CF /* Resources */,
+				8A1F2BD90071A608D3D48A3F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MCDiaryKit;
+			productName = MCDiaryKit;
+			productReference = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		249BEBDA1B8F4ABA00C2A3CF /* MCDiaryKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 249BEBED1B8F4ABB00C2A3CF /* Build configuration list for PBXNativeTarget "MCDiaryKitTests" */;
+			buildPhases = (
+				249BEBD71B8F4ABA00C2A3CF /* Sources */,
+				249BEBD81B8F4ABA00C2A3CF /* Frameworks */,
+				249BEBD91B8F4ABA00C2A3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				249BEBDE1B8F4ABA00C2A3CF /* PBXTargetDependency */,
+				249BEBE01B8F4ABA00C2A3CF /* PBXTargetDependency */,
+			);
+			name = MCDiaryKitTests;
+			productName = MCDiaryKitTests;
+			productReference = 249BEBDB1B8F4ABA00C2A3CF /* MCDiaryKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -318,6 +539,13 @@
 						CreatedOnToolsVersion = 6.4;
 					};
 					24694E421B83390300E09636 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 24694E291B83390300E09636;
+					};
+					249BEBD01B8F4ABA00C2A3CF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					249BEBDA1B8F4ABA00C2A3CF = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 24694E291B83390300E09636;
 					};
@@ -338,6 +566,8 @@
 			targets = (
 				24694E291B83390300E09636 /* MCDiary */,
 				24694E421B83390300E09636 /* MCDiaryTests */,
+				249BEBD01B8F4ABA00C2A3CF /* MCDiaryKit */,
+				249BEBDA1B8F4ABA00C2A3CF /* MCDiaryKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,7 +582,7 @@
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
 				D715704DBE7017E744F43804 /* README.md in Resources */,
-				D715736FFB49A3047143E091 /* README.md in Resources */,
+				240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,10 +593,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		249BEBCF1B8F4ABA00C2A3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */,
+				249BEBFB1B8F52E000C2A3CF /* MCDTextFormField.xib in Resources */,
+				249BEBF11B8F4AF100C2A3CF /* MCDButtonView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		249BEBD91B8F4ABA00C2A3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A1AC605AA03A469C874E7C86 /* Check Pods Manifest.lock */ = {
+		2D55A16707D17257D1843947 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,6 +626,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A1F2BD90071A608D3D48A3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75416B5BE45F716518B3EC5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B635FC8089E9BD4A167C6640 /* Copy Pods Resources */ = {
@@ -396,6 +673,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0B508A8EA3428350DEC6659 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -409,6 +701,8 @@
 				D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */,
 				D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */,
 				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
+				D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */,
+				D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +714,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		249BEBCC1B8F4ABA00C2A3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */,
+				249BEBF91B8F50D000C2A3CF /* MCDCustomView.m in Sources */,
+				249BEBF51B8F4B6F00C2A3CF /* MCDButtonView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		249BEBD71B8F4ABA00C2A3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249BEBE51B8F4ABB00C2A3CF /* MCDiaryKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -427,6 +739,21 @@
 			isa = PBXTargetDependency;
 			target = 24694E291B83390300E09636 /* MCDiary */;
 			targetProxy = 24694E441B83390300E09636 /* PBXContainerItemProxy */;
+		};
+		249BEBDE1B8F4ABA00C2A3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 249BEBD01B8F4ABA00C2A3CF /* MCDiaryKit */;
+			targetProxy = 249BEBDD1B8F4ABA00C2A3CF /* PBXContainerItemProxy */;
+		};
+		249BEBE01B8F4ABA00C2A3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24694E291B83390300E09636 /* MCDiary */;
+			targetProxy = 249BEBDF1B8F4ABA00C2A3CF /* PBXContainerItemProxy */;
+		};
+		249BEBE71B8F4ABB00C2A3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 249BEBD01B8F4ABA00C2A3CF /* MCDiaryKit */;
+			targetProxy = 249BEBE61B8F4ABB00C2A3CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -513,7 +840,7 @@
 		};
 		24694E4E1B83390300E09636 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 386926BA5C4366C0166A3B54 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -522,12 +849,13 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		24694E4F1B83390300E09636 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E341D212A6CFFA5C85FF3C6 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -536,6 +864,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -546,6 +875,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/MCDiaryKit/build/Debug-iphoneos",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -565,8 +895,89 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/MCDiaryKit/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = MCDiaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
+			};
+			name = Release;
+		};
+		249BEBEB1B8F4ABB00C2A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MCDiaryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		249BEBEC1B8F4ABB00C2A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MCDiaryKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		249BEBEE1B8F4ABB00C2A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
+			};
+			name = Debug;
+		};
+		249BEBEF1B8F4ABB00C2A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
@@ -599,6 +1010,24 @@
 			buildConfigurations = (
 				24694E511B83390300E09636 /* Debug */,
 				24694E521B83390300E09636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		249BEBEA1B8F4ABB00C2A3CF /* Build configuration list for PBXNativeTarget "MCDiaryKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				249BEBEB1B8F4ABB00C2A3CF /* Debug */,
+				249BEBEC1B8F4ABB00C2A3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		249BEBED1B8F4ABB00C2A3CF /* Build configuration list for PBXNativeTarget "MCDiaryKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				249BEBEE1B8F4ABB00C2A3CF /* Debug */,
+				249BEBEF1B8F4ABB00C2A3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
