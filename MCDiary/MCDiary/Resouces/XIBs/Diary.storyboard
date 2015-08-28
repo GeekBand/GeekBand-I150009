@@ -14,7 +14,7 @@
         <!--Diary Time Line View Controller-->
         <scene sceneID="wZA-rL-nHW">
             <objects>
-                <viewController id="n1D-qV-CPn" customClass="DiaryTimeLineViewController" sceneMemberID="viewController">
+                <viewController id="n1D-qV-CPn" customClass="MCDiaryTimeLineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETz-ob-tjZ"/>
                         <viewControllerLayoutGuide type="bottom" id="GPx-zw-3tx"/>
@@ -29,8 +29,8 @@
                                     <constraint firstAttribute="height" constant="28" id="zoU-u8-I8M"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="所有日记"/>
+                                    <segment title="仅大事录"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKo-U5-zjm">
@@ -61,18 +61,18 @@
                                 <state key="normal" title="添加"/>
                                 <connections>
                                     <action selector="createButtonTouchUpInside:" destination="n1D-qV-CPn" eventType="touchUpInside" id="a3q-Yc-Pzu"/>
-                                    <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="AddDiarySegue" id="7RX-Pp-qgU"/>
+                                    <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="AddMCDiarySegue" id="7RX-Pp-qgU"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="184" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2XU-nH-krx">
                                 <rect key="frame" x="20" y="116" width="560" height="464"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiaryCellIdentifier" rowHeight="184" id="vAa-eE-04N" customClass="DiaryTableViewCell">
-                                        <rect key="frame" x="0.0" y="50" width="560" height="184"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCDiaryCellIdentifier" rowHeight="150" id="vAa-eE-04N" customClass="MCDiaryTableViewCell">
+                                        <rect key="frame" x="0.0" y="50" width="560" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vAa-eE-04N" id="9rf-ao-Avk">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7nN-Jx-TS1">
@@ -102,15 +102,15 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKL-Ev-uxq">
-                                                    <rect key="frame" x="174" y="41" width="368" height="50"/>
+                                                    <rect key="frame" x="174" y="41" width="368" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7W-yx-ahN">
-                                                    <rect key="frame" x="174" y="96" width="368" height="75"/>
+                                                    <rect key="frame" x="174" y="87" width="368" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="75" id="Iw1-Mw-7lO"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Iw1-Mw-7lO"/>
                                                     </constraints>
                                                 </scrollView>
                                             </subviews>
@@ -133,13 +133,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="MCDiaryImagesScrollView" destination="d7W-yx-ahN" id="bz9-vn-4OG"/>
+                                            <outlet property="MCDiaryImagesScrollViewHeightConstraint" destination="Iw1-Mw-7lO" id="4wE-Xt-pm1"/>
                                             <outlet property="contentLabel" destination="LKL-Ev-uxq" id="FqQ-Fy-IBo"/>
-                                            <outlet property="diaryImagesScrollView" destination="d7W-yx-ahN" id="bz9-vn-4OG"/>
-                                            <outlet property="diaryImagesScrollViewHeightConstraint" destination="Iw1-Mw-7lO" id="4wE-Xt-pm1"/>
                                             <outlet property="tagImageView" destination="7nN-Jx-TS1" id="nX3-KT-UIy"/>
                                             <outlet property="timeLabel" destination="6RK-DW-XbW" id="wRQ-Xp-cJL"/>
                                             <outlet property="titleLabel" destination="Ve4-T3-ka5" id="OhN-kg-TXm"/>
-                                            <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="EditDiarySegue" id="sQ8-M2-VnS"/>
+                                            <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="EditMCDiarySegue" id="sQ8-M2-VnS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -176,7 +176,7 @@
         <!--Create Diary View Controller-->
         <scene sceneID="OAn-hU-8dr">
             <objects>
-                <viewController id="ZM0-TE-kdx" customClass="CreateDiaryViewController" sceneMemberID="viewController">
+                <viewController id="ZM0-TE-kdx" customClass="MCCreateDiaryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V5j-mS-E9j"/>
                         <viewControllerLayoutGuide type="bottom" id="XjG-dc-gXf"/>
@@ -216,7 +216,7 @@
                                     <constraint firstAttribute="height" constant="130" id="1xG-6j-UfH"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiaryOptionCellIdentifier" id="9mP-9K-q9E">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCDiaryOptionCellIdentifier" id="9mP-9K-q9E">
                                         <rect key="frame" x="0.0" y="22" width="560" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9mP-9K-q9E" id="JG6-nQ-yPD">
@@ -232,7 +232,7 @@
                                     <constraint firstAttribute="height" constant="75" id="whA-U7-6o7"/>
                                 </constraints>
                             </scrollView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-QA-rfl" customClass="UIPlaceHolderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-QA-rfl" customClass="MCPlaceHolderTextView">
                                 <rect key="frame" x="20" y="271" width="560" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -279,6 +279,7 @@
                     </view>
                     <connections>
                         <outlet property="contentTextView" destination="hlv-QA-rfl" id="Dns-Yk-E1h"/>
+                        <outlet property="deleteButton" destination="RFy-DB-wGl" id="5bR-hp-28X"/>
                         <outlet property="imagesScrollView" destination="56k-vV-ufL" id="60c-ZK-L3z"/>
                         <outlet property="optionsTableView" destination="wVX-AW-y5p" id="fMK-x3-pCG"/>
                         <outlet property="titleLabel" destination="ogx-bS-sfp" id="rF5-F0-qVS"/>
@@ -295,6 +296,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7RX-Pp-qgU"/>
+        <segue reference="sQ8-M2-VnS"/>
     </inferredMetricsTieBreakers>
 </document>

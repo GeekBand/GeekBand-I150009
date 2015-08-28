@@ -1,5 +1,5 @@
 //
-//  Diary.h
+//  MCDiary.h
 //  MCDiary
 //
 //  Created by Turtle on 15/8/26.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Diary : NSObject
+@interface MCDiary : NSObject
 
 @property (copy, nonatomic)NSString         *title;
 @property (strong, nonatomic)NSDate         *createTime;
@@ -16,7 +16,7 @@
 @property (strong, nonatomic)NSMutableArray *images;
 @property (assign, nonatomic)BOOL            isBigEvent;
 
-- (id)initADiaryWithTitle:(NSString *) title
+- (id)initAMCDiaryWithTitle:(NSString *) title
                createTime:(NSDate *) createTime
                   content:(NSString *) content
                    images:(NSMutableArray *) images

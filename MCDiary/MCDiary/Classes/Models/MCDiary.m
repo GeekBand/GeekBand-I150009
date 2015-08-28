@@ -1,16 +1,16 @@
 //
-//  Diary.m
+//  MCDiary.m
 //  MCDiary
 //
 //  Created by Turtle on 15/8/26.
 //  Copyright © 2015年 zzdjk6. All rights reserved.
 //
 
-#import "Diary.h"
+#import "MCDiary.h"
 
-@implementation Diary
+@implementation MCDiary
 
-- (id)initADiaryWithTitle:(NSString *) title
+- (id)initAMCDiaryWithTitle:(NSString *) title
                createTime:(NSDate *) createTime
                   content:(NSString *) content
                    images:(NSMutableArray *) images

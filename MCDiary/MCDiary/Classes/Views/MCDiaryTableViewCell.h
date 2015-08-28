@@ -1,5 +1,5 @@
 //
-//  DiaryTableViewCell.h
+//  MCDiaryTableViewCell.h
 //  MCDiary
 //
 //  Created by Turtle on 15/8/26.
@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiaryTableViewCell : UITableViewCell
+@interface MCDiaryTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-@property (weak, nonatomic) IBOutlet UIScrollView *diaryImagesScrollView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *diaryImagesScrollViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *MCDiaryImagesScrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *MCDiaryImagesScrollViewHeightConstraint;
 
 @end

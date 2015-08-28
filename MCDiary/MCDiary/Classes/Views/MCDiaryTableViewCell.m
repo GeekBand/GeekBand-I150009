@@ -1,14 +1,14 @@
 //
-//  DiaryTableViewCell.m
+//  MCDiaryTableViewCell.m
 //  MCDiary
 //
 //  Created by Turtle on 15/8/26.
 //  Copyright © 2015年 zzdjk6. All rights reserved.
 //
 
-#import "DiaryTableViewCell.h"
+#import "MCDiaryTableViewCell.h"
 
-@implementation DiaryTableViewCell
+@implementation MCDiaryTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

@@ -1,5 +1,5 @@
 //
-//  DiaryTimeLineViewController.h
+//  MCDiaryTimeLineViewController.h
 //  MCDiary
 //
 //  Created by Turtle on 15/8/26.
@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DiaryTableViewCell.h"
-#import "CreateDiaryViewController.h"
+#import "MCDiaryTableViewCell.h"
+#import "MCCreateDiaryViewController.h"
 
-@interface DiaryTimeLineViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, CreateDiaryViewControllerDelegate>
+@interface MCDiaryTimeLineViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, MCCreateDiaryViewControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *titleButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *eventsSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *diariesTableView;
+@property (strong, nonatomic) NSMutableArray *diaries;
 
 @end
