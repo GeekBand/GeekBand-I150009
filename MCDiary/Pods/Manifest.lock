@@ -22,6 +22,8 @@ PODS:
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
   - RegExCategories (1.0)
+  - RSKImageCropper (1.2.1)
+  - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - AVOSCloudCrashReportingDynamic
@@ -32,6 +34,8 @@ DEPENDENCIES:
   - Masonry
   - ReactiveCocoa
   - RegExCategories
+  - RSKImageCropper
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AVOSCloudCrashReportingDynamic: 861a704bc41c459bc392ecdfbe04101c2856b0bc
@@ -42,5 +46,7 @@ SPEC CHECKSUMS:
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
+  RSKImageCropper: e912419809d3a4eac47864d6fbc22f84c14879d5
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
 COCOAPODS: 0.38.2

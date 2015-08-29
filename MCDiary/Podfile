@@ -11,5 +11,7 @@ pod 'AVOSCloudDynamic'
 pod 'AVOSCloudIMDynamic'
 pod 'AVOSCloudCrashReportingDynamic'
 pod 'RegExCategories'
+pod 'RSKImageCropper'
+pod 'SVProgressHUD'
 
 

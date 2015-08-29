@@ -4,12 +4,15 @@
 //
 
 #import "MCDSignupContentViewController.h"
-#import "MCDTextFormField.h"
 #import "MCDSignupContentViewModel.h"
-#import "MCDButtonView.h"
-#import "MCDAvatarView.h"
+#import "RSKImageCropViewController.h"
+@import MCDiaryKit;
 
-@interface MCDSignupContentViewController () <UITextFieldDelegate>
+@interface MCDSignupContentViewController ()
+    <UITextFieldDelegate,
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate,
+    RSKImageCropViewControllerDelegate>
 
 @property(nonatomic, weak) IBOutlet UIButton         *toLoginButton;
 @property(nonatomic, weak) IBOutlet MCDButtonView    *signupButton;
@@ -38,7 +41,7 @@
     self.passwordTextFormField.textField.delegate = self;
     self.emailTextFormField.textField.delegate    = self;
 
-    self.viewModel = [[MCDSignupContentViewModel alloc] init];
+    self.viewModel             = [[MCDSignupContentViewModel alloc] init];
     self.viewModel.avatarImage = [MCDAvatarView defaultAvatarImage];
 
     @weakify(self);
@@ -95,7 +98,33 @@
     }];
     [[self.signupButton.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
+        [self.activeField resignFirstResponder];
         [self.viewModel validate];
+    }];
+    [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil
+                                                                       message:nil
+                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            [sheet addAction:[UIAlertAction actionWithTitle:@"拍照"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction *action) {
+                                                        [self presentImagePicker:UIImagePickerControllerSourceTypeCamera];
+                                                    }]];
+        }
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+            [sheet addAction:[UIAlertAction actionWithTitle:@"选择照片"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction *action) {
+                                                        [self presentImagePicker:UIImagePickerControllerSourceTypePhotoLibrary];
+                                                    }]];
+        }
+        [sheet addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                  style:UIAlertActionStyleCancel
+                                                handler:nil]];
+        [self presentViewController:sheet animated:YES completion:nil];
     }];
 }
 
@@ -118,5 +147,59 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+//    self.viewModel.avatarImage = image;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
+    RSKImageCropViewController *imageCropVC = [[RSKImageCropViewController alloc] initWithImage:image];
+    imageCropVC.delegate = self;
+    [self presentViewController:imageCropVC animated:YES completion:nil];
+}
+
+#pragma mark - RSKImageCropViewControllerDelegate
+
+// Crop image has been canceled.
+- (void)imageCropViewControllerDidCancelCrop:(RSKImageCropViewController *)controller
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+// The original image has been cropped.
+- (void)imageCropViewController:(RSKImageCropViewController *)controller
+                   didCropImage:(UIImage *)croppedImage
+                  usingCropRect:(CGRect)cropRect
+{
+    self.viewModel.avatarImage = croppedImage;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+// The original image has been cropped. Additionally provides a rotation angle used to produce image.
+- (void)imageCropViewController:(RSKImageCropViewController *)controller
+                   didCropImage:(UIImage *)croppedImage
+                  usingCropRect:(CGRect)cropRect
+                  rotationAngle:(CGFloat)rotationAngle
+{
+    self.viewModel.avatarImage = croppedImage;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - private
+
+- (void)presentImagePicker:(UIImagePickerControllerSourceType)sourceType
+{
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    pickerController.sourceType = sourceType;
+    pickerController.delegate   = self;
+    [self presentViewController:pickerController
+                       animated:YES
+                     completion:nil];
+}
+
 
 @end

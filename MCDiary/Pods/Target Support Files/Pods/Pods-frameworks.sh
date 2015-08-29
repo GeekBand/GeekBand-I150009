@@ -55,13 +55,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/CocoaLumberjack.framework'
   install_framework 'Pods/HexColors.framework'
   install_framework 'Pods/Masonry.framework'
+  install_framework 'Pods/RSKImageCropper.framework'
   install_framework 'Pods/ReactiveCocoa.framework'
   install_framework 'Pods/RegExCategories.framework'
+  install_framework 'Pods/SVProgressHUD.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/CocoaLumberjack.framework'
   install_framework 'Pods/HexColors.framework'
   install_framework 'Pods/Masonry.framework'
+  install_framework 'Pods/RSKImageCropper.framework'
   install_framework 'Pods/ReactiveCocoa.framework'
   install_framework 'Pods/RegExCategories.framework'
+  install_framework 'Pods/SVProgressHUD.framework'
 fi

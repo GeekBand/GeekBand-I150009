@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import "ReactiveCocoa/ReactiveCocoa.h"
-#import <HexColors/HexColors.h>
 #import "MCDTextFormField.h"
 
 @interface MCDTextFormField ()

@@ -4,10 +4,9 @@
 //
 
 #import "MCDLoginViewController.h"
-#import "MCDTextFormField.h"
-#import "MCDLoginViewModel.h"
-#import "MCDButtonView.h"
 #import "MCDSignupContainerViewController.h"
+#import "MCDLoginViewModel.h"
+@import MCDiaryKit;
 
 @interface MCDLoginViewController () <UITextFieldDelegate>
 

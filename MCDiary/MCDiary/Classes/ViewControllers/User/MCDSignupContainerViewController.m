@@ -65,6 +65,7 @@
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification
                                                            object:nil]
         subscribeNext:^(NSNotification *notification) {
+            @strongify(self);
             NSDictionary *info  = [notification userInfo];
             CGSize       kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 

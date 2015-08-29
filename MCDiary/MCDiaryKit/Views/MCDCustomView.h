@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface MCDCustomView : UIView
 
 @property(strong, nonatomic) UIView *view;

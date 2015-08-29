@@ -26,7 +26,8 @@
 @import QuartzCore;
 
 // Logging
-#import "CocoaLumberjack/CocoaLumberjack.h"
+//#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "CocoaLumberjack.h"
 
 // ReactiveCocoa
 #import "ReactiveCocoa/ReactiveCocoa.h"
@@ -36,6 +37,9 @@
 
 // BAAS
 #import <AVOSCloud/AVOSCloud.h>
+
+// HUD
+#import "SVProgressHUD.h"
 
 // Useful Constants & Macros
 #ifdef DEBUG
