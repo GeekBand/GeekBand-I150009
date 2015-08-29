@@ -23,6 +23,9 @@
     _diariesTableView.estimatedRowHeight = 100;
     _diariesTableView.dataSource = self;
     _diariesTableView.delegate = self;
+    _diariesTableView.backgroundColor = [UIColor whiteColor];
+    _diariesTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _diaries = [NSMutableArray array];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +34,7 @@
 }
 
 #pragma mark - Two top layout guide buttons' responding selectors
+
 - (IBAction)menuButtonTouchUpInside:(id)sender {
     
 }
@@ -40,8 +44,9 @@
 }
 
 #pragma mark - UITableViewDataSource methods
+
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return _diaries.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
@@ -52,41 +57,44 @@
         cell = [[MCDiaryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    
+    [cell setupCellWithDiary:_diaries[indexPath.row]];
     
     return cell;
 }
 
 #pragma mark - UITableViewDelegate methods
+
 - (void)tableView:(nonnull UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     _createDiaryViewController.diary = _diaries[indexPath.row];
 }
 
 #pragma mark - MCCreateDiaryViewControllerDelegate methods
-- (void)setupMCDiary:(MCDiary *)MCDiary{
-    
+
+- (void)setupMCDiary:(MCDiary *) diary {
+    [_diaries addObject:diary];
+    [_diariesTableView reloadData];
 }
 
-- (void)removeMCDiary:(MCDiary *)MCDiary{
-    
+- (void)removeMCDiary:(MCDiary *) diary {
+    [_diaries removeObject:diary];
+    [_diariesTableView reloadData];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if (_createDiaryViewController == nil) {
-        _createDiaryViewController = (MCCreateDiaryViewController *)segue.destinationViewController;
-    }
+    _createDiaryViewController = (MCCreateDiaryViewController *)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"AddMCDiarySegue"]) {
         _createDiaryViewController.diary = nil;
         //hide delete button
-        _createDiaryViewController.deleteButton.hidden = YES;//没卵用，估计要等读取页面后才能改
+        _createDiaryViewController.shouldHideDeleteButton = YES;
     }
     
     if ([segue.identifier isEqualToString:@"EditMCDiarySegue"]) {
         //show delete button
-        _createDiaryViewController.deleteButton.hidden = NO;
+        _createDiaryViewController.shouldHideDeleteButton = NO;
     }
+    _createDiaryViewController.delegate = self;
 }
 
 @end

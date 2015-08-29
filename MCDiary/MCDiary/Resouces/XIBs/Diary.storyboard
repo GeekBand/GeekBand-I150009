@@ -61,7 +61,7 @@
                                 <state key="normal" title="添加"/>
                                 <connections>
                                     <action selector="createButtonTouchUpInside:" destination="n1D-qV-CPn" eventType="touchUpInside" id="a3q-Yc-Pzu"/>
-                                    <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="AddMCDiarySegue" id="7RX-Pp-qgU"/>
+                                    <segue destination="ZM0-TE-kdx" kind="show" identifier="AddMCDiarySegue" id="7RX-Pp-qgU"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="184" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="2XU-nH-krx">
@@ -139,7 +139,7 @@
                                             <outlet property="tagImageView" destination="7nN-Jx-TS1" id="nX3-KT-UIy"/>
                                             <outlet property="timeLabel" destination="6RK-DW-XbW" id="wRQ-Xp-cJL"/>
                                             <outlet property="titleLabel" destination="Ve4-T3-ka5" id="OhN-kg-TXm"/>
-                                            <segue destination="ZM0-TE-kdx" kind="showDetail" identifier="EditMCDiarySegue" id="sQ8-M2-VnS"/>
+                                            <segue destination="ZM0-TE-kdx" kind="show" identifier="EditMCDiarySegue" id="sQ8-M2-VnS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -296,6 +296,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sQ8-M2-VnS"/>
+        <segue reference="7RX-Pp-qgU"/>
     </inferredMetricsTieBreakers>
 </document>

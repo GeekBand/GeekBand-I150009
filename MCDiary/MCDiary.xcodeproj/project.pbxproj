@@ -10,7 +10,7 @@
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
 		24694E5D1B83851400E09636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5B1B83851400E09636 /* Main.storyboard */; };
-		4836C56CA4354C046E01A605 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */; };
+		C3BEC9143B03EEAAA746FAC6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25DF49EF794D5723A3C2F5D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D715704DBE7017E744F43804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157186918912F6DF4E5A22 /* README.md */; };
 		D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715702E68F282071E4ED827 /* MCDHomeViewModel.m */; };
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
@@ -18,15 +18,24 @@
 		D715736FFB49A3047143E091 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157F8AF21E4552000AB895 /* README.md */; };
 		D715748D8283647564751954 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157599303790267B230DF1 /* MCDHomeViewController.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
-		D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */; };
 		D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
+		E481A59B1B915CB60048E36F /* MCCreateDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A59A1B915CB60048E36F /* MCCreateDiaryViewController.m */; };
+		E481A5A01B915D2F0048E36F /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A59F1B915D2F0048E36F /* MCDBaseViewController.m */; };
+		E481A5A41B915D780048E36F /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5A31B915D780048E36F /* MCDLoginViewController.m */; };
+		E481A5A81B915D960048E36F /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5A71B915D960048E36F /* MCDLoginViewModel.m */; };
+		E481A5AD1B915DF30048E36F /* MCDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5AA1B915DF30048E36F /* MCDiaryTableViewCell.m */; };
+		E481A5AE1B915DF30048E36F /* MCPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5AC1B915DF30048E36F /* MCPlaceHolderTextView.m */; };
+		E481A5BC1B915FA30048E36F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E481A5B11B915FA30048E36F /* Images.xcassets */; };
+		E481A5BD1B915FA30048E36F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E481A5B21B915FA30048E36F /* Info.plist */; };
+		E481A5BE1B915FA30048E36F /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5B41B915FA30048E36F /* MCDButtonView.m */; };
+		E481A5BF1B915FA30048E36F /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E481A5B51B915FA30048E36F /* MCDButtonView.xib */; };
+		E481A5C01B915FA30048E36F /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5B71B915FA30048E36F /* MCDCustomView.m */; };
+		E481A5C11B915FA30048E36F /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = E481A5BA1B915FA30048E36F /* MCDTextFormField.m */; };
+		E481A5C21B915FA30048E36F /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E481A5BB1B915FA30048E36F /* MCDTextFormField.xib */; };
 		E4AA324E1B8D659B002E6B91 /* MCDiaryTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA324D1B8D659B002E6B91 /* MCDiaryTimeLineViewController.m */; };
-		E4AA32511B8D8BF5002E6B91 /* MCDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA32501B8D8BF5002E6B91 /* MCDiaryTableViewCell.m */; };
 		E4AA32531B8D93F2002E6B91 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4AA32521B8D93F2002E6B91 /* Diary.storyboard */; };
 		E4AA32561B8D944C002E6B91 /* MCDiary.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AA32551B8D944C002E6B91 /* MCDiary.m */; };
-		E4AD9B8C1B8EBC63000AB1CA /* MCPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AD9B8B1B8EBC63000AB1CA /* MCPlaceHolderTextView.m */; };
-		E4AD9B8F1B8F24B6000AB1CA /* MCCreateDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AD9B8E1B8F24B6000AB1CA /* MCCreateDiaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +58,7 @@
 		24694E5B1B83851400E09636 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		386926BA5C4366C0166A3B54 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6E341D212A6CFFA5C85FF3C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25DF49EF794D5723A3C2F5D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D715702E68F282071E4ED827 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
@@ -57,26 +66,41 @@
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7157599303790267B230DF1 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
-		D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D7157C182BA005319D29D099 /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
-		D7157C7390DB2C2C0EA3D6E7 /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
 		D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
 		D7157D091202401A4C5895D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7157D737AA85AC4E15D00E1 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
 		D7157F8AF21E4552000AB895 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		E481A5991B915CB60048E36F /* MCCreateDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCCreateDiaryViewController.h; path = Diary/MCCreateDiaryViewController.h; sourceTree = "<group>"; };
+		E481A59A1B915CB60048E36F /* MCCreateDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCCreateDiaryViewController.m; path = Diary/MCCreateDiaryViewController.m; sourceTree = "<group>"; };
+		E481A59E1B915D2F0048E36F /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
+		E481A59F1B915D2F0048E36F /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
+		E481A5A21B915D780048E36F /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCDLoginViewController.h; path = User/MCDLoginViewController.h; sourceTree = "<group>"; };
+		E481A5A31B915D780048E36F /* MCDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDLoginViewController.m; path = User/MCDLoginViewController.m; sourceTree = "<group>"; };
+		E481A5A61B915D960048E36F /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
+		E481A5A71B915D960048E36F /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
+		E481A5A91B915DF30048E36F /* MCDiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCDiaryTableViewCell.h; path = Diary/MCDiaryTableViewCell.h; sourceTree = "<group>"; };
+		E481A5AA1B915DF30048E36F /* MCDiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDiaryTableViewCell.m; path = Diary/MCDiaryTableViewCell.m; sourceTree = "<group>"; };
+		E481A5AB1B915DF30048E36F /* MCPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCPlaceHolderTextView.h; path = Diary/MCPlaceHolderTextView.h; sourceTree = "<group>"; };
+		E481A5AC1B915DF30048E36F /* MCPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCPlaceHolderTextView.m; path = Diary/MCPlaceHolderTextView.m; sourceTree = "<group>"; };
+		E481A5B11B915FA30048E36F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E481A5B21B915FA30048E36F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E481A5B31B915FA30048E36F /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
+		E481A5B41B915FA30048E36F /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
+		E481A5B51B915FA30048E36F /* MCDButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
+		E481A5B61B915FA30048E36F /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
+		E481A5B71B915FA30048E36F /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
+		E481A5B81B915FA30048E36F /* MCDiaryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryKit.h; sourceTree = "<group>"; };
+		E481A5B91B915FA30048E36F /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
+		E481A5BA1B915FA30048E36F /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
+		E481A5BB1B915FA30048E36F /* MCDTextFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
 		E4AA324C1B8D659B002E6B91 /* MCDiaryTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCDiaryTimeLineViewController.h; path = Diary/MCDiaryTimeLineViewController.h; sourceTree = "<group>"; };
 		E4AA324D1B8D659B002E6B91 /* MCDiaryTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDiaryTimeLineViewController.m; path = Diary/MCDiaryTimeLineViewController.m; sourceTree = "<group>"; };
-		E4AA324F1B8D8BF5002E6B91 /* MCDiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryTableViewCell.h; sourceTree = "<group>"; };
-		E4AA32501B8D8BF5002E6B91 /* MCDiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDiaryTableViewCell.m; sourceTree = "<group>"; };
 		E4AA32521B8D93F2002E6B91 /* Diary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
 		E4AA32541B8D944C002E6B91 /* MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiary.h; sourceTree = "<group>"; };
 		E4AA32551B8D944C002E6B91 /* MCDiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDiary.m; sourceTree = "<group>"; };
-		E4AD9B8A1B8EBC63000AB1CA /* MCPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPlaceHolderTextView.h; sourceTree = "<group>"; };
-		E4AD9B8B1B8EBC63000AB1CA /* MCPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPlaceHolderTextView.m; sourceTree = "<group>"; };
-		E4AD9B8D1B8F24B6000AB1CA /* MCCreateDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCreateDiaryViewController.h; sourceTree = "<group>"; };
-		E4AD9B8E1B8F24B6000AB1CA /* MCCreateDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCreateDiaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4836C56CA4354C046E01A605 /* libPods.a in Frameworks */,
+				C3BEC9143B03EEAAA746FAC6 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +181,7 @@
 		4BE136B7BEC3F63C1DFCF35F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3A110AC9EB9F9AB4BC5CEB1 /* libPods.a */,
+				B25DF49EF794D5723A3C2F5D /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,11 +202,9 @@
 		D715715F72DFFD1BC6D87436 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E481A5AF1B915E020048E36F /* Diary */,
+				E481A5B01B915FA30048E36F /* MCDiaryKit */,
 				D7157186918912F6DF4E5A22 /* README.md */,
-				E4AA32501B8D8BF5002E6B91 /* MCDiaryTableViewCell.m */,
-				E4AA324F1B8D8BF5002E6B91 /* MCDiaryTableViewCell.h */,
-				E4AD9B8B1B8EBC63000AB1CA /* MCPlaceHolderTextView.m */,
-				E4AD9B8A1B8EBC63000AB1CA /* MCPlaceHolderTextView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 			children = (
 				D71576C64FB0C513DF655B21 /* Home */,
 				D71574F9A119CD26E0679463 /* Base */,
+				E481A5A51B915D960048E36F /* User */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -249,6 +272,7 @@
 				E4AA32481B8D652D002E6B91 /* Diary */,
 				D7157759040A99FEE3E85DB7 /* Home */,
 				D7157F30A59A548E3BEE45AD /* Base */,
+				E481A5A11B915D4D0048E36F /* User */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -284,10 +308,57 @@
 		D7157F30A59A548E3BEE45AD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */,
-				D7157C7390DB2C2C0EA3D6E7 /* MCDBaseViewController.h */,
+				E481A59E1B915D2F0048E36F /* MCDBaseViewController.h */,
+				E481A59F1B915D2F0048E36F /* MCDBaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E481A5A11B915D4D0048E36F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E481A5A21B915D780048E36F /* MCDLoginViewController.h */,
+				E481A5A31B915D780048E36F /* MCDLoginViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		E481A5A51B915D960048E36F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E481A5A71B915D960048E36F /* MCDLoginViewModel.m */,
+				E481A5A61B915D960048E36F /* MCDLoginViewModel.h */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E481A5AF1B915E020048E36F /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				E481A5AA1B915DF30048E36F /* MCDiaryTableViewCell.m */,
+				E481A5A91B915DF30048E36F /* MCDiaryTableViewCell.h */,
+				E481A5AC1B915DF30048E36F /* MCPlaceHolderTextView.m */,
+				E481A5AB1B915DF30048E36F /* MCPlaceHolderTextView.h */,
+			);
+			name = Diary;
+			sourceTree = "<group>";
+		};
+		E481A5B01B915FA30048E36F /* MCDiaryKit */ = {
+			isa = PBXGroup;
+			children = (
+				E481A5B11B915FA30048E36F /* Images.xcassets */,
+				E481A5B21B915FA30048E36F /* Info.plist */,
+				E481A5B41B915FA30048E36F /* MCDButtonView.m */,
+				E481A5B31B915FA30048E36F /* MCDButtonView.h */,
+				E481A5B51B915FA30048E36F /* MCDButtonView.xib */,
+				E481A5B71B915FA30048E36F /* MCDCustomView.m */,
+				E481A5B61B915FA30048E36F /* MCDCustomView.h */,
+				E481A5B81B915FA30048E36F /* MCDiaryKit.h */,
+				E481A5BA1B915FA30048E36F /* MCDTextFormField.m */,
+				E481A5B91B915FA30048E36F /* MCDTextFormField.h */,
+				E481A5BB1B915FA30048E36F /* MCDTextFormField.xib */,
+			);
+			path = MCDiaryKit;
 			sourceTree = "<group>";
 		};
 		E4AA32481B8D652D002E6B91 /* Diary */ = {
@@ -295,8 +366,8 @@
 			children = (
 				E4AA324D1B8D659B002E6B91 /* MCDiaryTimeLineViewController.m */,
 				E4AA324C1B8D659B002E6B91 /* MCDiaryTimeLineViewController.h */,
-				E4AD9B8E1B8F24B6000AB1CA /* MCCreateDiaryViewController.m */,
-				E4AD9B8D1B8F24B6000AB1CA /* MCCreateDiaryViewController.h */,
+				E481A59A1B915CB60048E36F /* MCCreateDiaryViewController.m */,
+				E481A5991B915CB60048E36F /* MCCreateDiaryViewController.h */,
 			);
 			name = Diary;
 			sourceTree = "<group>";
@@ -313,6 +384,7 @@
 				24694E271B83390300E09636 /* Frameworks */,
 				24694E281B83390300E09636 /* Resources */,
 				B635FC8089E9BD4A167C6640 /* Copy Pods Resources */,
+				287CFE15542A010D9FDF2908 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,12 +456,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AA32531B8D93F2002E6B91 /* Diary.storyboard in Resources */,
+				E481A5BC1B915FA30048E36F /* Images.xcassets in Resources */,
+				E481A5BD1B915FA30048E36F /* Info.plist in Resources */,
 				24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
 				D715704DBE7017E744F43804 /* README.md in Resources */,
 				D715736FFB49A3047143E091 /* README.md in Resources */,
+				E481A5C21B915FA30048E36F /* MCDTextFormField.xib in Resources */,
+				E481A5BF1B915FA30048E36F /* MCDButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +479,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		287CFE15542A010D9FDF2908 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A1AC605AA03A469C874E7C86 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,16 +532,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AA324E1B8D659B002E6B91 /* MCDiaryTimeLineViewController.m in Sources */,
+				E481A59B1B915CB60048E36F /* MCCreateDiaryViewController.m in Sources */,
+				E481A5AE1B915DF30048E36F /* MCPlaceHolderTextView.m in Sources */,
 				D7157C2FED09661163DE707C /* AppDelegate.m in Sources */,
-				E4AD9B8F1B8F24B6000AB1CA /* MCCreateDiaryViewController.m in Sources */,
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
 				E4AA32561B8D944C002E6B91 /* MCDiary.m in Sources */,
-				E4AA32511B8D8BF5002E6B91 /* MCDiaryTableViewCell.m in Sources */,
+				E481A5AD1B915DF30048E36F /* MCDiaryTableViewCell.m in Sources */,
+				E481A5BE1B915FA30048E36F /* MCDButtonView.m in Sources */,
+				E481A5A01B915D2F0048E36F /* MCDBaseViewController.m in Sources */,
+				E481A5A81B915D960048E36F /* MCDLoginViewModel.m in Sources */,
 				D715748D8283647564751954 /* MCDHomeViewController.m in Sources */,
 				D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */,
-				E4AD9B8C1B8EBC63000AB1CA /* MCPlaceHolderTextView.m in Sources */,
+				E481A5C01B915FA30048E36F /* MCDCustomView.m in Sources */,
 				D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */,
-				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
+				E481A5C11B915FA30048E36F /* MCDTextFormField.m in Sources */,
+				E481A5A41B915D780048E36F /* MCDLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

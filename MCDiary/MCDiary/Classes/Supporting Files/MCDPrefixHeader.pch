@@ -26,10 +26,10 @@
 @import QuartzCore;
 
 // Logging
-#import "CocoaLumberjack/CocoaLumberjack.h"
+#import "CocoaLumberjack.h"
 
 // ReactiveCocoa
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "ReactiveCocoa/ReactiveCocoa.h"
 
 // Color
 #import "HexColors.h"

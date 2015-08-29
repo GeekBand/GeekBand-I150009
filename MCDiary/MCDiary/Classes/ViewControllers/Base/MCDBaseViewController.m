@@ -15,7 +15,7 @@
 
 @implementation MCDBaseViewController
 
-@synthesize viewModel;
+@dynamic viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
