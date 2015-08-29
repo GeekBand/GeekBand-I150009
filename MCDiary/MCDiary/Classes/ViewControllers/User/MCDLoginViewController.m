@@ -7,6 +7,7 @@
 #import "MCDTextFormField.h"
 #import "MCDLoginViewModel.h"
 #import "MCDButtonView.h"
+#import "MCDSignupContainerViewController.h"
 
 @interface MCDLoginViewController () <UITextFieldDelegate>
 
@@ -16,6 +17,7 @@
 @property(weak, nonatomic) IBOutlet MCDTextFormField *usernameField;
 @property(weak, nonatomic) IBOutlet MCDTextFormField *passwordField;
 @property(weak, nonatomic) IBOutlet MCDButtonView    *loginButton;
+@property(nonatomic, weak) IBOutlet UIButton         *toSignupButton;
 
 @end
 
@@ -47,7 +49,17 @@
                 // TODO: login
                 return;
             }
-        }];
+        }
+    ];
+
+    [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            NSString *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
+            MCDSignupContainerViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    ];
 }
 
 #pragma mark - UITextFieldDelegate

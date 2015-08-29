@@ -15,4 +15,6 @@ IB_DESIGNABLE
 
 @property(nonatomic, weak) IBInspectable UIImage* avatarImage;
 
++ (UIImage *)defaultAvatarImage;
+
 @end

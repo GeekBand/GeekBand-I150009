@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="7Se-lq-EzO">
             <objects>
-                <viewController id="sck-TL-Gu2" customClass="MCDLoginViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="sck-TL-Gu2" customClass="MCDLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="by2-uN-UhF"/>
                         <viewControllerLayoutGuide type="bottom" id="RfK-p4-8m4"/>
@@ -124,6 +124,7 @@
                         <outlet property="loginButton" destination="VHI-9x-Yq2" id="n6k-hH-mvO"/>
                         <outlet property="logoImageView" destination="xze-OA-ns1" id="da4-jZ-eqO"/>
                         <outlet property="passwordField" destination="0cE-Lv-5iP" id="7df-ep-rFk"/>
+                        <outlet property="toSignupButton" destination="s2d-Ht-gIz" id="vbe-fu-O5j"/>
                         <outlet property="usernameField" destination="wqc-tk-bvU" id="Z05-Q3-8rx"/>
                     </connections>
                 </viewController>
@@ -131,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="37" y="354"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Container View Controller-->
         <scene sceneID="6gI-A3-BWO">
             <objects>
-                <viewController id="Ulb-7n-q2A" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCDSignupContainerViewController" modalTransitionStyle="flipHorizontal" id="Ulb-7n-q2A" customClass="MCDSignupContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DlX-NE-faK"/>
                         <viewControllerLayoutGuide type="bottom" id="2lG-kk-yBz"/>
@@ -152,7 +153,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uet-vx-jFq">
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uet-vx-jFq">
                                 <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                             </scrollView>
                         </subviews>
@@ -167,15 +168,19 @@
                             <constraint firstItem="9Hp-y6-Rvr" firstAttribute="leading" secondItem="xio-6B-5YG" secondAttribute="leading" id="yav-gh-dLv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="rz6-aC-GrH" id="4MY-nA-7tE"/>
+                        <outlet property="scrollView" destination="uet-vx-jFq" id="xJe-D6-Bga"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSQ-Fa-ZiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="354"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Content View Controller-->
         <scene sceneID="HVj-1B-iI8">
             <objects>
-                <viewController id="rZw-MA-KcT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCDSignupContentViewController" id="rZw-MA-KcT" customClass="MCDSignupContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9P-Ve-Bfe"/>
                         <viewControllerLayoutGuide type="bottom" id="YtL-4U-FDf"/>
@@ -285,6 +290,14 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="498"/>
+                    <connections>
+                        <outlet property="avatarView" destination="RlZ-of-jdV" id="78Y-HZ-X2x"/>
+                        <outlet property="emailTextFormField" destination="TNz-u2-B4h" id="uK0-bD-bdT"/>
+                        <outlet property="passwordTextFormField" destination="gis-uK-AmG" id="0TN-hV-3tT"/>
+                        <outlet property="signupButton" destination="JBr-io-AXb" id="ZIT-R3-Ccz"/>
+                        <outlet property="toLoginButton" destination="dQL-IS-LDb" id="SKa-Hq-fVy"/>
+                        <outlet property="usernameTextFormField" destination="nBO-hW-qoz" id="RS2-vz-8jp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T15-KA-fuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

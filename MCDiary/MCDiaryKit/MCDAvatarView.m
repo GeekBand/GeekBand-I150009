@@ -16,7 +16,16 @@
     [self.button setImage:avatarImage forState:UIControlStateNormal];
 
     self.button.layer.cornerRadius = self.button.bounds.size.width / 2.f;
-    self.button.clipsToBounds = YES;
+    self.button.clipsToBounds      = YES;
 }
+
++ (UIImage *)defaultAvatarImage
+{
+    UIImage *image = [UIImage imageNamed:@"Avatar"
+                                inBundle:[NSBundle bundleForClass:[self class]]
+           compatibleWithTraitCollection:nil];
+    return image;
+}
+
 
 @end

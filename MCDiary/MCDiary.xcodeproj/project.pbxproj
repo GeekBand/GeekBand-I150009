@@ -37,10 +37,13 @@
 		D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */; };
 		D715748D8283647564751954 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157599303790267B230DF1 /* MCDHomeViewController.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
+		D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */; };
 		D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */; };
 		D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
 		D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */; };
+		D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */; };
+		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,15 +126,21 @@
 		D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCDiaryKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D715702E68F282071E4ED827 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D715708364A73ABAAF5628DD /* MCDSignupContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContainerViewController.h; sourceTree = "<group>"; };
+		D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewModel.m; sourceTree = "<group>"; };
+		D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewController.m; sourceTree = "<group>"; };
 		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		D715736E1351EA20CE986083 /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContainerViewController.m; sourceTree = "<group>"; };
 		D7157599303790267B230DF1 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
 		D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
+		D71577AAA7E125B8328D9E59 /* MCDSignupContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewModel.h; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
+		D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
 		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D7157C182BA005319D29D099 /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
@@ -422,6 +431,10 @@
 			children = (
 				D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */,
 				D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */,
+				D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */,
+				D715708364A73ABAAF5628DD /* MCDSignupContainerViewController.h */,
+				D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */,
+				D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -431,6 +444,8 @@
 			children = (
 				D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */,
 				D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */,
+				D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */,
+				D71577AAA7E125B8328D9E59 /* MCDSignupContentViewModel.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -710,6 +725,9 @@
 				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
 				D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */,
 				D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */,
+				D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */,
+				D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */,
+				D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
