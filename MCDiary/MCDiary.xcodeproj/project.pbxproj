@@ -25,10 +25,11 @@
 		249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFC1B8F537100C2A3CF /* Images.xcassets */; };
 		249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */; };
 		249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */; };
+		249BEC031B9035BF00C2A3CF /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BEC021B9035BF00C2A3CF /* MCDAvatarView.xib */; };
+		249BEC061B90370100C2A3CF /* MCDAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEC041B90370100C2A3CF /* MCDAvatarView.h */; };
+		249BEC071B90370100C2A3CF /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEC051B90370100C2A3CF /* MCDAvatarView.m */; };
 		30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260165B44A98B3B1828B07C /* libPods-MCDiary.a */; };
 		667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */; };
 		D715704DBE7017E744F43804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157186918912F6DF4E5A22 /* README.md */; };
 		D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715702E68F282071E4ED827 /* MCDHomeViewModel.m */; };
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
@@ -113,6 +114,9 @@
 		249BEBFC1B8F537100C2A3CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
 		249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
+		249BEC021B9035BF00C2A3CF /* MCDAvatarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDAvatarView.xib; sourceTree = "<group>"; };
+		249BEC041B90370100C2A3CF /* MCDAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAvatarView.h; sourceTree = "<group>"; };
+		249BEC051B90370100C2A3CF /* MCDAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAvatarView.m; sourceTree = "<group>"; };
 		40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7D062F7380464731C18E59AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +148,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */,
-				34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */,
 				667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,7 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */,
 				30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				249BEBD51B8F4ABA00C2A3CF /* MCDiaryKit.h */,
+				249BEBFC1B8F537100C2A3CF /* Images.xcassets */,
 				249BEBD31B8F4ABA00C2A3CF /* Supporting Files */,
 				249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */,
 				249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */,
@@ -238,9 +241,11 @@
 				249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */,
 				249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */,
 				249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */,
-				249BEBFC1B8F537100C2A3CF /* Images.xcassets */,
 				249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */,
 				249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */,
+				249BEC021B9035BF00C2A3CF /* MCDAvatarView.xib */,
+				249BEC041B90370100C2A3CF /* MCDAvatarView.h */,
+				249BEC051B90370100C2A3CF /* MCDAvatarView.m */,
 			);
 			path = MCDiaryKit;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				249BEBF81B8F50D000C2A3CF /* MCDCustomView.h in Headers */,
 				249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */,
 				249BEBF41B8F4B6F00C2A3CF /* MCDButtonView.h in Headers */,
+				249BEC061B90370100C2A3CF /* MCDAvatarView.h in Headers */,
 				249BEBD61B8F4ABA00C2A3CF /* MCDiaryKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +603,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249BEC031B9035BF00C2A3CF /* MCDAvatarView.xib in Resources */,
 				249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */,
 				249BEBFB1B8F52E000C2A3CF /* MCDTextFormField.xib in Resources */,
 				249BEBF11B8F4AF100C2A3CF /* MCDButtonView.xib in Resources */,
@@ -718,6 +725,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				249BEC071B90370100C2A3CF /* MCDAvatarView.m in Sources */,
 				249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */,
 				249BEBF91B8F50D000C2A3CF /* MCDCustomView.m in Sources */,
 				249BEBF51B8F4B6F00C2A3CF /* MCDButtonView.m in Sources */,

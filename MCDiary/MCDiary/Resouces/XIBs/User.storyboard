@@ -34,6 +34,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有帐号？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JI-Fi-xtM">
                                 <rect key="frame" x="25" y="530" width="84" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="YDd-hR-Wo6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.14901960784313725" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,17 +64,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-tk-bvU" customClass="MCDTextFormField">
-                                <rect key="frame" x="25" y="323" width="270" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9m0-f8-hR0"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHq-Is-9nX">
                                 <rect key="frame" x="0.0" y="548" width="320" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,6 +82,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-tk-bvU" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="323" width="270" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9m0-f8-hR0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,10 +104,10 @@
                             <constraint firstItem="pFN-xV-hU4" firstAttribute="leading" secondItem="13Q-2Q-OsS" secondAttribute="leading" id="Khe-sU-74V"/>
                             <constraint firstItem="VHI-9x-Yq2" firstAttribute="leading" secondItem="13Q-2Q-OsS" secondAttribute="leading" constant="25" id="Lgk-J9-jtD"/>
                             <constraint firstItem="VHI-9x-Yq2" firstAttribute="top" secondItem="0cE-Lv-5iP" secondAttribute="bottom" constant="20" id="O1a-hG-ytG"/>
+                            <constraint firstItem="pFN-xV-hU4" firstAttribute="top" secondItem="by2-uN-UhF" secondAttribute="bottom" id="VId-Zc-avH"/>
                             <constraint firstItem="wqc-tk-bvU" firstAttribute="leading" secondItem="13Q-2Q-OsS" secondAttribute="leading" constant="25" id="YZ7-VA-M1u"/>
                             <constraint firstItem="RfK-p4-8m4" firstAttribute="top" secondItem="cHq-Is-9nX" secondAttribute="bottom" id="YcV-EK-5EG"/>
                             <constraint firstItem="cHq-Is-9nX" firstAttribute="top" secondItem="s2d-Ht-gIz" secondAttribute="bottom" id="ZNX-Mq-sIt"/>
-                            <constraint firstItem="pFN-xV-hU4" firstAttribute="top" secondItem="13Q-2Q-OsS" secondAttribute="top" constant="20" id="agM-m0-T7l"/>
                             <constraint firstItem="cHq-Is-9nX" firstAttribute="top" secondItem="4JI-Fi-xtM" secondAttribute="bottom" id="aij-q2-PfM"/>
                             <constraint firstAttribute="trailing" secondItem="0cE-Lv-5iP" secondAttribute="trailing" constant="25" id="eOC-VA-OTh"/>
                             <constraint firstAttribute="trailing" secondItem="s2d-Ht-gIz" secondAttribute="trailing" constant="25" id="fFP-vF-tQT"/>
@@ -128,8 +131,168 @@
             </objects>
             <point key="canvasLocation" x="37" y="354"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6gI-A3-BWO">
+            <objects>
+                <viewController id="Ulb-7n-q2A" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlX-NE-faK"/>
+                        <viewControllerLayoutGuide type="bottom" id="2lG-kk-yBz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xio-6B-5YG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="萌宠日记.x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hp-y6-Rvr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ucw-TA-yGz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uet-vx-jFq">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uet-vx-jFq" firstAttribute="top" secondItem="9Hp-y6-Rvr" secondAttribute="bottom" id="CGc-6H-C26"/>
+                            <constraint firstItem="9Hp-y6-Rvr" firstAttribute="top" secondItem="DlX-NE-faK" secondAttribute="bottom" id="Ky0-So-NVf"/>
+                            <constraint firstAttribute="trailing" secondItem="uet-vx-jFq" secondAttribute="trailing" id="Uhi-tw-qnP"/>
+                            <constraint firstItem="uet-vx-jFq" firstAttribute="leading" secondItem="xio-6B-5YG" secondAttribute="leading" id="fQO-w0-GY4"/>
+                            <constraint firstAttribute="trailing" secondItem="9Hp-y6-Rvr" secondAttribute="trailing" id="p1c-ci-VuK"/>
+                            <constraint firstItem="2lG-kk-yBz" firstAttribute="top" secondItem="uet-vx-jFq" secondAttribute="bottom" id="rz6-aC-GrH"/>
+                            <constraint firstItem="9Hp-y6-Rvr" firstAttribute="leading" secondItem="xio-6B-5YG" secondAttribute="leading" id="yav-gh-dLv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSQ-Fa-ZiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HVj-1B-iI8">
+            <objects>
+                <viewController id="rZw-MA-KcT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9P-Ve-Bfe"/>
+                        <viewControllerLayoutGuide type="bottom" id="YtL-4U-FDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NHj-Hh-7x6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlZ-of-jdV" customClass="MCDAvatarView">
+                                <rect key="frame" x="118" y="20" width="85" height="85"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Ehe-NL-Jy4"/>
+                                    <constraint firstAttribute="height" constant="85" id="J0x-SW-V5B"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="avatarImage" value="AvatarDemo"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBO-hW-qoz" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="180" width="270" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5RS-CV-2cf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gis-uK-AmG" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="250" width="270" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sHC-8Q-YS5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="密码"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请输入密码"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-io-AXb" customClass="MCDButtonView">
+                                <rect key="frame" x="25" y="390" width="270" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kWN-ev-frg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="注册"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经有帐号？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZB-bX-2NZ">
+                                <rect key="frame" x="25" y="460" width="84" height="18"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <color key="textColor" red="0.1137254902" green="0.1137254902" blue="0.14901960780000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQL-IS-LDb">
+                                <rect key="frame" x="253" y="457" width="42" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="gg9-ju-Tw4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                <state key="normal" title="去登录">
+                                    <color key="titleColor" red="0.1137254902" green="0.1137254902" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNz-u2-B4h" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="320" width="270" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="v91-Xr-ICK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="邮箱（可选，仅用于找回密码）"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请输入邮箱（可选）"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YtL-4U-FDf" firstAttribute="top" secondItem="dQL-IS-LDb" secondAttribute="bottom" constant="23" id="1PO-dV-Xko"/>
+                            <constraint firstAttribute="centerX" secondItem="RlZ-of-jdV" secondAttribute="centerX" id="3hC-UT-JFF"/>
+                            <constraint firstItem="JBr-io-AXb" firstAttribute="leading" secondItem="NHj-Hh-7x6" secondAttribute="leading" constant="25" id="3n1-B5-g33"/>
+                            <constraint firstAttribute="trailing" secondItem="TNz-u2-B4h" secondAttribute="trailing" constant="25" id="Bht-Cr-5Xy"/>
+                            <constraint firstAttribute="trailing" secondItem="nBO-hW-qoz" secondAttribute="trailing" constant="25" id="DKJ-1p-p7r"/>
+                            <constraint firstItem="YtL-4U-FDf" firstAttribute="top" secondItem="BZB-bX-2NZ" secondAttribute="bottom" constant="20" id="E9l-nB-4zB"/>
+                            <constraint firstAttribute="trailing" secondItem="JBr-io-AXb" secondAttribute="trailing" constant="25" id="Fl4-68-VMH"/>
+                            <constraint firstAttribute="trailing" secondItem="gis-uK-AmG" secondAttribute="trailing" constant="25" id="HIw-4B-5cH"/>
+                            <constraint firstItem="TNz-u2-B4h" firstAttribute="top" secondItem="gis-uK-AmG" secondAttribute="bottom" constant="20" id="M65-42-taB"/>
+                            <constraint firstItem="gis-uK-AmG" firstAttribute="leading" secondItem="NHj-Hh-7x6" secondAttribute="leading" constant="25" id="OIG-sL-6yR"/>
+                            <constraint firstItem="TNz-u2-B4h" firstAttribute="leading" secondItem="NHj-Hh-7x6" secondAttribute="leading" constant="25" id="PdG-kY-obu"/>
+                            <constraint firstItem="nBO-hW-qoz" firstAttribute="leading" secondItem="NHj-Hh-7x6" secondAttribute="leading" constant="25" id="Svy-Uh-Egt"/>
+                            <constraint firstItem="dQL-IS-LDb" firstAttribute="top" secondItem="JBr-io-AXb" secondAttribute="bottom" constant="17" id="aDg-if-NVL"/>
+                            <constraint firstItem="JBr-io-AXb" firstAttribute="top" secondItem="TNz-u2-B4h" secondAttribute="bottom" constant="20" id="ayd-i0-83D"/>
+                            <constraint firstItem="BZB-bX-2NZ" firstAttribute="leading" secondItem="NHj-Hh-7x6" secondAttribute="leading" constant="25" id="bd8-Iv-5sj"/>
+                            <constraint firstItem="RlZ-of-jdV" firstAttribute="top" secondItem="d9P-Ve-Bfe" secondAttribute="bottom" constant="20" id="kcU-IR-nWL"/>
+                            <constraint firstAttribute="trailing" secondItem="dQL-IS-LDb" secondAttribute="trailing" constant="25" id="mnj-2t-yNv"/>
+                            <constraint firstItem="gis-uK-AmG" firstAttribute="top" secondItem="nBO-hW-qoz" secondAttribute="bottom" constant="20" id="xFZ-3Z-GFQ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="498"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T15-KA-fuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="389"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="AvatarDemo" width="85" height="85"/>
         <image name="Logo" width="129" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
