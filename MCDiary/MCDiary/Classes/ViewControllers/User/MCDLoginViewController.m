@@ -6,17 +6,20 @@
 #import "MCDLoginViewController.h"
 #import "MCDSignupContainerViewController.h"
 #import "MCDLoginViewModel.h"
+
 @import MCDiaryKit;
 
-@interface MCDLoginViewController () <UITextFieldDelegate>
+@interface MCDLoginViewController ()
 
-@property(weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
-@property(weak, nonatomic) IBOutlet UIImageView        *logoImageView;
+@property(nonatomic, weak) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
+@property(nonatomic, weak) IBOutlet UIImageView        *logoImageView;
 
-@property(weak, nonatomic) IBOutlet MCDTextFormField *usernameField;
-@property(weak, nonatomic) IBOutlet MCDTextFormField *passwordField;
-@property(weak, nonatomic) IBOutlet MCDButtonView    *loginButton;
+@property(nonatomic, weak) IBOutlet MCDTextFormField *usernameField;
+@property(nonatomic, weak) IBOutlet MCDTextFormField *passwordField;
+@property(nonatomic, weak) IBOutlet MCDButtonView    *loginButton;
 @property(nonatomic, weak) IBOutlet UIButton         *toSignupButton;
+
+@property(nonatomic, weak) UITextField *activeField;
 
 @end
 
@@ -31,6 +34,7 @@
     [super viewDidLoad];
     self.viewModel = [[MCDLoginViewModel alloc] init];
 
+    [self initBinding];
     [self registerKeyBoardObserver];
     [self registerButtonObserver];
 }
@@ -40,36 +44,42 @@
     @weakify(self);
 
     [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
-            @strongify(self);
-            [self.viewModel validate];
-            [self updateFormField];
-            if (self.viewModel.isValid) {
-                // TODO: login
-                return;
-            }
+        @strongify(self);
+        [self.activeField resignFirstResponder];
+        [self.viewModel validate];
+        [self updateFormField];
+        if (self.viewModel.isValid) {
+            // TODO: login
+            return;
         }
+    }
     ];
 
     [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
         subscribeNext:^(id x) {
             @strongify(self);
-            NSString *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
-            MCDSignupContainerViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
+            NSString                         *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
+            MCDSignupContainerViewController *vc   = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
             [self presentViewController:vc animated:YES completion:nil];
         }
     ];
 }
 
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    [textField resignFirstResponder];
-    return YES;
-}
-
 #pragma mark - private
+
+- (void)initBinding
+{
+    @weakify(self);
+    [[[RACSignal merge:@[
+        self.usernameField.textFieldBeginEditingSignal,
+        self.passwordField.textFieldBeginEditingSignal
+    ]] map:^id(RACTuple *tuple) {
+        return tuple.first;
+    }] subscribeNext:^(UITextField *textField) {
+        @strongify(self);
+        self.activeField = textField;
+    }];
+}
 
 - (void)registerKeyBoardObserver
 {
@@ -100,9 +110,6 @@
                                  [self.view layoutIfNeeded];
                              }];
         }];
-
-    self.usernameField.textField.delegate = self;
-    self.passwordField.textField.delegate = self;
 
     RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
     RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];

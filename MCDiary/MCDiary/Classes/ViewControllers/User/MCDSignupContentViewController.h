@@ -11,6 +11,6 @@
 
 @property(nonatomic, strong) MCDSignupContentViewModel *viewModel;
 
-@property(nonatomic, weak, readonly) UITextField *activeField;
+@property(nonatomic, strong, readonly) UITextField *activeField;
 
 @end

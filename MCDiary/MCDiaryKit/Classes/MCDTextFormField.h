@@ -8,6 +8,8 @@
 
 #import "MCDCustomView.h"
 
+@class RACSignal;
+
 typedef NS_ENUM(NSUInteger, MCDTextFormFieldState)
 {
     MCDTextFormFieldStateNormal,
@@ -17,15 +19,18 @@ typedef NS_ENUM(NSUInteger, MCDTextFormFieldState)
 IB_DESIGNABLE
 @interface MCDTextFormField : MCDCustomView
 
-@property(weak, nonatomic) IBOutlet UILabel     *titleLabel;
-@property(weak, nonatomic) IBOutlet UITextField *textField;
-@property(weak, nonatomic) IBOutlet UIButton    *assessoryButton;
+@property(nonatomic, weak) IBOutlet UILabel     *titleLabel;
+@property(nonatomic, weak) IBOutlet UITextField *textField;
+@property(nonatomic, weak) IBOutlet UIButton    *assessoryButton;
 
-@property(copy, nonatomic) IBInspectable NSString *titleText;
-@property(copy, nonatomic) IBInspectable NSString *hintText;
-@property(assign, nonatomic) IBInspectable BOOL   isPassword;
-@property(assign, nonatomic) IBInspectable BOOL   needAssessoryButton;
+@property(nonatomic, copy) IBInspectable NSString *titleText;
+@property(nonatomic, copy) IBInspectable NSString *hintText;
+@property(nonatomic, assign) IBInspectable BOOL   isPassword;
+@property(nonatomic, assign) IBInspectable BOOL   needAssessoryButton;
 
-@property(assign, nonatomic) MCDTextFormFieldState state;
+@property(nonatomic, assign) MCDTextFormFieldState state;
+
+@property(nonatomic, strong, readonly) RACSignal *textFieldBeginEditingSignal;
+@property(nonatomic, strong, readonly) RACSignal *textFieldShouldReturnSignal;
 
 @end

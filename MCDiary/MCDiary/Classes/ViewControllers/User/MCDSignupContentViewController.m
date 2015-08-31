@@ -6,11 +6,11 @@
 #import "MCDSignupContentViewController.h"
 #import "MCDSignupContentViewModel.h"
 #import "RSKImageCropViewController.h"
+
 @import MCDiaryKit;
 
 @interface MCDSignupContentViewController ()
-    <UITextFieldDelegate,
-    UIImagePickerControllerDelegate,
+    <UIImagePickerControllerDelegate,
     UINavigationControllerDelegate,
     RSKImageCropViewControllerDelegate>
 
@@ -25,7 +25,7 @@
 
 @implementation MCDSignupContentViewController
 {
-
+    __block UITextField *_activeField;
 }
 
 @synthesize viewModel = _viewModel;
@@ -36,14 +36,65 @@
 {
     [super viewDidLoad];
 
-    // init UI
-    self.usernameTextFormField.textField.delegate = self;
-    self.passwordTextFormField.textField.delegate = self;
-    self.emailTextFormField.textField.delegate    = self;
-
     self.viewModel             = [[MCDSignupContentViewModel alloc] init];
     self.viewModel.avatarImage = [MCDAvatarView defaultAvatarImage];
 
+    [self initBinding];
+    [self initButtonControls];
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent
+{
+    [super didMoveToParentViewController:parent];
+
+    [self.view layoutIfNeeded];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+//    self.viewModel.avatarImage = image;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
+    RSKImageCropViewController *imageCropVC = [[RSKImageCropViewController alloc] initWithImage:image];
+    imageCropVC.delegate = self;
+    [self presentViewController:imageCropVC animated:YES completion:nil];
+}
+
+#pragma mark - RSKImageCropViewControllerDelegate
+
+// Crop image has been canceled.
+- (void)imageCropViewControllerDidCancelCrop:(RSKImageCropViewController *)controller
+{
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+// The original image has been cropped.
+- (void)imageCropViewController:(RSKImageCropViewController *)controller
+                   didCropImage:(UIImage *)croppedImage
+                  usingCropRect:(CGRect)cropRect
+{
+    self.viewModel.avatarImage = croppedImage;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+// The original image has been cropped. Additionally provides a rotation angle used to produce image.
+- (void)imageCropViewController:(RSKImageCropViewController *)controller
+                   didCropImage:(UIImage *)croppedImage
+                  usingCropRect:(CGRect)cropRect
+                  rotationAngle:(CGFloat)rotationAngle
+{
+    self.viewModel.avatarImage = croppedImage;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - private
+
+- (void)initBinding
+{
     @weakify(self);
 
     // V to VM binding
@@ -91,16 +142,33 @@
         }
     }];
 
+    // events
+    [[RACSignal merge:@[
+        self.usernameTextFormField.textFieldBeginEditingSignal,
+        self.passwordTextFormField.textFieldBeginEditingSignal,
+        self.emailTextFormField.textFieldBeginEditingSignal
+    ]] subscribeNext:^(RACTuple *tuple) {
+        @strongify(self);
+        _activeField = tuple.first;
+    }];
+}
+
+- (void)initButtonControls
+{
+    @weakify(self);
+
     // buttons
     [[self.toLoginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
     }];
+
     [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
         [self.viewModel validate];
     }];
+
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil
@@ -127,69 +195,6 @@
         [self presentViewController:sheet animated:YES completion:nil];
     }];
 }
-
-- (void)didMoveToParentViewController:(UIViewController *)parent
-{
-    [super didMoveToParentViewController:parent];
-
-    [self.view layoutIfNeeded];
-}
-
-#pragma mark - UITextFieldDelegate
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    _activeField = textField;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
-
-#pragma mark - UIImagePickerControllerDelegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
-//    self.viewModel.avatarImage = image;
-    [picker dismissViewControllerAnimated:YES completion:nil];
-
-    RSKImageCropViewController *imageCropVC = [[RSKImageCropViewController alloc] initWithImage:image];
-    imageCropVC.delegate = self;
-    [self presentViewController:imageCropVC animated:YES completion:nil];
-}
-
-#pragma mark - RSKImageCropViewControllerDelegate
-
-// Crop image has been canceled.
-- (void)imageCropViewControllerDidCancelCrop:(RSKImageCropViewController *)controller
-{
-    [controller dismissViewControllerAnimated:YES completion:nil];
-}
-
-// The original image has been cropped.
-- (void)imageCropViewController:(RSKImageCropViewController *)controller
-                   didCropImage:(UIImage *)croppedImage
-                  usingCropRect:(CGRect)cropRect
-{
-    self.viewModel.avatarImage = croppedImage;
-    [controller dismissViewControllerAnimated:YES completion:nil];
-}
-
-// The original image has been cropped. Additionally provides a rotation angle used to produce image.
-- (void)imageCropViewController:(RSKImageCropViewController *)controller
-                   didCropImage:(UIImage *)croppedImage
-                  usingCropRect:(CGRect)cropRect
-                  rotationAngle:(CGFloat)rotationAngle
-{
-    self.viewModel.avatarImage = croppedImage;
-    [controller dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - private
 
 - (void)presentImagePicker:(UIImagePickerControllerSourceType)sourceType
 {

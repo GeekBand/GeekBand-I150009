@@ -6,13 +6,28 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
+#import <HexColors/HexColors.h>
 #import "MCDTextFormField.h"
 
-@interface MCDTextFormField ()
+@interface MCDTextFormField () <UITextFieldDelegate>
 
 @end
 
 @implementation MCDTextFormField
+
+@synthesize textFieldBeginEditingSignal = _textFieldBeginEditingSignal;
+@synthesize textFieldShouldReturnSignal = _textFieldShouldReturnSignal;
+
+#pragma mark - life cycle
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.textField.delegate = self;
+
+    _textFieldBeginEditingSignal = [self rac_signalForSelector:@selector(textFieldShouldBeginEditing:)];
+    _textFieldShouldReturnSignal = [self rac_signalForSelector:@selector(textFieldShouldReturn:)];
+}
 
 #pragma mark - getter & setter
 
@@ -50,5 +65,19 @@
             self.titleLabel.textColor = [UIColor colorWithHexString:@"#1D1D26" alpha:0.5f];
     }
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 @end
