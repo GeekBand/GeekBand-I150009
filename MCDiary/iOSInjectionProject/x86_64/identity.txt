@@ -1,0 +1,2 @@
+/Users/zzdjk6/Library/Developer/Xcode/DerivedData/MCDiary-bkiutwtpjctursdvwgztmxwwuthc/Build/Products/Debug-iphonesimulator/MCDiary.app
+

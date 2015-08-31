@@ -1,17 +1,30 @@
 platform :ios, '8.0'
 use_frameworks!
 
-link_with 'MCDiary', 'MCDiaryKit'
+target :MCDiary do
+  pod 'ReactiveCocoa'
+  pod 'CocoaLumberjack', :inhibit_warnings => true
+  pod 'HexColors'
+  pod 'Masonry'
+  pod 'AVOSCloudDynamic'
+  pod 'AVOSCloudIMDynamic'
+  pod 'AVOSCloudCrashReportingDynamic'
+  pod 'RegExCategories'
+  pod 'RSKImageCropper'
+  pod 'SVProgressHUD'
+  pod 'DLRadioButton'
+  pod 'DateTools'
+end
 
-pod 'ReactiveCocoa'
-pod 'CocoaLumberjack', :inhibit_warnings => true
-pod 'HexColors'
-pod 'Masonry'
-pod 'AVOSCloudDynamic'
-pod 'AVOSCloudIMDynamic'
-pod 'AVOSCloudCrashReportingDynamic'
-pod 'RegExCategories'
-pod 'RSKImageCropper'
-pod 'SVProgressHUD'
+target :MCDiaryKit do
+  pod 'ReactiveCocoa'
+  pod 'CocoaLumberjack', :inhibit_warnings => true
+  pod 'HexColors'
+  pod 'Masonry'
+  pod 'RegExCategories'
+  pod 'DLRadioButton'
+end
+
+
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sck-TL-Gu2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nqR-8B-pxk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Login View Controller-->
         <scene sceneID="7Se-lq-EzO">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="sck-TL-Gu2" customClass="MCDLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCDLoginViewController" modalTransitionStyle="flipHorizontal" id="sck-TL-Gu2" customClass="MCDLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="by2-uN-UhF"/>
                         <viewControllerLayoutGuide type="bottom" id="RfK-p4-8m4"/>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGF-ya-BFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37" y="354"/>
+            <point key="canvasLocation" x="53" y="354"/>
         </scene>
         <!--Signup Container View Controller-->
         <scene sceneID="6gI-A3-BWO">
@@ -169,7 +169,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomConstraint" destination="rz6-aC-GrH" id="4MY-nA-7tE"/>
                         <outlet property="scrollView" destination="uet-vx-jFq" id="xJe-D6-Bga"/>
                     </connections>
                 </viewController>
@@ -301,7 +300,182 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T15-KA-fuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="389"/>
+            <point key="canvasLocation" x="731" y="389"/>
+        </scene>
+        <!--User Info Container View Controller-->
+        <scene sceneID="VZG-Vc-6u7">
+            <objects>
+                <viewController storyboardIdentifier="MCDUserInfoContainerViewController" id="nqR-8B-pxk" customClass="MCDUserInfoContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jU9-M5-Njt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2cH-3d-roe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="byY-o3-3yO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SQ-Nd-cqP">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8SQ-Nd-cqP" firstAttribute="leading" secondItem="byY-o3-3yO" secondAttribute="leading" id="4nU-lR-z5w"/>
+                            <constraint firstAttribute="trailing" secondItem="8SQ-Nd-cqP" secondAttribute="trailing" id="BEi-dg-oTc"/>
+                            <constraint firstItem="8SQ-Nd-cqP" firstAttribute="top" secondItem="jU9-M5-Njt" secondAttribute="bottom" constant="30" id="Lni-qq-54h"/>
+                            <constraint firstItem="2cH-3d-roe" firstAttribute="top" secondItem="8SQ-Nd-cqP" secondAttribute="bottom" id="z8i-yR-ih9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="8SQ-Nd-cqP" id="y7i-zV-Xrt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXh-GO-OmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="354"/>
+        </scene>
+        <!--User Info Content View Controller-->
+        <scene sceneID="VAu-ED-h8I">
+            <objects>
+                <viewController storyboardIdentifier="MCDUserInfoContentViewController" id="hoO-iX-j4H" customClass="MCDUserInfoContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h8A-Bm-ucI"/>
+                        <viewControllerLayoutGuide type="bottom" id="8oV-ti-Cln"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CSG-9j-9fP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKQ-lK-5tu" customClass="MCDAvatarView">
+                                <rect key="frame" x="118" y="0.0" width="85" height="85"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="3en-KL-RYl"/>
+                                    <constraint firstAttribute="width" constant="85" id="Mfj-ce-uda"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boG-LE-oMF" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="105" width="270" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hCN-Ge-aLX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-nt-0Gn" customClass="MCDTextFormField">
+                                <rect key="frame" x="25" y="175" width="270" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wad-AN-rFK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="邮箱（可选，仅用于找回密码）"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请输入邮箱（可选）"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-Tp-Imu" customClass="MCDButtonView">
+                                <rect key="frame" x="165" y="448" width="130" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="90I-1u-m5u"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZeY-BI-YeE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="保存修改"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-RR-iHe" customClass="MCDButtonFormField">
+                                <rect key="frame" x="25" y="315" width="270" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tMT-cf-TC1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="1991年 01月 01日"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkr-Q8-FUn" customClass="MCDButtonFormField">
+                                <rect key="frame" x="25" y="385" width="270" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="b3t-Ha-gSO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="我的所在地"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="浙江省 杭州市"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBf-Nh-UrU" customClass="MCDButtonView">
+                                <rect key="frame" x="25" y="448" width="130" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yrc-k3-L7z"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="trq-xi-Uw7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="更改密码"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hav-b4-0MQ" customClass="MCDRadioFormField">
+                                <rect key="frame" x="25" y="245" width="270" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MGt-Bg-68j"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNd-RR-iHe" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="17e-dI-hBS"/>
+                            <constraint firstItem="hav-b4-0MQ" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="2BD-WS-utq"/>
+                            <constraint firstItem="8oV-ti-Cln" firstAttribute="top" secondItem="kBf-Nh-UrU" secondAttribute="bottom" constant="20" id="2IK-fP-FjF"/>
+                            <constraint firstAttribute="trailing" secondItem="Gkr-Q8-FUn" secondAttribute="trailing" constant="25" id="8Jf-xu-EEe"/>
+                            <constraint firstItem="boG-LE-oMF" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="CZE-0z-Pme"/>
+                            <constraint firstItem="kBf-Nh-UrU" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="D4X-QR-JDO"/>
+                            <constraint firstItem="AE0-nt-0Gn" firstAttribute="top" secondItem="boG-LE-oMF" secondAttribute="bottom" constant="20" id="FsN-Wy-pKm"/>
+                            <constraint firstItem="8oV-ti-Cln" firstAttribute="top" secondItem="Xdg-Tp-Imu" secondAttribute="bottom" constant="20" id="Gr5-2z-tc8"/>
+                            <constraint firstAttribute="centerX" secondItem="PKQ-lK-5tu" secondAttribute="centerX" id="J8h-yq-FYc"/>
+                            <constraint firstItem="Gkr-Q8-FUn" firstAttribute="top" secondItem="dNd-RR-iHe" secondAttribute="bottom" constant="20" id="JPA-Qa-7Eg"/>
+                            <constraint firstAttribute="trailing" secondItem="AE0-nt-0Gn" secondAttribute="trailing" constant="25" id="NVa-Fd-Y0M"/>
+                            <constraint firstItem="Xdg-Tp-Imu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kBf-Nh-UrU" secondAttribute="trailing" constant="10" id="PHi-ZZ-uQs"/>
+                            <constraint firstAttribute="trailing" secondItem="dNd-RR-iHe" secondAttribute="trailing" constant="25" id="a9Z-fn-L4c"/>
+                            <constraint firstItem="AE0-nt-0Gn" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="afC-v9-Gte"/>
+                            <constraint firstItem="PKQ-lK-5tu" firstAttribute="top" secondItem="h8A-Bm-ucI" secondAttribute="bottom" id="eCv-0a-qhj"/>
+                            <constraint firstItem="kBf-Nh-UrU" firstAttribute="width" secondItem="Xdg-Tp-Imu" secondAttribute="width" id="h6X-Vv-ALG"/>
+                            <constraint firstItem="Gkr-Q8-FUn" firstAttribute="leading" secondItem="CSG-9j-9fP" secondAttribute="leading" constant="25" id="ihE-uf-VrP"/>
+                            <constraint firstItem="boG-LE-oMF" firstAttribute="top" secondItem="PKQ-lK-5tu" secondAttribute="bottom" constant="20" id="kY3-4d-09S"/>
+                            <constraint firstAttribute="trailing" secondItem="boG-LE-oMF" secondAttribute="trailing" constant="25" id="oC3-ns-0Vx"/>
+                            <constraint firstItem="hav-b4-0MQ" firstAttribute="top" secondItem="AE0-nt-0Gn" secondAttribute="bottom" constant="20" id="pOh-sr-Q1j"/>
+                            <constraint firstAttribute="trailing" secondItem="Xdg-Tp-Imu" secondAttribute="trailing" constant="25" id="shC-pt-6kP"/>
+                            <constraint firstAttribute="trailing" secondItem="hav-b4-0MQ" secondAttribute="trailing" constant="25" id="sl7-Fw-kvK"/>
+                            <constraint firstItem="dNd-RR-iHe" firstAttribute="top" secondItem="hav-b4-0MQ" secondAttribute="bottom" constant="20" id="yu7-UX-wHb"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="518"/>
+                    <connections>
+                        <outlet property="avatarView" destination="PKQ-lK-5tu" id="wM9-co-BzQ"/>
+                        <outlet property="birthdayField" destination="dNd-RR-iHe" id="Tpo-Kk-sMf"/>
+                        <outlet property="emailField" destination="AE0-nt-0Gn" id="xzf-5H-Ig0"/>
+                        <outlet property="genderField" destination="hav-b4-0MQ" id="GYE-dh-agS"/>
+                        <outlet property="locationField" destination="Gkr-Q8-FUn" id="rXJ-br-49q"/>
+                        <outlet property="usernameField" destination="boG-LE-oMF" id="h0o-OW-nXJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbU-Iv-N0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="379"/>
         </scene>
     </scenes>
     <resources>

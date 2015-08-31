@@ -20,3 +20,5 @@ FOUNDATION_EXPORT const unsigned char MCDiaryKitVersionString[];
 #import "MCDButtonView.h"
 #import "MCDTextFormField.h"
 #import "MCDAvatarView.h"
+#import "MCDRadioFormField.h"
+#import "MCDButtonFormField.h"

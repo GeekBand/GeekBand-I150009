@@ -1,0 +1,50 @@
+//
+//  MCDDiaryKitPrefixHeader.pch
+//  MCDiary
+//
+//  Created by zzdjk6 on 15/9/1.
+//  Copyright (c) 2015年 zzdjk6. All rights reserved.
+//
+
+#ifndef MCDiary_MCDDiaryKitPrefixHeader_pch
+#define MCDiary_MCDDiaryKitPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifndef __IPHONE_8_0
+#warning "This project uses features only available in iOS SDK 8.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+// Standard iOS Nonsense
+@import Foundation;
+@import UIKit;
+@import QuartzCore;
+
+// Logging
+//#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "CocoaLumberjack.h"
+
+// ReactiveCocoa
+#import "ReactiveCocoa/ReactiveCocoa.h"
+
+// Color
+#import "HexColors.h"
+
+// Useful Constants & Macros
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
+#define NSStringFromBOOL(b) (b) ? @"YES" : @"NO"
+#define DDLogVerbosePrettyFunction DDLogVerbose(@"%s", __PRETTY_FUNCTION__)
+
+#endif
+
+#endif
