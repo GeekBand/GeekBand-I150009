@@ -96,7 +96,7 @@
         @strongify(self);
         [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
     }];
-    [[self.signupButton.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+    [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
         [self.viewModel validate];

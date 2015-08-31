@@ -8,11 +8,15 @@
 
 #import "MCDCustomView.h"
 
+@class RACSignal;
+
 IB_DESIGNABLE
 @interface MCDButtonView : MCDCustomView
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
 @property (copy, nonatomic) IBInspectable NSString *buttonTitle;
+
+@property(nonatomic, assign, readonly) RACSignal *buttonPressSignal;
 
 @end

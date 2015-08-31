@@ -39,8 +39,7 @@
 {
     @weakify(self);
 
-    [[self.loginButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
-        subscribeNext:^(id x) {
+    [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
             @strongify(self);
             [self.viewModel validate];
             [self updateFormField];
