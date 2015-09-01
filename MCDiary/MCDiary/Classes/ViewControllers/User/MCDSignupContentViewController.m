@@ -21,11 +21,12 @@
 @property(nonatomic, weak) IBOutlet MCDTextFormField *emailTextFormField;
 @property(nonatomic, weak) IBOutlet MCDAvatarView    *avatarView;
 
+@property(nonatomic, strong) UITextField *activeField;
+
 @end
 
 @implementation MCDSignupContentViewController
 {
-    __block UITextField *_activeField;
 }
 
 @synthesize viewModel = _viewModel;
@@ -40,7 +41,6 @@
     self.viewModel.avatarImage = [MCDAvatarView defaultAvatarImage];
 
     [self initBinding];
-    [self initButtonControls];
 }
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
@@ -56,7 +56,6 @@
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-//    self.viewModel.avatarImage = image;
     [picker dismissViewControllerAnimated:YES completion:nil];
 
     RSKImageCropViewController *imageCropVC = [[RSKImageCropViewController alloc] initWithImage:image];
@@ -97,18 +96,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     @weakify(self);
 
-    // V to VM binding
-    RAC(self.viewModel, username)     = [self.usernameTextFormField.textField rac_textSignal];
-    RAC(self.viewModel, password)     = [self.passwordTextFormField.textField rac_textSignal];
-    RAC(self.viewModel, email)        = [[self.emailTextFormField.textField rac_textSignal]
-        map:^id(NSString *string) {
-            // trim
-            return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        }
-    ];
-    RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
-
-    // VM to V binding
+    // 用户名
+    RAC(self.viewModel, username) = [self.usernameTextFormField.textField rac_textSignal];
     [RACObserve(self.viewModel, usernameValid) subscribeNext:^(NSNumber *number) {
         @strongify(self);
         if ([number boolValue]) {
@@ -120,6 +109,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         }
     }];
 
+    // 密码
+    RAC(self.viewModel, password) = [self.passwordTextFormField.textField rac_textSignal];
     [RACObserve(self.viewModel, passwordValid) subscribeNext:^(NSNumber *number) {
         @strongify(self);
         if ([number boolValue]) {
@@ -131,6 +122,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         }
     }];
 
+    // 邮箱
+    RAC(self.viewModel, email) = [[self.emailTextFormField.textField rac_textSignal]
+        map:^id(NSString *string) {
+            // trim
+            return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        }
+    ];
     [RACObserve(self.viewModel, emailValid) subscribeNext:^(NSNumber *number) {
         @strongify(self);
         if ([number boolValue]) {
@@ -142,33 +140,33 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         }
     }];
 
-    // events
+    // 头像
+    RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
+
+    // activeField
     [[RACSignal merge:@[
         self.usernameTextFormField.textFieldBeginEditingSignal,
         self.passwordTextFormField.textFieldBeginEditingSignal,
         self.emailTextFormField.textFieldBeginEditingSignal
     ]] subscribeNext:^(RACTuple *tuple) {
         @strongify(self);
-        _activeField = tuple.first;
+        self.activeField = tuple.first;
     }];
-}
 
-- (void)initButtonControls
-{
-    @weakify(self);
-
-    // buttons
+    // 去登录
     [[self.toLoginButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
     }];
 
+    // 注册
     [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
         [self.viewModel validate];
     }];
 
+    // 换头像
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil

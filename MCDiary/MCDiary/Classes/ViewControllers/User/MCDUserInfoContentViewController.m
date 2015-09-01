@@ -62,7 +62,10 @@
 
     // 邮箱，初始值+输入绑定+错误提示
     self.emailField.textField.text = self.viewModel.email;
-    RAC(self.viewModel, email) = [self.emailField.textField rac_textSignal];
+    RAC(self.viewModel, email) = [[self.emailField.textField rac_textSignal] map:^id(NSString *string) {
+        // trim
+        return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    }];
     [RACObserve(self.viewModel, emailValid) subscribeNext:^(NSNumber *number) {
         if ([number boolValue]) {
             self.emailField.titleText = self.viewModel.emailNormalTitle;

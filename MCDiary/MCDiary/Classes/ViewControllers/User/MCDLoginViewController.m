@@ -35,34 +35,6 @@
     self.viewModel = [[MCDLoginViewModel alloc] init];
 
     [self initBinding];
-    [self registerKeyBoardObserver];
-    [self registerButtonObserver];
-}
-
-- (void)registerButtonObserver
-{
-    @weakify(self);
-
-    [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
-        @strongify(self);
-        [self.activeField resignFirstResponder];
-        [self.viewModel validate];
-        [self updateFormField];
-        if (self.viewModel.isValid) {
-            // TODO: login
-            return;
-        }
-    }
-    ];
-
-    [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-        subscribeNext:^(id x) {
-            @strongify(self);
-            NSString                         *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
-            MCDSignupContainerViewController *vc   = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
-            [self presentViewController:vc animated:YES completion:nil];
-        }
-    ];
 }
 
 #pragma mark - private
@@ -70,6 +42,12 @@
 - (void)initBinding
 {
     @weakify(self);
+
+    // 同步绑定用户名和密码
+    RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
+    RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];
+
+    // activeField
     [[[RACSignal merge:@[
         self.usernameField.textFieldBeginEditingSignal,
         self.passwordField.textFieldBeginEditingSignal
@@ -79,14 +57,33 @@
         @strongify(self);
         self.activeField = textField;
     }];
-}
 
-- (void)registerKeyBoardObserver
-{
-    @weakify(self);
+    // 按钮事件
+    [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        [self.activeField resignFirstResponder];
+        [self.viewModel validate];
+        [self updateFormField];
+        if (self.viewModel.isValid) {
+            // TODO: login
+            return;
+        }
+    }];
+
+    [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            NSString                         *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
+            MCDSignupContainerViewController *vc   = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    ];
+
+    // 监听键盘
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification
                                                            object:nil]
         subscribeNext:^(NSNotification *notification) {
+            @strongify(self);
             NSDictionary *info  = [notification userInfo];
             CGSize       kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 
@@ -102,6 +99,7 @@
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification
                                                            object:nil]
         subscribeNext:^(id x) {
+            @strongify(self);
             [UIView animateWithDuration:0.3f
                              animations:^{
                                  @strongify(self);
@@ -110,9 +108,6 @@
                                  [self.view layoutIfNeeded];
                              }];
         }];
-
-    RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
-    RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];
 }
 
 - (void)updateFormField

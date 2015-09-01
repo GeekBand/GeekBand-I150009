@@ -34,7 +34,7 @@
     return _instance;
 }
 
-+ (NSString *)errorStringForUsername:(NSString *)username
++ (nullable NSString *)errorStringForUsername:(NSString *)username
 {
     if (username.length < 3) {
         return @"用户名（不能短于3位）";
@@ -50,7 +50,7 @@
     return nil;
 }
 
-+ (NSString *)errorStringForPassword:(NSString *)password
++ (nullable NSString *)errorStringForPassword:(NSString *)password
 {
     if (password.length < 6) {
         return @"密码（不能短于6位）";
@@ -66,7 +66,7 @@
     return nil;
 }
 
-+ (NSString *)errorStringForEmail:(NSString *)email
++ (nullable NSString *)errorStringForEmail:(NSString *)email
 {
     // 允许没有邮箱
     if ([email isEqualToString:@""]) {

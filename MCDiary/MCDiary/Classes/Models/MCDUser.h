@@ -26,11 +26,11 @@ typedef NS_ENUM(NSUInteger, MCDUserGender)
 
 + (MCDUser *)currentUser;
 
-+ (NSString *)errorStringForUsername:(NSString *)username;
++ (nullable NSString *)errorStringForUsername:(NSString *)username;
 
-+ (NSString *)errorStringForPassword:(NSString *)password;
++ (nullable NSString *)errorStringForPassword:(NSString *)password;
 
-+ (NSString *)errorStringForEmail:(NSString *)email;
++ (nullable NSString *)errorStringForEmail:(NSString *)email;
 
 - (void)save;
 
