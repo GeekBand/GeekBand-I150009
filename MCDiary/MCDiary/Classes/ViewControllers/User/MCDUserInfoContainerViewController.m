@@ -5,13 +5,14 @@
 
 #import "MCDUserInfoContainerViewController.h"
 #import "MCDUserInfoContentViewController.h"
+#import "TPKeyboardAvoidingScrollView.h"
 
 @interface MCDUserInfoContainerViewController ()
 
 @property(nonatomic, strong) MCDUserInfoContentViewController *contentViewController;
 @property(nonatomic, assign) CGRect                           contentViewFrame;
 
-@property(nonatomic, weak) IBOutlet UIScrollView       *scrollView;
+@property(nonatomic, weak) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 
 @end
 
@@ -26,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    [self registerKeyBoardObserver];
+//    [self registerKeyBoardObserver];
 }
 
 - (void)viewDidLayoutSubviews
@@ -35,7 +36,6 @@
     [self loadContentViewController];
     self.contentViewController.view.frame = self.contentViewFrame;
     [self.contentViewController.view layoutIfNeeded];
-
 }
 
 #pragma mark - accessor
@@ -63,38 +63,6 @@
     [self addChildViewController:self.contentViewController];
     [self.scrollView addSubview:self.contentViewController.view];
     [self.contentViewController didMoveToParentViewController:self];
-}
-
-- (void)registerKeyBoardObserver
-{
-    @weakify(self);
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification
-                                                           object:nil]
-        subscribeNext:^(NSNotification *notification) {
-            @strongify(self);
-            NSDictionary *info  = [notification userInfo];
-            CGSize       kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-
-            UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
-            self.scrollView.contentInset          = contentInsets;
-            self.scrollView.scrollIndicatorInsets = contentInsets;
-
-            // If active text field is hidden by keyboard, scroll it so it's visible
-            // Your app might not need or want this behavior.
-            CGRect aRect = self.view.frame;
-            aRect.size.height -= kbSize.height;
-            if (!CGRectContainsPoint(aRect, self.contentViewController.activeField.frame.origin)) {
-                [self.scrollView scrollRectToVisible:self.contentViewController.activeField.frame animated:YES];
-            }
-        }];
-
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification
-                                                           object:nil]
-        subscribeNext:^(id x) {
-            UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-            self.scrollView.contentInset          = contentInsets;
-            self.scrollView.scrollIndicatorInsets = contentInsets;
-        }];
 }
 
 @end

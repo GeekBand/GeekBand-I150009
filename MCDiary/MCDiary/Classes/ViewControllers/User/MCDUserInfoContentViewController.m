@@ -10,6 +10,7 @@
 #import "MCDUserInfoContentViewModel.h"
 #import "MCDAreaPickerViewModel.h"
 #import "RSKImageCropViewController.h"
+#import "MCDUser.h"
 
 @import MCDiaryKit;
 
@@ -22,6 +23,9 @@
 @property(nonatomic, weak) IBOutlet MCDButtonFormField *birthdayField;
 @property(nonatomic, weak) IBOutlet MCDButtonFormField *locationField;
 
+@property(nonatomic, weak) IBOutlet MCDButtonView *changePasswordButton;
+@property(nonatomic, weak) IBOutlet MCDButtonView *saveInfoButton;
+
 @end
 
 @implementation MCDUserInfoContentViewController
@@ -31,34 +35,99 @@
 
 @synthesize viewModel = _viewModel;
 
+#pragma mark - public
+
 #pragma mark - life cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.viewModel = [[MCDUserInfoContentViewModel alloc] init];
-    self.viewModel.avatarImage = [MCDAvatarView defaultAvatarImage];
 
-    [self initBind];
-    [self initButtonControls];
-    [self initPickers];
+    [self initBindings];
 }
 
 
 #pragma mark - accessor
 
-#pragma mark - public
-
 #pragma mark - private
 
-- (void)initBind
-{
-    RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
-}
-
-- (void)initButtonControls
+- (void)initBindings
 {
     @weakify(self);
+
+    // 用户名，初始值，不可以更改
+    self.usernameField.textField.text                   = self.viewModel.username;
+    self.usernameField.textField.userInteractionEnabled = NO;
+
+    // 邮箱，初始值+输入绑定+错误提示
+    self.emailField.textField.text = self.viewModel.email;
+    RAC(self.viewModel, email) = [self.emailField.textField rac_textSignal];
+    [RACObserve(self.viewModel, emailValid) subscribeNext:^(NSNumber *number) {
+        if ([number boolValue]) {
+            self.emailField.titleText = self.viewModel.emailNormalTitle;
+            self.emailField.state     = MCDTextFormFieldStateNormal;
+        } else {
+            self.emailField.titleText = self.viewModel.emailErrorTitle;
+            self.emailField.state     = MCDTextFormFieldStateError;
+        }
+    }];
+    [self.emailField.textFieldBeginEditingSignal subscribeNext:^(id x) {
+        @strongify(self);
+        self.activeField = self.emailField.textField;
+    }];
+
+    // 性别，初始值+输入绑定
+    self.genderField.selectedIndex = self.viewModel.gender;
+    RAC(self.viewModel, gender) = self.genderField.selectedIndexChangeSignal;
+
+    // 生日，展示绑定
+    RAC(self.birthdayField, buttonText) = RACObserve(self.viewModel, birthdayString);
+    [self.birthdayField.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择生日"
+                                                                          datePickerMode:UIDatePickerModeDate
+                                                                            selectedDate:self.viewModel.birthday
+                                                                               doneBlock:^(ActionSheetDatePicker *picker, NSDate *selectedDate, id origin) {
+                                                                                   self.viewModel.birthday = selectedDate;
+                                                                               }
+                                                                             cancelBlock:^(ActionSheetDatePicker *picker) {
+
+                                                                             }
+                                                                                  origin:self.view];
+        [datePicker setLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]];
+        [datePicker setMaximumDate:[[NSDate date] dateBySubtractingDays:1]];
+        [datePicker setMinimumDate:[[NSDate date] dateBySubtractingYears:100]];
+
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] init];
+        doneButton.title     = @"完成";
+        doneButton.tintColor = [UIColor MCDGreen];
+        [datePicker setDoneButton:doneButton];
+
+        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] init];
+        cancelButton.title     = @"取消";
+        cancelButton.tintColor = [UIColor MCDGreen];
+        [datePicker setCancelButton:cancelButton];
+
+        [datePicker showActionSheetPicker];
+    }];
+
+    // 所在地，展示绑定
+    RAC(self.locationField, buttonText) = RACObserve(self.viewModel, locationString);
+    [self.locationField.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        MCDAreaPickerViewModel  *pickerViewModel = self.viewModel.pickerViewModel;
+        ActionSheetCustomPicker *customPicker    = [[ActionSheetCustomPicker alloc] initWithTitle:@"选择所在地"
+                                                                                         delegate:pickerViewModel
+                                                                                 showCancelButton:NO
+                                                                                           origin:self.view
+                                                                                initialSelections:pickerViewModel.initialSelection
+        ];
+        [customPicker showActionSheetPicker];
+    }];
+
+    // 头像，展示绑定
+    RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil
@@ -84,46 +153,12 @@
                                                 handler:nil]];
         [self presentViewController:sheet animated:YES completion:nil];
     }];
-}
 
-- (void)initPickers
-{
-    // 可以优化:缓存选择器控件
-
-    [self.birthdayField.buttonPressSignal subscribeNext:^(id x) {
-        ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择生日"
-                                                                          datePickerMode:UIDatePickerModeDate
-                                                                            selectedDate:[[NSDate date] dateBySubtractingYears:20]
-                                                                               doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
-
-                                                                               }
-                                                                             cancelBlock:^(ActionSheetDatePicker *picker) {
-
-                                                                             }
-                                                                                  origin:self.view];
-        [datePicker setLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]];
-        [datePicker setMaximumDate:[[NSDate date] dateBySubtractingDays:1]];
-        [datePicker setMinimumDate:[[NSDate date] dateBySubtractingYears:100]];
-
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] init];
-        doneButton.title     = @"完成";
-        doneButton.tintColor = [UIColor MCDGreen];
-        [datePicker setDoneButton:doneButton];
-
-        UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] init];
-        cancelButton.title     = @"取消";
-        cancelButton.tintColor = [UIColor MCDGreen];
-        [datePicker setCancelButton:cancelButton];
-
-        [datePicker showActionSheetPicker];
-    }];
-
-    [self.locationField.buttonPressSignal subscribeNext:^(id x) {
-        ActionSheetCustomPicker *customPicker = [[ActionSheetCustomPicker alloc] initWithTitle:@"选择所在地"
-                                                                                      delegate:[[MCDAreaPickerViewModel alloc] init]
-                                                                              showCancelButton:NO
-                                                                                        origin:self.view];
-        [customPicker showActionSheetPicker];
+    // 保存信息
+    [self.saveInfoButton.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        [self.activeField resignFirstResponder];
+        [self.viewModel validateAndSave];
     }];
 }
 

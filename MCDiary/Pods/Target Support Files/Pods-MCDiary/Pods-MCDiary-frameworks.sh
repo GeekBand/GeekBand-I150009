@@ -61,6 +61,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-MCDiary/ReactiveCocoa.framework'
   install_framework 'Pods-MCDiary/RegExCategories.framework'
   install_framework 'Pods-MCDiary/SVProgressHUD.framework'
+  install_framework 'Pods-MCDiary/TPKeyboardAvoiding.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-MCDiary/CocoaLumberjack.framework'
@@ -72,4 +73,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-MCDiary/ReactiveCocoa.framework'
   install_framework 'Pods-MCDiary/RegExCategories.framework'
   install_framework 'Pods-MCDiary/SVProgressHUD.framework'
+  install_framework 'Pods-MCDiary/TPKeyboardAvoiding.framework'
 fi

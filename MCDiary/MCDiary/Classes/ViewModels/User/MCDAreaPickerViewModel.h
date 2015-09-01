@@ -6,11 +6,16 @@
 
 #import "ActionSheetCustomPickerDelegate.h"
 
-@interface MCDAreaPickerViewModel : NSObject  <ActionSheetCustomPickerDelegate>
+@class MCDUser;
+
+@interface MCDAreaPickerViewModel : NSObject <ActionSheetCustomPickerDelegate>
+
+@property(nonatomic, strong) MCDUser *user;
 
 @property(nonatomic, strong, readonly) NSArray *provinceList;
-@property(nonatomic, assign) NSUInteger provinceIndex;
-@property(nonatomic, assign) NSUInteger cityIndex;
-@property(nonatomic, assign) NSUInteger areaIndex;
+@property(nonatomic, assign) NSUInteger        provinceIndex;
+@property(nonatomic, assign) NSUInteger        cityIndex;
+@property(nonatomic, assign) NSUInteger        areaIndex;
 
+@property(nonatomic, strong) NSArray *initialSelection;
 @end
