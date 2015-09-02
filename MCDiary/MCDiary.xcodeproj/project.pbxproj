@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237D3AF95D0908421F424A34 /* Pods_MCDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC317E9EAFA249C0DB84A17 /* Pods_MCDiary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B012C1B8F1E95004C7D2C /* User.storyboard */; };
+		2451579C1B94D0B500F76A27 /* MCDiaryKitPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2451579B1B94D0B500F76A27 /* MCDiaryKitPrefixHeader.pch */; };
+		245157B41B94D5B800F76A27 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157A11B94D5B800F76A27 /* AbstractActionSheetPicker.m */; };
+		245157B51B94D5B800F76A27 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157A31B94D5B800F76A27 /* ActionSheetCustomPicker.m */; };
+		245157B61B94D5B800F76A27 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157A61B94D5B800F76A27 /* ActionSheetDatePicker.m */; };
+		245157B71B94D5B800F76A27 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157A81B94D5B800F76A27 /* ActionSheetDistancePicker.m */; };
+		245157B81B94D5B800F76A27 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157AA1B94D5B800F76A27 /* ActionSheetLocalePicker.m */; };
+		245157B91B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157AC1B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m */; };
+		245157BA1B94D5B800F76A27 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157AF1B94D5B800F76A27 /* ActionSheetStringPicker.m */; };
+		245157BB1B94D5B800F76A27 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157B11B94D5B800F76A27 /* DistancePickerView.m */; };
+		245157BC1B94D5B800F76A27 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157B31B94D5B800F76A27 /* SWActionSheet.m */; };
+		245157C31B94DC9B00F76A27 /* UIColor+MCDiary.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157C21B94DC9B00F76A27 /* UIColor+MCDiary.m */; };
+		245157C61B94DE3600F76A27 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245157C51B94DE3600F76A27 /* Area.plist */; };
+		245157C81B964DE800F76A27 /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245157C71B964DE800F76A27 /* MCDBorderView.xib */; };
+		245730831B925ECF00BD980E /* MCDPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 24694E561B83661C00E09636 /* MCDPrefixHeader.pch */; };
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
 		24694E5D1B83851400E09636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5B1B83851400E09636 /* Main.storyboard */; };
@@ -16,30 +31,51 @@
 		249BEBE51B8F4ABB00C2A3CF /* MCDiaryKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */; };
 		249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; };
 		249BEBE91B8F4ABB00C2A3CF /* MCDiaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		249BEBF11B8F4AF100C2A3CF /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */; };
-		249BEBF41B8F4B6F00C2A3CF /* MCDButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */; };
-		249BEBF51B8F4B6F00C2A3CF /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */; };
-		249BEBF81B8F50D000C2A3CF /* MCDCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */; };
-		249BEBF91B8F50D000C2A3CF /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */; };
-		249BEBFB1B8F52E000C2A3CF /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */; };
 		249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFC1B8F537100C2A3CF /* Images.xcassets */; };
-		249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */; };
-		249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */; };
-		30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260165B44A98B3B1828B07C /* libPods-MCDiary.a */; };
-		667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D062F7380464731C18E59AC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */; };
+		5577DE89387FB5D2EE17466F /* Pods_MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45E03235E4C78317D17E845 /* Pods_MCDiaryKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D715702CE7580138A60B175D /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D715783E09D378D0A237EABB /* MCDAvatarView.m */; };
+		D715704CC2590DAB35E76A86 /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157F17CB797D9622BC8827 /* MCDTextFormField.m */; };
 		D715704DBE7017E744F43804 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7157186918912F6DF4E5A22 /* README.md */; };
+		D7157057CAB7264231304748 /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7157892EFDA6A3607C98C79 /* MCDButtonView.xib */; };
 		D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715702E68F282071E4ED827 /* MCDHomeViewModel.m */; };
 		D71571E260E3C879FDDACA6D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7157AAAC68C65C7FDC816BC /* Podfile */; };
 		D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D715706813D9823C3B115E79 /* Images.xcassets */; };
 		D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */; };
+		D71572DC9A824667EFBE61EE /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */; };
+		D715737C5B75D57DE1F9DA3E /* MCDButtonFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */; };
+		D7157387EB4E881C4955A8F0 /* MCDUserInfoContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715706087B6E4B8DD9EA8EE /* MCDUserInfoContentViewModel.m */; };
+		D715740A0331A443A46F7D2D /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = D7157C5C7CCCEA98DD8A1740 /* MCDTextFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7157475A64764F1121BE81D /* MCDButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = D715714567FD76C14CB4AEEF /* MCDButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D715748D8283647564751954 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157599303790267B230DF1 /* MCDHomeViewController.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
+		D715750D9DACF2B0E5A0A071 /* MCDUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71578BD58825D29ADF87D0E /* MCDUserLocation.m */; };
+		D715752E21F0E7AAD13B4B22 /* MCDBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = D715793B972E3BC459C34BAA /* MCDBorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */; };
 		D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */; };
+		D715788E6B193BEAA91E9C5E /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D715781D960C2797D5AAE2AD /* MCDTextFormField.xib */; };
+		D71578EBA00CD7C3604096D4 /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D715704082135C3CE9EE1091 /* MCDCustomView.m */; };
+		D7157916E2696B9824C8EA1F /* MCDRadioFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A8DB9817A0147220265 /* MCDRadioFormField.m */; };
+		D715791F7F491A70D861EE17 /* MCDRadioFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = D715705123119823DFB4A0C3 /* MCDRadioFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7157997D7ACCC78FC710CCF /* MCDCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D71576410CC30B023A2A41B1 /* MCDCustomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */; };
+		D71579D5E10B89BC3518D393 /* MCDButtonFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = D7157D4C2D31766DA238A30E /* MCDButtonFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7157AA9F8AAD02C5885C3C9 /* MCDRadioFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */; };
+		D7157B172669D4B8A67DC5F3 /* MCDUserLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D71571BD4CDA7364C74CCFBC /* MCDUserLocationHelper.m */; };
+		D7157B53508BF9227081C4FB /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157C5AAAF90748304DC4A3 /* MCDButtonView.m */; };
+		D7157B7EF579CFCE7166C324 /* MCDBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157BC57FC211DADF4528B1 /* MCDBorderView.m */; };
+		D7157BA5A70946F755CA5708 /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D715709A666B8DA050CB6875 /* MCDButtonFormField.m */; };
+		D7157BE4D1E8160054E09348 /* MCDAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7157606AD9E2CEAEA29C671 /* MCDAvatarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7157BED71185F978D403A32 /* MCDUserInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715725DB0806EA510632B9E /* MCDUserInfoContainerViewController.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
+		D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */; };
 		D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */; };
+		D7157D633F4C2BF3975E697B /* MCDAreaPickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */; };
+		D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */; };
+		D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */; };
+		D7157E50FDD5C96E952C083F /* MCDUserInfoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */; };
+		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
+		D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577102E45FAF73DF0191F /* MCDUser.m */; };
+		D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +124,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2260165B44A98B3B1828B07C /* libPods-MCDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06434D3BAC163FC98DF6C086 /* Pods-MCDiaryKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.debug.xcconfig"; sourceTree = "<group>"; };
 		240B012C1B8F1E95004C7D2C /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		245140461B8F40AD009DE3F4 /* MCDiaryKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MCDiaryKit.framework; path = "MCDiaryKit/build/Debug-iphoneos/MCDiaryKit.framework"; sourceTree = "<group>"; };
+		2451579B1B94D0B500F76A27 /* MCDiaryKitPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryKitPrefixHeader.pch; sourceTree = "<group>"; };
+		245157A01B94D5B800F76A27 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		245157A11B94D5B800F76A27 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		245157A21B94D5B800F76A27 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		245157A31B94D5B800F76A27 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		245157A41B94D5B800F76A27 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		245157A51B94D5B800F76A27 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		245157A61B94D5B800F76A27 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		245157A71B94D5B800F76A27 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		245157A81B94D5B800F76A27 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		245157A91B94D5B800F76A27 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		245157AA1B94D5B800F76A27 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		245157AB1B94D5B800F76A27 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		245157AC1B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		245157AD1B94D5B800F76A27 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		245157AE1B94D5B800F76A27 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		245157AF1B94D5B800F76A27 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		245157B01B94D5B800F76A27 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		245157B11B94D5B800F76A27 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		245157B21B94D5B800F76A27 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		245157B31B94D5B800F76A27 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		245157C11B94DC9B00F76A27 /* UIColor+MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MCDiary.h"; sourceTree = "<group>"; };
+		245157C21B94DC9B00F76A27 /* UIColor+MCDiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MCDiary.m"; sourceTree = "<group>"; };
+		245157C51B94DE3600F76A27 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
+		245157C71B964DE800F76A27 /* MCDBorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDBorderView.xib; sourceTree = "<group>"; };
 		24694E2A1B83390300E09636 /* MCDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E431B83390300E09636 /* MCDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E481B83390300E09636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,38 +164,77 @@
 		249BEBDB1B8F4ABA00C2A3CF /* MCDiaryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		249BEBE31B8F4ABB00C2A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryKitTests.m; sourceTree = "<group>"; };
-		249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
-		249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
-		249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
-		249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
-		249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
-		249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
 		249BEBFC1B8F537100C2A3CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
-		249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
-		40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2DAE61709DC64C7EF34524D8 /* Pods-MCDiaryKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.release.xcconfig"; sourceTree = "<group>"; };
 		7D062F7380464731C18E59AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCDiaryKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E722961BE71790041DCB8A6 /* Pods-MCDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.release.xcconfig"; sourceTree = "<group>"; };
+		BAC317E9EAFA249C0DB84A17 /* Pods_MCDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45E03235E4C78317D17E845 /* Pods_MCDiaryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCDiaryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D715702E68F282071E4ED827 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
+		D715704082135C3CE9EE1091 /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
+		D715705123119823DFB4A0C3 /* MCDRadioFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDRadioFormField.h; sourceTree = "<group>"; };
+		D715706087B6E4B8DD9EA8EE /* MCDUserInfoContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewModel.m; sourceTree = "<group>"; };
 		D715706813D9823C3B115E79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D715708364A73ABAAF5628DD /* MCDSignupContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContainerViewController.h; sourceTree = "<group>"; };
+		D715709A666B8DA050CB6875 /* MCDButtonFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonFormField.m; sourceTree = "<group>"; };
+		D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewModel.m; sourceTree = "<group>"; };
+		D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewController.m; sourceTree = "<group>"; };
+		D715714567FD76C14CB4AEEF /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		D71571BD4CDA7364C74CCFBC /* MCDUserLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocationHelper.m; sourceTree = "<group>"; };
+		D7157247B493F5D6845C5B16 /* MCDUserModifyPasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewModel.h; sourceTree = "<group>"; };
+		D715725DB0806EA510632B9E /* MCDUserInfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContainerViewController.m; sourceTree = "<group>"; };
 		D715736E1351EA20CE986083 /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		D71573E1B53343276708BC94 /* MCDUserInfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContainerViewController.h; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D71574C628D868D8A9C2CCB7 /* MCDUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocation.h; sourceTree = "<group>"; };
+		D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContainerViewController.m; sourceTree = "<group>"; };
+		D7157560471A9313BAD69A2E /* MCDUserLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocationHelper.h; sourceTree = "<group>"; };
 		D7157599303790267B230DF1 /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
+		D7157606AD9E2CEAEA29C671 /* MCDAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAvatarView.h; sourceTree = "<group>"; };
+		D71576410CC30B023A2A41B1 /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
+		D715765039487E0ADFF7E204 /* MCDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUser.h; sourceTree = "<group>"; };
+		D71576973068D44B17A93851 /* MCDAreaPickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAreaPickerViewModel.h; sourceTree = "<group>"; };
+		D71576F36DB7E842B27D8093 /* MCDUserModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewController.h; sourceTree = "<group>"; };
+		D71577102E45FAF73DF0191F /* MCDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUser.m; sourceTree = "<group>"; };
 		D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
+		D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseModel.m; sourceTree = "<group>"; };
+		D71577AAA7E125B8328D9E59 /* MCDSignupContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewModel.h; sourceTree = "<group>"; };
+		D715781D960C2797D5AAE2AD /* MCDTextFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
+		D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewModel.m; sourceTree = "<group>"; };
+		D715783E09D378D0A237EABB /* MCDAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAvatarView.m; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7157892EFDA6A3607C98C79 /* MCDButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
+		D71578BD58825D29ADF87D0E /* MCDUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocation.m; sourceTree = "<group>"; };
+		D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonFormField.xib; sourceTree = "<group>"; };
+		D715793B972E3BC459C34BAA /* MCDBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBorderView.h; sourceTree = "<group>"; };
 		D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
+		D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAreaPickerViewModel.m; sourceTree = "<group>"; };
+		D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
+		D7157A8DB9817A0147220265 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
 		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
-		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
+		D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
+		D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
+		D7157BC57FC211DADF4528B1 /* MCDBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBorderView.m; sourceTree = "<group>"; };
 		D7157C182BA005319D29D099 /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
+		D7157C2BC81F305C548F7F6D /* MCDUserInfoContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewModel.h; sourceTree = "<group>"; };
+		D7157C5AAAF90748304DC4A3 /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
+		D7157C5C7CCCEA98DD8A1740 /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
 		D7157C7390DB2C2C0EA3D6E7 /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
 		D7157CE093D65BDB579120AD /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
 		D7157D091202401A4C5895D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7157D4C2D31766DA238A30E /* MCDButtonFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonFormField.h; sourceTree = "<group>"; };
 		D7157D737AA85AC4E15D00E1 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
 		D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewController.m; sourceTree = "<group>"; };
+		D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDAvatarView.xib; sourceTree = "<group>"; };
+		D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewController.m; sourceTree = "<group>"; };
+		D7157F17CB797D9622BC8827 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
+		D7157F7BDCAFC41E9E09C194 /* MCDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseModel.h; sourceTree = "<group>"; };
+		FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */,
-				34207814897CE2511424C07D /* libPods-MCDiary.a in Frameworks */,
-				667E8BD442E15858E3CD1B6B /* Pods.framework in Frameworks */,
+				237D3AF95D0908421F424A34 /* Pods_MCDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F20FD2D7DAA4F09061978E /* libPods-MCDiaryKit.a in Frameworks */,
-				30E55B7DD7C1006397FC3C19 /* Pods.framework in Frameworks */,
+				5577DE89387FB5D2EE17466F /* Pods_MCDiaryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +273,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2451579E1B94D5B800F76A27 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2451579F1B94D5B800F76A27 /* ActionSheetPicker */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		2451579F1B94D5B800F76A27 /* ActionSheetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				245157A01B94D5B800F76A27 /* AbstractActionSheetPicker.h */,
+				245157A11B94D5B800F76A27 /* AbstractActionSheetPicker.m */,
+				245157A21B94D5B800F76A27 /* ActionSheetCustomPicker.h */,
+				245157A31B94D5B800F76A27 /* ActionSheetCustomPicker.m */,
+				245157A41B94D5B800F76A27 /* ActionSheetCustomPickerDelegate.h */,
+				245157A51B94D5B800F76A27 /* ActionSheetDatePicker.h */,
+				245157A61B94D5B800F76A27 /* ActionSheetDatePicker.m */,
+				245157A71B94D5B800F76A27 /* ActionSheetDistancePicker.h */,
+				245157A81B94D5B800F76A27 /* ActionSheetDistancePicker.m */,
+				245157A91B94D5B800F76A27 /* ActionSheetLocalePicker.h */,
+				245157AA1B94D5B800F76A27 /* ActionSheetLocalePicker.m */,
+				245157AB1B94D5B800F76A27 /* ActionSheetMultipleStringPicker.h */,
+				245157AC1B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m */,
+				245157AD1B94D5B800F76A27 /* ActionSheetPicker.h */,
+				245157AE1B94D5B800F76A27 /* ActionSheetStringPicker.h */,
+				245157AF1B94D5B800F76A27 /* ActionSheetStringPicker.m */,
+				245157B01B94D5B800F76A27 /* DistancePickerView.h */,
+				245157B11B94D5B800F76A27 /* DistancePickerView.m */,
+				245157B21B94D5B800F76A27 /* SWActionSheet.h */,
+				245157B31B94D5B800F76A27 /* SWActionSheet.m */,
+			);
+			path = ActionSheetPicker;
+			sourceTree = "<group>";
+		};
+		245157C41B94DE3600F76A27 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				245157C51B94DE3600F76A27 /* Area.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		24694E211B83390300E09636 = {
 			isa = PBXGroup;
 			children = (
@@ -231,16 +371,10 @@
 			isa = PBXGroup;
 			children = (
 				249BEBD51B8F4ABA00C2A3CF /* MCDiaryKit.h */,
-				249BEBD31B8F4ABA00C2A3CF /* Supporting Files */,
-				249BEBF01B8F4AF100C2A3CF /* MCDButtonView.xib */,
-				249BEBF21B8F4B6F00C2A3CF /* MCDButtonView.h */,
-				249BEBF31B8F4B6F00C2A3CF /* MCDButtonView.m */,
-				249BEBF61B8F50D000C2A3CF /* MCDCustomView.h */,
-				249BEBF71B8F50D000C2A3CF /* MCDCustomView.m */,
-				249BEBFA1B8F52E000C2A3CF /* MCDTextFormField.xib */,
 				249BEBFC1B8F537100C2A3CF /* Images.xcassets */,
-				249BEBFE1B8F54FE00C2A3CF /* MCDTextFormField.h */,
-				249BEBFF1B8F54FE00C2A3CF /* MCDTextFormField.m */,
+				249BEBD31B8F4ABA00C2A3CF /* Supporting Files */,
+				D715771C13A96C002C4280D7 /* Classes */,
+				D7157CD48F32A9A81965522E /* XIBs */,
 			);
 			path = MCDiaryKit;
 			sourceTree = "<group>";
@@ -249,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				249BEBD41B8F4ABA00C2A3CF /* Info.plist */,
+				2451579B1B94D0B500F76A27 /* MCDiaryKitPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,8 +408,10 @@
 		335B55BEEB488F4458D01302 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */,
-				40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */,
+				FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */,
+				8E722961BE71790041DCB8A6 /* Pods-MCDiary.release.xcconfig */,
+				06434D3BAC163FC98DF6C086 /* Pods-MCDiaryKit.debug.xcconfig */,
+				2DAE61709DC64C7EF34524D8 /* Pods-MCDiaryKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -282,10 +419,9 @@
 		4BE136B7BEC3F63C1DFCF35F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				245140461B8F40AD009DE3F4 /* MCDiaryKit.framework */,
-				2260165B44A98B3B1828B07C /* libPods-MCDiary.a */,
-				D08D972E3E02D4B7522B3E1B /* libPods-MCDiaryKit.a */,
 				7D062F7380464731C18E59AC /* Pods.framework */,
+				C45E03235E4C78317D17E845 /* Pods_MCDiaryKit.framework */,
+				BAC317E9EAFA249C0DB84A17 /* Pods_MCDiary.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -293,12 +429,14 @@
 		D715701AEBFE7EEEF22ED39B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2451579E1B94D5B800F76A27 /* Vendor */,
 				D7157BFEE095CD7BB377F038 /* Global */,
 				D71575A8B01EA09120294002 /* Supporting Files */,
 				D7157B8A08D8F47B13A60E4A /* ViewControllers */,
 				D71579EEAC46D8F6D9BFBDE7 /* ViewModels */,
 				D7157DB86FCFA53F7E37365E /* Models */,
 				D715715F72DFFD1BC6D87436 /* Views */,
+				D71579EA974AF3484FA6C9F6 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -339,6 +477,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D715771C13A96C002C4280D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D715704082135C3CE9EE1091 /* MCDCustomView.m */,
+				D71576410CC30B023A2A41B1 /* MCDCustomView.h */,
+				D7157C5C7CCCEA98DD8A1740 /* MCDTextFormField.h */,
+				D7157C5AAAF90748304DC4A3 /* MCDButtonView.m */,
+				D715714567FD76C14CB4AEEF /* MCDButtonView.h */,
+				D7157F17CB797D9622BC8827 /* MCDTextFormField.m */,
+				D715709A666B8DA050CB6875 /* MCDButtonFormField.m */,
+				D7157D4C2D31766DA238A30E /* MCDButtonFormField.h */,
+				D7157A8DB9817A0147220265 /* MCDRadioFormField.m */,
+				D715705123119823DFB4A0C3 /* MCDRadioFormField.h */,
+				D715783E09D378D0A237EABB /* MCDAvatarView.m */,
+				D7157606AD9E2CEAEA29C671 /* MCDAvatarView.h */,
+				D7157BC57FC211DADF4528B1 /* MCDBorderView.m */,
+				D715793B972E3BC459C34BAA /* MCDBorderView.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D7157759040A99FEE3E85DB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +515,17 @@
 				240B012C1B8F1E95004C7D2C /* User.storyboard */,
 			);
 			path = XIBs;
+			sourceTree = "<group>";
+		};
+		D71579EA974AF3484FA6C9F6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				245157C11B94DC9B00F76A27 /* UIColor+MCDiary.h */,
+				245157C21B94DC9B00F76A27 /* UIColor+MCDiary.m */,
+				D71571BD4CDA7364C74CCFBC /* MCDUserLocationHelper.m */,
+				D7157560471A9313BAD69A2E /* MCDUserLocationHelper.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D71579EEAC46D8F6D9BFBDE7 /* ViewModels */ = {
@@ -387,9 +557,28 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		D7157CD48F32A9A81965522E /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */,
+				D715781D960C2797D5AAE2AD /* MCDTextFormField.xib */,
+				D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */,
+				D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */,
+				D7157892EFDA6A3607C98C79 /* MCDButtonView.xib */,
+				245157C71B964DE800F76A27 /* MCDBorderView.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		D7157DB86FCFA53F7E37365E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D71577102E45FAF73DF0191F /* MCDUser.m */,
+				D715765039487E0ADFF7E204 /* MCDUser.h */,
+				D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */,
+				D7157F7BDCAFC41E9E09C194 /* MCDBaseModel.h */,
+				D71578BD58825D29ADF87D0E /* MCDUserLocation.m */,
+				D71574C628D868D8A9C2CCB7 /* MCDUserLocation.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +586,7 @@
 		D7157EB9C345959E022160BF /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				245157C41B94DE3600F76A27 /* Data */,
 				D715706813D9823C3B115E79 /* Images.xcassets */,
 				D71577FDE33B4B96199BEB93 /* XIBs */,
 			);
@@ -417,6 +607,16 @@
 			children = (
 				D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */,
 				D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */,
+				D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */,
+				D715708364A73ABAAF5628DD /* MCDSignupContainerViewController.h */,
+				D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */,
+				D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */,
+				D715725DB0806EA510632B9E /* MCDUserInfoContainerViewController.m */,
+				D71573E1B53343276708BC94 /* MCDUserInfoContainerViewController.h */,
+				D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */,
+				D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */,
+				D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */,
+				D71576F36DB7E842B27D8093 /* MCDUserModifyPasswordViewController.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -426,6 +626,14 @@
 			children = (
 				D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */,
 				D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */,
+				D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */,
+				D71577AAA7E125B8328D9E59 /* MCDSignupContentViewModel.h */,
+				D715706087B6E4B8DD9EA8EE /* MCDUserInfoContentViewModel.m */,
+				D7157C2BC81F305C548F7F6D /* MCDUserInfoContentViewModel.h */,
+				D71576973068D44B17A93851 /* MCDAreaPickerViewModel.h */,
+				D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */,
+				D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */,
+				D7157247B493F5D6845C5B16 /* MCDUserModifyPasswordViewModel.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -437,10 +645,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249BEBF81B8F50D000C2A3CF /* MCDCustomView.h in Headers */,
-				249BEC001B8F54FE00C2A3CF /* MCDTextFormField.h in Headers */,
-				249BEBF41B8F4B6F00C2A3CF /* MCDButtonView.h in Headers */,
 				249BEBD61B8F4ABA00C2A3CF /* MCDiaryKit.h in Headers */,
+				D7157997D7ACCC78FC710CCF /* MCDCustomView.h in Headers */,
+				D715740A0331A443A46F7D2D /* MCDTextFormField.h in Headers */,
+				D7157475A64764F1121BE81D /* MCDButtonView.h in Headers */,
+				245730831B925ECF00BD980E /* MCDPrefixHeader.pch in Headers */,
+				2451579C1B94D0B500F76A27 /* MCDiaryKitPrefixHeader.pch in Headers */,
+				D71579D5E10B89BC3518D393 /* MCDButtonFormField.h in Headers */,
+				D715791F7F491A70D861EE17 /* MCDRadioFormField.h in Headers */,
+				D7157BE4D1E8160054E09348 /* MCDAvatarView.h in Headers */,
+				D715752E21F0E7AAD13B4B22 /* MCDBorderView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +792,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */,
+				245157C61B94DE3600F76A27 /* Area.plist in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
@@ -598,8 +813,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */,
-				249BEBFB1B8F52E000C2A3CF /* MCDTextFormField.xib in Resources */,
-				249BEBF11B8F4AF100C2A3CF /* MCDButtonView.xib in Resources */,
+				D7157AA9F8AAD02C5885C3C9 /* MCDRadioFormField.xib in Resources */,
+				D715788E6B193BEAA91E9C5E /* MCDTextFormField.xib in Resources */,
+				D71572DC9A824667EFBE61EE /* MCDAvatarView.xib in Resources */,
+				245157C81B964DE800F76A27 /* MCDBorderView.xib in Resources */,
+				D715737C5B75D57DE1F9DA3E /* MCDButtonFormField.xib in Resources */,
+				D7157057CAB7264231304748 /* MCDButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +859,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A75416B5BE45F716518B3EC5 /* Embed Pods Frameworks */ = {
@@ -655,7 +874,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B635FC8089E9BD4A167C6640 /* Copy Pods Resources */ = {
@@ -670,7 +889,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C0B508A8EA3428350DEC6659 /* Check Pods Manifest.lock */ = {
@@ -696,13 +915,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7157C2FED09661163DE707C /* AppDelegate.m in Sources */,
+				245157C31B94DC9B00F76A27 /* UIColor+MCDiary.m in Sources */,
+				245157B71B94D5B800F76A27 /* ActionSheetDistancePicker.m in Sources */,
+				245157B41B94D5B800F76A27 /* AbstractActionSheetPicker.m in Sources */,
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
 				D715748D8283647564751954 /* MCDHomeViewController.m in Sources */,
 				D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */,
+				245157BB1B94D5B800F76A27 /* DistancePickerView.m in Sources */,
+				245157B61B94D5B800F76A27 /* ActionSheetDatePicker.m in Sources */,
 				D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */,
 				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
 				D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */,
 				D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */,
+				D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */,
+				245157BC1B94D5B800F76A27 /* SWActionSheet.m in Sources */,
+				D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */,
+				245157B51B94D5B800F76A27 /* ActionSheetCustomPicker.m in Sources */,
+				245157B91B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m in Sources */,
+				D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */,
+				245157BA1B94D5B800F76A27 /* ActionSheetStringPicker.m in Sources */,
+				245157B81B94D5B800F76A27 /* ActionSheetLocalePicker.m in Sources */,
+				D7157BED71185F978D403A32 /* MCDUserInfoContainerViewController.m in Sources */,
+				D7157E50FDD5C96E952C083F /* MCDUserInfoContentViewController.m in Sources */,
+				D7157387EB4E881C4955A8F0 /* MCDUserInfoContentViewModel.m in Sources */,
+				D7157D633F4C2BF3975E697B /* MCDAreaPickerViewModel.m in Sources */,
+				D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */,
+				D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */,
+				D715750D9DACF2B0E5A0A071 /* MCDUserLocation.m in Sources */,
+				D7157B172669D4B8A67DC5F3 /* MCDUserLocationHelper.m in Sources */,
+				D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */,
+				D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,9 +960,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249BEC011B8F54FE00C2A3CF /* MCDTextFormField.m in Sources */,
-				249BEBF91B8F50D000C2A3CF /* MCDCustomView.m in Sources */,
-				249BEBF51B8F4B6F00C2A3CF /* MCDButtonView.m in Sources */,
+				D71578EBA00CD7C3604096D4 /* MCDCustomView.m in Sources */,
+				D7157B53508BF9227081C4FB /* MCDButtonView.m in Sources */,
+				D715704CC2590DAB35E76A86 /* MCDTextFormField.m in Sources */,
+				D7157BA5A70946F755CA5708 /* MCDButtonFormField.m in Sources */,
+				D7157916E2696B9824C8EA1F /* MCDRadioFormField.m in Sources */,
+				D715702CE7580138A60B175D /* MCDAvatarView.m in Sources */,
+				D7157B7EF579CFCE7166C324 /* MCDBorderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,7 +1023,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -840,14 +1086,67 @@
 		};
 		24694E4E1B83390300E09636 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AVOSCloud\"",
+					"-framework",
+					"\"AVOSCloudCrashReporting\"",
+					"-framework",
+					"\"AVOSCloudIM\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"DLRadioButton\"",
+					"-framework",
+					"\"DateTools\"",
+					"-framework",
+					"\"HexColors\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RSKImageCropper\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"RegExCategories\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -855,14 +1154,67 @@
 		};
 		24694E4F1B83390300E09636 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8E722961BE71790041DCB8A6 /* Pods-MCDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AVOSCloud\"",
+					"-framework",
+					"\"AVOSCloudCrashReporting\"",
+					"-framework",
+					"\"AVOSCloudIM\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"DLRadioButton\"",
+					"-framework",
+					"\"DateTools\"",
+					"-framework",
+					"\"HexColors\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RSKImageCropper\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"RegExCategories\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -906,13 +1258,17 @@
 		};
 		249BEBEB1B8F4ABB00C2A3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 449904657DF929C3F789E3A0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 06434D3BAC163FC98DF6C086 /* Pods-MCDiaryKit.debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MCDiaryKit/MCDiaryKitPrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -931,13 +1287,17 @@
 		};
 		249BEBEC1B8F4ABB00C2A3CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B3F7E7EDC3A2F46D42FB8E /* Pods.release.xcconfig */;
+			baseConfigurationReference = 2DAE61709DC64C7EF34524D8 /* Pods-MCDiaryKit.release.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MCDiaryKit/MCDiaryKitPrefixHeader.pch;
 				INFOPLIST_FILE = MCDiaryKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

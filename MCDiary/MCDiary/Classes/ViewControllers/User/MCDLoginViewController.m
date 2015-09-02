@@ -4,18 +4,22 @@
 //
 
 #import "MCDLoginViewController.h"
-#import "MCDTextFormField.h"
+#import "MCDSignupContainerViewController.h"
 #import "MCDLoginViewModel.h"
-#import "MCDButtonView.h"
 
-@interface MCDLoginViewController () <UITextFieldDelegate>
+@import MCDiaryKit;
 
-@property(weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
-@property(weak, nonatomic) IBOutlet UIImageView        *logoImageView;
+@interface MCDLoginViewController ()
 
-@property(weak, nonatomic) IBOutlet MCDTextFormField *usernameField;
-@property(weak, nonatomic) IBOutlet MCDTextFormField *passwordField;
-@property(weak, nonatomic) IBOutlet MCDButtonView    *loginButton;
+@property(nonatomic, weak) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
+@property(nonatomic, weak) IBOutlet UIImageView        *logoImageView;
+
+@property(nonatomic, weak) IBOutlet MCDTextFormField *usernameField;
+@property(nonatomic, weak) IBOutlet MCDTextFormField *passwordField;
+@property(nonatomic, weak) IBOutlet MCDButtonView    *loginButton;
+@property(nonatomic, weak) IBOutlet UIButton         *toSignupButton;
+
+@property(nonatomic, weak) UITextField *activeField;
 
 @end
 
@@ -30,43 +34,56 @@
     [super viewDidLoad];
     self.viewModel = [[MCDLoginViewModel alloc] init];
 
-    [self registerKeyBoardObserver];
-    [self registerButtonObserver];
-}
-
-- (void)registerButtonObserver
-{
-    @weakify(self);
-
-    [[self.loginButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
-        subscribeNext:^(id x) {
-            @strongify(self);
-            [self.viewModel validate];
-            [self updateFormField];
-            if (self.viewModel.isValid) {
-                // TODO: login
-                return;
-            }
-        }];
-}
-
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    [textField resignFirstResponder];
-    return YES;
+    [self initBinding];
 }
 
 #pragma mark - private
 
-- (void)registerKeyBoardObserver
+- (void)initBinding
 {
     @weakify(self);
+
+    // 同步绑定用户名和密码
+    RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
+    RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];
+
+    // activeField
+    [[[RACSignal merge:@[
+        self.usernameField.textFieldBeginEditingSignal,
+        self.passwordField.textFieldBeginEditingSignal
+    ]] map:^id(RACTuple *tuple) {
+        return tuple.first;
+    }] subscribeNext:^(UITextField *textField) {
+        @strongify(self);
+        self.activeField = textField;
+    }];
+
+    // 按钮事件
+    [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        [self.activeField resignFirstResponder];
+        [self.viewModel validate];
+        [self updateFormField];
+        if (self.viewModel.isValid) {
+            // TODO: login
+            return;
+        }
+    }];
+
+    [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            NSString                         *vcID = NSStringFromClass([MCDSignupContainerViewController class]);
+            MCDSignupContainerViewController *vc   = [self.storyboard instantiateViewControllerWithIdentifier:vcID];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    ];
+
+    // 监听键盘
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification
                                                            object:nil]
         subscribeNext:^(NSNotification *notification) {
+            @strongify(self);
             NSDictionary *info  = [notification userInfo];
             CGSize       kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 
@@ -82,6 +99,7 @@
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillHideNotification
                                                            object:nil]
         subscribeNext:^(id x) {
+            @strongify(self);
             [UIView animateWithDuration:0.3f
                              animations:^{
                                  @strongify(self);
@@ -90,12 +108,6 @@
                                  [self.view layoutIfNeeded];
                              }];
         }];
-
-    self.usernameField.textField.delegate = self;
-    self.passwordField.textField.delegate = self;
-
-    RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
-    RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];
 }
 
 - (void)updateFormField

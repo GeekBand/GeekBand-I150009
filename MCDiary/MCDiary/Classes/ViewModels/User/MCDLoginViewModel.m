@@ -4,10 +4,37 @@
 //
 
 #import "MCDLoginViewModel.h"
-#import "RegExCategories.h"
+#import "MCDUser.h"
 
 
 @implementation MCDLoginViewModel
+
+#pragma mark - public
+
+- (void)validate
+{
+    // useranme
+    NSString *errorUsername = [MCDUser errorStringForUsername:self.username];
+    if(errorUsername){
+        _usernameErrorTitle = errorUsername;
+        self.usernameValid = NO;
+    }else{
+        self.usernameValid = YES;
+    }
+
+    // password
+    NSString *errorPassword = [MCDUser errorStringForPassword:self.password];
+    if(errorPassword){
+        _passwordErrorTitle = errorPassword;
+        self.passwordValid = NO;
+    }else{
+        self.passwordValid = YES;
+    }
+
+    // TODO: Cloud 检测
+}
+
+#pragma mark - life cycle
 
 - (instancetype)init
 {
@@ -31,6 +58,7 @@
     return self;
 }
 
+#pragma mark - accessor
 
 - (NSString *)usernameNormalTitle
 {
@@ -42,48 +70,6 @@
     return @"密码";
 }
 
-- (void)validate
-{
-    [self validateUsername];
-    [self validatePassword];
-}
-
--(void)validateUsername
-{
-    self.usernameValid = NO;
-    if (self.username.length < 3) {
-        _usernameErrorTitle = @"用户名（不能短于3位）";
-        return;
-    }
-    if (self.username.length > 15) {
-        _usernameErrorTitle = @"用户名（不能长于15位）";
-        return;
-    }
-
-    if(![self.username isMatch:RX(@"^\\w+$")]){
-        _usernameErrorTitle = @"用户名（只包含字母、数字和下划线）";
-        return;
-    }
-    self.usernameValid = YES;
-}
-
--(void)validatePassword
-{
-    self.passwordValid = NO;
-    if (self.password.length < 6) {
-        _passwordErrorTitle = @"密码（不能短于6位）";
-        return;
-    }
-    if (self.password.length > 12) {
-        _passwordErrorTitle = @"用户名（不能长于12位）";
-        return;
-    }
-
-    if(![self.password isMatch:RX(@"^\\w+$")]){
-        _passwordErrorTitle = @"密码（只包含字母、数字和下划线）";
-        return;
-    }
-    self.passwordValid = YES;
-}
+#pragma mark - private
 
 @end

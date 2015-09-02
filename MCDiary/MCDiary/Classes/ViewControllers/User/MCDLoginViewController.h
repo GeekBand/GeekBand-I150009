@@ -9,6 +9,6 @@
 
 @interface MCDLoginViewController : MCDBaseViewController
 
-@property(strong, nonatomic) MCDLoginViewModel *viewModel;
+@property(nonatomic, strong) MCDLoginViewModel *viewModel;
 
 @end

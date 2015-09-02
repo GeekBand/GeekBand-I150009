@@ -16,4 +16,10 @@ FOUNDATION_EXPORT const unsigned char MCDiaryKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MCDiaryKit/PublicHeader.h>
 
-
+#import "MCDCustomView.h"
+#import "MCDButtonView.h"
+#import "MCDTextFormField.h"
+#import "MCDAvatarView.h"
+#import "MCDRadioFormField.h"
+#import "MCDButtonFormField.h"
+#import "MCDBorderView.h"
