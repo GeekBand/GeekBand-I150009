@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sck-TL-Gu2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nqR-8B-pxk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -478,6 +478,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbU-Iv-N0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1452" y="379"/>
+        </scene>
+        <!--User Modify Password View Controller-->
+        <scene sceneID="1Nq-oL-wEh">
+            <objects>
+                <viewController storyboardIdentifier="MCDUserModifyPasswordViewController" modalTransitionStyle="crossDissolve" id="oN6-7s-ntv" customClass="MCDUserModifyPasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D0s-L2-tci"/>
+                        <viewControllerLayoutGuide type="bottom" id="zVw-Y0-7xF"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ct9-Lb-I8A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmJ-Vm-pm1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-vn-bDn" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4SF-ip-e78" customClass="MCDBorderView">
+                                        <rect key="frame" x="12" y="119" width="300" height="330"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ker-jQ-1Vy" customClass="MCDTextFormField">
+                                                <rect key="frame" x="15" y="20" width="270" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="原密码"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请输入原密码"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Uq-KS-aqj" customClass="MCDTextFormField">
+                                                <rect key="frame" x="15" y="90" width="270" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="新密码"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请输入新密码"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-ru-yLv" customClass="MCDTextFormField">
+                                                <rect key="frame" x="15" y="160" width="270" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="确认新密码"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="请确认新密码"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-3i-K2K">
+                                                <rect key="frame" x="15" y="220" width="270" height="30"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                                <state key="normal" title="忘记密码?">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRZ-ea-In5" customClass="MCDButtonView">
+                                                <rect key="frame" x="15" y="260" width="270" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="保存修改"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.31372549020000001" green="0.82352941180000006" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313725490198" green="0.96078431372549022" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.31372549020000001" green="0.82352941180000006" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a0c-vn-bDn" secondAttribute="trailing" id="2vb-cM-ndK"/>
+                            <constraint firstItem="zVw-Y0-7xF" firstAttribute="top" secondItem="a0c-vn-bDn" secondAttribute="bottom" constant="119" id="5tc-4a-9KX"/>
+                            <constraint firstItem="a0c-vn-bDn" firstAttribute="top" secondItem="D0s-L2-tci" secondAttribute="bottom" id="iZw-YM-hbe"/>
+                            <constraint firstItem="a0c-vn-bDn" firstAttribute="leading" secondItem="ct9-Lb-I8A" secondAttribute="leading" id="yRC-ng-46Q"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundButton" destination="EmJ-Vm-pm1" id="PJq-Ar-cnA"/>
+                        <outlet property="confirmChangePasswordButton" destination="jRZ-ea-In5" id="R14-5Z-J3S"/>
+                        <outlet property="confirmPasswordField" destination="M4p-ru-yLv" id="hdM-zH-jzh"/>
+                        <outlet property="forgetPasswordButton" destination="dGb-3i-K2K" id="riE-pQ-8Fw"/>
+                        <outlet property="freshPasswordField" destination="5Uq-KS-aqj" id="21q-Mg-lHJ"/>
+                        <outlet property="oldPasswordField" destination="Ker-jQ-1Vy" id="0oR-Hn-Yze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tz-MT-WEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855" y="354"/>
         </scene>
     </scenes>
     <resources>

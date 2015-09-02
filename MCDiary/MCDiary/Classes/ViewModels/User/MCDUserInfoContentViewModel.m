@@ -64,10 +64,10 @@
         // Binding
         RAC(self, birthdayString) = [RACObserve(self, birthday) map:^id(NSDate *date) {
             return [NSString stringWithFormat:
-                                 @"%u年 %u月 %u日",
-                                 date.year,
-                                 date.month,
-                                 date.day
+                                 @"%ld年 %ld月 %ld日",
+                                 (long)date.year,
+                                 (long)date.month,
+                                 (long)date.day
             ];
         }];
 

@@ -8,7 +8,7 @@
 
 @class MCDUserLocation;
 
-typedef NS_ENUM(NSUInteger, MCDUserGender)
+typedef NS_ENUM (NSUInteger, MCDUserGender)
 {
     MCDUserGenderFemale = 1,
     MCDUserGenderMale   = 2,
@@ -26,11 +26,11 @@ typedef NS_ENUM(NSUInteger, MCDUserGender)
 
 + (MCDUser *)currentUser;
 
-+ (nullable NSString *)errorStringForUsername:(NSString *)username;
++ (NSString *)errorStringForUsername:(NSString *)username;
 
-+ (nullable NSString *)errorStringForPassword:(NSString *)password;
++ (NSString *)errorStringForPassword:(NSString *)password;
 
-+ (nullable NSString *)errorStringForEmail:(NSString *)email;
++ (NSString *)errorStringForEmail:(NSString *)email;
 
 - (void)save;
 

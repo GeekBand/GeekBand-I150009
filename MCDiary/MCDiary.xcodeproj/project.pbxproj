@@ -21,6 +21,7 @@
 		245157BC1B94D5B800F76A27 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157B31B94D5B800F76A27 /* SWActionSheet.m */; };
 		245157C31B94DC9B00F76A27 /* UIColor+MCDiary.m in Sources */ = {isa = PBXBuildFile; fileRef = 245157C21B94DC9B00F76A27 /* UIColor+MCDiary.m */; };
 		245157C61B94DE3600F76A27 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245157C51B94DE3600F76A27 /* Area.plist */; };
+		245157C81B964DE800F76A27 /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245157C71B964DE800F76A27 /* MCDBorderView.xib */; };
 		245730831B925ECF00BD980E /* MCDPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 24694E561B83661C00E09636 /* MCDPrefixHeader.pch */; };
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
@@ -48,6 +49,7 @@
 		D715748D8283647564751954 /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157599303790267B230DF1 /* MCDHomeViewController.m */; };
 		D71574C4F692FF5A2D8B9292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D715745DC6897E9BE38555DB /* main.m */; };
 		D715750D9DACF2B0E5A0A071 /* MCDUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D71578BD58825D29ADF87D0E /* MCDUserLocation.m */; };
+		D715752E21F0E7AAD13B4B22 /* MCDBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = D715793B972E3BC459C34BAA /* MCDBorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71570AF7386D84140418A43 /* MCDSignupContentViewModel.m */; };
 		D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */; };
 		D715788E6B193BEAA91E9C5E /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D715781D960C2797D5AAE2AD /* MCDTextFormField.xib */; };
@@ -60,13 +62,16 @@
 		D7157AA9F8AAD02C5885C3C9 /* MCDRadioFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */; };
 		D7157B172669D4B8A67DC5F3 /* MCDUserLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D71571BD4CDA7364C74CCFBC /* MCDUserLocationHelper.m */; };
 		D7157B53508BF9227081C4FB /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157C5AAAF90748304DC4A3 /* MCDButtonView.m */; };
+		D7157B7EF579CFCE7166C324 /* MCDBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157BC57FC211DADF4528B1 /* MCDBorderView.m */; };
 		D7157BA5A70946F755CA5708 /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D715709A666B8DA050CB6875 /* MCDButtonFormField.m */; };
 		D7157BE4D1E8160054E09348 /* MCDAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7157606AD9E2CEAEA29C671 /* MCDAvatarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7157BED71185F978D403A32 /* MCDUserInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D715725DB0806EA510632B9E /* MCDUserInfoContainerViewController.m */; };
 		D7157C2FED09661163DE707C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157888BFE956975F919221 /* AppDelegate.m */; };
+		D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */; };
 		D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */; };
 		D7157D633F4C2BF3975E697B /* MCDAreaPickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */; };
 		D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */; };
+		D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */; };
 		D7157E50FDD5C96E952C083F /* MCDUserInfoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */; };
 		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
 		D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577102E45FAF73DF0191F /* MCDUser.m */; };
@@ -145,6 +150,7 @@
 		245157C11B94DC9B00F76A27 /* UIColor+MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MCDiary.h"; sourceTree = "<group>"; };
 		245157C21B94DC9B00F76A27 /* UIColor+MCDiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MCDiary.m"; sourceTree = "<group>"; };
 		245157C51B94DE3600F76A27 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
+		245157C71B964DE800F76A27 /* MCDBorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDBorderView.xib; sourceTree = "<group>"; };
 		24694E2A1B83390300E09636 /* MCDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E431B83390300E09636 /* MCDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E481B83390300E09636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 		D715714567FD76C14CB4AEEF /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		D7157186918912F6DF4E5A22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		D71571BD4CDA7364C74CCFBC /* MCDUserLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocationHelper.m; sourceTree = "<group>"; };
+		D7157247B493F5D6845C5B16 /* MCDUserModifyPasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewModel.h; sourceTree = "<group>"; };
 		D715725DB0806EA510632B9E /* MCDUserInfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContainerViewController.m; sourceTree = "<group>"; };
 		D715736E1351EA20CE986083 /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -189,17 +196,20 @@
 		D71576410CC30B023A2A41B1 /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
 		D715765039487E0ADFF7E204 /* MCDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUser.h; sourceTree = "<group>"; };
 		D71576973068D44B17A93851 /* MCDAreaPickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAreaPickerViewModel.h; sourceTree = "<group>"; };
+		D71576F36DB7E842B27D8093 /* MCDUserModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewController.h; sourceTree = "<group>"; };
 		D71577102E45FAF73DF0191F /* MCDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUser.m; sourceTree = "<group>"; };
 		D715772E0D17D2739C42FE91 /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		D715773D8BDB93D276EA4A82 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
 		D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseModel.m; sourceTree = "<group>"; };
 		D71577AAA7E125B8328D9E59 /* MCDSignupContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewModel.h; sourceTree = "<group>"; };
 		D715781D960C2797D5AAE2AD /* MCDTextFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
+		D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewModel.m; sourceTree = "<group>"; };
 		D715783E09D378D0A237EABB /* MCDAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAvatarView.m; sourceTree = "<group>"; };
 		D7157888BFE956975F919221 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D7157892EFDA6A3607C98C79 /* MCDButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
 		D71578BD58825D29ADF87D0E /* MCDUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocation.m; sourceTree = "<group>"; };
 		D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonFormField.xib; sourceTree = "<group>"; };
+		D715793B972E3BC459C34BAA /* MCDBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBorderView.h; sourceTree = "<group>"; };
 		D7157A02C337E954CE241CE3 /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
 		D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAreaPickerViewModel.m; sourceTree = "<group>"; };
 		D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
@@ -207,7 +217,9 @@
 		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
 		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
 		D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
+		D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
 		D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
+		D7157BC57FC211DADF4528B1 /* MCDBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBorderView.m; sourceTree = "<group>"; };
 		D7157C182BA005319D29D099 /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
 		D7157C2BC81F305C548F7F6D /* MCDUserInfoContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewModel.h; sourceTree = "<group>"; };
 		D7157C5AAAF90748304DC4A3 /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
@@ -480,6 +492,8 @@
 				D715705123119823DFB4A0C3 /* MCDRadioFormField.h */,
 				D715783E09D378D0A237EABB /* MCDAvatarView.m */,
 				D7157606AD9E2CEAEA29C671 /* MCDAvatarView.h */,
+				D7157BC57FC211DADF4528B1 /* MCDBorderView.m */,
+				D715793B972E3BC459C34BAA /* MCDBorderView.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -551,6 +565,7 @@
 				D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */,
 				D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */,
 				D7157892EFDA6A3607C98C79 /* MCDButtonView.xib */,
+				245157C71B964DE800F76A27 /* MCDBorderView.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -600,6 +615,8 @@
 				D71573E1B53343276708BC94 /* MCDUserInfoContainerViewController.h */,
 				D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */,
 				D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */,
+				D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */,
+				D71576F36DB7E842B27D8093 /* MCDUserModifyPasswordViewController.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -615,6 +632,8 @@
 				D7157C2BC81F305C548F7F6D /* MCDUserInfoContentViewModel.h */,
 				D71576973068D44B17A93851 /* MCDAreaPickerViewModel.h */,
 				D7157A66A3FBFCC216DF769C /* MCDAreaPickerViewModel.m */,
+				D715781DAF923B8D1241C5D9 /* MCDUserModifyPasswordViewModel.m */,
+				D7157247B493F5D6845C5B16 /* MCDUserModifyPasswordViewModel.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -635,6 +654,7 @@
 				D71579D5E10B89BC3518D393 /* MCDButtonFormField.h in Headers */,
 				D715791F7F491A70D861EE17 /* MCDRadioFormField.h in Headers */,
 				D7157BE4D1E8160054E09348 /* MCDAvatarView.h in Headers */,
+				D715752E21F0E7AAD13B4B22 /* MCDBorderView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +816,7 @@
 				D7157AA9F8AAD02C5885C3C9 /* MCDRadioFormField.xib in Resources */,
 				D715788E6B193BEAA91E9C5E /* MCDTextFormField.xib in Resources */,
 				D71572DC9A824667EFBE61EE /* MCDAvatarView.xib in Resources */,
+				245157C81B964DE800F76A27 /* MCDBorderView.xib in Resources */,
 				D715737C5B75D57DE1F9DA3E /* MCDButtonFormField.xib in Resources */,
 				D7157057CAB7264231304748 /* MCDButtonView.xib in Resources */,
 			);
@@ -922,6 +943,8 @@
 				D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */,
 				D715750D9DACF2B0E5A0A071 /* MCDUserLocation.m in Sources */,
 				D7157B172669D4B8A67DC5F3 /* MCDUserLocationHelper.m in Sources */,
+				D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */,
+				D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +966,7 @@
 				D7157BA5A70946F755CA5708 /* MCDButtonFormField.m in Sources */,
 				D7157916E2696B9824C8EA1F /* MCDRadioFormField.m in Sources */,
 				D715702CE7580138A60B175D /* MCDAvatarView.m in Sources */,
+				D7157B7EF579CFCE7166C324 /* MCDBorderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,7 +1261,7 @@
 			baseConfigurationReference = 06434D3BAC163FC98DF6C086 /* Pods-MCDiaryKit.debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

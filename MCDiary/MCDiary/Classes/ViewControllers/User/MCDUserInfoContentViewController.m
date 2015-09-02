@@ -11,6 +11,7 @@
 #import "MCDAreaPickerViewModel.h"
 #import "RSKImageCropViewController.h"
 #import "MCDUser.h"
+#import "MCDUserModifyPasswordViewController.h"
 
 @import MCDiaryKit;
 
@@ -162,6 +163,13 @@
         @strongify(self);
         [self.activeField resignFirstResponder];
         [self.viewModel validateAndSave];
+    }];
+
+    [self.changePasswordButton.buttonPressSignal subscribeNext:^(id x) {
+        @strongify(self);
+        MCDUserModifyPasswordViewController *vc = [self.storyboard
+            instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserModifyPasswordViewController class])];
+        [self presentViewController:vc animated:YES completion:nil];
     }];
 }
 
