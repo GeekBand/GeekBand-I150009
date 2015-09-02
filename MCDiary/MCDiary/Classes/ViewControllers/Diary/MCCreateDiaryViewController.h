@@ -20,12 +20,13 @@
 
 @end
 
-@interface MCCreateDiaryViewController : UIViewController<UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MCCreateDiaryViewController : UIViewController<UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UITableView *optionsTableView;
-@property (weak, nonatomic) IBOutlet UIScrollView *imagesScrollView;
+@property (weak, nonatomic) IBOutlet UICollectionView *imagesCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet MCPlaceHolderTextView *contentTextView;
 @property (strong, nonatomic) MCDiary *diary;
 @property (weak, nonatomic) id<MCCreateDiaryViewControllerDelegate> delegate;

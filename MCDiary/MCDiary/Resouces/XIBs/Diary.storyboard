@@ -226,12 +226,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56k-vV-ufL">
-                                <rect key="frame" x="20" y="188" width="560" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="whA-U7-6o7"/>
-                                </constraints>
-                            </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-QA-rfl" customClass="MCPlaceHolderTextView">
                                 <rect key="frame" x="20" y="271" width="560" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,6 +243,30 @@
                                     <action selector="addButtonTouchUpInside:" destination="ZM0-TE-kdx" eventType="touchUpInside" id="ecl-Rf-CEN"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yla-g8-20T">
+                                <rect key="frame" x="40" y="188" width="520" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.98792944329999999" blue="0.97423659380000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="5Z5-je-xkv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1d7-cH-6br">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCellIdentifier" id="chT-i0-lLL">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -258,19 +276,19 @@
                             <constraint firstItem="wVX-AW-y5p" firstAttribute="top" secondItem="ogx-bS-sfp" secondAttribute="bottom" constant="8" id="8bX-wR-b2C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RFy-DB-wGl" secondAttribute="trailing" id="8xO-sL-Swd"/>
                             <constraint firstItem="hlv-QA-rfl" firstAttribute="centerX" secondItem="zLf-QL-uNh" secondAttribute="centerX" id="BQp-uM-Ckn"/>
-                            <constraint firstItem="hlv-QA-rfl" firstAttribute="top" secondItem="56k-vV-ufL" secondAttribute="bottom" constant="8" id="I06-EJ-yT7"/>
+                            <constraint firstItem="hlv-QA-rfl" firstAttribute="top" secondItem="yla-g8-20T" secondAttribute="bottom" constant="8" id="BTC-dV-Opx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wVX-AW-y5p" secondAttribute="leading" id="QQI-v6-cua"/>
+                            <constraint firstItem="yla-g8-20T" firstAttribute="leading" secondItem="zLf-QL-uNh" secondAttribute="leadingMargin" constant="20" id="Qce-nv-Lrf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hlv-QA-rfl" secondAttribute="leading" id="UCK-g1-0GK"/>
                             <constraint firstItem="ogx-bS-sfp" firstAttribute="centerY" secondItem="RFy-DB-wGl" secondAttribute="centerY" id="VM8-Ga-KKX"/>
-                            <constraint firstItem="56k-vV-ufL" firstAttribute="centerX" secondItem="zLf-QL-uNh" secondAttribute="centerX" id="VOC-3K-lF1"/>
                             <constraint firstItem="9h8-YK-5jp" firstAttribute="centerX" secondItem="zLf-QL-uNh" secondAttribute="centerX" id="WGF-Y1-SK7"/>
+                            <constraint firstItem="yla-g8-20T" firstAttribute="top" secondItem="wVX-AW-y5p" secondAttribute="bottom" constant="5" id="WPt-d3-zom"/>
                             <constraint firstItem="9h8-YK-5jp" firstAttribute="top" secondItem="hlv-QA-rfl" secondAttribute="bottom" constant="23" id="WTG-ru-IY7"/>
+                            <constraint firstItem="yla-g8-20T" firstAttribute="centerX" secondItem="zLf-QL-uNh" secondAttribute="centerX" id="ZIV-oc-s98"/>
                             <constraint firstItem="42K-pw-Wwt" firstAttribute="centerY" secondItem="ogx-bS-sfp" secondAttribute="centerY" id="b3z-VC-GPk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="42K-pw-Wwt" secondAttribute="leading" id="b7k-PN-4UA"/>
-                            <constraint firstItem="56k-vV-ufL" firstAttribute="top" secondItem="wVX-AW-y5p" secondAttribute="bottom" constant="5" id="bUM-Wf-PEU"/>
                             <constraint firstItem="XjG-dc-gXf" firstAttribute="top" secondItem="9h8-YK-5jp" secondAttribute="bottom" constant="20" id="npR-tT-e16"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9h8-YK-5jp" secondAttribute="leading" id="xS8-21-icf"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="56k-vV-ufL" secondAttribute="leading" id="xpU-b2-4WO"/>
                             <constraint firstItem="wVX-AW-y5p" firstAttribute="centerX" secondItem="zLf-QL-uNh" secondAttribute="centerX" id="yvV-7P-VfE"/>
                         </constraints>
                         <connections>
@@ -278,9 +296,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="collectionHeightLayoutConstraint" destination="5Z5-je-xkv" id="28x-m8-83h"/>
                         <outlet property="contentTextView" destination="hlv-QA-rfl" id="Dns-Yk-E1h"/>
                         <outlet property="deleteButton" destination="RFy-DB-wGl" id="5bR-hp-28X"/>
-                        <outlet property="imagesScrollView" destination="56k-vV-ufL" id="60c-ZK-L3z"/>
+                        <outlet property="imagesCollectionView" destination="yla-g8-20T" id="ULr-hN-GbC"/>
                         <outlet property="optionsTableView" destination="wVX-AW-y5p" id="fMK-x3-pCG"/>
                         <outlet property="titleLabel" destination="ogx-bS-sfp" id="rF5-F0-qVS"/>
                     </connections>

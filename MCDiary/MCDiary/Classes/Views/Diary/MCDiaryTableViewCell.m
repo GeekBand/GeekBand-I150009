@@ -16,6 +16,9 @@
     }else{
         _tagImageView.image = [UIImage imageNamed:@""];
     }
+    UIView *grayLineView = [[UIView alloc] initWithFrame:CGRectMake(_tagImageView.center.x, 0, 1, self.frame.size.height)];
+    [grayLineView setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
+    [self.contentView insertSubview:grayLineView belowSubview:_tagImageView];
     _timeLabel.text = [self dateStringFromADate:diary.createTime];
     _titleLabel.text = diary.title;
     _contentLabel.text = diary.content;

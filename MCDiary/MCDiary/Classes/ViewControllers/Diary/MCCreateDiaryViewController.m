@@ -25,6 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _optionsTableView.dataSource = self;
+    
+    _imagesCollectionView.dataSource = self;
     if (_diary) {
         _imagesArray = _diary.images;
         _contentTextView.text = _diary.content;
@@ -35,45 +37,7 @@
     }else{
         _titleLabel.text = @"编辑日记";
     }
-    [self initializeImagesScrollView];
-}
-
-- (void)initializeImagesScrollView {
-    //上图       图片：宽 80, 高 60  间距为5
-    _imagesScrollView.contentSize = CGSizeMake(85 * 9 + 5, _imagesScrollView.frame.size.height);
-    if (_imagesArray) {
-        if (85 * (_imagesArray.count + 1) + 5 > _imagesScrollView.frame.size.width) {
-            _imagesScrollView.scrollEnabled = YES;
-        }else{
-            _imagesScrollView.scrollEnabled = NO;
-        }
-        for(int i = 0; i < _imagesArray.count; ++i){
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(85 * i + 5, 8, 80, 60)];
-            imageView.image = (UIImage *)_imagesArray[i];
-            [_imagesScrollView addSubview:imageView];
-        }
-    }else{
-        _imagesScrollView.scrollEnabled = NO;
-    }
     
-    _addPhotoButton = [[UIButton alloc] initWithFrame:CGRectMake(_imagesArray.count * 85 + 5, 8, 80, 60)];
-    [_addPhotoButton setTitle:@"add" forState:UIControlStateNormal];
-    [_addPhotoButton setBackgroundColor:[UIColor grayColor]];
-    [_addPhotoButton addTarget:self action:@selector(addImageButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-    [_imagesScrollView addSubview:_addPhotoButton];
-}
-
-- (void)refreshScrollView {
-    if (85 * (_imagesArray.count + 1) + 5 > _imagesScrollView.frame.size.width) {
-        _imagesScrollView.scrollEnabled = YES;
-    }else{
-        _imagesScrollView.scrollEnabled = NO;
-    }
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(85 * (_imagesArray.count - 1) + 5, 8, 80, 60)];
-    imageView.image = (UIImage *)_imagesArray[_imagesArray.count - 1];
-    [_imagesScrollView addSubview:imageView];
-    
-    _addPhotoButton.frame = CGRectMake(_imagesArray.count * 85 + 5, 8, 80, 60);
 }
 
 #pragma mark - Memory Handler
@@ -150,6 +114,7 @@
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
             pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            pickerController.allowsEditing = YES;
             pickerController.delegate = self;
             [self presentViewController:pickerController animated:YES completion:nil];
         }else{
@@ -160,9 +125,10 @@
         }
     }];
     UIAlertAction *photoStoreAction = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
             UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
-            pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            pickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+            pickerController.allowsEditing = YES;
             pickerController.delegate = self;
             [self presentViewController:pickerController animated:YES completion:nil];
         }else{
@@ -231,17 +197,64 @@
 - (void)imagePickerController:(nonnull UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary<NSString *,id> *)info
 {
     for (NSString *key in [info allKeys]) {
-        if ([key isEqualToString:UIImagePickerControllerOriginalImage] || [key isEqualToString:UIImagePickerControllerEditedImage]) {
+        if ([key isEqualToString:UIImagePickerControllerEditedImage] || [key isEqualToString:UIImagePickerControllerOriginalImage]) {
             UIImage *image = (UIImage *)[info objectForKey:key];
             if (_imagesArray == nil) {
                 _imagesArray = [NSMutableArray array];
             }
             if (image) {
                 [_imagesArray addObject:image];
-                [self refreshScrollView];
+                [_imagesCollectionView reloadData];
+                [picker dismissViewControllerAnimated:YES completion:nil];
+                return;
             }
         }
     }
+}
+
+#pragma mark - UICollectionViewDataSource methods
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return (_imagesArray.count + 1) >= 9 ? 9 : _imagesArray.count + 1;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (nonnull UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *imageCellIdentifier = @"ImageCellIdentifier";
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:imageCellIdentifier forIndexPath:indexPath];
+    if (indexPath.item == _imagesArray.count && _imagesArray.count != 9) {
+        UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, cell.contentView.frame.size.width, cell.frame.size.width)];
+        [addButton setTitle:@"add" forState:UIControlStateNormal];
+        [addButton setBackgroundColor:[UIColor lightGrayColor]];
+        [addButton addTarget:self action:@selector(addImageButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:addButton];
+    }else{
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
+        imageView.image = _imagesArray[indexPath.item];
+        [cell.contentView addSubview:imageView];
+        for (id view in [cell.contentView subviews]) {
+            if ([view isKindOfClass:[UIButton class]]) {
+                [view removeFromSuperview];
+            }
+        }
+    }
+    if (collectionView.contentSize.height > 75) {
+        _collectionHeightLayoutConstraint.constant = collectionView.contentSize.height;
+    }
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(60, 60);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(8, 5, 5, 7);
 }
 
 @end
