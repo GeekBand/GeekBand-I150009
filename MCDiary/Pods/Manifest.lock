@@ -16,6 +16,18 @@ PODS:
   - DLRadioButton (1.3.2)
   - HexColors (2.3.0)
   - Masonry (0.6.2)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -37,6 +49,7 @@ DEPENDENCIES:
   - DLRadioButton
   - HexColors
   - Masonry
+  - MMDrawerController
   - ReactiveCocoa
   - RegExCategories
   - RSKImageCropper
@@ -52,6 +65,7 @@ SPEC CHECKSUMS:
   DLRadioButton: 99f4aba746ae10d727f885b64291d0318623fd28
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
   RSKImageCropper: e912419809d3a4eac47864d6fbc22f84c14879d5

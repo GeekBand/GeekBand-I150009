@@ -10,4 +10,17 @@
 {
 
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        // todo: 判断用户登录状态
+        self.userLoggedIn = NO;
+    }
+
+    return self;
+}
+
+
 @end
