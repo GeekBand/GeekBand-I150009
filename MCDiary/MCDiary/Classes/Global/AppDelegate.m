@@ -23,7 +23,7 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
-    // TODO: cloud
+    // TODO: 设置 LeanCloud
 
     return YES;
 }

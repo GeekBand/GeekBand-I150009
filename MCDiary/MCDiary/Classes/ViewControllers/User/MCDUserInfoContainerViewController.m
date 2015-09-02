@@ -6,6 +6,7 @@
 #import "MCDUserInfoContainerViewController.h"
 #import "MCDUserInfoContentViewController.h"
 #import "TPKeyboardAvoidingScrollView.h"
+#import "MMDrawerController.h"
 
 @interface MCDUserInfoContainerViewController ()
 
@@ -13,6 +14,7 @@
 @property(nonatomic, assign) CGRect                           contentViewFrame;
 
 @property(nonatomic, weak) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
+@property(nonatomic, weak) IBOutlet UIButton                     *openMenuButton;
 
 @end
 
@@ -27,7 +29,7 @@
 {
     [super viewDidLoad];
 
-//    [self registerKeyBoardObserver];
+    [self initButtons];
 }
 
 - (void)viewDidLayoutSubviews
@@ -63,6 +65,18 @@
     [self addChildViewController:self.contentViewController];
     [self.scrollView addSubview:self.contentViewController.view];
     [self.contentViewController didMoveToParentViewController:self];
+}
+
+- (void)initButtons
+{
+    [[self.openMenuButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            MMDrawerController * rootVC = (MMDrawerController * )
+            [UIApplication sharedApplication].delegate.window.rootViewController;
+            rootVC.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+            [rootVC openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+        }
+    ];
 }
 
 @end

@@ -7,4 +7,6 @@
 
 @interface MCDHomeViewModel : MCDBaseViewModel
 
+@property(nonatomic, assign) BOOL userLoggedIn;
+
 @end
