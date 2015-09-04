@@ -165,6 +165,24 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         [self.activeField resignFirstResponder];
         [self.viewModel validate];
     }];
+    [self.viewModel.signUpErrorSignal subscribeNext:^(RACTuple *tuple) {
+        // TODO: 本地化错误显示
+        NSError     *error = tuple.first;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    [self.viewModel.signUpSuccessSignal subscribeNext:^(id x) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册成功"
+                                                        message:@"恭喜! 注册成功."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
 
     // 换头像
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {

@@ -9,6 +9,8 @@
 #import "NSDate+DateTools.h"
 #import "RegExCategories.h"
 
+static MCDUser *_instance = nil;
+
 @interface MCDUser ()
 
 @end
@@ -22,8 +24,6 @@
 
 + (MCDUser *)currentUser
 {
-    static MCDUser *_instance = nil;
-
     @synchronized (self) {
         if (_instance == nil) {
             // TODO: load from plist and cloud
@@ -32,6 +32,11 @@
     }
 
     return _instance;
+}
+
++ (void)setCurrentUser:(MCDUser *)user
+{
+    _instance = user;
 }
 
 + (nullable NSString *)errorStringForUsername:(NSString *)username
@@ -98,6 +103,18 @@
         self.birthday    = [NSDate dateWithYear:1991 month:1 day:1];
     }
 
+    return self;
+}
+
+- (instancetype)initWithAVUser:(AVUser *)avUser
+{
+    self = [self init];
+    if (self) {
+        self.userId   = avUser.objectId;
+        self.username = avUser.username;
+        self.email    = avUser.email;
+        self.avUser   = avUser;
+    }
     return self;
 }
 

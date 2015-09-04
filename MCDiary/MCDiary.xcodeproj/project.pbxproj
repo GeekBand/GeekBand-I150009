@@ -32,6 +32,7 @@
 		249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; };
 		249BEBE91B8F4ABB00C2A3CF /* MCDiaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFC1B8F537100C2A3CF /* Images.xcassets */; };
+		24EF48C31B9A0E3E00726ECB /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */; };
 		5577DE89387FB5D2EE17466F /* Pods_MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45E03235E4C78317D17E845 /* Pods_MCDiaryKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D715702CE7580138A60B175D /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D715783E09D378D0A237EABB /* MCDAvatarView.m */; };
 		D715704CC2590DAB35E76A86 /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157F17CB797D9622BC8827 /* MCDTextFormField.m */; };
@@ -165,6 +166,7 @@
 		249BEBE31B8F4ABB00C2A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryKitTests.m; sourceTree = "<group>"; };
 		249BEBFC1B8F537100C2A3CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = MCDConfig.plist; sourceTree = "<group>"; };
 		2DAE61709DC64C7EF34524D8 /* Pods-MCDiaryKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.release.xcconfig"; sourceTree = "<group>"; };
 		7D062F7380464731C18E59AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E722961BE71790041DCB8A6 /* Pods-MCDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.release.xcconfig"; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				245157C51B94DE3600F76A27 /* Area.plist */,
+				24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				245157C61B94DE3600F76A27 /* Area.plist in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
+				24EF48C31B9A0E3E00726ECB /* MCDConfig.plist in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
 				D715704DBE7017E744F43804 /* README.md in Resources */,
 				240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */,

@@ -25,6 +25,9 @@
 @property(nonatomic, readonly) NSString *passwordNormalTitle;
 @property(nonatomic, readonly) NSString *emailNormalTitle;
 
+@property(nonatomic, strong, readonly) RACSignal *signUpErrorSignal;
+@property(nonatomic, strong, readonly) RACSignal *signUpSuccessSignal;
+
 - (void)validate;
 
 @end

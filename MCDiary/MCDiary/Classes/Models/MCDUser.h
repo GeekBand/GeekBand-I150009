@@ -24,13 +24,20 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
 @property(nonatomic, strong) MCDUserLocation *location;
 @property(nonatomic, strong) UIImage         *avatarImage;
 
+@property(nonatomic, copy) NSString *userId;
+@property(nonatomic, strong) AVUser *avUser;
+
 + (MCDUser *)currentUser;
+
++ (void)setCurrentUser:(MCDUser *)user;
 
 + (NSString *)errorStringForUsername:(NSString *)username;
 
 + (NSString *)errorStringForPassword:(NSString *)password;
 
 + (NSString *)errorStringForEmail:(NSString *)email;
+
+- (instancetype)initWithAVUser:(AVUser *)avUser;
 
 - (void)save;
 
