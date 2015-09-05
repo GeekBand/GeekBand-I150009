@@ -378,6 +378,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoutButton" destination="eoW-u8-Dip" id="yeH-rl-JOp"/>
                         <outlet property="openMenuButton" destination="DwU-I2-t1c" id="wBe-cS-pLG"/>
                         <outlet property="scrollView" destination="8SQ-Nd-cqP" id="y7i-zV-Xrt"/>
                     </connections>

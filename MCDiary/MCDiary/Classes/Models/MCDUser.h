@@ -29,6 +29,7 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
 
 @property(nonatomic, strong, readonly) RACSignal *allInfoUpdatedSignal;
 @property(nonatomic, strong, readonly) RACSignal *infoUpdateFailSignal;
+@property(nonatomic, strong, readonly) RACSignal *logoutSignal;
 
 + (MCDUser *)currentUser;
 
@@ -49,4 +50,8 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
 - (void)cacheUser;
 
 - (void)updateUserFromCloud;
+
+- (void)logout;
+
+
 @end

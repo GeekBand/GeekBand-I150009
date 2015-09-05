@@ -7,6 +7,8 @@
 #import "MCDUserInfoContentViewController.h"
 #import "TPKeyboardAvoidingScrollView.h"
 #import "MMDrawerController.h"
+#import "MCDUser.h"
+#import "MCDLoginViewController.h"
 
 @interface MCDUserInfoContainerViewController ()
 
@@ -15,6 +17,7 @@
 
 @property(nonatomic, weak) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 @property(nonatomic, weak) IBOutlet UIButton                     *openMenuButton;
+@property(nonatomic, weak) IBOutlet UIButton                     *logoutButton;
 
 @end
 
@@ -29,7 +32,7 @@
 {
     [super viewDidLoad];
 
-    [self initButtons];
+    [self initBindings];
 }
 
 - (void)viewDidLayoutSubviews
@@ -67,16 +70,29 @@
     [self.contentViewController didMoveToParentViewController:self];
 }
 
-- (void)initButtons
+- (void)initBindings
 {
+    // 打开菜单
     [[self.openMenuButton rac_signalForControlEvents:UIControlEventTouchUpInside]
         subscribeNext:^(id x) {
-            MMDrawerController * rootVC = (MMDrawerController * )
-            [UIApplication sharedApplication].delegate.window.rootViewController;
+            MMDrawerController *rootVC = (MMDrawerController *)
+                [UIApplication sharedApplication].delegate.window.rootViewController;
             rootVC.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
             [rootVC openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
         }
     ];
+
+    // 注销用户
+    [[MCDUser currentUser].logoutSignal subscribeNext:^(id x) {
+        MMDrawerController *rootVC = (MMDrawerController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+        rootVC.centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MCDLoginViewController class])];
+    }];
+    [[self.logoutButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            [[MCDUser currentUser] logout];
+        }
+    ];
+
 }
 
 @end

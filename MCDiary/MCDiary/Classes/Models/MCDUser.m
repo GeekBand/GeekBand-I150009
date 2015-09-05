@@ -26,6 +26,7 @@ static MCDUser *_instance = nil;
 
 @synthesize allInfoUpdatedSignal = _allInfoUpdatedSignal;
 @synthesize infoUpdateFailSignal = _infoUpdateFailSignal;
+@synthesize logoutSignal = _logoutSignal;
 
 #pragma mark - public
 
@@ -50,6 +51,16 @@ static MCDUser *_instance = nil;
 {
     NSURL *cacheURL = [MCDUser cacheURL];
     return [NSKeyedUnarchiver unarchiveObjectWithFile:cacheURL.path];
+}
+
+- (void)logout
+{
+    // 删缓存
+    NSURL *fileURL = [MCDUser cacheURL];
+    [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
+
+    // 云注销
+    [AVUser logOut];
 }
 
 + (nullable NSString *)errorStringForUsername:(NSString *)username
@@ -194,6 +205,7 @@ static MCDUser *_instance = nil;
         _infoUpdateFailSignal = [[self rac_signalForSelector:@selector(infoUpdateFailed:)] map:^NSError *(RACTuple *tuple) {
             return tuple.first;
         }];
+        _logoutSignal = [self rac_signalForSelector:@selector(logout)];
     }
 
     return self;
