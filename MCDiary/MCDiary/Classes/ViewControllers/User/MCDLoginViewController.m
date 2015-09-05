@@ -6,6 +6,8 @@
 #import "MCDLoginViewController.h"
 #import "MCDSignupContainerViewController.h"
 #import "MCDLoginViewModel.h"
+#import "MMDrawerController.h"
+#import "MCDUserInfoContainerViewController.h"
 
 @import MCDiaryKit;
 
@@ -87,25 +89,26 @@
     [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
+        [SVProgressHUD show];
         [self.viewModel validateAndLogin];
     }];
     [self.viewModel.loginSuccessSignal subscribeNext:^(id x) {
-        // TODO: 跳转到正确的位置
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录成功"
-                                                        message:@"恭喜! 登录成功."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        [SVProgressHUD dismiss];
+        MMDrawerController                 *rootVC     = (MMDrawerController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+        MCDUserInfoContainerViewController *userInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserInfoContainerViewController class])];
+        [rootVC setCenterViewController:userInfoVC];
     }];
-    [[self.viewModel loginFailSignal] subscribeNext:^(NSError *error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }];
+    [[[self.viewModel loginFailSignal]
+        throttle:1] // 1秒内只接受一次登录失败的信号
+        subscribeNext:^(NSError *error) {
+            [SVProgressHUD dismiss];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
 
     // 去注册
     [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
@@ -190,7 +193,7 @@
                                                               UITextField *field = alert.textFields[0];
                                                               [self.viewModel sendForgetPasswordRequestWithEmail:field.text];
                                                           }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+    UIAlertAction *cancelAction  = [UIAlertAction actionWithTitle:@"取消"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) {
                                                               [alert dismissViewControllerAnimated:YES

@@ -14,6 +14,14 @@
 
 }
 
+@dynamic userId;
+@dynamic gender;
+@dynamic birthday;
+@dynamic avatarImageFile;
+@dynamic provinceIndex;
+@dynamic cityIndex;
+@dynamic areaIndex;
+
 #pragma mark - public
 
 #pragma mark - life cycle

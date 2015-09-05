@@ -67,6 +67,10 @@
     [avUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         @strongify(self);
         if (succeeded) {
+            // 设置用户状态
+            MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
+            user.avatarImage = self.avatarImage;
+            [MCDUser setCurrentUser:user];
             [self signUpSucess:weakAVUser];
         } else {
             // TODO: 本地化错误显示
@@ -126,22 +130,25 @@
     [avUser saveInBackground];
 
     // 上传头像
-    AVFile *avatarFile = [AVFile fileWithName:[NSString stringWithFormat:@"%@.png",avUser.objectId]
-                                         data:UIImagePNGRepresentation(self.avatarImage)];
+    if (self.avatarImage != nil) {
+        AVFile *avatarFile = [AVFile fileWithName:[NSString stringWithFormat:@"%@.png", avUser.objectId]
+                                             data:UIImagePNGRepresentation(self.avatarImage)];
 
-    __weak typeof(avatarFile) weakFile = avatarFile;
-    [avatarFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded){
-            MCDCloudUserInfo *cloudUserInfo = [MCDCloudUserInfo object];
-            cloudUserInfo.userId = avUser.objectId;
-            cloudUserInfo.avatarImageFile = weakFile;
-            cloudUserInfo.ACL = acl;
-            [cloudUserInfo save];
-        }
-    }];
-
-    MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
-    [MCDUser setCurrentUser:user];
+        __weak typeof(avatarFile) weakFile = avatarFile;
+        [avatarFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                MCDCloudUserInfo *cloudUserInfo = [MCDCloudUserInfo object];
+                cloudUserInfo.userId          = avUser.objectId;
+                cloudUserInfo.avatarImageFile = weakFile;
+                cloudUserInfo.ACL             = acl;
+                [cloudUserInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (error != nil) {
+                        DDLogVerbose(@"%@", error);
+                    }
+                }];
+            }
+        }];
+    }
 }
 
 - (void)signUpError:(NSError *)error

@@ -6,6 +6,8 @@
 #import "MCDSignupContentViewController.h"
 #import "MCDSignupContentViewModel.h"
 #import "RSKImageCropViewController.h"
+#import "MCDUserInfoContainerViewController.h"
+#import "MMDrawerController.h"
 
 @import MCDiaryKit;
 
@@ -177,13 +179,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }];
     [self.viewModel.signUpSuccessSignal subscribeNext:^(id x) {
         [SVProgressHUD dismiss];
-        // TODO: 跳转到合适的位置
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册成功"
-                                                        message:@"恭喜! 注册成功."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        MMDrawerController                 *rootVC     = (MMDrawerController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+        MCDUserInfoContainerViewController *userInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserInfoContainerViewController class])];
+        [rootVC setCenterViewController:userInfoVC];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
 
     // 换头像

@@ -42,9 +42,19 @@
     // Cloud 登录
     [AVUser logInWithUsernameInBackground:self.username
                                  password:self.password
-                                    block:^(AVUser *user, NSError *error) {
-                                        if (user != nil) {
-                                            [self loginSuccess:user];
+                                    block:^(AVUser *avUser, NSError *error) {
+                                        if (avUser != nil) {
+                                            MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
+                                            [MCDUser setCurrentUser:user];
+
+                                            [user.allInfoUpdatedSignal subscribeNext:^(NSNumber *numFlag) {
+                                                [self loginSuccess];
+                                            }];
+                                            [user.infoUpdateFailSignal subscribeNext:^(NSError *cloudError) {
+                                                [self loginFail:cloudError];
+                                            }];
+
+                                            [user updateUserFromCloud];
                                         } else {
                                             [self loginFail:error];
                                         }
@@ -86,7 +96,7 @@
         self.usernameValid = YES;
         self.passwordValid = YES;
 
-        _loginSuccessSignal = [[self rac_signalForSelector:@selector(loginSuccess:)] map:^MCDUser *(id value) {
+        _loginSuccessSignal = [[self rac_signalForSelector:@selector(loginSuccess)] map:^MCDUser *(id value) {
             return [MCDUser currentUser];
         }];
         _loginFailSignal    = [[self rac_signalForSelector:@selector(loginFail:)] map:^NSError *(RACTuple *tuple) {
@@ -116,10 +126,8 @@
 
 #pragma mark - private
 
-- (void)loginSuccess:(AVUser *)avUser
+- (void)loginSuccess
 {
-    MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
-    [MCDUser setCurrentUser:user];
 }
 
 - (void)loginFail:(NSError *)error

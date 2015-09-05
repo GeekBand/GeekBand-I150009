@@ -8,15 +8,12 @@
 
 @interface MCDCloudUserInfo : AVObject <AVSubclassing>
 
-@property(nonatomic, copy) NSString *userId;
-
-@property(nonatomic, assign) MCDUserGender gender;
-@property(nonatomic, copy) NSDate          *birthday;
-@property(nonatomic, strong) AVFile        *avatarImageFile;
-
-// 位置
-@property(nonatomic, assign) NSNumber      *provinceIndex;
-@property(nonatomic, assign) NSNumber      *cityIndex;
-@property(nonatomic, assign) NSNumber      *areaIndex;
+@property(nonatomic, strong) NSString *userId;
+@property(nonatomic, strong) NSNumber *gender;
+@property(nonatomic, strong) NSDate   *birthday;
+@property(nonatomic, strong) AVFile   *avatarImageFile;
+@property(nonatomic, strong) NSNumber *provinceIndex;
+@property(nonatomic, strong) NSNumber *cityIndex;
+@property(nonatomic, strong) NSNumber *areaIndex;
 
 @end

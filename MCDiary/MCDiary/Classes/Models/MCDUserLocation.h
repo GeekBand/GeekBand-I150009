@@ -4,7 +4,7 @@
 //
 
 
-@interface MCDUserLocation : NSObject
+@interface MCDUserLocation : NSObject <NSCoding>
 
 @property(nonatomic, assign) NSUInteger provinceIndex;
 @property(nonatomic, assign) NSUInteger cityIndex;
