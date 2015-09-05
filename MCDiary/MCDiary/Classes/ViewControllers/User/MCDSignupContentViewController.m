@@ -6,6 +6,8 @@
 #import "MCDSignupContentViewController.h"
 #import "MCDSignupContentViewModel.h"
 #import "RSKImageCropViewController.h"
+#import "MCDUserInfoContainerViewController.h"
+#import "MMDrawerController.h"
 
 @import MCDiaryKit;
 
@@ -163,7 +165,24 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
-        [self.viewModel validate];
+        [self.viewModel validateAndSignup];
+        [SVProgressHUD show];
+    }];
+    [self.viewModel.signUpErrorSignal subscribeNext:^(NSError *error) {
+        [SVProgressHUD dismiss];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    [self.viewModel.signUpSuccessSignal subscribeNext:^(id x) {
+        [SVProgressHUD dismiss];
+        MMDrawerController                 *rootVC     = (MMDrawerController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+        MCDUserInfoContainerViewController *userInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserInfoContainerViewController class])];
+        [rootVC setCenterViewController:userInfoVC];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
 
     // 换头像

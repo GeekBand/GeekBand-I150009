@@ -14,7 +14,7 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
     MCDUserGenderMale   = 2,
 };
 
-@interface MCDUser : MCDBaseModel
+@interface MCDUser : MCDBaseModel <NSCoding>
 
 @property(nonatomic, copy) NSString          *username;
 @property(nonatomic, copy) NSString          *password;
@@ -24,7 +24,16 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
 @property(nonatomic, strong) MCDUserLocation *location;
 @property(nonatomic, strong) UIImage         *avatarImage;
 
+@property(nonatomic, copy) NSString *userId;
+@property(nonatomic, strong) AVUser *avUser;
+
+@property(nonatomic, strong, readonly) RACSignal *allInfoUpdatedSignal;
+@property(nonatomic, strong, readonly) RACSignal *infoUpdateFailSignal;
+@property(nonatomic, strong, readonly) RACSignal *logoutSignal;
+
 + (MCDUser *)currentUser;
+
++ (void)setCurrentUser:(MCDUser *)user;
 
 + (NSString *)errorStringForUsername:(NSString *)username;
 
@@ -32,6 +41,17 @@ typedef NS_ENUM (NSUInteger, MCDUserGender)
 
 + (NSString *)errorStringForEmail:(NSString *)email;
 
++ (MCDUser *)loadCachedUser;
+
+- (instancetype)initWithAVUser:(AVUser *)avUser;
+
 - (void)save;
+
+- (void)cacheUser;
+
+- (void)updateUserFromCloud;
+
+- (void)logout;
+
 
 @end

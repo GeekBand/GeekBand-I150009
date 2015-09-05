@@ -16,6 +16,24 @@
 
 #pragma mark - life cycle
 
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeInteger:self.provinceIndex forKey:@"provinceIndex"];
+    [coder encodeInteger:self.cityIndex forKey:@"cityIndex"];
+    [coder encodeInteger:self.areaIndex forKey:@"areaIndex"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [self init];
+    if(self){
+        self.provinceIndex = (NSUInteger)[coder decodeIntegerForKey:@"provinceIndex"];
+        self.cityIndex = (NSUInteger)[coder decodeIntegerForKey:@"cityIndex"];
+        self.areaIndex = (NSUInteger)[coder decodeIntegerForKey:@"areaIndex"];
+    }
+    return self;
+}
+
 #pragma mark - accessor
 
 #pragma mark - public

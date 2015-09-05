@@ -8,8 +8,14 @@
 #import "MCDAvatarView.h"
 #import "NSDate+DateTools.h"
 #import "RegExCategories.h"
+#import "MCDCloudUserInfo.h"
+
+static MCDUser *_instance = nil;
 
 @interface MCDUser ()
+
+@property(nonatomic, assign) BOOL basicInfoUpdated;
+@property(nonatomic, assign) BOOL extraInfoUpdated;
 
 @end
 
@@ -18,20 +24,43 @@
 
 }
 
+@synthesize allInfoUpdatedSignal = _allInfoUpdatedSignal;
+@synthesize infoUpdateFailSignal = _infoUpdateFailSignal;
+@synthesize logoutSignal = _logoutSignal;
+
 #pragma mark - public
 
 + (MCDUser *)currentUser
 {
-    static MCDUser *_instance = nil;
-
     @synchronized (self) {
         if (_instance == nil) {
-            // TODO: load from plist and cloud
-            _instance = [[self alloc] init];
+            // 从缓存中取
+            _instance = [self loadCachedUser];
         }
     }
 
     return _instance;
+}
+
++ (void)setCurrentUser:(MCDUser *)user
+{
+    _instance = user;
+}
+
++ (MCDUser *)loadCachedUser
+{
+    NSURL *cacheURL = [MCDUser cacheURL];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:cacheURL.path];
+}
+
+- (void)logout
+{
+    // 删缓存
+    NSURL *fileURL = [MCDUser cacheURL];
+    [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
+
+    // 云注销
+    [AVUser logOut];
 }
 
 + (nullable NSString *)errorStringForUsername:(NSString *)username
@@ -85,6 +114,72 @@
     DDLogVerbosePrettyFunction;
 }
 
+- (void)cacheUser
+{
+    NSURL *cacheURL = [MCDUser cacheURL];
+    [NSKeyedArchiver archiveRootObject:self toFile:cacheURL.path];
+}
+
+- (void)updateUserFromCloud
+{
+    if (self.userId == nil || [self.userId isEqualToString:@""])
+        return;
+    self.basicInfoUpdated = NO;
+    self.extraInfoUpdated = NO;
+
+    // 基本信息
+    AVQuery *query = [AVUser query];
+    [query getObjectInBackgroundWithId:self.userId
+                                 block:^(AVObject *object, NSError *cloudError) {
+                                     if (cloudError != nil) {
+                                         DDLogVerbose(@"%@", cloudError);
+                                         [self infoUpdateFailed:cloudError];
+                                         return;
+                                     }
+
+                                     AVUser *avUser = (AVUser *)object;
+                                     self.avUser   = avUser;
+                                     self.username = avUser.username;
+
+                                     if (avUser.email != nil)
+                                         self.email = avUser.email;
+
+                                     self.basicInfoUpdated = YES;
+                                 }];
+
+    // 额外信息
+    query = [MCDCloudUserInfo query];
+    [query whereKey:@"userId" equalTo:self.userId];
+    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *cloudError) {
+        if (cloudError != nil) {
+            DDLogVerbose(@"%@", cloudError);
+            [self infoUpdateFailed:cloudError];
+            return;
+        }
+
+        MCDCloudUserInfo *cloudUserInfo = (MCDCloudUserInfo *)object;
+        if (cloudUserInfo.gender != nil)
+            self.gender = (MCDUserGender)[cloudUserInfo.gender unsignedIntegerValue];
+
+        if (cloudUserInfo.birthday != nil)
+            self.birthday = cloudUserInfo.birthday;
+
+        if (cloudUserInfo.avatarImageFile != nil)
+            self.avatarImage = [UIImage imageWithData:[cloudUserInfo.avatarImageFile getData]];
+
+        if (cloudUserInfo.provinceIndex != nil)
+            self.location.provinceIndex = [cloudUserInfo.provinceIndex unsignedIntegerValue];
+
+        if (cloudUserInfo.cityIndex != nil)
+            self.location.cityIndex = [cloudUserInfo.cityIndex unsignedIntegerValue];
+
+        if (cloudUserInfo.areaIndex != nil)
+            self.location.areaIndex = [cloudUserInfo.areaIndex unsignedIntegerValue];
+
+        self.extraInfoUpdated = YES;
+    }];
+}
+
 #pragma mark - life cycle
 
 - (instancetype)init
@@ -96,8 +191,61 @@
         self.avatarImage = [MCDAvatarView defaultAvatarImage];
         self.gender      = MCDUserGenderFemale;
         self.birthday    = [NSDate dateWithYear:1991 month:1 day:1];
+
+        _allInfoUpdatedSignal = [[RACSignal
+            combineLatest:@[
+                RACObserve(self, basicInfoUpdated),
+                RACObserve(self, extraInfoUpdated)]
+                   reduce:^id(NSNumber *basicFlag, NSNumber *extraFlag) {
+                       return @([basicFlag boolValue] && [extraFlag boolValue]);
+                   }]
+            filter:^BOOL(NSNumber *numFlag) {
+                return [numFlag boolValue];
+            }];
+        _infoUpdateFailSignal = [[self rac_signalForSelector:@selector(infoUpdateFailed:)] map:^NSError *(RACTuple *tuple) {
+            return tuple.first;
+        }];
+        _logoutSignal = [self rac_signalForSelector:@selector(logout)];
     }
 
+    return self;
+}
+
+- (instancetype)initWithAVUser:(AVUser *)avUser
+{
+    self = [self init];
+    if (self) {
+        self.userId   = avUser.objectId;
+        self.username = avUser.username;
+        self.email    = avUser.email;
+        self.avUser   = avUser;
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.username forKey:@"username"];
+    [coder encodeObject:self.email forKey:@"email"];
+    [coder encodeInteger:self.gender forKey:@"gender"];
+    [coder encodeObject:self.birthday forKey:@"birthday"];
+    [coder encodeObject:self.location forKey:@"location"];
+    [coder encodeObject:UIImagePNGRepresentation(self.avatarImage) forKey:@"avatarImage"];
+    [coder encodeObject:self.userId forKey:@"userId"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [self init];
+    if (self) {
+        self.username    = [coder decodeObjectForKey:@"username"];
+        self.email       = [coder decodeObjectForKey:@"email"];
+        self.gender      = (MCDUserGender)[coder decodeIntegerForKey:@"gender"];
+        self.birthday    = [coder decodeObjectForKey:@"birthday"];
+        self.location    = [coder decodeObjectForKey:@"location"];
+        self.avatarImage = [UIImage imageWithData:[coder decodeObjectForKey:@"avatarImage"]];
+        self.userId      = [coder decodeObjectForKey:@"userId"];
+    }
     return self;
 }
 
@@ -105,5 +253,21 @@
 #pragma mark - accessor
 
 #pragma mark - private
+
++ (NSURL *)cacheURL
+{
+    NSURL *docUrl  = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                            inDomain:NSUserDomainMask
+                                                   appropriateForURL:nil
+                                                              create:YES
+                                                               error:nil];
+    NSURL *fileUrl = [docUrl URLByAppendingPathComponent:@"UserCache.plist"];
+    return fileUrl;
+}
+
+- (void)infoUpdateFailed:(NSError *)error
+{
+    DDLogVerbose(@"%@", error);
+}
 
 @end
