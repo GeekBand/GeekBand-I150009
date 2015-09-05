@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MCDCloudUserInfo.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,9 @@
     // 设置 LeanCloud
     NSString *configPath = [[NSBundle mainBundle] pathForResource:@"MCDConfig" ofType:@"plist"];
     if (configPath != nil) {
+        // 注册远程存储的模型类
+        [MCDCloudUserInfo registerSubclass];
+
         NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:configPath];
         [AVOSCloud setApplicationId:config[@"LeanCloudAppID"]
                           clientKey:config[@"LeanCloudAppKey"]];

@@ -43,6 +43,7 @@
 		D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D715706813D9823C3B115E79 /* Images.xcassets */; };
 		D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157D9886488B04AAFC0A87 /* MCDLoginViewController.m */; };
 		D71572DC9A824667EFBE61EE /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */; };
+		D7157331B13A1B72BDB5850C /* MCDCloudUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157F7076E3C65A0435E86E /* MCDCloudUserInfo.m */; };
 		D715737C5B75D57DE1F9DA3E /* MCDButtonFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71578D0F510C69B961E0297 /* MCDButtonFormField.xib */; };
 		D7157387EB4E881C4955A8F0 /* MCDUserInfoContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D715706087B6E4B8DD9EA8EE /* MCDUserInfoContentViewModel.m */; };
 		D715740A0331A443A46F7D2D /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = D7157C5C7CCCEA98DD8A1740 /* MCDTextFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -190,6 +191,7 @@
 		D71573D44677FF89AAE13521 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D71573E1B53343276708BC94 /* MCDUserInfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContainerViewController.h; sourceTree = "<group>"; };
 		D715745DC6897E9BE38555DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D71574AABEE6E1A11906AAD5 /* MCDCloudUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCloudUserInfo.h; sourceTree = "<group>"; };
 		D71574C628D868D8A9C2CCB7 /* MCDUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocation.h; sourceTree = "<group>"; };
 		D71575584B76B7A52D6FAA0D /* MCDSignupContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContainerViewController.m; sourceTree = "<group>"; };
 		D7157560471A9313BAD69A2E /* MCDUserLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocationHelper.h; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		D7157E0F44B60C6451D85A46 /* MCDAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDAvatarView.xib; sourceTree = "<group>"; };
 		D7157EB5636F1F738C771541 /* MCDUserInfoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewController.m; sourceTree = "<group>"; };
 		D7157F17CB797D9622BC8827 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
+		D7157F7076E3C65A0435E86E /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
 		D7157F7BDCAFC41E9E09C194 /* MCDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseModel.h; sourceTree = "<group>"; };
 		FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,6 +443,7 @@
 				D7157DB86FCFA53F7E37365E /* Models */,
 				D715715F72DFFD1BC6D87436 /* Views */,
 				D71579EA974AF3484FA6C9F6 /* Utils */,
+				D7157A1FB615DAE56B2C0544 /* CloudModels */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -539,6 +543,15 @@
 				D7157FFACE73C03FB8038424 /* User */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D7157A1FB615DAE56B2C0544 /* CloudModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7157F7076E3C65A0435E86E /* MCDCloudUserInfo.m */,
+				D71574AABEE6E1A11906AAD5 /* MCDCloudUserInfo.h */,
+			);
+			path = CloudModels;
 			sourceTree = "<group>";
 		};
 		D7157B8A08D8F47B13A60E4A /* ViewControllers */ = {
@@ -949,6 +962,7 @@
 				D7157B172669D4B8A67DC5F3 /* MCDUserLocationHelper.m in Sources */,
 				D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */,
 				D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */,
+				D7157331B13A1B72BDB5850C /* MCDCloudUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

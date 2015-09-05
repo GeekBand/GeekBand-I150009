@@ -5,6 +5,7 @@
 
 #import "MCDSignupContentViewModel.h"
 #import "MCDUser.h"
+#import "MCDCloudUserInfo.h"
 
 @interface MCDSignupContentViewModel ()
 
@@ -49,7 +50,7 @@
         self.emailValid = YES;
     }
 
-    // TODO: Cloud 检测
+    // Cloud 检测
     if (!(self.emailValid && self.usernameValid && self.passwordValid)) {
         return;
     }
@@ -115,12 +116,29 @@
 
 - (void)signUpSucess:(AVUser *)avUser
 {
-    // 设置用户的ACL
+    // 设置仅用户可写的ACL
     AVACL *acl = [AVACL ACL];
     [acl setPublicReadAccess:YES]; //此处设置的是所有人的可读权限
     [acl setWriteAccess:YES forUser:avUser]; //而这里设置了文件创建者的写权限
+
+    // 设置用户的ACL
     avUser.ACL = acl;
     [avUser saveInBackground];
+
+    // 上传头像
+    AVFile *avatarFile = [AVFile fileWithName:[NSString stringWithFormat:@"%@.png",avUser.objectId]
+                                         data:UIImagePNGRepresentation(self.avatarImage)];
+
+    __weak typeof(avatarFile) weakFile = avatarFile;
+    [avatarFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded){
+            MCDCloudUserInfo *cloudUserInfo = [MCDCloudUserInfo object];
+            cloudUserInfo.userId = avUser.objectId;
+            cloudUserInfo.avatarImageFile = weakFile;
+            cloudUserInfo.ACL = acl;
+            [cloudUserInfo save];
+        }
+    }];
 
     MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
     [MCDUser setCurrentUser:user];
