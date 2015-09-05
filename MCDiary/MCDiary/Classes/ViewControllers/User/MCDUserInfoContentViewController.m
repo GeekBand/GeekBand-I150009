@@ -162,9 +162,30 @@
     [self.saveInfoButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
+        [SVProgressHUD show];
         [self.viewModel validateAndSave];
     }];
+    [self.viewModel.allInfoSavedSignal subscribeNext:^(id x) {
+        [SVProgressHUD dismiss];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存成功"
+                                                        message:@"您的信息已保存"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    [[self.viewModel.infoSaveFailedSignal throttle:1]
+        subscribeNext:^(NSError *error) {
+            [SVProgressHUD dismiss];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存失败"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
 
+    //修改密码
     [self.changePasswordButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         MCDUserModifyPasswordViewController *vc = [self.storyboard

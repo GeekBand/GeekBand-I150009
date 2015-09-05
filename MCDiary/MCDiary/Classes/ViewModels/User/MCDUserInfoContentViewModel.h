@@ -30,6 +30,9 @@
 @property(nonatomic, readonly) NSString *emailErrorTitle;
 @property(nonatomic, readonly) NSString *emailNormalTitle;
 
+@property(nonatomic, strong, readonly) RACSignal *allInfoSavedSignal;
+@property(nonatomic, strong, readonly) RACSignal *infoSaveFailedSignal;
+
 - (void)validateAndSave;
 
 @end

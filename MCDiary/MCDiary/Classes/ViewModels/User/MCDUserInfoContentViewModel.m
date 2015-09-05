@@ -9,8 +9,12 @@
 #import "NSDate+DateTools.h"
 #import "MCDAreaPickerViewModel.h"
 #import "MCDUserLocationHelper.h"
+#import "MCDCloudUserInfo.h"
 
 @interface MCDUserInfoContentViewModel ()
+
+@property(nonatomic, assign) BOOL basicInfoSaved;
+@property(nonatomic, assign) BOOL extraInfoSaved;
 
 @end
 
@@ -19,27 +23,80 @@
 
 }
 
+@synthesize allInfoSavedSignal = _allInfoSavedSignal;
+@synthesize infoSaveFailedSignal = _infoSaveFailedSignal;
+
 #pragma mark - public
 
 - (void)validateAndSave
 {
-    // 验证+保存邮箱
+    self.basicInfoSaved = NO;
+    self.extraInfoSaved = NO;
+
+    // 邮箱初步验证
     NSString *emailError = [MCDUser errorStringForEmail:self.email];
     if (emailError) {
         _emailErrorTitle = emailError;
         self.emailValid = NO;
+        [self infoSaveFailed:[NSError errorWithDomain:NSStringFromClass(self.class)
+                                                 code:-1
+                                             userInfo:@{NSLocalizedDescriptionKey:@"邮箱格式错误"}]];
+        return;
     } else {
         self.emailValid = YES;
-        self.user.email = self.email;
+    }
+
+    @weakify(self);
+
+    // 邮箱保存
+    if (self.emailValid && self.email != nil && ![self.email isEqualToString:@""]) {
+        AVUser *avUser = [AVUser currentUser];
+        avUser.email = self.email;
+        [avUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            @strongify(self);
+            if (succeeded) {
+                self.user.email = self.email;
+                self.basicInfoSaved = YES;
+            } else {
+                DDLogVerbose(@"%@", error);
+                [self infoSaveFailed:error];
+            }
+        }];
     }
 
     // 其他字段
-    self.user.gender      = self.gender;
-    self.user.birthday    = self.birthday;
-    self.user.location    = self.location;
-    self.user.avatarImage = self.avatarImage;
+    AVQuery *query = [MCDCloudUserInfo query];
+    [query whereKey:@"userId" equalTo:self.user.userId];
+    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
+        @strongify(self);
+        if (error != nil) {
+            DDLogVerbose(@"%@", error);
+            return;
+        }
 
-    [self.user save];
+        MCDCloudUserInfo *userInfo = (MCDCloudUserInfo *)object;
+        userInfo.gender        = @(self.gender);
+        userInfo.birthday      = self.birthday;
+        userInfo.provinceIndex = @(self.location.provinceIndex);
+        userInfo.cityIndex     = @(self.location.cityIndex);
+        userInfo.areaIndex     = @(self.location.areaIndex);
+
+        [userInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (error != nil) {
+                DDLogVerbose(@"%@", error);
+                [self infoSaveFailed:error];
+                return;
+            }
+
+            self.user.gender   = self.gender;
+            self.user.birthday = self.birthday;
+            self.user.location = self.location;
+
+            self.extraInfoSaved = YES;
+        }];
+    }];
+
+    // 头像单独处理
 }
 
 
@@ -50,9 +107,9 @@
     self = [super init];
     if (self) {
         // 初始值
-        self.user = [MCDUser currentUser];
+        self.user            = [MCDUser currentUser];
         self.pickerViewModel = [[MCDAreaPickerViewModel alloc] init];
-        self.emailValid = YES;
+        self.emailValid      = YES;
 
         self.username    = self.user.username;
         self.email       = self.user.email;
@@ -62,32 +119,7 @@
         self.avatarImage = self.user.avatarImage;
 
         // Binding
-        RAC(self, birthdayString) = [RACObserve(self, birthday) map:^id(NSDate *date) {
-            return [NSString stringWithFormat:
-                                 @"%ld年 %ld月 %ld日",
-                                 (long)date.year,
-                                 (long)date.month,
-                                 (long)date.day
-            ];
-        }];
-
-        RAC(self, locationString) = [RACObserve(self.pickerViewModel, initialSelection) map:^id(NSArray *selection) {
-            MCDUserLocationHelper *locationHelper = [MCDUserLocationHelper sharedHelper];
-            NSString              *string         = [locationHelper getLocationStringByProvinceIndex:[selection[0] unsignedIntegerValue]
-                                                                                           cityIndex:[selection[1] unsignedIntegerValue]
-                                                                                           areaIndex:[selection[2] unsignedIntegerValue]
-            ];
-            return string;
-        }];
-
-        RAC(self, location) = [RACObserve(self.pickerViewModel, initialSelection) map:^id(NSArray *selection) {
-
-            MCDUserLocation *location = [[MCDUserLocation alloc] init];
-            location.provinceIndex = [selection[0] unsignedIntegerValue];
-            location.cityIndex     = [selection[1] unsignedIntegerValue];
-            location.areaIndex     = [selection[2] unsignedIntegerValue];
-            return location;
-        }];
+        [self initBinding];
     }
 
     return self;
@@ -102,5 +134,56 @@
 }
 
 #pragma mark - private
+
+- (void)initBinding
+{
+    RAC(self, birthdayString) = [RACObserve(self, birthday) map:^id(NSDate *date) {
+        return [NSString stringWithFormat:
+                             @"%ld年 %ld月 %ld日",
+                             (long)date.year,
+                             (long)date.month,
+                             (long)date.day
+        ];
+    }];
+
+    RAC(self, locationString) = [RACObserve(self.pickerViewModel, initialSelection) map:^id(NSArray *selection) {
+        MCDUserLocationHelper *locationHelper = [MCDUserLocationHelper sharedHelper];
+        NSString              *string         = [locationHelper getLocationStringByProvinceIndex:[selection[0] unsignedIntegerValue]
+                                                                                       cityIndex:[selection[1] unsignedIntegerValue]
+                                                                                       areaIndex:[selection[2] unsignedIntegerValue]
+        ];
+        return string;
+    }];
+
+    RAC(self, location) = [RACObserve(self.pickerViewModel, initialSelection) map:^id(NSArray *selection) {
+
+        MCDUserLocation *location = [[MCDUserLocation alloc] init];
+        location.provinceIndex = [selection[0] unsignedIntegerValue];
+        location.cityIndex     = [selection[1] unsignedIntegerValue];
+        location.areaIndex     = [selection[2] unsignedIntegerValue];
+        return location;
+    }];
+
+    // 仅在全部保存成功的时候发送此信号
+    _allInfoSavedSignal = [[RACSignal
+        combineLatest:@[
+            RACObserve(self, basicInfoSaved),
+            RACObserve(self, extraInfoSaved)]
+               reduce:^id(NSNumber *basicFlag, NSNumber *extraFlag) {
+                   return @([basicFlag boolValue] && [extraFlag boolValue]);
+               }]
+        filter:^BOOL(NSNumber *flag) {
+            return [flag boolValue];
+        }];
+
+    _infoSaveFailedSignal = [[self rac_signalForSelector:@selector(infoSaveFailed:)] map:^NSError *(RACTuple *tuple) {
+        return tuple.first;
+    }];
+}
+
+- (void)infoSaveFailed:(NSError *)error
+{
+    DDLogVerbose(@"%@",error);
+}
 
 @end
