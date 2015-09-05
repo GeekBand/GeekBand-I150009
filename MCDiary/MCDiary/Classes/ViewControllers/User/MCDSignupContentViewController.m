@@ -163,10 +163,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
-        [self.viewModel validate];
+        [self.viewModel validateAndSignup];
     }];
     [self.viewModel.signUpErrorSignal subscribeNext:^(RACTuple *tuple) {
-        // TODO: 本地化错误显示
         NSError     *error = tuple.first;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败"
                                                         message:[error localizedDescription]
@@ -176,6 +175,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         [alert show];
     }];
     [self.viewModel.signUpSuccessSignal subscribeNext:^(id x) {
+        // TODO: 跳转到合适的位置
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册成功"
                                                         message:@"恭喜! 注册成功."
                                                        delegate:nil

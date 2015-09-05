@@ -20,7 +20,7 @@
 
 #pragma mark - public
 
-- (void)validate
+- (void)validateAndSignup
 {
     // useranme
     NSString *errorUsername = [MCDUser errorStringForUsername:self.username];
@@ -66,17 +66,9 @@
     [avUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         @strongify(self);
         if (succeeded) {
-            // 设置用户的ACL
-            AVACL *acl = [AVACL ACL];
-            [acl setPublicReadAccess:YES]; //此处设置的是所有人的可读权限
-            [acl setWriteAccess:YES forUser:weakAVUser]; //而这里设置了文件创建者的写权限
-            weakAVUser.ACL = acl;
-            [weakAVUser saveInBackground];
-
-            MCDUser *user = [[MCDUser alloc] initWithAVUser:weakAVUser];
-            [MCDUser setCurrentUser:user];
-            [self signUpSucess:user];
+            [self signUpSucess:weakAVUser];
         } else {
+            // TODO: 本地化错误显示
             [self signUpError:error];
         }
     }];
@@ -93,7 +85,9 @@
         _emailValid    = YES;
 
         _signUpSuccessSignal = [self rac_signalForSelector:@selector(signUpSucess:)];
-        _signUpErrorSignal = [self rac_signalForSelector:@selector(signUpError:)];
+        _signUpErrorSignal   = [[self rac_signalForSelector:@selector(signUpError:)] map:^NSError *(RACTuple *tuple) {
+            return tuple.first;
+        }];
     }
 
     return self;
@@ -119,12 +113,22 @@
 
 #pragma mark - private
 
-- (void)signUpSucess:(MCDUser *)username
+- (void)signUpSucess:(AVUser *)avUser
 {
+    // 设置用户的ACL
+    AVACL *acl = [AVACL ACL];
+    [acl setPublicReadAccess:YES]; //此处设置的是所有人的可读权限
+    [acl setWriteAccess:YES forUser:avUser]; //而这里设置了文件创建者的写权限
+    avUser.ACL = acl;
+    [avUser saveInBackground];
+
+    MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
+    [MCDUser setCurrentUser:user];
 }
 
-- (void)signUpError:(NSError *)signUpError
+- (void)signUpError:(NSError *)error
 {
+    DDLogVerbose(@"%@", error);
 }
 
 @end

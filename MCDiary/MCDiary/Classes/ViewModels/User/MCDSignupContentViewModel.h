@@ -28,6 +28,6 @@
 @property(nonatomic, strong, readonly) RACSignal *signUpErrorSignal;
 @property(nonatomic, strong, readonly) RACSignal *signUpSuccessSignal;
 
-- (void)validate;
+- (void)validateAndSignup;
 
 @end

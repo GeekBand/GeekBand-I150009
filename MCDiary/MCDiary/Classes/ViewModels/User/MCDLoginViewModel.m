@@ -9,29 +9,72 @@
 
 @implementation MCDLoginViewModel
 
+@synthesize loginSuccessSignal = _loginSuccessSignal;
+@synthesize loginFailSignal = _loginFailSignal;
+@synthesize foregetPasswordRequestSuccessSignal = _foregetPasswordRequestSuccessSignal;
+@synthesize foregetPasswordRequestFailSignal = _foregetPasswordRequestFailSignal;
+
 #pragma mark - public
 
-- (void)validate
+- (void)validateAndLogin
 {
     // useranme
     NSString *errorUsername = [MCDUser errorStringForUsername:self.username];
-    if(errorUsername){
+    if (errorUsername) {
         _usernameErrorTitle = errorUsername;
         self.usernameValid = NO;
-    }else{
+    } else {
         self.usernameValid = YES;
     }
 
     // password
     NSString *errorPassword = [MCDUser errorStringForPassword:self.password];
-    if(errorPassword){
+    if (errorPassword) {
         _passwordErrorTitle = errorPassword;
         self.passwordValid = NO;
-    }else{
+    } else {
         self.passwordValid = YES;
     }
 
-    // TODO: Cloud 检测
+    if(!self.usernameValid || !self.passwordValid)
+        return;
+
+    // Cloud 登录
+    [AVUser logInWithUsernameInBackground:self.username
+                                 password:self.password
+                                    block:^(AVUser *user, NSError *error) {
+                                        if (user != nil) {
+                                            [self loginSuccess:user];
+                                        } else {
+                                            [self loginFail:error];
+                                        }
+                                    }];
+}
+
+- (void)sendForgetPasswordRequestWithEmail:(NSString *)email
+{
+    // 检验email
+    NSString *errorMsg = [MCDUser errorStringForEmail:email];
+    if(errorMsg != nil){
+        NSError *error = [NSError errorWithDomain:NSStringFromClass(self.class)
+                                             code:-1
+                                         userInfo:@{
+                                             NSLocalizedDescriptionKey : @"Email 不正确"
+                                         }];
+        [self forgetPasswordRequestFail:error];
+        return;
+    }
+
+    // 发送重置密码邮件
+    [AVUser requestPasswordResetForEmailInBackground:email
+                                               block:^(BOOL succeeded, NSError *error) {
+                                                   if (succeeded) {
+                                                       [self forgetPasswordRequestSuccess];
+                                                   } else {
+                                                       // TODO: 本地化错误显示
+                                                       [self forgetPasswordRequestFail:error];
+                                                   }
+                                               }];
 }
 
 #pragma mark - life cycle
@@ -40,18 +83,19 @@
 {
     self = [super init];
     if (self) {
-        self.isValid       = YES;
         self.usernameValid = YES;
         self.passwordValid = YES;
 
-        RACSignal *usernameValidSignal = RACObserve(self, usernameValid);
-        RACSignal *passwordValidSignal = RACObserve(self, passwordValid);
-        RACSignal *validSignal         = [RACSignal combineLatest:@[usernameValidSignal, passwordValidSignal]
-                                                           reduce:^id(NSNumber *usernameValid, NSNumber *passwordValid) {
-                                                               return @([usernameValid boolValue] && [passwordValid boolValue]);
-                                                           }];
-        [validSignal subscribeNext:^(NSNumber *valid) {
-            self.isValid = [valid boolValue];
+        _loginSuccessSignal = [[self rac_signalForSelector:@selector(loginSuccess:)] map:^MCDUser *(id value) {
+            return [MCDUser currentUser];
+        }];
+        _loginFailSignal    = [[self rac_signalForSelector:@selector(loginFail:)] map:^NSError *(RACTuple *tuple) {
+            return tuple.first;
+        }];
+
+        _foregetPasswordRequestSuccessSignal = [self rac_signalForSelector:@selector(forgetPasswordRequestSuccess)];
+        _foregetPasswordRequestFailSignal = [[self rac_signalForSelector:@selector(forgetPasswordRequestFail:)] map:^NSError *(RACTuple *tuple) {
+            return tuple.first;
         }];
     }
 
@@ -71,5 +115,26 @@
 }
 
 #pragma mark - private
+
+- (void)loginSuccess:(AVUser *)avUser
+{
+    MCDUser *user = [[MCDUser alloc] initWithAVUser:avUser];
+    [MCDUser setCurrentUser:user];
+}
+
+- (void)loginFail:(NSError *)error
+{
+    DDLogVerbose(@"%@", error);
+}
+
+- (void)forgetPasswordRequestSuccess
+{
+    DDLogVerbosePrettyFunction;
+}
+
+-(void)forgetPasswordRequestFail:(NSError *)error
+{
+    DDLogVerbose(@"%@", error);
+}
 
 @end

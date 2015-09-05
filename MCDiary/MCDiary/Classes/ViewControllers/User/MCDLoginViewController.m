@@ -43,9 +43,34 @@
 {
     @weakify(self);
 
-    // 同步绑定用户名和密码
+    // 用户名字段
     RAC(self.viewModel, username) = [self.usernameField.textField rac_textSignal];
+    [RACObserve(self.viewModel, usernameValid) subscribeNext:^(NSNumber *number) {
+        @strongify(self);
+        if (![number boolValue]) {
+            self.usernameField.state     = MCDTextFormFieldStateError;
+            self.usernameField.titleText = self.viewModel.usernameErrorTitle;
+        } else {
+            self.usernameField.state     = MCDTextFormFieldStateNormal;
+            self.usernameField.titleText = self.viewModel.usernameNormalTitle;
+        }
+    }];
+
+    // 密码字段
     RAC(self.viewModel, password) = [self.passwordField.textField rac_textSignal];
+    [RACObserve(self.viewModel, passwordValid) subscribeNext:^(NSNumber *number) {
+        @strongify(self);
+        if (![number boolValue]) {
+            self.passwordField.state     = MCDTextFormFieldStateError;
+            self.passwordField.titleText = self.viewModel.passwordErrorTitle;
+        } else {
+            self.passwordField.state     = MCDTextFormFieldStateNormal;
+            self.passwordField.titleText = self.viewModel.passwordNormalTitle;
+        }
+    }];
+
+    // 忘记密码
+    [self initForgetPasswordLogic];
 
     // activeField
     [[[RACSignal merge:@[
@@ -58,18 +83,31 @@
         self.activeField = textField;
     }];
 
-    // 按钮事件
+    // 登录按钮
     [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
-        [self.viewModel validate];
-        [self updateFormField];
-        if (self.viewModel.isValid) {
-            // TODO: login
-            return;
-        }
+        [self.viewModel validateAndLogin];
+    }];
+    [self.viewModel.loginSuccessSignal subscribeNext:^(id x) {
+        // TODO: 跳转到正确的位置
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录成功"
+                                                        message:@"恭喜! 登录成功."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    [[self.viewModel loginFailSignal] subscribeNext:^(NSError *error) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }];
 
+    // 去注册
     [[self.toSignupButton rac_signalForControlEvents:UIControlEventTouchUpInside]
         subscribeNext:^(id x) {
             @strongify(self);
@@ -110,23 +148,66 @@
         }];
 }
 
-- (void)updateFormField
-{
-    if (!self.viewModel.usernameValid) {
-        self.usernameField.state     = MCDTextFormFieldStateError;
-        self.usernameField.titleText = self.viewModel.usernameErrorTitle;
-    } else {
-        self.usernameField.state     = MCDTextFormFieldStateNormal;
-        self.usernameField.titleText = self.viewModel.usernameNormalTitle;
-    }
+#pragma mark - 忘记密码
 
-    if (!self.viewModel.passwordValid) {
-        self.passwordField.state     = MCDTextFormFieldStateError;
-        self.passwordField.titleText = self.viewModel.passwordErrorTitle;
-    } else {
-        self.passwordField.state     = MCDTextFormFieldStateNormal;
-        self.passwordField.titleText = self.viewModel.passwordNormalTitle;
-    }
+- (void)initForgetPasswordLogic
+{
+    // 忘记密码 按钮
+    [[self.passwordField.assessoryButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            [self popupForgetPasswordAlert];
+        }
+    ];
+
+    // 忘记密码邮件发送信号订阅
+    [self.viewModel.foregetPasswordRequestFailSignal subscribeNext:^(NSError *error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"出错啦"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    [self.viewModel.foregetPasswordRequestSuccessSignal subscribeNext:^(id x) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"重置密码邮件已发出"
+                                                            message:@"请到邮箱查收邮件并重置密码"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+}
+
+- (void)popupForgetPasswordAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"忘记密码"
+                                                                   message:@"请输入邮箱"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"找回密码"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
+                                                              UITextField *field = alert.textFields[0];
+                                                              [self.viewModel sendForgetPasswordRequestWithEmail:field.text];
+                                                          }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
+                                                              [alert dismissViewControllerAnimated:YES
+                                                                                        completion:nil];
+                                                          }];
+    [alert addAction:defaultAction];
+    [alert addAction:cancelAction];
+
+    // 由于block不由self持有,这里的block不需要self的若引用
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.text = self.usernameField.textField.text;
+    }];
+
+    [SVProgressHUD show];
+    [self presentViewController:alert animated:YES completion:^{
+        [SVProgressHUD dismiss];
+    }];
 }
 
 @end
