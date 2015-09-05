@@ -130,7 +130,7 @@
         [customPicker showActionSheetPicker];
     }];
 
-    // 头像，展示绑定
+    // 头像
     RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
@@ -156,6 +156,24 @@
                                                   style:UIAlertActionStyleCancel
                                                 handler:nil]];
         [self presentViewController:sheet animated:YES completion:nil];
+    }];
+    [self.viewModel.avatarUploadSuccessSignal subscribeNext:^(id x) {
+        [SVProgressHUD dismiss];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"头像上传成功"
+                                                        message:@"您的信息已保存"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }];
+    [self.viewModel.avatarUploadFaieldSignal subscribeNext:^(NSError *error) {
+        [SVProgressHUD dismiss];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"头像上传失败"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }];
 
     // 保存信息
@@ -196,12 +214,15 @@
 
 - (void)presentImagePicker:(UIImagePickerControllerSourceType)sourceType
 {
+    [SVProgressHUD show];
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     pickerController.sourceType = sourceType;
     pickerController.delegate   = self;
     [self presentViewController:pickerController
                        animated:YES
-                     completion:nil];
+                     completion:^{
+                         [SVProgressHUD dismiss];
+                     }];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -232,6 +253,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                   usingCropRect:(CGRect)cropRect
 {
     self.viewModel.avatarImage = croppedImage;
+    [SVProgressHUD show];
+    [self.viewModel uploadAvatar];
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -242,6 +265,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                   rotationAngle:(CGFloat)rotationAngle
 {
     self.viewModel.avatarImage = croppedImage;
+    [SVProgressHUD show];
+    [self.viewModel uploadAvatar];
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
 

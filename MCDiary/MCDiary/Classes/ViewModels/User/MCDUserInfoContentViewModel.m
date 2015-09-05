@@ -25,6 +25,8 @@
 
 @synthesize allInfoSavedSignal = _allInfoSavedSignal;
 @synthesize infoSaveFailedSignal = _infoSaveFailedSignal;
+@synthesize avatarUploadFaieldSignal = _avatarUploadFaieldSignal;
+@synthesize avatarUploadSuccessSignal = _avatarUploadSuccessSignal;
 
 #pragma mark - public
 
@@ -40,7 +42,7 @@
         self.emailValid = NO;
         [self infoSaveFailed:[NSError errorWithDomain:NSStringFromClass(self.class)
                                                  code:-1
-                                             userInfo:@{NSLocalizedDescriptionKey:@"邮箱格式错误"}]];
+                                             userInfo:@{NSLocalizedDescriptionKey : @"邮箱格式错误"}]];
         return;
     } else {
         self.emailValid = YES;
@@ -55,7 +57,7 @@
         [avUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             @strongify(self);
             if (succeeded) {
-                self.user.email = self.email;
+                self.user.email     = self.email;
                 self.basicInfoSaved = YES;
             } else {
                 DDLogVerbose(@"%@", error);
@@ -99,6 +101,31 @@
     // 头像单独处理
 }
 
+- (void)uploadAvatar
+{
+    AVFile *file = [AVFile fileWithName:self.user.userId
+                                   data:UIImagePNGRepresentation(self.avatarImage)];
+
+    __weak typeof(file) weakFile = file;
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!succeeded) {
+            [self avatarUploadFaield:error];
+            return;
+        }
+
+        AVQuery *query = [MCDCloudUserInfo query];
+        [query whereKey:@"userId" equalTo:self.user.userId];
+        MCDCloudUserInfo *userInfo = (MCDCloudUserInfo *)[query getFirstObject];
+        userInfo.avatarImageFile = weakFile;
+        [userInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!succeeded) {
+                [self avatarUploadFaield:error];
+                return;
+            }
+            [self avatarUploadSuccess];
+        }];
+    }];
+}
 
 #pragma mark - life cycle
 
@@ -179,11 +206,26 @@
     _infoSaveFailedSignal = [[self rac_signalForSelector:@selector(infoSaveFailed:)] map:^NSError *(RACTuple *tuple) {
         return tuple.first;
     }];
+
+    _avatarUploadSuccessSignal = [self rac_signalForSelector:@selector(avatarUploadSuccess)];
+    _avatarUploadFaieldSignal  = [[self rac_signalForSelector:@selector(avatarUploadFaield:)] map:^NSError *(RACTuple *tuple) {
+        return tuple.first;
+    }];
 }
 
 - (void)infoSaveFailed:(NSError *)error
 {
-    DDLogVerbose(@"%@",error);
+    DDLogVerbose(@"%@", error);
+}
+
+- (void)avatarUploadFaield:(NSError *)error
+{
+    DDLogVerbose(@"%@", error);
+}
+
+- (void)avatarUploadSuccess
+{
+    DDLogVerbosePrettyFunction;
 }
 
 @end

@@ -32,7 +32,10 @@
 
 @property(nonatomic, strong, readonly) RACSignal *allInfoSavedSignal;
 @property(nonatomic, strong, readonly) RACSignal *infoSaveFailedSignal;
+@property(nonatomic, strong, readonly) RACSignal *avatarUploadFaieldSignal;
+@property(nonatomic, strong, readonly) RACSignal *avatarUploadSuccessSignal;
 
 - (void)validateAndSave;
 
+- (void)uploadAvatar;
 @end
