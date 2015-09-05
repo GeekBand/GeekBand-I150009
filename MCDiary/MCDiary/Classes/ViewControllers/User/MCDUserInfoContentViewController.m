@@ -36,37 +36,52 @@
 
 @synthesize viewModel = _viewModel;
 
-#pragma mark - public
+#pragma mark - Public
 
-#pragma mark - life cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.viewModel = [[MCDUserInfoContentViewModel alloc] init];
 
-    [self initBindings];
+    // bindings
+    [self initUsernameFieldBinding];
+    [self initEmailFieldBinding];
+    [self initGenderFieldBinding];
+    [self initBirthdayFieldBinding];
+    [self initLocationFieldBinding];
+    [self initAvatarFieldBinding];
+    [self initSaveInfoButtonBinding];
+    [self initChangePasswordButtonBinding];
 }
 
 
-#pragma mark - accessor
+#pragma mark - Accessor
 
-#pragma mark - private
+#pragma mark - Bindings
 
-- (void)initBindings
+- (void)initUsernameFieldBinding
 {
-    @weakify(self);
-
     // 用户名，初始值，不可以更改
     self.usernameField.textField.text                   = self.viewModel.username;
     self.usernameField.textField.userInteractionEnabled = NO;
+}
 
-    // 邮箱，初始值+输入绑定+错误提示
+- (void)initEmailFieldBinding
+{
+    @weakify(self);
+
+    // 初始值
     self.emailField.textField.text = self.viewModel.email;
+
+    // 输入绑定
     RAC(self.viewModel, email) = [[self.emailField.textField rac_textSignal] map:^id(NSString *string) {
         // trim
         return [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }];
+
+    // 错误提示
     [RACObserve(self.viewModel, emailValid) subscribeNext:^(NSNumber *number) {
         if ([number boolValue]) {
             self.emailField.titleText = self.viewModel.emailNormalTitle;
@@ -76,17 +91,29 @@
             self.emailField.state     = MCDTextFormFieldStateError;
         }
     }];
+
+    // activeField
     [self.emailField.textFieldBeginEditingSignal subscribeNext:^(id x) {
         @strongify(self);
         self.activeField = self.emailField.textField;
     }];
+}
 
+- (void)initGenderFieldBinding
+{
     // 性别，初始值+输入绑定
     self.genderField.selectedIndex = self.viewModel.gender;
     RAC(self.viewModel, gender) = self.genderField.selectedIndexChangeSignal;
+}
+
+- (void)initBirthdayFieldBinding
+{
+    @weakify(self);
 
     // 生日，展示绑定
     RAC(self.birthdayField, buttonText) = RACObserve(self.viewModel, birthdayString);
+
+    // 选择生日
     [self.birthdayField.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
         ActionSheetDatePicker *datePicker = [[ActionSheetDatePicker alloc] initWithTitle:@"选择生日"
@@ -115,7 +142,11 @@
 
         [datePicker showActionSheetPicker];
     }];
+}
 
+- (void)initLocationFieldBinding
+{
+    @weakify(self);
     // 所在地，展示绑定
     RAC(self.locationField, buttonText) = RACObserve(self.viewModel, locationString);
     [self.locationField.buttonPressSignal subscribeNext:^(id x) {
@@ -129,9 +160,16 @@
         ];
         [customPicker showActionSheetPicker];
     }];
+}
 
-    // 头像
+-(void)initAvatarFieldBinding
+{
+    @weakify(self);
+
+    // 头像显示
     RAC(self.avatarView, avatarImage) = RACObserve(self.viewModel, avatarImage);
+
+    // 更改头像
     [[self.avatarView.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil
@@ -157,6 +195,8 @@
                                                 handler:nil]];
         [self presentViewController:sheet animated:YES completion:nil];
     }];
+
+    // 上传头像的信号订阅
     [self.viewModel.avatarUploadSuccessSignal subscribeNext:^(id x) {
         [SVProgressHUD dismiss];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"头像上传成功"
@@ -176,6 +216,12 @@
         [alert show];
     }];
 
+}
+
+- (void)initSaveInfoButtonBinding
+{
+    @weakify(self);
+
     // 保存信息
     [self.saveInfoButton.buttonPressSignal subscribeNext:^(id x) {
         @strongify(self);
@@ -183,6 +229,8 @@
         [SVProgressHUD show];
         [self.viewModel validateAndSave];
     }];
+
+    // 保存信息的消息订阅
     [self.viewModel.allInfoSavedSignal subscribeNext:^(id x) {
         [SVProgressHUD dismiss];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"保存成功"
@@ -202,6 +250,11 @@
                                                   otherButtonTitles:nil];
             [alert show];
         }];
+}
+
+- (void)initChangePasswordButtonBinding
+{
+    @weakify(self);
 
     //修改密码
     [self.changePasswordButton.buttonPressSignal subscribeNext:^(id x) {
@@ -211,6 +264,8 @@
         [self presentViewController:vc animated:YES completion:nil];
     }];
 }
+
+#pragma mark - Private
 
 - (void)presentImagePicker:(UIImagePickerControllerSourceType)sourceType
 {
