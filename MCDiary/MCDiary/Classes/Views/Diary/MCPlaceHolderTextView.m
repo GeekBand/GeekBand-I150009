@@ -58,7 +58,7 @@
     }
 }
 
-- (void)setText:(NSString * _Nullable)text {
+- (void)setText:(NSString *)text {
     [super setText:text];
     [self textChanged:nil];
 }

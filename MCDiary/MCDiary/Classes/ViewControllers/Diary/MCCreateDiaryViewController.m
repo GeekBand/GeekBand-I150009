@@ -13,31 +13,81 @@
     UISwitch        *_bigEventSwitch;
     NSMutableArray  *_imagesArray;
     UIButton        *_addPhotoButton;
+    __weak MCShowImageViewController *_showImageViewController;
+    CGRect           _keyboardFrame;
 }
 
 @end
 
 @implementation MCCreateDiaryViewController
 
-#pragma mark - UI
+#pragma mark - dealloc
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - View controller life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _optionsTableView.dataSource = self;
     
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)_imagesCollectionView.collectionViewLayout;
+    flowLayout.itemSize = CGSizeMake(IMAGE_CELL_SIDECAR, IMAGE_CELL_SIDECAR);
+    flowLayout.minimumInteritemSpacing = 5;
     _imagesCollectionView.dataSource = self;
-    if (_diary) {
-        _imagesArray = _diary.images;
-        _contentTextView.text = _diary.content;
-    }
+    _imagesCollectionView.delegate = self;
     [_deleteButton setHidden:_shouldHideDeleteButton];
     if (_shouldHideDeleteButton) {
         _titleLabel.text = @"添加日记";
     }else{
         _titleLabel.text = @"编辑日记";
     }
-    
+    _contentTextView.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillAppear:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_diary) {
+        _imagesArray = _diary.images;
+        _contentTextView.text = _diary.content;
+    }
+}
+
+#pragma mark - segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    _showImageViewController = (MCShowImageViewController *)segue.destinationViewController;
+    _showImageViewController.delegate = self;
+}
+
+#pragma mark - Keyboard Handler
+
+- (void)keyboardWillAppear:(NSNotification *)notification {
+    _keyboardFrame = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    if ([_contentTextView isFirstResponder]) {
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            _collectionHeightLayoutConstraint.constant += 15;
+            CGRect frame = self.view.frame;
+            frame.origin.y -= _keyboardFrame.size.height;
+            self.view.frame = frame;
+        } completion:nil];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    if ([_contentTextView isFirstResponder]) {
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            _collectionHeightLayoutConstraint.constant -= 15;
+            CGRect frame = self.view.frame;
+            frame.origin.y += _keyboardFrame.size.height;
+            self.view.frame = frame;
+        } completion:nil];
+    }
 }
 
 #pragma mark - Memory Handler
@@ -49,7 +99,7 @@
 
 #pragma mark - UI Responder methods
 
-- (void)touchesBegan:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
+- (void)touchesBegan:(nonnull NSSet *)touches withEvent:(nullable UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     if ([_titleTextField respondsToSelector:@selector(resignFirstResponder)]) {
         [_titleTextField resignFirstResponder];
@@ -99,6 +149,7 @@
     
     if (_diary) {
         [_diary setupDataWithTitle:_titleTextField.text createTime:[NSDate date] content:_contentTextView.text images:_imagesArray isBigEvent:_bigEventSwitch.on];
+        [_delegate reloadTimeLineView];
     }
     else{
         _diary = [[MCDiary alloc] initAMCDiaryWithTitle:_titleTextField.text createTime:[NSDate date] content:_contentTextView.text images:_imagesArray isBigEvent:_bigEventSwitch.on];
@@ -110,7 +161,7 @@
 
 - (void)addImageButtonTouchUpInside:(UIButton *) button {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
             pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -124,7 +175,7 @@
             [self presentViewController:cameraDenyAlertController animated:YES completion:nil];
         }
     }];
-    UIAlertAction *photoStoreAction = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *photoStoreAction = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
             UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
             pickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
@@ -194,7 +245,7 @@
 }
 
 #pragma mark - UIImagePickerControllerDelegate methods
-- (void)imagePickerController:(nonnull UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary<NSString *,id> *)info
+- (void)imagePickerController:(nonnull UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary *)info
 {
     for (NSString *key in [info allKeys]) {
         if ([key isEqualToString:UIImagePickerControllerEditedImage] || [key isEqualToString:UIImagePickerControllerOriginalImage]) {
@@ -223,16 +274,16 @@
 }
 
 - (nonnull UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *imageCellIdentifier = @"ImageCellIdentifier";
+    static NSString *imageCellIdentifier = @"CreateImageCellIdentifier";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:imageCellIdentifier forIndexPath:indexPath];
     if (indexPath.item == _imagesArray.count && _imagesArray.count != 9) {
-        UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, cell.contentView.frame.size.width, cell.frame.size.width)];
+        UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, IMAGE_CELL_SIDECAR, IMAGE_CELL_SIDECAR)];
         [addButton setTitle:@"add" forState:UIControlStateNormal];
         [addButton setBackgroundColor:[UIColor lightGrayColor]];
         [addButton addTarget:self action:@selector(addImageButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [cell.contentView addSubview:addButton];
     }else{
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_CELL_SIDECAR, IMAGE_CELL_SIDECAR)];
         imageView.image = _imagesArray[indexPath.item];
         [cell.contentView addSubview:imageView];
         for (id view in [cell.contentView subviews]) {
@@ -247,14 +298,30 @@
     return cell;
 }
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(60, 60);
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    _showImageViewController.imageToShow = _imagesArray[indexPath.item];
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(8, 5, 5, 7);
+#pragma mark - MCShowImageViewControllerDelegate methods
+
+- (void)deleteImage:(UIImage *)image {
+    [_imagesArray removeObject:image];
+    [_imagesCollectionView reloadData];
+}
+
+#pragma mark - UITextViewDelegate methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    CGRect frame = self.view.frame;
+    NSLog(@"%@", NSStringFromCGRect(frame));
+    if (frame.origin.y == 0) {
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            _collectionHeightLayoutConstraint.constant += 15;
+            CGRect frame = self.view.frame;
+            frame.origin.y -= _keyboardFrame.size.height;
+            self.view.frame = frame;
+        } completion:nil];
+    }
 }
 
 @end

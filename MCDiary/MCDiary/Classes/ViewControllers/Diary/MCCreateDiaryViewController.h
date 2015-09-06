@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "MCPlaceHolderTextView.h"
 #import "MCDiary.h"
+#import "MCShowImageViewController.h"
 
 #define TIPS_LABEL_HEIGHT 15
 #define OFFSET 8
+#define IMAGE_CELL_SIDECAR 60
 
 @protocol MCCreateDiaryViewControllerDelegate
 
 - (void)setupMCDiary:(MCDiary *) diary;
 - (void)removeMCDiary:(MCDiary *) diary;
+- (void)reloadTimeLineView;
 
 @end
 
-@interface MCCreateDiaryViewController : UIViewController<UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface MCCreateDiaryViewController : UIViewController<UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextViewDelegate, MCShowImageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;

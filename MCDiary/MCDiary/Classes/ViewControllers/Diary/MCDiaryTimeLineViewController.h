@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *eventsSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *diariesTableView;
-@property (strong, nonatomic) NSMutableArray *diaries;
+@property (strong, nonatomic) NSMutableArray *fullDiariesArray;
+@property (strong, nonatomic) NSMutableArray *filteredDiariesArray;
 
 @end
