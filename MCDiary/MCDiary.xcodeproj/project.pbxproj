@@ -78,6 +78,7 @@
 		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
 		D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577102E45FAF73DF0191F /* MCDUser.m */; };
 		D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */; };
+		DA0AD2D71B9A7D5C009D3A13 /* MyPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */; };
 		DA0AD2DD1B9A7D6D009D3A13 /* MCDMyPet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */; };
 		DA0AD2DE1B9A7D6D009D3A13 /* MCDMyPetDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */; };
 		DA0AD2E61B9A7D80009D3A13 /* MCDCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */; };
@@ -250,6 +251,7 @@
 		DA0AD2DB1B9A7D6D009D3A13 /* MCDMyPetDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetDataModel.h; sourceTree = "<group>"; };
 		DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetDataModel.m; sourceTree = "<group>"; };
 		DA0AD2E01B9A7D80009D3A13 /* MCDCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomCell.h; sourceTree = "<group>"; };
+		DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomCell.m; sourceTree = "<group>"; };
 		DA0AD2E21B9A7D80009D3A13 /* MCDDetailPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDetailPetViewController.h; sourceTree = "<group>"; };
 		DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDetailPetViewController.m; sourceTree = "<group>"; };
 		DA0AD2E41B9A7D80009D3A13 /* MCDMyPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetViewController.h; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 			);
 			path = MyPet;
 			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
