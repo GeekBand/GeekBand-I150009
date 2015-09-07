@@ -78,6 +78,11 @@
 		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
 		D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577102E45FAF73DF0191F /* MCDUser.m */; };
 		D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */; };
+		DA0AD2DD1B9A7D6D009D3A13 /* MCDMyPet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */; };
+		DA0AD2DE1B9A7D6D009D3A13 /* MCDMyPetDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */; };
+		DA0AD2E61B9A7D80009D3A13 /* MCDCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */; };
+		DA0AD2E71B9A7D80009D3A13 /* MCDDetailPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */; };
+		DA0AD2E81B9A7D80009D3A13 /* MCDMyPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,7 +224,7 @@
 		D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
 		D7157A8DB9817A0147220265 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
 		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
-		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
 		D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
 		D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
@@ -239,6 +244,16 @@
 		D7157F17CB797D9622BC8827 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
 		D7157F7076E3C65A0435E86E /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
 		D7157F7BDCAFC41E9E09C194 /* MCDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseModel.h; sourceTree = "<group>"; };
+		DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPet.storyboard; sourceTree = "<group>"; };
+		DA0AD2D91B9A7D6D009D3A13 /* MCDMyPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPet.h; sourceTree = "<group>"; };
+		DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPet.m; sourceTree = "<group>"; };
+		DA0AD2DB1B9A7D6D009D3A13 /* MCDMyPetDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetDataModel.h; sourceTree = "<group>"; };
+		DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetDataModel.m; sourceTree = "<group>"; };
+		DA0AD2E01B9A7D80009D3A13 /* MCDCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomCell.h; sourceTree = "<group>"; };
+		DA0AD2E21B9A7D80009D3A13 /* MCDDetailPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDetailPetViewController.h; sourceTree = "<group>"; };
+		DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDetailPetViewController.m; sourceTree = "<group>"; };
+		DA0AD2E41B9A7D80009D3A13 /* MCDMyPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetViewController.h; sourceTree = "<group>"; };
+		DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetViewController.m; sourceTree = "<group>"; };
 		FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -517,6 +532,7 @@
 		D71577FDE33B4B96199BEB93 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */,
 				24694E5A1B83851400E09636 /* LaunchScreen.xib */,
 				24694E5B1B83851400E09636 /* Main.storyboard */,
 				240B012C1B8F1E95004C7D2C /* User.storyboard */,
@@ -557,6 +573,7 @@
 		D7157B8A08D8F47B13A60E4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA0AD2DF1B9A7D80009D3A13 /* MyPet */,
 				D7157759040A99FEE3E85DB7 /* Home */,
 				D7157F30A59A548E3BEE45AD /* Base */,
 				D7157F6EE5C6C6E3C86BB32A /* User */,
@@ -589,6 +606,7 @@
 		D7157DB86FCFA53F7E37365E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA0AD2D81B9A7D6D009D3A13 /* MyPet */,
 				D71577102E45FAF73DF0191F /* MCDUser.m */,
 				D715765039487E0ADFF7E204 /* MCDUser.h */,
 				D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */,
@@ -654,6 +672,29 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		DA0AD2D81B9A7D6D009D3A13 /* MyPet */ = {
+			isa = PBXGroup;
+			children = (
+				DA0AD2D91B9A7D6D009D3A13 /* MCDMyPet.h */,
+				DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */,
+				DA0AD2DB1B9A7D6D009D3A13 /* MCDMyPetDataModel.h */,
+				DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */,
+			);
+			path = MyPet;
+			sourceTree = "<group>";
+		};
+		DA0AD2DF1B9A7D80009D3A13 /* MyPet */ = {
+			isa = PBXGroup;
+			children = (
+				DA0AD2E01B9A7D80009D3A13 /* MCDCustomCell.h */,
+				DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */,
+				DA0AD2E21B9A7D80009D3A13 /* MCDDetailPetViewController.h */,
+				DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */,
+				DA0AD2E41B9A7D80009D3A13 /* MCDMyPetViewController.h */,
+				DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */,
+			);
+			path = MyPet;
+			sourceTree = "<group>";
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -814,6 +855,7 @@
 				24EF48C31B9A0E3E00726ECB /* MCDConfig.plist in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
 				D715704DBE7017E744F43804 /* README.md in Resources */,
+				DA0AD2D71B9A7D5C009D3A13 /* MyPet.storyboard in Resources */,
 				240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -935,22 +977,27 @@
 				245157C31B94DC9B00F76A27 /* UIColor+MCDiary.m in Sources */,
 				245157B71B94D5B800F76A27 /* ActionSheetDistancePicker.m in Sources */,
 				245157B41B94D5B800F76A27 /* AbstractActionSheetPicker.m in Sources */,
+				DA0AD2DE1B9A7D6D009D3A13 /* MCDMyPetDataModel.m in Sources */,
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
 				D715748D8283647564751954 /* MCDHomeViewController.m in Sources */,
 				D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */,
 				245157BB1B94D5B800F76A27 /* DistancePickerView.m in Sources */,
+				DA0AD2DD1B9A7D6D009D3A13 /* MCDMyPet.m in Sources */,
 				245157B61B94D5B800F76A27 /* ActionSheetDatePicker.m in Sources */,
 				D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */,
 				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
 				D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */,
 				D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */,
+				DA0AD2E61B9A7D80009D3A13 /* MCDCustomCell.m in Sources */,
 				D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */,
 				245157BC1B94D5B800F76A27 /* SWActionSheet.m in Sources */,
 				D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */,
 				245157B51B94D5B800F76A27 /* ActionSheetCustomPicker.m in Sources */,
 				245157B91B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m in Sources */,
+				DA0AD2E81B9A7D80009D3A13 /* MCDMyPetViewController.m in Sources */,
 				D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */,
 				245157BA1B94D5B800F76A27 /* ActionSheetStringPicker.m in Sources */,
+				DA0AD2E71B9A7D80009D3A13 /* MCDDetailPetViewController.m in Sources */,
 				245157B81B94D5B800F76A27 /* ActionSheetLocalePicker.m in Sources */,
 				D7157BED71185F978D403A32 /* MCDUserInfoContainerViewController.m in Sources */,
 				D7157E50FDD5C96E952C083F /* MCDUserInfoContentViewController.m in Sources */,
