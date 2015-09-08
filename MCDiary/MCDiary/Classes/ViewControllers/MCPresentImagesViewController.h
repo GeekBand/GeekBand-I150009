@@ -10,7 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCPresentImagesViewController : UIViewController
+@interface MCPresentImagesViewController : UIViewController<UIScrollViewDelegate>{
+    NSMutableArray          *_presentingImageViews;
+}
 
 @property (weak, nonatomic) IBOutlet UIScrollView   *presentImagesScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl  *imagesPageControl;

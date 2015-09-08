@@ -203,7 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-7C-djY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-7C-djY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
@@ -212,6 +212,7 @@
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0an-Zw-9LX" firstAttribute="top" secondItem="KAz-f7-iU0" secondAttribute="bottom" constant="8" id="3cl-zz-kOj"/>
                             <constraint firstAttribute="centerX" secondItem="KAz-f7-iU0" secondAttribute="centerX" constant="-0.5" id="G6R-JC-Z2S"/>
@@ -220,6 +221,9 @@
                             <constraint firstItem="JtG-7C-djY" firstAttribute="leading" secondItem="Zmo-9w-ZQG" secondAttribute="leadingMargin" constant="-16" id="iKO-q2-hXl"/>
                             <constraint firstAttribute="centerX" secondItem="JtG-7C-djY" secondAttribute="centerX" id="rAU-mb-aTE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nI4-Ku-ofr" appends="YES" id="e5Z-GY-bAc"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="imagesPageControl" destination="KAz-f7-iU0" id="fga-0u-RnZ"/>
@@ -227,6 +231,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFd-d8-pkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nI4-Ku-ofr">
+                    <connections>
+                        <action selector="tapGestureTrigger:" destination="1e3-Ta-uie" id="4ZR-EY-cst"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2426" y="928"/>
         </scene>

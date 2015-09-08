@@ -90,7 +90,8 @@
 //        }
 //    }
     [cell setupCellWithDiary:_dataSourceArray[indexPath.row]];
-    CGRect rect = cell.showImagesCollectionView.frame;
+    CGRect rect = cell.contentView.frame;
+    rect.size.width -= 64;
     if (diary.images.count == 0) {
         cell.showImagesCollectionViewHeightConstraint.constant = 0;
         cell.showImagesCollectionView.hidden = YES;
@@ -101,21 +102,21 @@
         cell.showImagesCollectionView.contentSize = CGSizeMake(cell.showImagesCollectionView.contentSize.width, 120);
         cell.showImagesCollectionView.hidden = NO;
     }else if(diary.images.count <= 3){
+//        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 60);
         cell.showImagesCollectionViewHeightConstraint.constant = 60;
-        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 60);
-        cell.showImagesCollectionView.frame = rect;
+//        cell.showImagesCollectionView.frame = rect;
         cell.showImagesCollectionView.contentSize = CGSizeMake(cell.showImagesCollectionView.contentSize.width, 60);
         cell.showImagesCollectionView.hidden = NO;
     }else if(diary.images.count <= 6){
+//        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 120);
         cell.showImagesCollectionViewHeightConstraint.constant = 120;
-        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 120);
-        cell.showImagesCollectionView.frame = rect;
+//        cell.showImagesCollectionView.frame = rect;
         cell.showImagesCollectionView.contentSize = CGSizeMake(cell.showImagesCollectionView.contentSize.width, 120);
         cell.showImagesCollectionView.hidden = NO;
     }else{
+//        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 180);
         cell.showImagesCollectionViewHeightConstraint.constant = 180;
-        rect = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 180);
-        cell.showImagesCollectionView.frame = rect;
+//        cell.showImagesCollectionView.frame = rect;
         cell.showImagesCollectionView.contentSize = CGSizeMake(cell.showImagesCollectionView.contentSize.width, 180);
         cell.showImagesCollectionView.hidden = NO;
     }

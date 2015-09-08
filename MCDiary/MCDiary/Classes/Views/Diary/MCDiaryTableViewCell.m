@@ -67,8 +67,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SIDECAR_ONEIMAGE, SIDECAR_ONEIMAGE)];
     imageView.image = _diary.images[indexPath.item];
     [cell.contentView addSubview:imageView];
-    CGRect newFrame = [self convertRect:cell.frame toView:nil];
-    NSLog(@"%@", NSStringFromCGRect(newFrame));
+    
     return cell;
 }
 
@@ -79,6 +78,7 @@
     }else if(_diary.images.count == 1){
         return CGSizeMake(SIDECAR_ONEIMAGE, SIDECAR_ONEIMAGE);
     }else{
+        NSLog(@"%@", NSStringFromCGRect(_showImagesCollectionView.frame));
         return CGSizeMake(50, 50);
     }
 }
@@ -97,7 +97,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [_showImagesCollectionView cellForItemAtIndexPath:indexPath];
-    CGRect startRect = [self convertRect:cell.frame toView:nil];
+    CGRect startRect = [_showImagesCollectionView convertRect:cell.frame toView:nil];
+    NSLog(@"%@", NSStringFromCGRect(startRect));
     [_delegate presentImages:[_diary.images copy] withStartIndex:indexPath.item andStartRect: startRect];
 }
 
