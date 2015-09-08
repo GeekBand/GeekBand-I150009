@@ -46,7 +46,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeStamp" translatesAutoresizingMaskIntoConstraints="NO" id="oDi-FC-iKL">
-                                            <rect key="frame" x="18" y="25" width="13" height="13"/>
+                                            <rect key="frame" x="18" y="26" width="13" height="13"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="13" id="Lcf-ET-rhm"/>
                                                 <constraint firstAttribute="width" constant="13" id="iaX-Co-Ntz"/>
@@ -69,7 +69,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="uXC-DZ-pQT" secondAttribute="bottom" constant="1" id="8yA-EL-eBJ"/>
                                         <constraint firstItem="G0c-Az-pPR" firstAttribute="leading" secondItem="7do-Sl-wtQ" secondAttribute="leading" id="90z-XQ-ANf"/>
-                                        <constraint firstAttribute="bottom" secondItem="oDi-FC-iKL" secondAttribute="bottom" constant="6" id="Aae-Pt-xY7"/>
+                                        <constraint firstAttribute="bottom" secondItem="oDi-FC-iKL" secondAttribute="bottom" constant="5" id="Aae-Pt-xY7"/>
                                         <constraint firstItem="oDi-FC-iKL" firstAttribute="leading" secondItem="G0c-Az-pPR" secondAttribute="trailing" constant="8" id="Dcb-HR-AY9"/>
                                         <constraint firstItem="PI6-R3-pYc" firstAttribute="leading" secondItem="G0c-Az-pPR" secondAttribute="trailing" constant="8" id="Ezv-Hs-mg1"/>
                                         <constraint firstAttribute="trailing" secondItem="EiB-P8-1er" secondAttribute="trailing" constant="8" id="JsA-PU-kYQ"/>

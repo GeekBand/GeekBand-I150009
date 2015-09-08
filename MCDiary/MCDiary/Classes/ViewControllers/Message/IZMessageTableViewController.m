@@ -63,8 +63,8 @@
 
 #pragma mark - IBAction
 - (IBAction)showMessageOption:(UIBarButtonItem *)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
-                                                                   message:@""
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"取消"
