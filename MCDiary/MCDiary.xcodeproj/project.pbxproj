@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A1C80671B9BDD7000BDA568 /* MCShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C80661B9BDD7000BDA568 /* MCShowImageViewController.m */; };
+		1AFE8DC11B9E827500FFD057 /* MCPresentImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE8DC01B9E827500FFD057 /* MCPresentImagesViewController.m */; };
 		24694E4A1B83390300E09636 /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694E491B83390300E09636 /* MCDiaryTests.m */; };
 		24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5A1B83851400E09636 /* LaunchScreen.xib */; };
 		24694E5D1B83851400E09636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694E5B1B83851400E09636 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		1A1C80651B9BDD7000BDA568 /* MCShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCShowImageViewController.h; path = Diary/MCShowImageViewController.h; sourceTree = "<group>"; };
 		1A1C80661B9BDD7000BDA568 /* MCShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCShowImageViewController.m; path = Diary/MCShowImageViewController.m; sourceTree = "<group>"; };
+		1AFE8DBF1B9E827500FFD057 /* MCPresentImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPresentImagesViewController.h; sourceTree = "<group>"; };
+		1AFE8DC01B9E827500FFD057 /* MCPresentImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPresentImagesViewController.m; sourceTree = "<group>"; };
 		24694E2A1B83390300E09636 /* MCDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E431B83390300E09636 /* MCDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694E481B83390300E09636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -373,6 +376,8 @@
 				E481A5991B915CB60048E36F /* MCCreateDiaryViewController.h */,
 				1A1C80661B9BDD7000BDA568 /* MCShowImageViewController.m */,
 				1A1C80651B9BDD7000BDA568 /* MCShowImageViewController.h */,
+				1AFE8DC01B9E827500FFD057 /* MCPresentImagesViewController.m */,
+				1AFE8DBF1B9E827500FFD057 /* MCPresentImagesViewController.h */,
 			);
 			name = Diary;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
 				E4AA32561B8D944C002E6B91 /* MCDiary.m in Sources */,
 				E481A5AD1B915DF30048E36F /* MCDiaryTableViewCell.m in Sources */,
+				1AFE8DC11B9E827500FFD057 /* MCPresentImagesViewController.m in Sources */,
 				E481A5BE1B915FA30048E36F /* MCDButtonView.m in Sources */,
 				E481A5A01B915D2F0048E36F /* MCDBaseViewController.m in Sources */,
 				E481A5A81B915D960048E36F /* MCDLoginViewModel.m in Sources */,

@@ -96,7 +96,9 @@
 #pragma mark - UICollectionViewDelegate methods
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    UICollectionViewCell *cell = [_showImagesCollectionView cellForItemAtIndexPath:indexPath];
+    CGRect startRect = [self convertRect:cell.frame toView:nil];
+    [_delegate presentImages:[_diary.images copy] withStartIndex:indexPath.item andStartRect: startRect];
 }
 
 @end

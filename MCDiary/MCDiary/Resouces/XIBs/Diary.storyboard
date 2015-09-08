@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1736" y="211"/>
         </scene>
-        <!--View Controller-->
+        <!--Present Images View Controller-->
         <scene sceneID="62y-YD-Fob">
             <objects>
-                <viewController id="1e3-Ta-uie" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCPresentImagesViewController" id="1e3-Ta-uie" customClass="MCPresentImagesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cPF-1n-KXo"/>
                         <viewControllerLayoutGuide type="bottom" id="0an-Zw-9LX"/>
@@ -202,12 +202,33 @@
                     <view key="view" contentMode="scaleToFill" id="Zmo-9w-ZQG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-7C-djY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KAz-f7-iU0">
+                                <rect key="frame" x="281" y="555" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0an-Zw-9LX" firstAttribute="top" secondItem="KAz-f7-iU0" secondAttribute="bottom" constant="8" id="3cl-zz-kOj"/>
+                            <constraint firstAttribute="centerX" secondItem="KAz-f7-iU0" secondAttribute="centerX" constant="-0.5" id="G6R-JC-Z2S"/>
+                            <constraint firstItem="JtG-7C-djY" firstAttribute="top" secondItem="cPF-1n-KXo" secondAttribute="bottom" constant="-20" id="RiF-lr-Pgh"/>
+                            <constraint firstAttribute="centerY" secondItem="JtG-7C-djY" secondAttribute="centerY" id="bS7-sp-sh4"/>
+                            <constraint firstItem="JtG-7C-djY" firstAttribute="leading" secondItem="Zmo-9w-ZQG" secondAttribute="leadingMargin" constant="-16" id="iKO-q2-hXl"/>
+                            <constraint firstAttribute="centerX" secondItem="JtG-7C-djY" secondAttribute="centerX" id="rAU-mb-aTE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagesPageControl" destination="KAz-f7-iU0" id="fga-0u-RnZ"/>
+                        <outlet property="presentImagesScrollView" destination="JtG-7C-djY" id="Y12-ex-gr3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFd-d8-pkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="924"/>
+            <point key="canvasLocation" x="2426" y="928"/>
         </scene>
         <!--Create Diary View Controller-->
         <scene sceneID="OAn-hU-8dr">

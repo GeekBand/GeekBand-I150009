@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
+//该类用以在创建日记的图片点击后放大
+
 #import <UIKit/UIKit.h>
 
 @protocol MCShowImageViewControllerDelegate

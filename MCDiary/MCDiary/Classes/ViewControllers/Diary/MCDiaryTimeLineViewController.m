@@ -84,11 +84,11 @@
     static NSString *cellIdentifier = @"MCDiaryCellIdentifier";
     MCDiary *diary = _dataSourceArray[indexPath.row];
     MCDiaryTableViewCell *cell = (MCDiaryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    for (UIView *view in [cell.contentView subviews]) {
-        if (view.tag == 999) {
-            [view removeFromSuperview];
-        }
-    }
+//    for (UIView *view in [cell.contentView subviews]) {
+//        if (view.tag == 999) {
+//            [view removeFromSuperview];
+//        }
+//    }
     [cell setupCellWithDiary:_dataSourceArray[indexPath.row]];
     CGRect rect = cell.showImagesCollectionView.frame;
     if (diary.images.count == 0) {
@@ -120,6 +120,7 @@
         cell.showImagesCollectionView.hidden = NO;
     }
     cell.showImagesCollectionView.scrollEnabled = NO;
+    cell.delegate = self;
     return cell;
 }
 
@@ -176,6 +177,17 @@
 
 - (void)reloadTimeLineView {
     [_diariesTableView reloadData];
+}
+
+#pragma mark - MCDiaryTableViewCellDelegate methods
+
+- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex andStartRect:(CGRect)rect {
+    MCPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCPresentImagesViewController"];
+    presentImagesViewController.presentingImages = images;
+    presentImagesViewController.startIndex = startIndex;
+    presentImagesViewController.rectForAnimation = rect;
+    [self.view addSubview:presentImagesViewController.view];
+    [self addChildViewController:presentImagesViewController];
 }
 
 #pragma mark - Navigation
