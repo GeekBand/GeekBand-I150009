@@ -32,7 +32,11 @@
 		249BEBE81B8F4ABB00C2A3CF /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; };
 		249BEBE91B8F4ABB00C2A3CF /* MCDiaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 249BEBD11B8F4ABA00C2A3CF /* MCDiaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		249BEBFD1B8F537100C2A3CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249BEBFC1B8F537100C2A3CF /* Images.xcassets */; };
-		24EF48C31B9A0E3E00726ECB /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */; };
+		3593B0F91B9F0D5400957A3D /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3593B0F81B9F0D5400957A3D /* MCDConfig.plist */; };
+		3593B0FB1B9F0E2600957A3D /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3593B0FA1B9F0E2600957A3D /* Message.storyboard */; };
+		3593B1011B9F144D00957A3D /* IZMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3593B1001B9F144D00957A3D /* IZMessageTableViewController.m */; };
+		3593B1051B9F16ED00957A3D /* IZMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3593B1041B9F16ED00957A3D /* IZMessageViewModel.m */; };
+		3593B1081B9F1FCA00957A3D /* IZMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3593B1071B9F1FCA00957A3D /* IZMessageTableViewCell.m */; };
 		5577DE89387FB5D2EE17466F /* Pods_MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45E03235E4C78317D17E845 /* Pods_MCDiaryKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D715702CE7580138A60B175D /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D715783E09D378D0A237EABB /* MCDAvatarView.m */; };
 		D715704CC2590DAB35E76A86 /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157F17CB797D9622BC8827 /* MCDTextFormField.m */; };
@@ -78,6 +82,12 @@
 		D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7157110F11D7FB4275CE2A7 /* MCDSignupContentViewController.m */; };
 		D7157E8F5E7FEFCC2B36F4B5 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577102E45FAF73DF0191F /* MCDUser.m */; };
 		D7157EC26DD6A2D4F3384269 /* MCDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */; };
+		DA0AD2D71B9A7D5C009D3A13 /* MyPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */; };
+		DA0AD2DD1B9A7D6D009D3A13 /* MCDMyPet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */; };
+		DA0AD2DE1B9A7D6D009D3A13 /* MCDMyPetDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */; };
+		DA0AD2E61B9A7D80009D3A13 /* MCDCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */; };
+		DA0AD2E71B9A7D80009D3A13 /* MCDDetailPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */; };
+		DA0AD2E81B9A7D80009D3A13 /* MCDMyPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,8 +177,15 @@
 		249BEBE31B8F4ABB00C2A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249BEBE41B8F4ABB00C2A3CF /* MCDiaryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryKitTests.m; sourceTree = "<group>"; };
 		249BEBFC1B8F537100C2A3CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = MCDConfig.plist; sourceTree = "<group>"; };
 		2DAE61709DC64C7EF34524D8 /* Pods-MCDiaryKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.release.xcconfig"; sourceTree = "<group>"; };
+		3593B0F81B9F0D5400957A3D /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCDConfig.plist; sourceTree = "<group>"; };
+		3593B0FA1B9F0E2600957A3D /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		3593B0FF1B9F144D00957A3D /* IZMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IZMessageTableViewController.h; sourceTree = "<group>"; };
+		3593B1001B9F144D00957A3D /* IZMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IZMessageTableViewController.m; sourceTree = "<group>"; };
+		3593B1031B9F16ED00957A3D /* IZMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IZMessageViewModel.h; sourceTree = "<group>"; };
+		3593B1041B9F16ED00957A3D /* IZMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IZMessageViewModel.m; sourceTree = "<group>"; };
+		3593B1061B9F1FCA00957A3D /* IZMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IZMessageTableViewCell.h; sourceTree = "<group>"; };
+		3593B1071B9F1FCA00957A3D /* IZMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IZMessageTableViewCell.m; sourceTree = "<group>"; };
 		7D062F7380464731C18E59AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E722961BE71790041DCB8A6 /* Pods-MCDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.release.xcconfig"; sourceTree = "<group>"; };
 		BAC317E9EAFA249C0DB84A17 /* Pods_MCDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +236,7 @@
 		D7157A79781A0A1377CED571 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
 		D7157A8DB9817A0147220265 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
 		D7157A9F68D3843AB8A26C6C /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
-		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		D7157AAAC68C65C7FDC816BC /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D7157B2460B7C0E13C07D10F /* MCDRadioFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
 		D7157B442E62AC52DFB6D543 /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
 		D7157BC44D8D2E6F1E1768BA /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
@@ -239,6 +256,17 @@
 		D7157F17CB797D9622BC8827 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
 		D7157F7076E3C65A0435E86E /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
 		D7157F7BDCAFC41E9E09C194 /* MCDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseModel.h; sourceTree = "<group>"; };
+		DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPet.storyboard; sourceTree = "<group>"; };
+		DA0AD2D91B9A7D6D009D3A13 /* MCDMyPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPet.h; sourceTree = "<group>"; };
+		DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPet.m; sourceTree = "<group>"; };
+		DA0AD2DB1B9A7D6D009D3A13 /* MCDMyPetDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetDataModel.h; sourceTree = "<group>"; };
+		DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetDataModel.m; sourceTree = "<group>"; };
+		DA0AD2E01B9A7D80009D3A13 /* MCDCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomCell.h; sourceTree = "<group>"; };
+		DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomCell.m; sourceTree = "<group>"; };
+		DA0AD2E21B9A7D80009D3A13 /* MCDDetailPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDetailPetViewController.h; sourceTree = "<group>"; };
+		DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDetailPetViewController.m; sourceTree = "<group>"; };
+		DA0AD2E41B9A7D80009D3A13 /* MCDMyPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetViewController.h; sourceTree = "<group>"; };
+		DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetViewController.m; sourceTree = "<group>"; };
 		FC680DB5B84AB204905AB74C /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,8 +344,8 @@
 		245157C41B94DE3600F76A27 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3593B0F81B9F0D5400957A3D /* MCDConfig.plist */,
 				245157C51B94DE3600F76A27 /* Area.plist */,
-				24EF48C21B9A0E3E00726ECB /* MCDConfig.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -422,6 +450,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3593B0FE1B9F142F00957A3D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3593B1061B9F1FCA00957A3D /* IZMessageTableViewCell.h */,
+				3593B1071B9F1FCA00957A3D /* IZMessageTableViewCell.m */,
+				3593B0FF1B9F144D00957A3D /* IZMessageTableViewController.h */,
+				3593B1001B9F144D00957A3D /* IZMessageTableViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3593B1021B9F153100957A3D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3593B1031B9F16ED00957A3D /* IZMessageViewModel.h */,
+				3593B1041B9F16ED00957A3D /* IZMessageViewModel.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		4BE136B7BEC3F63C1DFCF35F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,9 +565,11 @@
 		D71577FDE33B4B96199BEB93 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				DA0AD2D61B9A7D5C009D3A13 /* MyPet.storyboard */,
 				24694E5A1B83851400E09636 /* LaunchScreen.xib */,
 				24694E5B1B83851400E09636 /* Main.storyboard */,
 				240B012C1B8F1E95004C7D2C /* User.storyboard */,
+				3593B0FA1B9F0E2600957A3D /* Message.storyboard */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -538,6 +588,7 @@
 		D71579EEAC46D8F6D9BFBDE7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3593B1021B9F153100957A3D /* Message */,
 				D71576C64FB0C513DF655B21 /* Home */,
 				D71574F9A119CD26E0679463 /* Base */,
 				D7157FFACE73C03FB8038424 /* User */,
@@ -557,6 +608,8 @@
 		D7157B8A08D8F47B13A60E4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3593B0FE1B9F142F00957A3D /* Message */,
+				DA0AD2DF1B9A7D80009D3A13 /* MyPet */,
 				D7157759040A99FEE3E85DB7 /* Home */,
 				D7157F30A59A548E3BEE45AD /* Base */,
 				D7157F6EE5C6C6E3C86BB32A /* User */,
@@ -589,6 +642,7 @@
 		D7157DB86FCFA53F7E37365E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA0AD2D81B9A7D6D009D3A13 /* MyPet */,
 				D71577102E45FAF73DF0191F /* MCDUser.m */,
 				D715765039487E0ADFF7E204 /* MCDUser.h */,
 				D71577A3DF463B03D2EA25E9 /* MCDBaseModel.m */,
@@ -652,6 +706,30 @@
 				D7157247B493F5D6845C5B16 /* MCDUserModifyPasswordViewModel.h */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		DA0AD2D81B9A7D6D009D3A13 /* MyPet */ = {
+			isa = PBXGroup;
+			children = (
+				DA0AD2D91B9A7D6D009D3A13 /* MCDMyPet.h */,
+				DA0AD2DA1B9A7D6D009D3A13 /* MCDMyPet.m */,
+				DA0AD2DB1B9A7D6D009D3A13 /* MCDMyPetDataModel.h */,
+				DA0AD2DC1B9A7D6D009D3A13 /* MCDMyPetDataModel.m */,
+			);
+			path = MyPet;
+			sourceTree = "<group>";
+		};
+		DA0AD2DF1B9A7D80009D3A13 /* MyPet */ = {
+			isa = PBXGroup;
+			children = (
+				DA0AD2E01B9A7D80009D3A13 /* MCDCustomCell.h */,
+				DA0AD2E11B9A7D80009D3A13 /* MCDCustomCell.m */,
+				DA0AD2E21B9A7D80009D3A13 /* MCDDetailPetViewController.h */,
+				DA0AD2E31B9A7D80009D3A13 /* MCDDetailPetViewController.m */,
+				DA0AD2E41B9A7D80009D3A13 /* MCDMyPetViewController.h */,
+				DA0AD2E51B9A7D80009D3A13 /* MCDMyPetViewController.m */,
+			);
+			path = MyPet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -807,13 +885,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3593B0F91B9F0D5400957A3D /* MCDConfig.plist in Resources */,
 				24694E5C1B83851400E09636 /* LaunchScreen.xib in Resources */,
+				3593B0FB1B9F0E2600957A3D /* Message.storyboard in Resources */,
 				245157C61B94DE3600F76A27 /* Area.plist in Resources */,
 				D71571F5C40C5DA4C914B37C /* Images.xcassets in Resources */,
 				D71571E260E3C879FDDACA6D /* Podfile in Resources */,
-				24EF48C31B9A0E3E00726ECB /* MCDConfig.plist in Resources */,
 				24694E5D1B83851400E09636 /* Main.storyboard in Resources */,
 				D715704DBE7017E744F43804 /* README.md in Resources */,
+				DA0AD2D71B9A7D5C009D3A13 /* MyPet.storyboard in Resources */,
 				240B012D1B8F1E95004C7D2C /* User.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -935,22 +1015,29 @@
 				245157C31B94DC9B00F76A27 /* UIColor+MCDiary.m in Sources */,
 				245157B71B94D5B800F76A27 /* ActionSheetDistancePicker.m in Sources */,
 				245157B41B94D5B800F76A27 /* AbstractActionSheetPicker.m in Sources */,
+				DA0AD2DE1B9A7D6D009D3A13 /* MCDMyPetDataModel.m in Sources */,
 				D71574C4F692FF5A2D8B9292 /* main.m in Sources */,
+				3593B1081B9F1FCA00957A3D /* IZMessageTableViewCell.m in Sources */,
 				D715748D8283647564751954 /* MCDHomeViewController.m in Sources */,
 				D71571CA5B657173B1229A1A /* MCDHomeViewModel.m in Sources */,
+				3593B1011B9F144D00957A3D /* IZMessageTableViewController.m in Sources */,
 				245157BB1B94D5B800F76A27 /* DistancePickerView.m in Sources */,
+				DA0AD2DD1B9A7D6D009D3A13 /* MCDMyPet.m in Sources */,
 				245157B61B94D5B800F76A27 /* ActionSheetDatePicker.m in Sources */,
 				D71579BE1F2F31890DCC528E /* MCDBaseViewModel.m in Sources */,
 				D71577F696CD8ED662984D2B /* MCDBaseViewController.m in Sources */,
 				D715723EBAF5DAA83E511E22 /* MCDLoginViewController.m in Sources */,
 				D7157D4B5BF5086FE39DE0CE /* MCDLoginViewModel.m in Sources */,
+				DA0AD2E61B9A7D80009D3A13 /* MCDCustomCell.m in Sources */,
 				D7157DB73A5696F093F1DA02 /* MCDSignupContainerViewController.m in Sources */,
 				245157BC1B94D5B800F76A27 /* SWActionSheet.m in Sources */,
 				D7157E7949F92191C6CA29A4 /* MCDSignupContentViewController.m in Sources */,
 				245157B51B94D5B800F76A27 /* ActionSheetCustomPicker.m in Sources */,
 				245157B91B94D5B800F76A27 /* ActionSheetMultipleStringPicker.m in Sources */,
+				DA0AD2E81B9A7D80009D3A13 /* MCDMyPetViewController.m in Sources */,
 				D715754942C325A86F505278 /* MCDSignupContentViewModel.m in Sources */,
 				245157BA1B94D5B800F76A27 /* ActionSheetStringPicker.m in Sources */,
+				DA0AD2E71B9A7D80009D3A13 /* MCDDetailPetViewController.m in Sources */,
 				245157B81B94D5B800F76A27 /* ActionSheetLocalePicker.m in Sources */,
 				D7157BED71185F978D403A32 /* MCDUserInfoContainerViewController.m in Sources */,
 				D7157E50FDD5C96E952C083F /* MCDUserInfoContentViewController.m in Sources */,
@@ -963,6 +1050,7 @@
 				D7157E4580B84BF7BC387A2F /* MCDUserModifyPasswordViewController.m in Sources */,
 				D7157CC6CB599FEEE8DBC620 /* MCDUserModifyPasswordViewModel.m in Sources */,
 				D7157331B13A1B72BDB5850C /* MCDCloudUserInfo.m in Sources */,
+				3593B1051B9F16ED00957A3D /* IZMessageViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
