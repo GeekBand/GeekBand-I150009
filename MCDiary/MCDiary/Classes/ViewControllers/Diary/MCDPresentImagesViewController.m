@@ -1,14 +1,14 @@
 //
-//  MCPresentImagesViewController.m
+//  MCDPresentImagesViewController.m
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/8.
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import "MCPresentImagesViewController.h"
+#import "MCDPresentImagesViewController.h"
 
-@implementation MCPresentImagesViewController
+@implementation MCDPresentImagesViewController
 
 #pragma mark - View controller life cycle
 

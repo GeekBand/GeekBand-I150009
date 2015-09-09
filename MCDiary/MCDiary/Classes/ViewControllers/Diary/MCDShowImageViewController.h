@@ -1,5 +1,5 @@
 //
-//  MCShowImageViewController.h
+//  MCDShowImageViewController.h
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/6.
@@ -10,16 +10,16 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MCShowImageViewControllerDelegate
+@protocol MCDShowImageViewControllerDelegate
 
 - (void)deleteImage:(UIImage *)image;
 
 @end
 
-@interface MCShowImageViewController : UIViewController
+@interface MCDShowImageViewController : UIViewController
 
 @property (strong, nonatomic)UIImage *imageToShow;
 @property (weak, nonatomic) IBOutlet UIScrollView *imagesScrollView;
-@property (weak, nonatomic)id<MCShowImageViewControllerDelegate> delegate;
+@property (weak, nonatomic)id<MCDShowImageViewControllerDelegate> delegate;
 
 @end

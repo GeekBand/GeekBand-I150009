@@ -1,5 +1,5 @@
 //
-//  MCPresentImagesViewController.h
+//  MCDPresentImagesViewController.h
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/8.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCPresentImagesViewController : UIViewController<UIScrollViewDelegate>{
+@interface MCDPresentImagesViewController : UIViewController<UIScrollViewDelegate>{
     NSMutableArray          *_presentingImageViews;
 }
 

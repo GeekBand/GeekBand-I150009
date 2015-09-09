@@ -9,7 +9,7 @@
 #import "MCDiaryTimeLineViewController.h"
 
 @interface MCDiaryTimeLineViewController (){
-    MCCreateDiaryViewController *_createDiaryViewController;
+    MCDCreateDiaryViewController *_createDiaryViewController;
     NSMutableArray              *_dataSourceArray;
     NSMutableArray              *_ordinaryEventsIndexPathsArray;
 }
@@ -142,7 +142,7 @@
     });
 }
 
-#pragma mark - MCCreateDiaryViewControllerDelegate methods
+#pragma mark - MCDCreateDiaryViewControllerDelegate methods
 
 - (void)setupMCDiary:(MCDiary *) diary {
     if (diary.isBigEvent) {
@@ -183,7 +183,7 @@
 #pragma mark - MCDiaryTableViewCellDelegate methods
 
 - (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex andStartRect:(CGRect)rect {
-    MCPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCPresentImagesViewController"];
+    MCDPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCDPresentImagesViewController"];
     presentImagesViewController.presentingImages = images;
     presentImagesViewController.startIndex = startIndex;
     presentImagesViewController.rectForAnimation = rect;
@@ -194,7 +194,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    _createDiaryViewController = (MCCreateDiaryViewController *)segue.destinationViewController;
+    _createDiaryViewController = (MCDCreateDiaryViewController *)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"AddMCDiarySegue"]) {
         _createDiaryViewController.diary = nil;
         //hide delete button

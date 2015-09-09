@@ -1,14 +1,14 @@
 //
-//  MCPlaceHolderTextView.m
+//  MCDPlaceHolderTextView.m
 //  MCDiary
 //
 //  Created by Turtle on 15/8/27.
 //  Copyright © 2015年 zzdjk6. All rights reserved.
 //
 
-#import "MCPlaceHolderTextView.h"
+#import "MCDPlaceHolderTextView.h"
 
-@implementation MCPlaceHolderTextView
+@implementation MCDPlaceHolderTextView
 
 - (void)dealloc {
     //remove observer from notification center

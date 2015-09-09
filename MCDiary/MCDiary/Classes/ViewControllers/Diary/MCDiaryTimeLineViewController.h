@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MCDiaryTableViewCell.h"
-#import "MCCreateDiaryViewController.h"
-#import "MCPresentImagesViewController.h"
+#import "MCDCreateDiaryViewController.h"
+#import "MCDPresentImagesViewController.h"
 
-@interface MCDiaryTimeLineViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, MCCreateDiaryViewControllerDelegate, MCDiaryTableViewCellDelegate>
+@interface MCDiaryTimeLineViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, MCDCreateDiaryViewControllerDelegate, MCDiaryTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *eventsSegmentedControl;
