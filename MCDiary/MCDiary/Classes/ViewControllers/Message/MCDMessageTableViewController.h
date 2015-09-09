@@ -1,5 +1,5 @@
 //
-//  IZMessageTableViewCell.h
+//  MCDMessageTableViewController.h
 //  MCDiary
 //
 //  Created by Liang Zisheng on 9/8/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IZMessageTableViewCell : UITableViewCell
+@interface IZMessageTableViewController : UITableViewController
 
 @end

@@ -1,13 +1,13 @@
 //
-//  IZMessageTableViewController.m
+//  MCDMessageTableViewController.m
 //  MCDiary
 //
 //  Created by Liang Zisheng on 9/8/15.
 //  Copyright (c) 2015 zzdjk6. All rights reserved.
 //
 
-#import "IZMessageTableViewController.h"
-#import "IZMessageViewModel.h"
+#import "MCDMessageTableViewController.h"
+#import "MCDMessageViewModel.h"
 
 @interface IZMessageTableViewController ()
 
