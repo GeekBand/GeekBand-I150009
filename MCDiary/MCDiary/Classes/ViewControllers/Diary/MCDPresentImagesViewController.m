@@ -59,6 +59,8 @@
     //缩小动画
     UIImageView *imageView = _presentingImageViews[_imagesPageControl.currentPage];
     CGRect frame = imageView.frame;
+    CGRect rectOfCellInWindow = [_bindingCollectionView convertRect:[_bindingCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_imagesPageControl.currentPage inSection:0]].frame toView:nil];
+    _rectForAnimation = rectOfCellInWindow;
     _rectForAnimation.origin.x += frame.origin.x;
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         imageView.frame = _rectForAnimation;

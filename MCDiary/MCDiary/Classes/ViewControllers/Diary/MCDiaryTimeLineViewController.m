@@ -182,11 +182,12 @@
 
 #pragma mark - MCDiaryTableViewCellDelegate methods
 
-- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex andStartRect:(CGRect)rect {
+- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex startRect:(CGRect)rect andCollectionView:(UICollectionView *__weak)collectionView {
     MCDPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCDPresentImagesViewController"];
     presentImagesViewController.presentingImages = images;
     presentImagesViewController.startIndex = startIndex;
     presentImagesViewController.rectForAnimation = rect;
+    presentImagesViewController.bindingCollectionView = collectionView;
     [self.view addSubview:presentImagesViewController.view];
     [self addChildViewController:presentImagesViewController];
 }

@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSArray               *presentingImages;
 @property (assign, nonatomic) NSInteger              startIndex;
 @property (assign, nonatomic) CGRect                 rectForAnimation;
+@property (weak, nonatomic) UICollectionView        *bindingCollectionView;
 //@property (strong, nonatomic) NSArray *fullImagesAddresses;  //大图地址
 
 @end

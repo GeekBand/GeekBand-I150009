@@ -313,7 +313,6 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     CGRect frame = self.view.frame;
-//    NSLog(@"%@", NSStringFromCGRect(frame));
     if (frame.origin.y == 0) {
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             _collectionHeightLayoutConstraint.constant += 15;
