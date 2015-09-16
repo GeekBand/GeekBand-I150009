@@ -78,7 +78,6 @@
     }else if(_diary.images.count == 1){
         return CGSizeMake(SIDECAR_ONEIMAGE, SIDECAR_ONEIMAGE);
     }else{
-        NSLog(@"%@", NSStringFromCGRect(_showImagesCollectionView.frame));
         return CGSizeMake(50, 50);
     }
 }
@@ -98,8 +97,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [_showImagesCollectionView cellForItemAtIndexPath:indexPath];
     CGRect startRect = [_showImagesCollectionView convertRect:cell.frame toView:nil];
-    NSLog(@"%@", NSStringFromCGRect(startRect));
-    [_delegate presentImages:[_diary.images copy] withStartIndex:indexPath.item andStartRect: startRect];
+    [_delegate presentImages:[_diary.images copy] withStartIndex:indexPath.item startRect: startRect andCollectionView:_showImagesCollectionView];
 }
 
 @end

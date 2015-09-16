@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MCDiary : NSObject
+@interface MCDiary : NSObject <NSCoding>
 
 @property (copy, nonatomic)NSString         *title;
 @property (strong, nonatomic)NSDate         *createTime;

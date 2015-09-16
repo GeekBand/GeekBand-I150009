@@ -1,14 +1,14 @@
 //
-//  MCShowImageViewController.m
+//  MCDShowImageViewController.m
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/6.
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import "MCShowImageViewController.h"
+#import "MCDShowImageViewController.h"
 
-@implementation MCShowImageViewController
+@implementation MCDShowImageViewController
 
 #pragma mark - View controller life cycle
 

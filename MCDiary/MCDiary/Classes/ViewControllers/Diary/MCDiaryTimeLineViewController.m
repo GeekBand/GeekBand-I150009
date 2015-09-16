@@ -9,7 +9,7 @@
 #import "MCDiaryTimeLineViewController.h"
 
 @interface MCDiaryTimeLineViewController (){
-    MCCreateDiaryViewController *_createDiaryViewController;
+    MCDCreateDiaryViewController *_createDiaryViewController;
     NSMutableArray              *_dataSourceArray;
     NSMutableArray              *_ordinaryEventsIndexPathsArray;
 }
@@ -18,7 +18,7 @@
 
 @implementation MCDiaryTimeLineViewController
 
-#pragma mark - UI
+#pragma mark - View controller life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,11 +29,44 @@
     _diariesTableView.delegate = self;
     _diariesTableView.backgroundColor = [UIColor whiteColor];
     _diariesTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _fullDiariesArray = [NSMutableArray array];
     _filteredDiariesArray = [NSMutableArray array];
-    _dataSourceArray = _fullDiariesArray;
     _ordinaryEventsIndexPathsArray = [NSMutableArray array];
     [_eventsSegmentedControl addTarget:self action:@selector(segmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self readingDataFromPlist];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *plistPath = [paths objectAtIndex:0];
+    plistPath = [plistPath stringByAppendingPathComponent:@"MCDiary.txt"];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_fullDiariesArray];
+    [data writeToFile:plistPath atomically:YES];
+}
+
+#pragma mark - Reading data from plist
+
+- (void)readingDataFromPlist {
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *plistPath = [paths objectAtIndex:0];
+    plistPath = [plistPath stringByAppendingPathComponent:@"MCDiary.txt"];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:plistPath];
+    _fullDiariesArray = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    if (_fullDiariesArray == nil) {
+        _fullDiariesArray = [NSMutableArray array];
+    }
+    _dataSourceArray = _fullDiariesArray;
+}
+
+#pragma mark - Little ops
+
+- (void)addDiaryProperlyWithDiary:(MCDiary *)diary {
+    if (diary.isBigEvent) {
+        [_fullDiariesArray addObject:diary];
+        [_filteredDiariesArray addObject:diary];
+    }else{
+        [_fullDiariesArray addObject:diary];
+        [_ordinaryEventsIndexPathsArray addObject:[NSIndexPath indexPathForRow:_fullDiariesArray.count - 1 inSection:0]];
+    }
 }
 
 #pragma mark - Memory Handler
@@ -42,8 +75,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 #pragma mark - UI Responder methods
 
@@ -142,16 +173,10 @@
     });
 }
 
-#pragma mark - MCCreateDiaryViewControllerDelegate methods
+#pragma mark - MCDCreateDiaryViewControllerDelegate methods
 
 - (void)setupMCDiary:(MCDiary *) diary {
-    if (diary.isBigEvent) {
-        [_fullDiariesArray addObject:diary];
-        [_filteredDiariesArray addObject:diary];
-    }else{
-        [_fullDiariesArray addObject:diary];
-        [_ordinaryEventsIndexPathsArray addObject:[NSIndexPath indexPathForRow:_fullDiariesArray.count - 1 inSection:0]];
-    }
+    [self addDiaryProperlyWithDiary:diary];
     [_diariesTableView reloadData];
 }
 
@@ -182,11 +207,12 @@
 
 #pragma mark - MCDiaryTableViewCellDelegate methods
 
-- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex andStartRect:(CGRect)rect {
-    MCPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCPresentImagesViewController"];
+- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex startRect:(CGRect)rect andCollectionView:(UICollectionView *__weak)collectionView {
+    MCDPresentImagesViewController *presentImagesViewController = [[UIStoryboard storyboardWithName:@"Diary" bundle:nil] instantiateViewControllerWithIdentifier:@"MCDPresentImagesViewController"];
     presentImagesViewController.presentingImages = images;
     presentImagesViewController.startIndex = startIndex;
     presentImagesViewController.rectForAnimation = rect;
+    presentImagesViewController.bindingCollectionView = collectionView;
     [self.view addSubview:presentImagesViewController.view];
     [self addChildViewController:presentImagesViewController];
 }
@@ -194,7 +220,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    _createDiaryViewController = (MCCreateDiaryViewController *)segue.destinationViewController;
+    _createDiaryViewController = (MCDCreateDiaryViewController *)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"AddMCDiarySegue"]) {
         _createDiaryViewController.diary = nil;
         //hide delete button

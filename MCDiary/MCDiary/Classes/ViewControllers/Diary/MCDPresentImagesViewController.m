@@ -1,14 +1,14 @@
 //
-//  MCPresentImagesViewController.m
+//  MCDPresentImagesViewController.m
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/8.
 //  Copyright (c) 2015年 zzdjk6. All rights reserved.
 //
 
-#import "MCPresentImagesViewController.h"
+#import "MCDPresentImagesViewController.h"
 
-@implementation MCPresentImagesViewController
+@implementation MCDPresentImagesViewController
 
 #pragma mark - View controller life cycle
 
@@ -59,6 +59,8 @@
     //缩小动画
     UIImageView *imageView = _presentingImageViews[_imagesPageControl.currentPage];
     CGRect frame = imageView.frame;
+    CGRect rectOfCellInWindow = [_bindingCollectionView convertRect:[_bindingCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:_imagesPageControl.currentPage inSection:0]].frame toView:nil];
+    _rectForAnimation = rectOfCellInWindow;
     _rectForAnimation.origin.x += frame.origin.x;
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         imageView.frame = _rectForAnimation;

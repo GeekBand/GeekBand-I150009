@@ -194,7 +194,7 @@
         <!--Present Images View Controller-->
         <scene sceneID="62y-YD-Fob">
             <objects>
-                <viewController storyboardIdentifier="MCPresentImagesViewController" id="1e3-Ta-uie" customClass="MCPresentImagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MCDPresentImagesViewController" id="1e3-Ta-uie" customClass="MCDPresentImagesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cPF-1n-KXo"/>
                         <viewControllerLayoutGuide type="bottom" id="0an-Zw-9LX"/>
@@ -242,7 +242,7 @@
         <!--Create Diary View Controller-->
         <scene sceneID="OAn-hU-8dr">
             <objects>
-                <viewController id="ZM0-TE-kdx" customClass="MCCreateDiaryViewController" sceneMemberID="viewController">
+                <viewController id="ZM0-TE-kdx" customClass="MCDCreateDiaryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V5j-mS-E9j"/>
                         <viewControllerLayoutGuide type="bottom" id="XjG-dc-gXf"/>
@@ -292,7 +292,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-QA-rfl" customClass="MCPlaceHolderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-QA-rfl" customClass="MCDPlaceHolderTextView">
                                 <rect key="frame" x="16" y="271" width="568" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -385,7 +385,7 @@
         <!--Show Image View Controller-->
         <scene sceneID="AoM-Xt-2yx">
             <objects>
-                <viewController id="wEK-pm-QRy" customClass="MCShowImageViewController" sceneMemberID="viewController">
+                <viewController id="wEK-pm-QRy" customClass="MCDShowImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9t-l3-kXU"/>
                         <viewControllerLayoutGuide type="bottom" id="xRY-Te-8tx"/>
@@ -437,6 +437,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sQ8-M2-VnS"/>
+        <segue reference="7RX-Pp-qgU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  MCPresentImagesViewController.h
+//  MCDPresentImagesViewController.h
 //  MCDiary
 //
 //  Created by Turtleeeeeeeeee on 15/9/8.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCPresentImagesViewController : UIViewController<UIScrollViewDelegate>{
+@interface MCDPresentImagesViewController : UIViewController<UIScrollViewDelegate>{
     NSMutableArray          *_presentingImageViews;
 }
 
@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSArray               *presentingImages;
 @property (assign, nonatomic) NSInteger              startIndex;
 @property (assign, nonatomic) CGRect                 rectForAnimation;
+@property (weak, nonatomic) UICollectionView        *bindingCollectionView;
 //@property (strong, nonatomic) NSArray *fullImagesAddresses;  //大图地址
 
 @end

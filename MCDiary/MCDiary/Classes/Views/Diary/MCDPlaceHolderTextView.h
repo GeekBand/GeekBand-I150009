@@ -1,5 +1,5 @@
 //
-//  MCPlaceHolderTextView.h
+//  MCDPlaceHolderTextView.h
 //  MCDiary
 //
 //  Created by Turtle on 15/8/27.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 //implements this class in order to make a text view, which has a place holder.
-@interface MCPlaceHolderTextView : UITextView
+@interface MCDPlaceHolderTextView : UITextView
 
 @property(nonatomic, strong)UILabel *placeHolderLabel;
 @property(nonatomic, copy)NSString  *placeHolder;

@@ -13,7 +13,7 @@
 
 @protocol MCDiaryTableViewCellDelegate
 
-- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex andStartRect:(CGRect)rect;
+- (void)presentImages:(NSArray *)images withStartIndex:(NSInteger)startIndex startRect:(CGRect)rect andCollectionView:(__weak UICollectionView *)collectionView;
 
 @end
 

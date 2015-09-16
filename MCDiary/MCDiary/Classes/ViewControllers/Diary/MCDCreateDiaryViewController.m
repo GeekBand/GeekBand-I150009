@@ -1,25 +1,25 @@
 //
-//  MCCreateDiaryViewController.m
+//  MCDCreateDiaryViewController.m
 //  MCDiary
 //
 //  Created by Turtle on 15/8/27.
 //  Copyright © 2015年 zzdjk6. All rights reserved.
 //
 
-#import "MCCreateDiaryViewController.h"
+#import "MCDCreateDiaryViewController.h"
 
-@interface MCCreateDiaryViewController () {
+@interface MCDCreateDiaryViewController () {
     UITextField     *_titleTextField;
     UISwitch        *_bigEventSwitch;
     NSMutableArray  *_imagesArray;
     UIButton        *_addPhotoButton;
-    __weak MCShowImageViewController *_showImageViewController;
+    __weak MCDShowImageViewController *_showImageViewController;
     CGRect           _keyboardFrame;
 }
 
 @end
 
-@implementation MCCreateDiaryViewController
+@implementation MCDCreateDiaryViewController
 
 #pragma mark - dealloc
 
@@ -61,7 +61,7 @@
 #pragma mark - segue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    _showImageViewController = (MCShowImageViewController *)segue.destinationViewController;
+    _showImageViewController = (MCDShowImageViewController *)segue.destinationViewController;
     _showImageViewController.delegate = self;
 }
 
@@ -302,7 +302,7 @@
     _showImageViewController.imageToShow = _imagesArray[indexPath.item];
 }
 
-#pragma mark - MCShowImageViewControllerDelegate methods
+#pragma mark - MCDShowImageViewControllerDelegate methods
 
 - (void)deleteImage:(UIImage *)image {
     [_imagesArray removeObject:image];
@@ -313,7 +313,6 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     CGRect frame = self.view.frame;
-    NSLog(@"%@", NSStringFromCGRect(frame));
     if (frame.origin.y == 0) {
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             _collectionHeightLayoutConstraint.constant += 15;
