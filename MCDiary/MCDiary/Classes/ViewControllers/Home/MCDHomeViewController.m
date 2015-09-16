@@ -24,26 +24,27 @@
     [super viewDidLoad];
 
     self.viewModel = [[MCDHomeViewModel alloc] init];
+
+    // 根据用户登录状态判断跳转位置
+    if (!self.viewModel.userLoggedIn) {
+        // 去登录
+        UIStoryboard     *sb = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        UIViewController *vc = [sb instantiateInitialViewController];
+
+        UIViewController *leftDrawer = [self.storyboard instantiateViewControllerWithIdentifier:@"MCDLeftDrawerViewController"];
+        leftDrawer.view.backgroundColor = [UIColor MCDGreen];
+
+        MMDrawerController *drawerController = [[MMDrawerController alloc]
+            initWithCenterViewController:vc
+                leftDrawerViewController:leftDrawer
+               rightDrawerViewController:nil];
+
+        [UIApplication sharedApplication].delegate.window.rootViewController = drawerController;
+    }
     
-    UIStoryboard     *sb = [UIStoryboard storyboardWithName:@"MyPet" bundle:nil];
-    UIViewController *vc = [sb instantiateInitialViewController];
-    [UIApplication sharedApplication].delegate.window.rootViewController = vc;
-//     根据用户登录状态判断跳转位置
-//    if (!self.viewModel.userLoggedIn) {
-//        // 去登录
-//        UIStoryboard     *sb = [UIStoryboard storyboardWithName:@"User" bundle:nil];
-//        UIViewController *vc = [sb instantiateInitialViewController];
-//
-//        UIViewController *leftDrawer = [self.storyboard instantiateViewControllerWithIdentifier:@"MCDLeftDrawerViewController"];
-//        leftDrawer.view.backgroundColor = [UIColor MCDGreen];
-//
-//        MMDrawerController *drawerController = [[MMDrawerController alloc]
-//            initWithCenterViewController:vc
-//                leftDrawerViewController:leftDrawer
-//               rightDrawerViewController:nil];
-//
-//        [UIApplication sharedApplication].delegate.window.rootViewController = drawerController;
-//    }
+//    UIStoryboard     *sb = [UIStoryboard storyboardWithName:@"MyPet" bundle:nil];
+//    UIViewController *vc = [sb instantiateInitialViewController];
+//    [UIApplication sharedApplication].delegate.window.rootViewController = vc;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "MCDMessageTableViewCell.h"
 
-@implementation IZMessageTableViewCell
+@implementation MCDMessageTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

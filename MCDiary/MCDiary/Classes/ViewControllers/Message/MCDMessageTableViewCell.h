@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IZMessageTableViewCell : UITableViewCell
+@interface MCDMessageTableViewCell : UITableViewCell
 
 @end
