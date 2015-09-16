@@ -27,7 +27,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经过了 xx 小时" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXC-DZ-pQT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx 小时前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXC-DZ-pQT">
                                             <rect key="frame" x="34" y="22" width="100" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Aew-r9-UNn"/>
@@ -46,7 +46,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeStamp" translatesAutoresizingMaskIntoConstraints="NO" id="oDi-FC-iKL">
-                                            <rect key="frame" x="18" y="25" width="13" height="13"/>
+                                            <rect key="frame" x="18" y="26" width="13" height="13"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="13" id="Lcf-ET-rhm"/>
                                                 <constraint firstAttribute="width" constant="13" id="iaX-Co-Ntz"/>
@@ -69,7 +69,7 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="uXC-DZ-pQT" secondAttribute="bottom" constant="1" id="8yA-EL-eBJ"/>
                                         <constraint firstItem="G0c-Az-pPR" firstAttribute="leading" secondItem="7do-Sl-wtQ" secondAttribute="leading" id="90z-XQ-ANf"/>
-                                        <constraint firstAttribute="bottom" secondItem="oDi-FC-iKL" secondAttribute="bottom" constant="6" id="Aae-Pt-xY7"/>
+                                        <constraint firstAttribute="bottom" secondItem="oDi-FC-iKL" secondAttribute="bottom" constant="5" id="Aae-Pt-xY7"/>
                                         <constraint firstItem="oDi-FC-iKL" firstAttribute="leading" secondItem="G0c-Az-pPR" secondAttribute="trailing" constant="8" id="Dcb-HR-AY9"/>
                                         <constraint firstItem="PI6-R3-pYc" firstAttribute="leading" secondItem="G0c-Az-pPR" secondAttribute="trailing" constant="8" id="Ezv-Hs-mg1"/>
                                         <constraint firstAttribute="trailing" secondItem="EiB-P8-1er" secondAttribute="trailing" constant="8" id="JsA-PU-kYQ"/>
@@ -92,8 +92,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="汪汪喵喵" id="0X4-Tm-Hpk">
-                        <barButtonItem key="leftBarButtonItem" image="Menu Button" id="XSv-PH-Aly"/>
-                        <barButtonItem key="rightBarButtonItem" image="ActionSheetBtn" id="Y30-FZ-kxr">
+                        <barButtonItem key="leftBarButtonItem" image="Menu Button" id="XSv-PH-Aly">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ActionSheet Button" id="Y30-FZ-kxr">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showMessageOption:" destination="RlZ-At-A6l" id="iWT-FY-lRJ"/>
                             </connections>
@@ -137,6 +140,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yz1-sW-rmZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -149,7 +154,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ActionSheetBtn" width="27" height="7"/>
+        <image name="ActionSheet Button" width="32" height="10"/>
         <image name="Menu Button" width="19" height="15"/>
         <image name="goDetail" width="28" height="42"/>
         <image name="timeStamp" width="32" height="32"/>

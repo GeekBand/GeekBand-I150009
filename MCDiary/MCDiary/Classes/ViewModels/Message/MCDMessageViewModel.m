@@ -1,12 +1,12 @@
 //
-//  IZMessageViewModel.m
+//  MCDMessageViewModel.m
 //  MCDiary
 //
 //  Created by Liang Zisheng on 9/8/15.
 //  Copyright (c) 2015 zzdjk6. All rights reserved.
 //
 
-#import "IZMessageViewModel.h"
+#import "MCDMessageViewModel.h"
 
 @implementation IZMessageViewModel
 

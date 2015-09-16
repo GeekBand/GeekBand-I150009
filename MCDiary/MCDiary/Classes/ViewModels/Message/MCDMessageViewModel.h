@@ -1,5 +1,5 @@
 //
-//  IZMessageViewModel.h
+//  MCDMessageViewModel.h
 //  MCDiary
 //
 //  Created by Liang Zisheng on 9/8/15.
