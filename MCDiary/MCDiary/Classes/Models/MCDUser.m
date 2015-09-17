@@ -50,7 +50,15 @@ static MCDUser *_instance = nil;
 + (MCDUser *)loadCachedUser
 {
     NSURL *cacheURL = [MCDUser cacheURL];
-    return [NSKeyedUnarchiver unarchiveObjectWithFile:cacheURL.path];
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[cacheURL path]];
+    if(!fileExists) {
+        return nil;
+    }
+    
+    MCDUser *user = [NSKeyedUnarchiver unarchiveObjectWithFile:cacheURL.path];
+    user.avUser = [AVUser currentUser];
+    [MCDUser setCurrentUser:user];
+    return user;
 }
 
 - (void)logout

@@ -4,6 +4,7 @@
 //
 
 #import "MCDHomeViewModel.h"
+#import "MCDUser.h"
 
 
 @implementation MCDHomeViewModel
@@ -11,16 +12,11 @@
 
 }
 
-- (instancetype)init
+#pragma mark - Accessors
+
+- (BOOL)userLoggedIn
 {
-    self = [super init];
-    if (self) {
-        // todo: 判断用户登录状态
-        self.userLoggedIn = NO;
-    }
-
-    return self;
+    return [MCDUser currentUser] != nil;
 }
-
 
 @end

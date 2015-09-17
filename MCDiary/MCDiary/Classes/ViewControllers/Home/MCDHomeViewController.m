@@ -10,6 +10,7 @@
 #import "MCDHomeViewModel.h"
 #import "MMDrawerController.h"
 #import "UIColor+MCDiary.h"
+#import "MCDUserInfoContainerViewController.h"
 
 @interface MCDHomeViewController ()
 
@@ -39,6 +40,21 @@
                 leftDrawerViewController:leftDrawer
                rightDrawerViewController:nil];
 
+        [UIApplication sharedApplication].delegate.window.rootViewController = drawerController;
+    } else {
+        // TODO: 改为去宠物列表页面
+        // 暂时去个人页面
+        UIStoryboard     *sb = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserInfoContainerViewController class])];
+        
+        UIViewController *leftDrawer = [self.storyboard instantiateViewControllerWithIdentifier:@"MCDLeftDrawerViewController"];
+        leftDrawer.view.backgroundColor = [UIColor MCDGreen];
+        
+        MMDrawerController *drawerController = [[MMDrawerController alloc]
+                                                initWithCenterViewController:vc
+                                                leftDrawerViewController:leftDrawer
+                                                rightDrawerViewController:nil];
+        
         [UIApplication sharedApplication].delegate.window.rootViewController = drawerController;
     }
     

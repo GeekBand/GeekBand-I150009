@@ -128,6 +128,8 @@
 
 - (void)loginSuccess
 {
+    // 保持用户状态
+    [[MCDUser currentUser] cacheUser];
 }
 
 - (void)loginFail:(NSError *)error
