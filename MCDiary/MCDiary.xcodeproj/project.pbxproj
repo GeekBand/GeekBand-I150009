@@ -21,6 +21,7 @@
 		1A089E8632928232051BB682B65A0F11 /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823E7F65C2CC8EA997FCCBA0C320C96B /* MCDButtonView.xib */; };
 		2637A280C47BEDCC59324A0D69A6D974 /* MCDAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C98460BC7D87B02D1022FA5ADCB6E92 /* MCDAvatarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2857D38FA6DF2990721292330AA42946 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C693EAC1928F09EAE948F0BD37405 /* DistancePickerView.m */; };
+		293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D67A6C0D74CF6795A963DA9F055A3D6 /* MCDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB424BBC9837EF7390CD9FDD35EDDB /* MCDiaryTableViewCell.m */; };
 		3309D2C3FC0B5A80FC7B964B47A26C28 /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B0CFBD85BC6A29BC15DA3DE59A73 /* MCDButtonView.m */; };
 		3313E81C5E4F6C46C50897C6BB40FF40 /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4677AA1EA01CAE24847DD696D32F5837 /* MCDAvatarView.xib */; };
@@ -219,6 +220,7 @@
 		742E7235232DA1DDCB5B830AC262F6B4 /* MCDiaryTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryTimeLineViewController.h; sourceTree = "<group>"; };
 		76FD20C202297F5891B400CBAB353A10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7708646BAC110ACB4D4FAAF879E11523 /* MCDAreaPickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAreaPickerViewModel.m; sourceTree = "<group>"; };
+		7BDE021C0601683064993F256F08EFBB /* MCDLeftDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLeftDrawerViewController.h; sourceTree = "<group>"; };
 		7CD23F2D6480D8B5EFFC113472288EE2 /* MCDShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDShowImageViewController.m; sourceTree = "<group>"; };
 		7F0FD2654FDDE2070205B23AA252205D /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
 		823E7F65C2CC8EA997FCCBA0C320C96B /* MCDButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		C01C5E29E7081DE929CFE22F3F2559E7 /* MCDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPrefixHeader.pch; sourceTree = "<group>"; };
 		C0F661EE87161F1A451AA778E40FA435 /* MCDTextFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
+		C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLeftDrawerViewController.m; sourceTree = "<group>"; };
 		C2F11E13E28983A8821058D7A409B354 /* MCDDetailPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDetailPetViewController.h; sourceTree = "<group>"; };
 		C3502D95C778AC61C25727AAE6A340CB /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
 		C4915C79FAFE142B965626D1669CED69 /* MCDMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageViewModel.m; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 			children = (
 				9A7DD4D6A952AF4A28491ABDBDE5E5B8 /* MCDHomeViewController.h */,
 				C3502D95C778AC61C25727AAE6A340CB /* MCDHomeViewController.m */,
+				7BDE021C0601683064993F256F08EFBB /* MCDLeftDrawerViewController.h */,
+				C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				D8B1C0A782A006F05520469A5AC1E044 /* MCDDetailPetViewController.m in Sources */,
 				AA6AA023959872F4F72A91B274EA98BA /* MCDHomeViewController.m in Sources */,
 				82BB26BA7C5E8AA779F6D71A845DFE03 /* MCDHomeViewModel.m in Sources */,
+				293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */,
 				17BB90D78325355516407758648957AF /* MCDLoginViewController.m in Sources */,
 				6E6081F29B5326D4BFA64E014E0C2347 /* MCDLoginViewModel.m in Sources */,
 				47F71BDE92C9B4C390B702BF390FE6A1 /* MCDMessageItem.m in Sources */,
