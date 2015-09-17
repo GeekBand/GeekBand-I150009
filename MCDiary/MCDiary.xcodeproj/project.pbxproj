@@ -66,7 +66,6 @@
 		A779B9D5AC867B88653DDA206B39F103 /* MCDUserInfoContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F1072AAAFA9BDBD7C8354232D03AD /* MCDUserInfoContentViewController.m */; };
 		A7FF5988FECA62C391A45FAC33B700AD /* MCDUserModifyPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8841B7C97D50B30418A024E01FE446E2 /* MCDUserModifyPasswordViewModel.m */; };
 		AA6AA023959872F4F72A91B274EA98BA /* MCDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3502D95C778AC61C25727AAE6A340CB /* MCDHomeViewController.m */; };
-		AB3D6F6D26000CD07EA37D67D291D0AD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 96C49D971C2E54069B6BB9379711E2F1 /* README.md */; };
 		ABAA0941EABFC7CCC2600B88C5116126 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20542579D6272F687DC575AB8E34E54F /* Diary.storyboard */; };
 		AD9A2790259D71C6CC3508BBE662A66C /* MCDMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4915C79FAFE142B965626D1669CED69 /* MCDMessageViewModel.m */; };
 		AE6DB083C43D8FC0617C16E9EFED98ED /* UIColor+MCDiary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B49680DCF81809539597CEB163B0DDF /* UIColor+MCDiary.m */; };
@@ -89,7 +88,6 @@
 		D8B1C0A782A006F05520469A5AC1E044 /* MCDDetailPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CD0B32BD45175F7A1C4B8359B9AF00 /* MCDDetailPetViewController.m */; };
 		D90BDF6FC4A3B523455AA3F3A4F806A1 /* MCDBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5504BDFADA3C021A9ACF47D1333BA859 /* MCDBorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA0C029CE66304ACCDA6C41334B8C8B7 /* MCDiaryKitPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 187C91761A375D37152DE0177DBDEC24 /* MCDiaryKitPrefixHeader.pch */; };
-		E1DC70EA2C3A887C1ADCCCF806219996 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEF5BAD9CC7231396A418A9417271B5F /* Info.plist */; };
 		E2891A529FF291B1C10F93B291CECCAD /* MCDButtonFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2D1635626CAA6C39AF975140736858 /* MCDButtonFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E63188C645B744F5822480C9478208F0 /* MCDButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA8578F45F09BAE4FFEED9B657535FB4 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576B666709B1B79298620F19645A2D32 /* User.storyboard */; };
@@ -237,7 +235,6 @@
 		9255A05F066CC3006A99AB065006552D /* MCDCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomCell.m; sourceTree = "<group>"; };
 		93E0C54A88F8036FB7783CC62E28C65D /* MCDPresentImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPresentImagesViewController.h; sourceTree = "<group>"; };
 		952F52D1F9DD7ED47C9FA9530FAC7FF0 /* MCDUserInfoContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewModel.m; sourceTree = "<group>"; };
-		96C49D971C2E54069B6BB9379711E2F1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96CD45CAC1B56E1A1726D923CC18406F /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		98B4C0E72FEBCF92484300B13BD5E3F1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A7DD4D6A952AF4A28491ABDBDE5E5B8 /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
@@ -713,7 +710,6 @@
 				30015BF332BFA8E89A2C5313598D064D /* MCDUserLocation.m */,
 				454C31C368DE8A974ED46995ADDE1545 /* MCDiary.h */,
 				1A08859B3A883AC29ED966263FF971B5 /* MCDiary.m */,
-				96C49D971C2E54069B6BB9379711E2F1 /* README.md */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -904,7 +900,7 @@
 		5B496D00D0DC4F5D33916EA0B4590561 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = zzdjk6;
 				TargetAttributes = {
 					366D35AD2EC224F8A0443A601FDEC393 = {
@@ -952,7 +948,6 @@
 				06C04868CA36BA09AF7E662D80C19434 /* Area.plist in Resources */,
 				ABAA0941EABFC7CCC2600B88C5116126 /* Diary.storyboard in Resources */,
 				882204B07ECA163074F3F1B899307202 /* Images.xcassets in Resources */,
-				E1DC70EA2C3A887C1ADCCCF806219996 /* Info.plist in Resources */,
 				12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */,
 				0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */,
 				7F1FA4D4249223C1124F27C253081175 /* Main.storyboard in Resources */,
@@ -1122,7 +1117,6 @@
 				99D7FC2FDD119650D21018C5EA647B33 /* MCDiary.m in Sources */,
 				2D67A6C0D74CF6795A963DA9F055A3D6 /* MCDiaryTableViewCell.m in Sources */,
 				44BCC09F17AC62B32236283A797C0B18 /* MCDiaryTimeLineViewController.m in Sources */,
-				AB3D6F6D26000CD07EA37D67D291D0AD /* README.md in Sources */,
 				420271320B7E021261CB17CB1D159977 /* SWActionSheet.m in Sources */,
 				AE6DB083C43D8FC0617C16E9EFED98ED /* UIColor+MCDiary.m in Sources */,
 				ED6737D6E5569A7A693EE8872EA9F1CF /* main.m in Sources */,
@@ -1195,6 +1189,7 @@
 				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
 			};
@@ -1214,6 +1209,7 @@
 				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
 			};
@@ -1230,6 +1226,7 @@
 				);
 				INFOPLIST_FILE = MCDiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
 			};
@@ -1298,6 +1295,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -1324,6 +1322,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1367,6 +1366,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1390,6 +1390,7 @@
 				);
 				INFOPLIST_FILE = MCDiaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
 			};
@@ -1458,6 +1459,7 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -1480,6 +1482,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

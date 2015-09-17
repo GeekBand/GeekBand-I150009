@@ -24,7 +24,7 @@
 {
     [super awakeFromNib];
 
-    @weakify(self);
+    //@weakify(self);
 
     // 2-way bind with selectedIndex and radioButtons
     RACChannelTerminal *selectedIndexTerminal        = RACChannelTo(self, selectedIndex);
