@@ -12,6 +12,7 @@
 		0760BE0D3A03A55C27F43059604EFFAC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D480F53D1B3754EB44A295A539BB21EA /* AbstractActionSheetPicker.m */; };
 		0762281DFCB5EFE4C669CE4DB964ABDB /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4667738F74E8F6827FAC8ECB33112DC4 /* MCDCustomView.m */; };
 		0B382B038DA2F79AAB71DA688C9D4A8E /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DFF8C736003F3A6FF640FB59B905A /* ActionSheetDatePicker.m */; };
+		0C0DB7D4DA02D4F40BEEFC42BFB2CF32 /* MCDDrawerControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */; };
 		0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */; };
 		12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB645FEE0637753C83582F30CEFD81A4 /* LaunchScreen.xib */; };
 		12586F5A9073F95DDE0D99995155BA4B /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = E22773247828994AF964022F0BE83797 /* MCDButtonFormField.m */; };
@@ -257,6 +258,8 @@
 		AEA28D5431799358A09F1A072A468976 /* MCDUserLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocationHelper.m; sourceTree = "<group>"; };
 		AF46900EADC08B5AEB7A22F81B9F95E4 /* MCDiaryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDiaryKit.h; sourceTree = "<group>"; };
 		B14D80773AE74752A46E6A688A899039 /* MCDMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewCell.h; sourceTree = "<group>"; };
+		B6716A68AF191237D1238F889C98AE92 /* MCDDrawerControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDrawerControllerHelper.h; sourceTree = "<group>"; };
+		B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDrawerControllerHelper.m; sourceTree = "<group>"; };
 		BF921A7F7D4DE0BD53FDE1C086FD773C /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
 		C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		C01C5E29E7081DE929CFE22F3F2559E7 /* MCDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPrefixHeader.pch; sourceTree = "<group>"; };
@@ -790,6 +793,8 @@
 		FBE209C93A884393845E0EE5C530FE47 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B6716A68AF191237D1238F889C98AE92 /* MCDDrawerControllerHelper.h */,
+				B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */,
 				83D829441458268E1191414D74B59565 /* MCDUserLocationHelper.h */,
 				AEA28D5431799358A09F1A072A468976 /* MCDUserLocationHelper.m */,
 				5947461EAE90AA2A044328B61028D7B0 /* UIColor+MCDiary.h */,
@@ -1093,6 +1098,7 @@
 				912E182FA47B57248A1E9C4140EB420E /* MCDCreateDiaryViewController.m in Sources */,
 				BE3B413439EF2605731F853B9D0A418C /* MCDCustomCell.m in Sources */,
 				D8B1C0A782A006F05520469A5AC1E044 /* MCDDetailPetViewController.m in Sources */,
+				0C0DB7D4DA02D4F40BEEFC42BFB2CF32 /* MCDDrawerControllerHelper.m in Sources */,
 				AA6AA023959872F4F72A91B274EA98BA /* MCDHomeViewController.m in Sources */,
 				82BB26BA7C5E8AA779F6D71A845DFE03 /* MCDHomeViewModel.m in Sources */,
 				293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */,

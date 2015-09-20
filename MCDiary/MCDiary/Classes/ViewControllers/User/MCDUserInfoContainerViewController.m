@@ -9,6 +9,7 @@
 #import "MMDrawerController.h"
 #import "MCDUser.h"
 #import "MCDLoginViewController.h"
+#import "MCDDrawerControllerHelper.h"
 
 @interface MCDUserInfoContainerViewController ()
 
@@ -75,10 +76,7 @@
     // 打开菜单
     [[self.openMenuButton rac_signalForControlEvents:UIControlEventTouchUpInside]
         subscribeNext:^(id x) {
-            MMDrawerController *rootVC = (MMDrawerController *)
-                [UIApplication sharedApplication].delegate.window.rootViewController;
-            rootVC.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
-            [rootVC openDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+            [MCDDrawerControllerHelper openDrawer];
         }
     ];
 
