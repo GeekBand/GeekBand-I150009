@@ -6,23 +6,7 @@
 
 #import "MCDBaseViewModel.h"
 
-@class MCDUserModifyPasswordViewModel;
-
-@protocol MCDUserModifyPasswordViewModelDelegate
-
-- (void)MCDUserModifyPasswordViewModel:(MCDUserModifyPasswordViewModel *)viewModel changePasswordSuccess:(BOOL)success;
-
-- (void)MCDUserModifyPasswordViewModel:(MCDUserModifyPasswordViewModel *)viewModel changePasswordFailed:(NSError *)error;
-
-- (void)MCDUserModifyPasswordViewModel:(MCDUserModifyPasswordViewModel *)viewModel sendForgotPasswordEmailSuccess:(BOOL)success;
-
-- (void)MCDUserModifyPasswordViewModel:(MCDUserModifyPasswordViewModel *)viewModel sendForgotPasswordEmailFailed:(NSError *)error;
-
-@end
-
 @interface MCDUserModifyPasswordViewModel : MCDBaseViewModel
-
-@property(nonatomic, weak) id <MCDUserModifyPasswordViewModelDelegate> delegate;
 
 @property(nonatomic, copy) NSString *oldPassword;
 @property(nonatomic, copy) NSString *freshPassword;
@@ -32,9 +16,13 @@
 @property(nonatomic, assign) BOOL freshPasswordValid;
 @property(nonatomic, assign) BOOL confirmPasswordValid;
 
-@property(nonatomic, strong, readonly) RACSignal *oldPasswordvalidSignal;
-@property(nonatomic, strong, readonly) RACSignal *freshPasswordvalidSignal;
-@property(nonatomic, strong, readonly) RACSignal *confirmPasswordvalidSignal;
+@property(nonatomic, strong, readonly) RACSignal *oldPasswordValidSignal;
+@property(nonatomic, strong, readonly) RACSignal *freshPasswordValidSignal;
+@property(nonatomic, strong, readonly) RACSignal *confirmPasswordValidSignal;
+@property(nonatomic, strong, readonly) RACSignal *changePasswordSuccessSignal;
+@property(nonatomic, strong, readonly) RACSignal *changePasswordFailedSignal;
+@property(nonatomic, strong, readonly) RACSignal *sendForgotPasswordEmailSuccessSignal;
+@property(nonatomic, strong, readonly) RACSignal *sendForgotPasswordEmailFailedSignal;
 
 @property(nonatomic, copy, readonly) NSString *oldPasswordTitleError;
 @property(nonatomic, copy, readonly) NSString *freshPasswordTitleError;

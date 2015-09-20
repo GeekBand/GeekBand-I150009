@@ -14,11 +14,15 @@
 {
 }
 
-@synthesize oldPasswordvalidSignal = _oldPasswordvalidSignal;
-@synthesize freshPasswordvalidSignal = _freshPasswordvalidSignal;
-@synthesize confirmPasswordvalidSignal = _confirmPasswordvalidSignal;
+@synthesize oldPasswordValidSignal = _oldPasswordValidSignal;
+@synthesize freshPasswordValidSignal = _freshPasswordValidSignal;
+@synthesize confirmPasswordValidSignal = _confirmPasswordValidSignal;
+@synthesize changePasswordSuccessSignal = _changePasswordSuccessSignal;
+@synthesize changePasswordFailedSignal = _changePasswordFailedSignal;
+@synthesize sendForgotPasswordEmailSuccessSignal = _sendForgotPasswordEmailSuccessSignal;
+@synthesize sendForgotPasswordEmailFailedSignal = _sendForgotPasswordEmailFailedSignal;
 
-#pragma mark - public
+#pragma mark - Public
 
 - (void)changePassword
 {
@@ -53,7 +57,7 @@
             if (error != nil) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.sendingRequest = NO;
-                    [self.delegate MCDUserModifyPasswordViewModel:self changePasswordFailed:error];
+                    [self changePasswordFailed:error];
                 });
                 return;
             }
@@ -64,11 +68,11 @@
                                                dispatch_async(dispatch_get_main_queue(), ^{
                                                    self.sendingRequest = NO;
                                                    if (cloudError != nil) {
-                                                       [self.delegate MCDUserModifyPasswordViewModel:self changePasswordFailed:cloudError];
+                                                       [self changePasswordFailed:cloudError];
                                                        return;
                                                    }
 
-                                                   [self.delegate MCDUserModifyPasswordViewModel:self changePasswordSuccess:YES];
+                                                   [self changePasswordSuccess];
                                                });
                                            }];
         });
@@ -85,7 +89,7 @@
                                          userInfo:@{
                                              NSLocalizedDescriptionKey : @"Email 不正确"
                                          }];
-        [self.delegate MCDUserModifyPasswordViewModel:self sendForgotPasswordEmailFailed:error];
+        [self sendForgotPasswordEmailFailed:error];
         return;
     }
 
@@ -95,26 +99,34 @@
                                                block:^(BOOL succeeded, NSError *error) {
                                                    self.sendingRequest = NO;
                                                    if (succeeded) {
-                                                       [self.delegate MCDUserModifyPasswordViewModel:self sendForgotPasswordEmailSuccess:YES];
+                                                       [self sendForgotPasswordEmailSuccess];
                                                    } else {
                                                        // TODO: 本地化错误显示
-                                                       [self.delegate MCDUserModifyPasswordViewModel:self sendForgotPasswordEmailFailed:error];
+                                                       [self sendForgotPasswordEmailFailed:error];
                                                    }
                                                }];
 }
 
-#pragma mark - life cycle
+#pragma mark - Life Cycle
 
 
-#pragma mark - accessor
+#pragma mark - Accessor
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _oldPasswordvalidSignal     = RACObserve(self, oldPasswordValid);
-        _freshPasswordvalidSignal   = RACObserve(self, freshPasswordValid);
-        _confirmPasswordvalidSignal = RACObserve(self, confirmPasswordValid);
+        _oldPasswordValidSignal     = RACObserve(self, oldPasswordValid);
+        _freshPasswordValidSignal   = RACObserve(self, freshPasswordValid);
+        _confirmPasswordValidSignal = RACObserve(self, confirmPasswordValid);
+        _changePasswordSuccessSignal = [self rac_signalForSelector:@selector(changePasswordSuccess)];
+        _changePasswordFailedSignal = [[self rac_signalForSelector:@selector(changePasswordFailed:)] map:^id(RACTuple *tuple) {
+            return tuple.first;
+        }];
+        _sendForgotPasswordEmailSuccessSignal = [self rac_signalForSelector:@selector(sendForgotPasswordEmailSuccess)];
+        _sendForgotPasswordEmailFailedSignal = [[self rac_signalForSelector:@selector(sendForgotPasswordEmailFailed:)] map:^id(RACTuple *tuple) {
+            return tuple.first;
+        }];
 
         _oldPasswordValid     = YES;
         _freshPasswordValid   = YES;
@@ -140,6 +152,24 @@
     return @"确认新密码";
 }
 
-#pragma mark - private
+#pragma mark - Signal Trigger
+
+- (void)changePasswordSuccess
+{
+}
+
+- (void)changePasswordFailed:(NSError *)error
+{
+}
+
+- (void)sendForgotPasswordEmailSuccess
+{
+}
+
+- (void)sendForgotPasswordEmailFailed:(NSError *)error
+{
+}
+
+#pragma mark - Private
 
 @end
