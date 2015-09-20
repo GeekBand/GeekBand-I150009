@@ -7,6 +7,7 @@
 //
 
 #import "MCDiaryTimeLineViewController.h"
+#import "MCDDrawerControllerHelper.h"
 
 @interface MCDiaryTimeLineViewController (){
     MCDCreateDiaryViewController *_createDiaryViewController;
@@ -93,7 +94,7 @@
 #pragma mark - Two top layout guide buttons' responding selectors
 
 - (IBAction)menuButtonTouchUpInside:(id)sender {
-    
+    [MCDDrawerControllerHelper openDrawer];
 }
 
 - (IBAction)createButtonTouchUpInside:(id)sender {

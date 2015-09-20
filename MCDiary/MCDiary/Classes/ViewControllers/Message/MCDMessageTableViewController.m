@@ -8,6 +8,7 @@
 
 #import "MCDMessageTableViewController.h"
 #import "MCDMessageViewModel.h"
+#import "MCDDrawerControllerHelper.h"
 
 @interface IZMessageTableViewController ()
 
@@ -85,6 +86,10 @@
     [alert addAction:markAllAsUnreadAction];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)showMenu:(UIBarButtonItem *)sender {
+    [MCDDrawerControllerHelper openDrawer];
 }
 
 @end

@@ -94,6 +94,9 @@
                     <navigationItem key="navigationItem" title="汪汪喵喵" id="0X4-Tm-Hpk">
                         <barButtonItem key="leftBarButtonItem" image="Menu Button" id="XSv-PH-Aly">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showMenu:" destination="RlZ-At-A6l" id="tsp-RV-s7Q"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ActionSheet Button" id="Y30-FZ-kxr">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

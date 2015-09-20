@@ -10,6 +10,7 @@
 #import "MCDMyPetDataModel.h"
 #import "MCDCustomCell.h"
 #import "MCDMyPet.h"
+#import "MCDDrawerControllerHelper.h"
 
 @interface MCDMyPetViewController ()
 
@@ -100,6 +101,12 @@ static NSString * const reuseIdentifier = @"Cell";
     NSArray *deleteItems = @[indexPath];
     [self.collectionView deleteItemsAtIndexPaths:deleteItems];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - IBAction
+
+- (IBAction)showMenu:(UIButton *)sender {
+    [MCDDrawerControllerHelper openDrawer];
 }
 
 @end
