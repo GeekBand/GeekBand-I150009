@@ -12,15 +12,16 @@
 
 @interface MCDLeftDrawerViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *greatingLabel;
+@property(weak, nonatomic) IBOutlet UILabel *greatingLabel;
 
 @end
 
 static const NSUInteger kMyPetIndex    = 0;
-static NSUInteger kMessageIndex  = 1;
-static NSUInteger kUserInfoIndex = 2;
-static NSUInteger kLogoutIndex   = 3;
-static NSUInteger kAboutIndex    = 4;
+static const NSUInteger kDiaryIndex    = 1;
+static const NSUInteger kMessageIndex  = 2;
+static const NSUInteger kUserInfoIndex = 3;
+static const NSUInteger kLogoutIndex   = 4;
+static const NSUInteger kAboutIndex    = 5;
 
 @implementation MCDLeftDrawerViewController
 
@@ -46,37 +47,43 @@ static NSUInteger kAboutIndex    = 4;
     NSUInteger row = (NSUInteger)indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    if(row == kMyPetIndex) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MyPet" bundle:nil];
+    if (row == kMyPetIndex) {
+        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"MyPet" bundle:nil];
         UIViewController *viewController = [storyboard instantiateInitialViewController];
         [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
         return;
     }
-    if(row == kMessageIndex) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Message" bundle:nil];
+    if (row == kDiaryIndex) {
+        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"Diary" bundle:nil];
         UIViewController *viewController = [storyboard instantiateInitialViewController];
         [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
         return;
     }
-    if(row == kUserInfoIndex) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+    if (row == kMessageIndex) {
+        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"Message" bundle:nil];
+        UIViewController *viewController = [storyboard instantiateInitialViewController];
+        [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
+        return;
+    }
+    if (row == kUserInfoIndex) {
+        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"User" bundle:nil];
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MCDUserInfoContainerViewController"];
         [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
         return;
     }
-    if(row == kLogoutIndex) {
+    if (row == kLogoutIndex) {
         [[MCDUser currentUser] logout];
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"User" bundle:nil];
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MCDLoginViewController"];
         [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
         return;
     }
-    if(row == kAboutIndex) {
+    if (row == kAboutIndex) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"欢迎使用萌宠日记.x"
-                                   message:[NSString stringWithFormat:@"当前版本: %@",[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]]
-                                  delegate:nil
-                         cancelButtonTitle:@"知道了"
-                         otherButtonTitles:nil];
+                                                        message:[NSString stringWithFormat:@"当前版本: %@", [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"知道了"
+                                              otherButtonTitles:nil];
         [alert show];
         return;
     }
