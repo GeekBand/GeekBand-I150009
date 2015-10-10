@@ -1,9 +1,5 @@
 PODS:
-  - AVOSCloudCrashReportingDynamic (3.1.3.4):
-    - AVOSCloudDynamic
-  - AVOSCloudDynamic (3.1.3.4)
-  - AVOSCloudIMDynamic (3.1.3.4):
-    - AVOSCloudDynamic
+  - AVOSCloud (3.1.4)
   - CocoaLumberjack (2.0.1):
     - CocoaLumberjack/Default (= 2.0.1)
     - CocoaLumberjack/Extensions (= 2.0.1)
@@ -12,8 +8,8 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.1):
     - CocoaLumberjack/Default
-  - DateTools (1.6.1)
-  - DLRadioButton (1.3.2)
+  - DateTools (1.7.0)
+  - DLRadioButton (1.3.5)
   - HexColors (2.3.0)
   - Masonry (0.6.2)
   - MMDrawerController (0.6.0):
@@ -36,39 +32,35 @@ PODS:
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
   - RegExCategories (1.0)
-  - RSKImageCropper (1.2.1)
+  - RSKImageCropper (1.3.1)
   - SVProgressHUD (1.1.3)
   - TPKeyboardAvoiding (1.2.9)
 
 DEPENDENCIES:
-  - AVOSCloudCrashReportingDynamic
-  - AVOSCloudDynamic
-  - AVOSCloudIMDynamic
+  - AVOSCloud
   - CocoaLumberjack
   - DateTools
   - DLRadioButton
   - HexColors
   - Masonry
   - MMDrawerController
-  - ReactiveCocoa
+  - ReactiveCocoa (= 2.5)
   - RegExCategories
   - RSKImageCropper
   - SVProgressHUD
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
-  AVOSCloudCrashReportingDynamic: 861a704bc41c459bc392ecdfbe04101c2856b0bc
-  AVOSCloudDynamic: dafbc07f991f6d40ae20e6a3f37ac24d4908c0c3
-  AVOSCloudIMDynamic: ab0492d9fc9578933a9e85a575d18316942712c0
+  AVOSCloud: 2be1640178facaac8343d67ed4d5348f4dffecd7
   CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
-  DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
-  DLRadioButton: 99f4aba746ae10d727f885b64291d0318623fd28
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  DLRadioButton: 817c7cba2a630a658dea90f56d6d9740f544930d
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
-  RSKImageCropper: e912419809d3a4eac47864d6fbc22f84c14879d5
+  RSKImageCropper: b4993121db4f6679a7f7ed1305050ef970764e3f
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
 

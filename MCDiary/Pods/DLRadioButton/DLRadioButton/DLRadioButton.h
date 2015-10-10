@@ -13,7 +13,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBOutletCollection(DLRadioButton) NSArray *otherButtons;
 
 /**
- Size of icon, default is kDefaulIconSize
+ Size of icon, default is kDefaulIconSize.
 */
 @property (nonatomic) IBInspectable CGFloat iconSize;
 

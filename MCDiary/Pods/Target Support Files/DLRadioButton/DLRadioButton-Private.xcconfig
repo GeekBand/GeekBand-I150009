@@ -1,5 +1,5 @@
 #include "DLRadioButton.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/DLRadioButton" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AVOSCloudCrashReportingDynamic" "${PODS_ROOT}/Headers/Public/AVOSCloudCrashReportingDynamic/AVOSCloudCrashReporting" "${PODS_ROOT}/Headers/Public/AVOSCloudDynamic" "${PODS_ROOT}/Headers/Public/AVOSCloudDynamic/AVOSCloud" "${PODS_ROOT}/Headers/Public/AVOSCloudIMDynamic" "${PODS_ROOT}/Headers/Public/AVOSCloudIMDynamic/AVOSCloudIM"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/DLRadioButton" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AVOSCloud"
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES

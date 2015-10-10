@@ -12,8 +12,11 @@
 #import "RSKImageCropViewController.h"
 #import "MCDUser.h"
 #import "MCDUserModifyPasswordViewController.h"
-
-@import MCDiaryKit;
+#import "MCDAvatarView.h"
+#import "MCDTextFormField.h"
+#import "MCDButtonFormField.h"
+#import "MCDRadioFormField.h"
+#import "MCDButtonView.h"
 
 @interface MCDUserInfoContentViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, RSKImageCropViewControllerDelegate>
 

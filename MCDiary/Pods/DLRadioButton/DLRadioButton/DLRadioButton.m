@@ -105,11 +105,10 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 
 - (void)touchDown {
     [self setSelected:YES];
-    [self setNeedsDisplay];
 }
 
 - (void)initRadioButton {
-    [super addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchDown];
+    [super addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)prepareForInterfaceBuilder {
@@ -122,7 +121,6 @@ static NSString *const kGeneratedIconName = @"Generated Icon";
 - (void)deselectOtherButtons {
     for (UIButton *button in self.otherButtons) {
         [button setSelected:NO];
-        [button setNeedsDisplay];
     }
 }
 

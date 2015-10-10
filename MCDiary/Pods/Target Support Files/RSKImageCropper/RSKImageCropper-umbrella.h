@@ -5,6 +5,7 @@
 #import "RSKImageCropViewController+Protected.h"
 #import "RSKImageCropViewController.h"
 #import "RSKImageScrollView.h"
+#import "RSKInternalUtility.h"
 #import "RSKTouchView.h"
 #import "UIApplication+RSKImageCropper.h"
 #import "UIImage+RSKImageCropper.h"

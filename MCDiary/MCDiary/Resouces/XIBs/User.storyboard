@@ -432,7 +432,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="needAssessoryButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-Tp-Imu" customClass="MCDButtonView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-Tp-Imu" customClass="MCDButtonView">
                                 <rect key="frame" x="165" y="448" width="130" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -464,7 +464,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="浙江省 杭州市"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBf-Nh-UrU" customClass="MCDButtonView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kBf-Nh-UrU" customClass="MCDButtonView">
                                 <rect key="frame" x="25" y="448" width="130" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

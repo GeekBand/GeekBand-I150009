@@ -3,64 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04684330D7648B05A995B85EDDBB8830 /* MCDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 361162CF61DD26BEAE56B58836C3DFEC /* MCDUser.m */; };
 		06C04868CA36BA09AF7E662D80C19434 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7BCF146E5F5F0FB9035D73C5C2BAE32 /* Area.plist */; };
 		0760BE0D3A03A55C27F43059604EFFAC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D480F53D1B3754EB44A295A539BB21EA /* AbstractActionSheetPicker.m */; };
-		0762281DFCB5EFE4C669CE4DB964ABDB /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4667738F74E8F6827FAC8ECB33112DC4 /* MCDCustomView.m */; };
 		0B382B038DA2F79AAB71DA688C9D4A8E /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DFF8C736003F3A6FF640FB59B905A /* ActionSheetDatePicker.m */; };
 		0C0DB7D4DA02D4F40BEEFC42BFB2CF32 /* MCDDrawerControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */; };
 		0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */; };
 		12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB645FEE0637753C83582F30CEFD81A4 /* LaunchScreen.xib */; };
-		12586F5A9073F95DDE0D99995155BA4B /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = E22773247828994AF964022F0BE83797 /* MCDButtonFormField.m */; };
 		15B9FE759F6F73A6C1312108CD833E1F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5C6E155F616EC7022C7CDADCAE9DF294 /* Podfile */; };
 		175062DED311ACCD98C384A85779FC3C /* MCDUserModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF921A7F7D4DE0BD53FDE1C086FD773C /* MCDUserModifyPasswordViewController.m */; };
 		17BB90D78325355516407758648957AF /* MCDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CACC71DB3C654327859FBA7EA91385 /* MCDLoginViewController.m */; };
-		1A089E8632928232051BB682B65A0F11 /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823E7F65C2CC8EA997FCCBA0C320C96B /* MCDButtonView.xib */; };
-		2637A280C47BEDCC59324A0D69A6D974 /* MCDAvatarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C98460BC7D87B02D1022FA5ADCB6E92 /* MCDAvatarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CF49AFB41332B7E1595FFE2DCB1CD6F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7CFC41A70D51E16A7ECF949B0BE53 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2857D38FA6DF2990721292330AA42946 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C693EAC1928F09EAE948F0BD37405 /* DistancePickerView.m */; };
 		293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */; };
 		2D67A6C0D74CF6795A963DA9F055A3D6 /* MCDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB424BBC9837EF7390CD9FDD35EDDB /* MCDiaryTableViewCell.m */; };
-		3309D2C3FC0B5A80FC7B964B47A26C28 /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B0CFBD85BC6A29BC15DA3DE59A73 /* MCDButtonView.m */; };
-		3313E81C5E4F6C46C50897C6BB40FF40 /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4677AA1EA01CAE24847DD696D32F5837 /* MCDAvatarView.xib */; };
-		37429609FA0553CBA05D3CBA2CD68A2E /* MCDRadioFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7DCF5E0B1E3E91ACD4ADB4A81728B5 /* MCDRadioFormField.xib */; };
+		3C4509D0645E02EE7541EBC964EFB87B /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13AC8C98AB7655FA6220ADFC98DFA353 /* MCDBorderView.xib */; };
 		420271320B7E021261CB17CB1D159977 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 43610C8BF94E169CE8F42AA832FEBF5A /* SWActionSheet.m */; };
+		441F02BB5C55DDC681C38561BE096929 /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D712DD2C7F72E13F69CC7FA3D9B388AC /* MCDButtonFormField.m */; };
 		44BCC09F17AC62B32236283A797C0B18 /* MCDiaryTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A5FE5C857C16C586A943BEDD65CA6 /* MCDiaryTimeLineViewController.m */; };
+		45ADD37B0A4E95299F470041D0ADC0B0 /* MCDAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C712CFAA9C55B75392F40B4407E09 /* MCDAvatarView.xib */; };
 		47F71BDE92C9B4C390B702BF390FE6A1 /* MCDMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E00AEC66E27F3290E9F22AB097DFF /* MCDMessageItem.m */; };
 		494FB69AC7C36A9867DC644396952E32 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C63DA2E2B41BB7102348CD1500A7419 /* ActionSheetStringPicker.m */; };
 		49FDBA643B7EB2148454D804924F9886 /* MCDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DCE14A01E72C1A23E1F318CCAAC9A6 /* MCDBaseModel.m */; };
 		4E52E7E1CE4A432B4C74D8A383109725 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F5177B2C08C2EDD58B6B0C08A84192BF /* ActionSheetLocalePicker.m */; };
-		53877AE0207BE16394BE4D8CEB43F385 /* MCDButtonFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A2963FA9EDCF42776AB1E2654DBDD3 /* MCDButtonFormField.xib */; };
-		540E7296EFE4D3A7A01D8DCAC1C1377A /* Pods_MCDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C7EED312EB4D0816A5319D93D8C2EE /* Pods_MCDiary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		54827AE4C625159A157B839F55290711 /* MCDRadioFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2F3DD1C1659196DDFAE3F17877E1A5 /* MCDRadioFormField.xib */; };
 		596965B9114BB345D49F20D326AA1883 /* MCDCloudUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */; };
-		5DACC57868C4990014D1CA60B3A9F84B /* MCDTextFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D26E1353ABF232C6B1CCF697973358C /* MCDTextFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F14F19E64ECA5C1AAA95D903F72D90A /* MCDMessageList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8905AD173E52874721AB2522EDFB72 /* MCDMessageList.m */; };
+		60FB302AC98FEB0D3B0F3863E19AA998 /* MCDButtonFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D7740AA7AB0FBCFD0BE3704C4D9493 /* MCDButtonFormField.xib */; };
 		623835A0E4BC097C04CE27C3255576D0 /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D20AE523D20C554A22BA2D4B15617 /* MCDBaseViewController.m */; };
 		629922A4DF2C94FB32B7A2546BA6EE08 /* MCDMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */; };
 		63EACDD3DB2DB3DD3A17018D983BDA41 /* MCDUserInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667A28E16E04B88404807E6DFACA9B5 /* MCDUserInfoContainerViewController.m */; };
 		6B972AA040FEFD59FD8FD10F251B1AFB /* MCDMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2048300CEC5EEB5157429822F8F4A1BC /* MCDMessageTableViewCell.m */; };
-		6C7227A9449F1EE5299B75B9F2B66574 /* MCDiaryKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F3409D1959453FF591667370728F73 /* MCDiaryKitTests.m */; };
-		6E1B11BB9E32DC2A16F4C25428FA6048 /* Pods_MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F8DFFC8262F785A4D4D428D187F815 /* Pods_MCDiaryKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6E6081F29B5326D4BFA64E014E0C2347 /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADB6E891AE93565606347D449A38A0 /* MCDLoginViewModel.m */; };
 		73EF986EAB882A5A72E10D57059209E0 /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83637CBBE652B30AA7B47F1E5F298642 /* MCDBaseViewModel.m */; };
 		75472B56E54632F348523388B028F7DD /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E144F450DA32134E39B7A45AA6345A /* ActionSheetDistancePicker.m */; };
+		7575013524221BD2CD05106A07A3A0A4 /* MCDCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C49244566A6001AD6258158C103733 /* MCDCustomView.m */; };
 		76255706E550D7882DBB25E38FB655F6 /* MCDPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A31696AEA853902F1CABBBD3F08E0346 /* MCDPlaceHolderTextView.m */; };
 		7AC2B1BC71685984D6AC0B0B8CEACC79 /* MCDMyPetDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE270EB3D9F286D9681F958BAB6DFE /* MCDMyPetDataModel.m */; };
-		7DC9CBCA61D5807C0BA271C653708C6A /* MCDCustomView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CC5A43D958423F4E9478B0FBF9DFFE /* MCDCustomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BF8180F30B92BE82C632CB88406AEC5 /* MCDRadioFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 07797222FFA0963315C3B4996E8929F6 /* MCDRadioFormField.m */; };
 		7F1FA4D4249223C1124F27C253081175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FD20C202297F5891B400CBAB353A10 /* Main.storyboard */; };
 		7F201402D9FF793E31F004B3718F8524 /* MCDPresentImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC964E1F06CD39AF7B82A2F0D003AEBB /* MCDPresentImagesViewController.m */; };
-		7FFB4E0AFEF91B3ACB2F8E22ECDA3558 /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D932A16355E6B31558158714B0963D /* MCDAvatarView.m */; };
 		82BB26BA7C5E8AA779F6D71A845DFE03 /* MCDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CEC8F0BAC6111C81C1A9854127F3F2 /* MCDHomeViewModel.m */; };
 		882204B07ECA163074F3F1B899307202 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50F631928AD8ED071DAF78C1F7F3049 /* Images.xcassets */; };
 		912E182FA47B57248A1E9C4140EB420E /* MCDCreateDiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08937443AD366AEB86F60AEBD777A493 /* MCDCreateDiaryViewController.m */; };
-		936D843BA086DC41A3F4C0D3AD7C12D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA40C2575634E87FFB81CB883AA1A6 /* Images.xcassets */; };
-		955BFE5C23417495BB53BA3B82B6963A /* MCDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C47AF82944FCDBB38F153ECC1FAF8DE /* MCDiaryTests.m */; };
-		96CD1947F63CA5D6C56CAA325135F1E1 /* MCDiaryKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		99D7FC2FDD119650D21018C5EA647B33 /* MCDiary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A08859B3A883AC29ED966263FF971B5 /* MCDiary.m */; };
-		A33EFEA2D49978649203E98DC10A8DAD /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */; };
+		9A713CAC875B69B69043E39C1BBA193C /* MCDButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4612D8B53C10D64A5CBF31CEC149D9DC /* MCDButtonView.xib */; };
+		9B9B765A044C59A8802C1D1254A72D4D /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CCED126EABDB7DBE5EB917928D5A1F /* MCDTextFormField.xib */; };
+		A01D82508803113774E8853B9C592251 /* MCDAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE9946948B1131960E4BA9A5D26D497 /* MCDAvatarView.m */; };
 		A39D8BBF715FCC400E9828A63B7B1DF3 /* MCDMyPet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC30AE14C3F47785D95BF00B98AB87 /* MCDMyPet.m */; };
 		A47B5AF2536BC72C923B289B12F526C6 /* MCDSignupContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A7D9AE4A4D5F325FD6C96492AD449E /* MCDSignupContainerViewController.m */; };
 		A6577D74470094586D94E94F2B42CD00 /* MCDUserInfoContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 952F52D1F9DD7ED47C9FA9530FAC7FF0 /* MCDUserInfoContentViewModel.m */; };
@@ -77,59 +70,19 @@
 		B670DF9DD0CB75966718ABE1605228AF /* MyPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64873F2D1848424F6E91F07B7D124072 /* MyPet.storyboard */; };
 		BA0B33DE2CD612ADC87A5AD862ACC65B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0471C8F0E1EF8BDE6304560390343 /* AppDelegate.m */; };
 		BA47D54B4BD331EBC953AD6EB18EFFC8 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C599EE2EA4C44B23069E487821D0BC6A /* ActionSheetMultipleStringPicker.m */; };
-		BBBAD3F8CA5EE9AF7F7E378DD6BA88E3 /* MCDiaryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AF46900EADC08B5AEB7A22F81B9F95E4 /* MCDiaryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDE4B344DF7CCD267BA3AE45C4AB806A /* MCDiaryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */; };
 		BE3B413439EF2605731F853B9D0A418C /* MCDCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9255A05F066CC3006A99AB065006552D /* MCDCustomCell.m */; };
-		C6D0CA145075DC60D938D7F1013CFF70 /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6738FB813AEF7EE6489CAE3E0AC384A6 /* MCDTextFormField.m */; };
-		CFD2CE70853D5399B75DF21F1BAA5C98 /* MCDBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8348910D4012FB8690C978C12668221 /* MCDBorderView.m */; };
 		D2D75828DE54A6097006A535A04C1934 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E406D2BDCCF366CD7E92EAF286820DC9 /* ActionSheetCustomPicker.m */; };
-		D42BA3C4D8511F26750932CEA355B559 /* MCDTextFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0F661EE87161F1A451AA778E40FA435 /* MCDTextFormField.xib */; };
-		D4E8F5CF6D49828D3ED2D4642276188A /* MCDRadioFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C55E393A708C616B0FA0342AF187632 /* MCDRadioFormField.m */; };
-		D5546C3B40A5D5FDCD49F4B1B2E59A76 /* MCDRadioFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2DD6EE4C727556A016AF57B5CAB57E /* MCDRadioFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D72C19EBA4F8B0FA7F010A4861D5E38B /* MCDBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC213A94E5580985328D26A8FBE22A /* MCDBorderView.m */; };
 		D8884C62E7A6850E4ADF36DC7D0F148F /* MCDSignupContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7D303A7C061C4F8787B3DCC2A07AF /* MCDSignupContentViewModel.m */; };
 		D8B1C0A782A006F05520469A5AC1E044 /* MCDDetailPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CD0B32BD45175F7A1C4B8359B9AF00 /* MCDDetailPetViewController.m */; };
-		D90BDF6FC4A3B523455AA3F3A4F806A1 /* MCDBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5504BDFADA3C021A9ACF47D1333BA859 /* MCDBorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA0C029CE66304ACCDA6C41334B8C8B7 /* MCDiaryKitPrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 187C91761A375D37152DE0177DBDEC24 /* MCDiaryKitPrefixHeader.pch */; };
-		E2891A529FF291B1C10F93B291CECCAD /* MCDButtonFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2D1635626CAA6C39AF975140736858 /* MCDButtonFormField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E63188C645B744F5822480C9478208F0 /* MCDButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E546A7373EA53091789944E4A8E32825 /* MCDTextFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F05C2E08C397F38C73B6EEDEB3CEA24 /* MCDTextFormField.m */; };
+		E97C55E6572274ADBC1BDDE98863C395 /* MCDButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9286610CCEA0F308817286B9419B781F /* MCDButtonView.m */; };
 		EA8578F45F09BAE4FFEED9B657535FB4 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576B666709B1B79298620F19645A2D32 /* User.storyboard */; };
 		EBF2769AA84CC645715A3006D564E2CE /* MCDUserLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA28D5431799358A09F1A072A468976 /* MCDUserLocationHelper.m */; };
 		ECB575A6F33272295EF7BFCB71E023EE /* MCDMyPetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC96F669D102C1CD2901A3DB435C052 /* MCDMyPetViewController.m */; };
 		ED6737D6E5569A7A693EE8872EA9F1CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B4C0E72FEBCF92484300B13BD5E3F1 /* main.m */; };
-		F0E41D628F7F313D0114419A914FC8CC /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3E687BBA60A0241D9F0C656BDA4737 /* MCDBorderView.xib */; };
 		F50CDA65B6F6E76294C3FBF69D9A859E /* MCDShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD23F2D6480D8B5EFFC113472288EE2 /* MCDShowImageViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		09ED40BF9779A27D83DFC685391D372E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B496D00D0DC4F5D33916EA0B4590561 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB188EE3215FAED2CD14609373D6DA8A;
-			remoteInfo = MCDiaryKit;
-		};
-		0D3039D1D8288127B18925908B9207FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B496D00D0DC4F5D33916EA0B4590561 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB54D77962F2DF0CAB5ED1B6A9D3E7A9;
-			remoteInfo = MCDiary;
-		};
-		8DE4959D94EB336CFD98B20C4C029968 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B496D00D0DC4F5D33916EA0B4590561 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB54D77962F2DF0CAB5ED1B6A9D3E7A9;
-			remoteInfo = MCDiary;
-		};
-		B2E893D9C0C4A7C8097FC43C129BE145 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B496D00D0DC4F5D33916EA0B4590561 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB188EE3215FAED2CD14609373D6DA8A;
-			remoteInfo = MCDiaryKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1CCD4D309892DE10D489CCF1E4AFCF75 /* Embed Frameworks */ = {
@@ -138,7 +91,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				96CD1947F63CA5D6C56CAA325135F1E1 /* MCDiaryKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,22 +101,25 @@
 		010F1072AAAFA9BDBD7C8354232D03AD /* MCDUserInfoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewController.m; sourceTree = "<group>"; };
 		02751361EC141A047E06C292439605CC /* MCDCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomCell.h; sourceTree = "<group>"; };
 		02EB12D4661F0F6C8CADECF9C6989C25 /* MCDMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewController.h; sourceTree = "<group>"; };
-		07A199A95DCDA938F9FBF967F53CA52E /* Pods-MCDiaryKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.debug.xcconfig"; sourceTree = "<group>"; };
+		03DB849FA88BC99C26E0A1656BA6D1E8 /* MCDButtonFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonFormField.h; sourceTree = "<group>"; };
+		07797222FFA0963315C3B4996E8929F6 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
 		08937443AD366AEB86F60AEBD777A493 /* MCDCreateDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCreateDiaryViewController.m; sourceTree = "<group>"; };
 		09EB2E4F876AF2DC732E6E6DAB6EB1A5 /* MCDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUser.h; sourceTree = "<group>"; };
 		0BE90ADB97B53F75A5596E4337C3ED2F /* MCDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C63DA2E2B41BB7102348CD1500A7419 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		0E5ABE7C6D40750B958AECDE4E91FB6E /* MCDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE9946948B1131960E4BA9A5D26D497 /* MCDAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAvatarView.m; sourceTree = "<group>"; };
+		13AC8C98AB7655FA6220ADFC98DFA353 /* MCDBorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDBorderView.xib; sourceTree = "<group>"; };
 		14D852906CF11904D4B29C0079D1B8A2 /* MCDSignupContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContainerViewController.h; sourceTree = "<group>"; };
 		152DABFAC725626294682DC980C76552 /* MCDUserModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewController.h; sourceTree = "<group>"; };
 		1841370CDB0DD01D2934764F2325A6A6 /* MCDPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPlaceHolderTextView.h; sourceTree = "<group>"; };
-		187C91761A375D37152DE0177DBDEC24 /* MCDiaryKitPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryKitPrefixHeader.pch; sourceTree = "<group>"; };
 		1A08859B3A883AC29ED966263FF971B5 /* MCDiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDiary.m; sourceTree = "<group>"; };
 		1ACE270EB3D9F286D9681F958BAB6DFE /* MCDMyPetDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetDataModel.m; sourceTree = "<group>"; };
 		1B8DFF8C736003F3A6FF640FB59B905A /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		1C55E393A708C616B0FA0342AF187632 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
+		1C4C712CFAA9C55B75392F40B4407E09 /* MCDAvatarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDAvatarView.xib; sourceTree = "<group>"; };
 		1D8D20AE523D20C554A22BA2D4B15617 /* MCDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewController.m; sourceTree = "<group>"; };
 		1DBB465AF4C218CBF0842AAE97D390C8 /* MCDCloudUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCloudUserInfo.h; sourceTree = "<group>"; };
+		1DFC213A94E5580985328D26A8FBE22A /* MCDBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBorderView.m; sourceTree = "<group>"; };
+		1F05C2E08C397F38C73B6EEDEB3CEA24 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
 		2048300CEC5EEB5157429822F8F4A1BC /* MCDMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewCell.m; sourceTree = "<group>"; };
 		20542579D6272F687DC575AB8E34E54F /* Diary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
 		21A7D9AE4A4D5F325FD6C96492AD449E /* MCDSignupContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContainerViewController.m; sourceTree = "<group>"; };
@@ -174,7 +129,6 @@
 		27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCDConfig.plist; sourceTree = "<group>"; };
 		29CEC8F0BAC6111C81C1A9854127F3F2 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		2BA7D303A7C061C4F8787B3DCC2A07AF /* MCDSignupContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewModel.m; sourceTree = "<group>"; };
-		2E2D1635626CAA6C39AF975140736858 /* MCDButtonFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonFormField.h; sourceTree = "<group>"; };
 		2E530FFD82033A4D091019422B0A1FAD /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
 		2F168869BE8E6B853B105BA9D6291A8E /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		30015BF332BFA8E89A2C5313598D064D /* MCDUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocation.m; sourceTree = "<group>"; };
@@ -184,86 +138,75 @@
 		36B50923931CD17487C890E4AD900DDE /* MCDUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocation.h; sourceTree = "<group>"; };
 		39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
 		3ADC30AE14C3F47785D95BF00B98AB87 /* MCDMyPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPet.m; sourceTree = "<group>"; };
-		3BDA40C2575634E87FFB81CB883AA1A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C8F9CDE29741D81F91343CA47BE5EBE /* MCDAreaPickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAreaPickerViewModel.h; sourceTree = "<group>"; };
 		3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewController.m; sourceTree = "<group>"; };
 		41C7EED312EB4D0816A5319D93D8C2EE /* Pods_MCDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43610C8BF94E169CE8F42AA832FEBF5A /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
-		437F45F656A336C599BCDDEA2D828D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C13D90065CC5ED0D2F7504FA81BC9D /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
 		454C31C368DE8A974ED46995ADDE1545 /* MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiary.h; sourceTree = "<group>"; };
 		459EB472FC783C2F4D329F73DCB08EDF /* MCDMessageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageList.h; sourceTree = "<group>"; };
-		4667738F74E8F6827FAC8ECB33112DC4 /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
-		4677AA1EA01CAE24847DD696D32F5837 /* MCDAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDAvatarView.xib; sourceTree = "<group>"; };
+		4612D8B53C10D64A5CBF31CEC149D9DC /* MCDButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
+		4862D824DA5B005B59425C7C8B5151F3 /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		4896D8EEAE1EC3D3D2D374CFA7999C44 /* MCDMyPetDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetDataModel.h; sourceTree = "<group>"; };
-		48A2963FA9EDCF42776AB1E2654DBDD3 /* MCDButtonFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonFormField.xib; sourceTree = "<group>"; };
-		49E4B0CFBD85BC6A29BC15DA3DE59A73 /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
 		4A3E9B1C22AA7820A278348E3E66399B /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
 		4CF4D17F9EE858BE833968794AAF8C09 /* MCDSignupContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewController.m; sourceTree = "<group>"; };
+		4E2F3DD1C1659196DDFAE3F17877E1A5 /* MCDRadioFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
 		4EE7976C3504C136A49CD73004454283 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		50CCED126EABDB7DBE5EB917928D5A1F /* MCDTextFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
 		512635DC272AF8CD043783BEC1244130 /* MCDUserInfoContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContainerViewController.h; sourceTree = "<group>"; };
 		52CBB49B8A83B55BE49D9B270938EBD4 /* MCDLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewModel.h; sourceTree = "<group>"; };
 		545603316D112EC9C352F780E119308C /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
 		548A5FE5C857C16C586A943BEDD65CA6 /* MCDiaryTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDiaryTimeLineViewController.m; sourceTree = "<group>"; };
-		5504BDFADA3C021A9ACF47D1333BA859 /* MCDBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBorderView.h; sourceTree = "<group>"; };
 		5667A28E16E04B88404807E6DFACA9B5 /* MCDUserInfoContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContainerViewController.m; sourceTree = "<group>"; };
 		576B666709B1B79298620F19645A2D32 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
-		58F3903024BA06B161984DB3EEF31BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5947461EAE90AA2A044328B61028D7B0 /* UIColor+MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MCDiary.h"; sourceTree = "<group>"; };
 		5C6E155F616EC7022C7CDADCAE9DF294 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5E3E687BBA60A0241D9F0C656BDA4737 /* MCDBorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDBorderView.xib; sourceTree = "<group>"; };
 		5F9C693EAC1928F09EAE948F0BD37405 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		61F463601D852DCCFC0A12D8F61CD69E /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
 		64873F2D1848424F6E91F07B7D124072 /* MyPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPet.storyboard; sourceTree = "<group>"; };
 		65F8DFFC8262F785A4D4D428D187F815 /* Pods_MCDiaryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCDiaryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6738FB813AEF7EE6489CAE3E0AC384A6 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
-		69D932A16355E6B31558158714B0963D /* MCDAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAvatarView.m; sourceTree = "<group>"; };
-		6D26E1353ABF232C6B1CCF697973358C /* MCDTextFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDTextFormField.h; sourceTree = "<group>"; };
 		742E7235232DA1DDCB5B830AC262F6B4 /* MCDiaryTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryTimeLineViewController.h; sourceTree = "<group>"; };
 		76FD20C202297F5891B400CBAB353A10 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7708646BAC110ACB4D4FAAF879E11523 /* MCDAreaPickerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDAreaPickerViewModel.m; sourceTree = "<group>"; };
+		7A2D42C411E3C675981D3AA048427F00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7BDE021C0601683064993F256F08EFBB /* MCDLeftDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLeftDrawerViewController.h; sourceTree = "<group>"; };
 		7CD23F2D6480D8B5EFFC113472288EE2 /* MCDShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDShowImageViewController.m; sourceTree = "<group>"; };
 		7F0FD2654FDDE2070205B23AA252205D /* MCDUserInfoContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewController.h; sourceTree = "<group>"; };
-		823E7F65C2CC8EA997FCCBA0C320C96B /* MCDButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDButtonView.xib; sourceTree = "<group>"; };
 		83637CBBE652B30AA7B47F1E5F298642 /* MCDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseViewModel.m; sourceTree = "<group>"; };
 		83D829441458268E1191414D74B59565 /* MCDUserLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocationHelper.h; sourceTree = "<group>"; };
 		87CACC71DB3C654327859FBA7EA91385 /* MCDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewController.m; sourceTree = "<group>"; };
 		8841B7C97D50B30418A024E01FE446E2 /* MCDUserModifyPasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewModel.m; sourceTree = "<group>"; };
+		88C49244566A6001AD6258158C103733 /* MCDCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomView.m; sourceTree = "<group>"; };
 		88DB424BBC9837EF7390CD9FDD35EDDB /* MCDiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDiaryTableViewCell.m; sourceTree = "<group>"; };
 		8BFC12CFB3C0A03ED06C7A08CCC3C63D /* MCDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewController.h; sourceTree = "<group>"; };
-		8C98460BC7D87B02D1022FA5ADCB6E92 /* MCDAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAvatarView.h; sourceTree = "<group>"; };
-		90B2D0FCEB476F53931F403E67D47081 /* Pods-MCDiaryKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiaryKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit.release.xcconfig"; sourceTree = "<group>"; };
-		90E577037F54CD7816C3B3BC62CECA68 /* MCDiaryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCDiaryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBBDC29AFD1D4F0ADF37C6C8685B9C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9125ADACCA212DC044B5C873318BAFD1 /* MCDUserModifyPasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserModifyPasswordViewModel.h; sourceTree = "<group>"; };
 		9255A05F066CC3006A99AB065006552D /* MCDCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCustomCell.m; sourceTree = "<group>"; };
+		9286610CCEA0F308817286B9419B781F /* MCDButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonView.m; sourceTree = "<group>"; };
 		93E0C54A88F8036FB7783CC62E28C65D /* MCDPresentImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPresentImagesViewController.h; sourceTree = "<group>"; };
 		952F52D1F9DD7ED47C9FA9530FAC7FF0 /* MCDUserInfoContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewModel.m; sourceTree = "<group>"; };
-		96CD45CAC1B56E1A1726D923CC18406F /* Pods-MCDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		98B4C0E72FEBCF92484300B13BD5E3F1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99D7740AA7AB0FBCFD0BE3704C4D9493 /* MCDButtonFormField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCDButtonFormField.xib; sourceTree = "<group>"; };
+		9A020AB30C3B22C4422D9AAA587E1778 /* MCDAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAvatarView.h; sourceTree = "<group>"; };
 		9A7DD4D6A952AF4A28491ABDBDE5E5B8 /* MCDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewController.h; sourceTree = "<group>"; };
 		9AB0471C8F0E1EF8BDE6304560390343 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9AE3246C2EC022FF529E33BEB30D5E7D /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
 		9B49680DCF81809539597CEB163B0DDF /* UIColor+MCDiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MCDiary.m"; sourceTree = "<group>"; };
-		9C47AF82944FCDBB38F153ECC1FAF8DE /* MCDiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryTests.m; sourceTree = "<group>"; };
-		9C4B6EBC85E8ED3A7196BB7011577085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8905AD173E52874721AB2522EDFB72 /* MCDMessageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageList.m; sourceTree = "<group>"; };
 		A31696AEA853902F1CABBBD3F08E0346 /* MCDPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDPlaceHolderTextView.m; sourceTree = "<group>"; };
 		A9D968307307ED3DEC331D66DEB44F77 /* MCDMyPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPetViewController.h; sourceTree = "<group>"; };
 		AA2ECCB4084C93DDE6F394E0AA56DAC9 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		AA7DCF5E0B1E3E91ACD4ADB4A81728B5 /* MCDRadioFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDRadioFormField.xib; sourceTree = "<group>"; };
+		AA328DF1B8FAD9A654363589B9E2DB2F /* MCDBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBorderView.h; sourceTree = "<group>"; };
 		AAE3C7C01E0DA51C5E402612A11CF831 /* MCDSignupContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewModel.h; sourceTree = "<group>"; };
 		AB645FEE0637753C83582F30CEFD81A4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		AC964E1F06CD39AF7B82A2F0D003AEBB /* MCDPresentImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDPresentImagesViewController.m; sourceTree = "<group>"; };
 		ADFDC724C115936972A09B73CAA1AECD /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		AEA28D5431799358A09F1A072A468976 /* MCDUserLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocationHelper.m; sourceTree = "<group>"; };
-		AF46900EADC08B5AEB7A22F81B9F95E4 /* MCDiaryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCDiaryKit.h; sourceTree = "<group>"; };
 		B14D80773AE74752A46E6A688A899039 /* MCDMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewCell.h; sourceTree = "<group>"; };
 		B6716A68AF191237D1238F889C98AE92 /* MCDDrawerControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDrawerControllerHelper.h; sourceTree = "<group>"; };
 		B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDrawerControllerHelper.m; sourceTree = "<group>"; };
 		BF921A7F7D4DE0BD53FDE1C086FD773C /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
-		C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonView.h; sourceTree = "<group>"; };
 		C01C5E29E7081DE929CFE22F3F2559E7 /* MCDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDPrefixHeader.pch; sourceTree = "<group>"; };
-		C0F661EE87161F1A451AA778E40FA435 /* MCDTextFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCDTextFormField.xib; sourceTree = "<group>"; };
 		C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLeftDrawerViewController.m; sourceTree = "<group>"; };
 		C2F11E13E28983A8821058D7A409B354 /* MCDDetailPetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDetailPetViewController.h; sourceTree = "<group>"; };
 		C3502D95C778AC61C25727AAE6A340CB /* MCDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewController.m; sourceTree = "<group>"; };
@@ -276,62 +219,34 @@
 		CA6889C4D1F3A9824488C3A1E5F4B932 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
 		D3BACEF315244357612CAD3E71F6096E /* MCDShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDShowImageViewController.h; sourceTree = "<group>"; };
 		D480F53D1B3754EB44A295A539BB21EA /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		D7F3409D1959453FF591667370728F73 /* MCDiaryKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCDiaryKitTests.m; sourceTree = "<group>"; };
-		D8348910D4012FB8690C978C12668221 /* MCDBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBorderView.m; sourceTree = "<group>"; };
+		D712DD2C7F72E13F69CC7FA3D9B388AC /* MCDButtonFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonFormField.m; sourceTree = "<group>"; };
 		DA65278F1E43D35A77A0B4D255FBF7CC /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
 		DBCFFF618B992B514377EE3394B3F573 /* MCDMyPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMyPet.h; sourceTree = "<group>"; };
 		DBF022D81E63283A4A597675C1284689 /* MCDMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageItem.h; sourceTree = "<group>"; };
 		DEC96F669D102C1CD2901A3DB435C052 /* MCDMyPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPetViewController.m; sourceTree = "<group>"; };
 		DEF5BAD9CC7231396A418A9417271B5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBAE70832D23EBEF7A0863E5DC829A1 /* MCDSignupContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDSignupContentViewController.h; sourceTree = "<group>"; };
-		E22773247828994AF964022F0BE83797 /* MCDButtonFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDButtonFormField.m; sourceTree = "<group>"; };
 		E302A69A7E0029DD59D48352CDB88FFF /* MCDiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiaryTableViewCell.h; sourceTree = "<group>"; };
 		E3B8FEE53FBECE0C0CD5B783407AD553 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E406D2BDCCF366CD7E92EAF286820DC9 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		E4CC5A43D958423F4E9478B0FBF9DFFE /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
-		E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MCDiaryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6E002744A472ABD7656D68619FE8912 /* Pods-MCDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary.release.xcconfig"; sourceTree = "<group>"; };
+		E617AA4BDCFEC6ABB6F0FA478435D446 /* MCDRadioFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDRadioFormField.h; sourceTree = "<group>"; };
 		E8FC12F5E14FB9F1EDA2B5F14D6FB0FC /* MCDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseModel.h; sourceTree = "<group>"; };
-		EE2DD6EE4C727556A016AF57B5CAB57E /* MCDRadioFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDRadioFormField.h; sourceTree = "<group>"; };
 		EE38B5C835894643406C4A0CCEEDF28A /* MCDCreateDiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCreateDiaryViewController.h; sourceTree = "<group>"; };
 		EF79420C03F8ABC28D96ADCB37AC37BE /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		F5177B2C08C2EDD58B6B0C08A84192BF /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
 		F6C7CFC41A70D51E16A7ECF949B0BE53 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAADB6E891AE93565606347D449A38A0 /* MCDLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDLoginViewModel.m; sourceTree = "<group>"; };
+		FC4AF992A7E2F0D3F22BEFF7AAC35D9B /* MCDCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomView.h; sourceTree = "<group>"; };
 		FC65EA562EF0A4F2C8A65012117A09C8 /* MCDUserInfoContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserInfoContentViewModel.h; sourceTree = "<group>"; };
 		FEA1BB18A6EA5A68059BD35B4536ECD7 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		464195442492AE38821CEC44D731DF4E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		80FE8099DD1CE9A47E6E94A22367BDEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE4B344DF7CCD267BA3AE45C4AB806A /* MCDiaryKit.framework in Frameworks */,
-				540E7296EFE4D3A7A01D8DCAC1C1377A /* Pods_MCDiary.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EE9B2FC33DF5E5EB1335E720C188269 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E1B11BB9E32DC2A16F4C25428FA6048 /* Pods_MCDiaryKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD16EB372B6003BA8019D60A2F44D264 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A33EFEA2D49978649203E98DC10A8DAD /* MCDiaryKit.framework in Frameworks */,
+				1CF49AFB41332B7E1595FFE2DCB1CD6F /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,18 +283,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18EEC777B55BCC4F84B32638814639EF /* MCDiaryKit */ = {
-			isa = PBXGroup;
-			children = (
-				377FF6E89F325C48736391168FF8BE64 /* Classes */,
-				E6106D3314D9B7FAF0CF4141A24847B6 /* Supporting Files */,
-				73937EB8898E1862E77859AED0DE4C7F /* XIBs */,
-				3BDA40C2575634E87FFB81CB883AA1A6 /* Images.xcassets */,
-				AF46900EADC08B5AEB7A22F81B9F95E4 /* MCDiaryKit.h */,
-			);
-			path = MCDiaryKit;
-			sourceTree = "<group>";
-		};
 		32C5C00CDA9E9EE86B6414ACC646FB93 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,33 +298,25 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
-		377FF6E89F325C48736391168FF8BE64 /* Classes */ = {
+		3AAA3A9945377A510B5CB71112F56384 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8C98460BC7D87B02D1022FA5ADCB6E92 /* MCDAvatarView.h */,
-				69D932A16355E6B31558158714B0963D /* MCDAvatarView.m */,
-				5504BDFADA3C021A9ACF47D1333BA859 /* MCDBorderView.h */,
-				D8348910D4012FB8690C978C12668221 /* MCDBorderView.m */,
-				2E2D1635626CAA6C39AF975140736858 /* MCDButtonFormField.h */,
-				E22773247828994AF964022F0BE83797 /* MCDButtonFormField.m */,
-				C013248AB3F0EAE6A0C39C9EDA5709A7 /* MCDButtonView.h */,
-				49E4B0CFBD85BC6A29BC15DA3DE59A73 /* MCDButtonView.m */,
-				E4CC5A43D958423F4E9478B0FBF9DFFE /* MCDCustomView.h */,
-				4667738F74E8F6827FAC8ECB33112DC4 /* MCDCustomView.m */,
-				EE2DD6EE4C727556A016AF57B5CAB57E /* MCDRadioFormField.h */,
-				1C55E393A708C616B0FA0342AF187632 /* MCDRadioFormField.m */,
-				6D26E1353ABF232C6B1CCF697973358C /* MCDTextFormField.h */,
-				6738FB813AEF7EE6489CAE3E0AC384A6 /* MCDTextFormField.m */,
+				9A020AB30C3B22C4422D9AAA587E1778 /* MCDAvatarView.h */,
+				0CE9946948B1131960E4BA9A5D26D497 /* MCDAvatarView.m */,
+				AA328DF1B8FAD9A654363589B9E2DB2F /* MCDBorderView.h */,
+				1DFC213A94E5580985328D26A8FBE22A /* MCDBorderView.m */,
+				03DB849FA88BC99C26E0A1656BA6D1E8 /* MCDButtonFormField.h */,
+				D712DD2C7F72E13F69CC7FA3D9B388AC /* MCDButtonFormField.m */,
+				4862D824DA5B005B59425C7C8B5151F3 /* MCDButtonView.h */,
+				9286610CCEA0F308817286B9419B781F /* MCDButtonView.m */,
+				FC4AF992A7E2F0D3F22BEFF7AAC35D9B /* MCDCustomView.h */,
+				88C49244566A6001AD6258158C103733 /* MCDCustomView.m */,
+				E617AA4BDCFEC6ABB6F0FA478435D446 /* MCDRadioFormField.h */,
+				07797222FFA0963315C3B4996E8929F6 /* MCDRadioFormField.m */,
+				61F463601D852DCCFC0A12D8F61CD69E /* MCDTextFormField.h */,
+				1F05C2E08C397F38C73B6EEDEB3CEA24 /* MCDTextFormField.m */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		4661C937EF8982B02313FA81A1785DBE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				437F45F656A336C599BCDDEA2D828D7B /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = Common;
 			sourceTree = "<group>";
 		};
 		59FAC19E11117A8820813D4C77DEE581 /* Message */ = {
@@ -431,15 +326,6 @@
 				C4915C79FAFE142B965626D1669CED69 /* MCDMessageViewModel.m */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		634C5DCA7BD508DF89766592EDAE2975 /* MCDiaryKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				7CCED1BA356468968C4BD0FF0A9AF21E /* Supporting Files */,
-				D7F3409D1959453FF591667370728F73 /* MCDiaryKitTests.m */,
-			);
-			path = MCDiaryKitTests;
 			sourceTree = "<group>";
 		};
 		6C58B70F2E1B17029A58FAA57548271D /* ActionSheetPicker */ = {
@@ -469,34 +355,10 @@
 			path = ActionSheetPicker;
 			sourceTree = "<group>";
 		};
-		73937EB8898E1862E77859AED0DE4C7F /* XIBs */ = {
-			isa = PBXGroup;
-			children = (
-				4677AA1EA01CAE24847DD696D32F5837 /* MCDAvatarView.xib */,
-				5E3E687BBA60A0241D9F0C656BDA4737 /* MCDBorderView.xib */,
-				48A2963FA9EDCF42776AB1E2654DBDD3 /* MCDButtonFormField.xib */,
-				823E7F65C2CC8EA997FCCBA0C320C96B /* MCDButtonView.xib */,
-				AA7DCF5E0B1E3E91ACD4ADB4A81728B5 /* MCDRadioFormField.xib */,
-				C0F661EE87161F1A451AA778E40FA435 /* MCDTextFormField.xib */,
-			);
-			path = XIBs;
-			sourceTree = "<group>";
-		};
-		7CCED1BA356468968C4BD0FF0A9AF21E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				58F3903024BA06B161984DB3EEF31BAD /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8DE0474BAB526BC9ADD9261319F5F7FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				0BE90ADB97B53F75A5596E4337C3ED2F /* MCDiary.app */,
-				E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */,
-				90E577037F54CD7816C3B3BC62CECA68 /* MCDiaryKitTests.xctest */,
-				0E5ABE7C6D40750B958AECDE4E91FB6E /* MCDiaryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,10 +392,8 @@
 		987CA3B3E8733563BF271F7B9170C5FF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				96CD45CAC1B56E1A1726D923CC18406F /* Pods-MCDiary.debug.xcconfig */,
-				E6E002744A472ABD7656D68619FE8912 /* Pods-MCDiary.release.xcconfig */,
-				07A199A95DCDA938F9FBF967F53CA52E /* Pods-MCDiaryKit.debug.xcconfig */,
-				90B2D0FCEB476F53931F403E67D47081 /* Pods-MCDiaryKit.release.xcconfig */,
+				8DBBDC29AFD1D4F0ADF37C6C8685B9C3 /* Pods.debug.xcconfig */,
+				7A2D42C411E3C675981D3AA048427F00 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -541,6 +401,7 @@
 		9ABDD9FDB6FAD258C39AA1DE6B4125B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3AAA3A9945377A510B5CB71112F56384 /* Common */,
 				C8A698D1E8899350E1E089F705F4D236 /* Diary */,
 				AF178C3E11EEDC08602214AC837132B7 /* MyPet */,
 			);
@@ -560,6 +421,7 @@
 		9F90CA14F2937194A9B077BAB81B9247 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				B75078E517C418E5B9719202E25D5497 /* Common */,
 				20542579D6272F687DC575AB8E34E54F /* Diary.storyboard */,
 				AB645FEE0637753C83582F30CEFD81A4 /* LaunchScreen.xib */,
 				76FD20C202297F5891B400CBAB353A10 /* Main.storyboard */,
@@ -606,6 +468,19 @@
 				3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		B75078E517C418E5B9719202E25D5497 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C712CFAA9C55B75392F40B4407E09 /* MCDAvatarView.xib */,
+				13AC8C98AB7655FA6220ADFC98DFA353 /* MCDBorderView.xib */,
+				99D7740AA7AB0FBCFD0BE3704C4D9493 /* MCDButtonFormField.xib */,
+				4612D8B53C10D64A5CBF31CEC149D9DC /* MCDButtonView.xib */,
+				4E2F3DD1C1659196DDFAE3F17877E1A5 /* MCDRadioFormField.xib */,
+				50CCED126EABDB7DBE5EB917928D5A1F /* MCDTextFormField.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BA9EFC8939D4BD1B4FF36EA6A63FAAC9 /* MCDiary */ = {
@@ -690,15 +565,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		DF474D8628255C21A59F6267E87DF05D /* MCDiaryTests */ = {
-			isa = PBXGroup;
-			children = (
-				4661C937EF8982B02313FA81A1785DBE /* Supporting Files */,
-				9C47AF82944FCDBB38F153ECC1FAF8DE /* MCDiaryTests.m */,
-			);
-			path = MCDiaryTests;
-			sourceTree = "<group>";
-		};
 		E39E9C7934357F9042CF0F03C9449ABD /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,15 +605,6 @@
 			path = MCDiary/Classes;
 			sourceTree = SOURCE_ROOT;
 		};
-		E6106D3314D9B7FAF0CF4141A24847B6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C4B6EBC85E8ED3A7196BB7011577085 /* Info.plist */,
-				187C91761A375D37152DE0177DBDEC24 /* MCDiaryKitPrefixHeader.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		F0FA02AED43340E433B7C1C4A147C488 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,9 +638,6 @@
 			children = (
 				16309ABCED11200A210D888A62CBC98C /* Frameworks */,
 				BA9EFC8939D4BD1B4FF36EA6A63FAAC9 /* MCDiary */,
-				18EEC777B55BCC4F84B32638814639EF /* MCDiaryKit */,
-				634C5DCA7BD508DF89766592EDAE2975 /* MCDiaryKitTests */,
-				DF474D8628255C21A59F6267E87DF05D /* MCDiaryTests */,
 				5C6E155F616EC7022C7CDADCAE9DF294 /* Podfile */,
 				987CA3B3E8733563BF271F7B9170C5FF /* Pods */,
 				8DE0474BAB526BC9ADD9261319F5F7FF /* Products */,
@@ -805,63 +659,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		EB27E917C84CCA658752D66C86DFAD66 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2637A280C47BEDCC59324A0D69A6D974 /* MCDAvatarView.h in Headers */,
-				D90BDF6FC4A3B523455AA3F3A4F806A1 /* MCDBorderView.h in Headers */,
-				E2891A529FF291B1C10F93B291CECCAD /* MCDButtonFormField.h in Headers */,
-				E63188C645B744F5822480C9478208F0 /* MCDButtonView.h in Headers */,
-				7DC9CBCA61D5807C0BA271C653708C6A /* MCDCustomView.h in Headers */,
-				D5546C3B40A5D5FDCD49F4B1B2E59A76 /* MCDRadioFormField.h in Headers */,
-				5DACC57868C4990014D1CA60B3A9F84B /* MCDTextFormField.h in Headers */,
-				BBBAD3F8CA5EE9AF7F7E378DD6BA88E3 /* MCDiaryKit.h in Headers */,
-				DA0C029CE66304ACCDA6C41334B8C8B7 /* MCDiaryKitPrefixHeader.pch in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		366D35AD2EC224F8A0443A601FDEC393 /* MCDiaryKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 444DC469660856C10D8E1141F0280FFB /* Build configuration list for PBXNativeTarget "MCDiaryKitTests" */;
-			buildPhases = (
-				E87157F44D688D47507BACBC02A2E8CE /* Sources */,
-				BD16EB372B6003BA8019D60A2F44D264 /* Frameworks */,
-				9924D6581AD09B99E5C71223C3C2906D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				545F5440BA7FAE995F242BB9E47E7728 /* PBXTargetDependency */,
-				FD79C6B6B59A0001A3E3F797E32C2003 /* PBXTargetDependency */,
-			);
-			name = MCDiaryKitTests;
-			productName = MCDiaryKitTests;
-			productReference = 90E577037F54CD7816C3B3BC62CECA68 /* MCDiaryKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		41CC6BEDA19FEC4F4FE45EFBFE9857EC /* MCDiaryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E6F760307E68CDD662E22BECB81BF5FE /* Build configuration list for PBXNativeTarget "MCDiaryTests" */;
-			buildPhases = (
-				A06DBB07E0ABFF68385F623084E8E7C9 /* Sources */,
-				464195442492AE38821CEC44D731DF4E /* Frameworks */,
-				599525FA7B5CCA94D9A8E7769F3CF47D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F30707C0DC78F8A021499BA1FFA265C5 /* PBXTargetDependency */,
-			);
-			name = MCDiaryTests;
-			productName = MCDiaryTests;
-			productReference = 0E5ABE7C6D40750B958AECDE4E91FB6E /* MCDiaryTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		AB54D77962F2DF0CAB5ED1B6A9D3E7A9 /* MCDiary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCDAD4253C744403E6096FE0A0A062AD /* Build configuration list for PBXNativeTarget "MCDiary" */;
@@ -870,39 +668,18 @@
 				683F967F48D7285BC47D246935756410 /* Sources */,
 				80FE8099DD1CE9A47E6E94A22367BDEC /* Frameworks */,
 				4EDB828471EAD4223AB33543773E763E /* Resources */,
-				7DC8FAEC7C46A31304596ADB7F9541DA /* Copy Pods Resources */,
+				0A3C57742040A46FA330B8E42B628D18 /* Copy Pods Resources */,
 				1CCD4D309892DE10D489CCF1E4AFCF75 /* Embed Frameworks */,
-				3BF7392EB94327206D47C3266352CD2A /* Embed Pods Frameworks */,
+				183F1DB7C1C286D0179FF9570F9F9B3C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				474C3B47B447BEA3A9B27B09EFACD014 /* PBXTargetDependency */,
 			);
 			name = MCDiary;
 			productName = MCDiary;
 			productReference = 0BE90ADB97B53F75A5596E4337C3ED2F /* MCDiary.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CB188EE3215FAED2CD14609373D6DA8A /* MCDiaryKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB872252F6B943B8BB1518A2106C2E4F /* Build configuration list for PBXNativeTarget "MCDiaryKit" */;
-			buildPhases = (
-				30D6C46FDBE93757AC2D89789BB679B3 /* Check Pods Manifest.lock */,
-				F772B6D1583C788B78D3CCB1F38E87CF /* Sources */,
-				9EE9B2FC33DF5E5EB1335E720C188269 /* Frameworks */,
-				EB27E917C84CCA658752D66C86DFAD66 /* Headers */,
-				D5BA2DE1505D4DB12B4B685EDA833120 /* Resources */,
-				E326116940568B70063F31FEC7EDCF3D /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MCDiaryKit;
-			productName = MCDiaryKit;
-			productReference = E54712346BFBD36DDC7FC171646A7306 /* MCDiaryKit.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -910,28 +687,22 @@
 		5B496D00D0DC4F5D33916EA0B4590561 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = zzdjk6;
 				TargetAttributes = {
-					366D35AD2EC224F8A0443A601FDEC393 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = AB54D77962F2DF0CAB5ED1B6A9D3E7A9;
-					};
-					41CC6BEDA19FEC4F4FE45EFBFE9857EC = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = AB54D77962F2DF0CAB5ED1B6A9D3E7A9;
-					};
 					AB54D77962F2DF0CAB5ED1B6A9D3E7A9 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = P2KQ62R5X2;
-					};
-					CB188EE3215FAED2CD14609373D6DA8A = {
-						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 418233E89C9076B219212E730BC836B1 /* Build configuration list for PBXProject "MCDiary" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -944,9 +715,6 @@
 			projectRoot = "";
 			targets = (
 				AB54D77962F2DF0CAB5ED1B6A9D3E7A9 /* MCDiary */,
-				41CC6BEDA19FEC4F4FE45EFBFE9857EC /* MCDiaryTests */,
-				CB188EE3215FAED2CD14609373D6DA8A /* MCDiaryKit */,
-				366D35AD2EC224F8A0443A601FDEC393 /* MCDiaryKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -960,7 +728,13 @@
 				ABAA0941EABFC7CCC2600B88C5116126 /* Diary.storyboard in Resources */,
 				882204B07ECA163074F3F1B899307202 /* Images.xcassets in Resources */,
 				12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */,
+				45ADD37B0A4E95299F470041D0ADC0B0 /* MCDAvatarView.xib in Resources */,
+				3C4509D0645E02EE7541EBC964EFB87B /* MCDBorderView.xib in Resources */,
+				60FB302AC98FEB0D3B0F3863E19AA998 /* MCDButtonFormField.xib in Resources */,
+				9A713CAC875B69B69043E39C1BBA193C /* MCDButtonView.xib in Resources */,
 				0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */,
+				54827AE4C625159A157B839F55290711 /* MCDRadioFormField.xib in Resources */,
+				9B9B765A044C59A8802C1D1254A72D4D /* MCDTextFormField.xib in Resources */,
 				7F1FA4D4249223C1124F27C253081175 /* Main.storyboard in Resources */,
 				A71F8CB1E9C9227FE20CE3A653AF647A /* Message.storyboard in Resources */,
 				B670DF9DD0CB75966718ABE1605228AF /* MyPet.storyboard in Resources */,
@@ -969,65 +743,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		599525FA7B5CCA94D9A8E7769F3CF47D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9924D6581AD09B99E5C71223C3C2906D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5BA2DE1505D4DB12B4B685EDA833120 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				936D843BA086DC41A3F4C0D3AD7C12D1 /* Images.xcassets in Resources */,
-				3313E81C5E4F6C46C50897C6BB40FF40 /* MCDAvatarView.xib in Resources */,
-				F0E41D628F7F313D0114419A914FC8CC /* MCDBorderView.xib in Resources */,
-				53877AE0207BE16394BE4D8CEB43F385 /* MCDButtonFormField.xib in Resources */,
-				1A089E8632928232051BB682B65A0F11 /* MCDButtonView.xib in Resources */,
-				37429609FA0553CBA05D3CBA2CD68A2E /* MCDRadioFormField.xib in Resources */,
-				D42BA3C4D8511F26750932CEA355B559 /* MCDTextFormField.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30D6C46FDBE93757AC2D89789BB679B3 /* Check Pods Manifest.lock */ = {
+		0A3C57742040A46FA330B8E42B628D18 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3BF7392EB94327206D47C3266352CD2A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		70E53CB2CCF62A2F4C026CECB4552375 /* Check Pods Manifest.lock */ = {
@@ -1045,34 +776,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7DC8FAEC7C46A31304596ADB7F9541DA /* Copy Pods Resources */ = {
+		183F1DB7C1C286D0179FF9570F9F9B3C /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiary/Pods-MCDiary-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E326116940568B70063F31FEC7EDCF3D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MCDiaryKit/Pods-MCDiaryKit-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1092,12 +808,17 @@
 				BA0B33DE2CD612ADC87A5AD862ACC65B /* AppDelegate.m in Sources */,
 				2857D38FA6DF2990721292330AA42946 /* DistancePickerView.m in Sources */,
 				B2F268A6FE79BC38F620BED9D8F968A0 /* MCDAreaPickerViewModel.m in Sources */,
+				A01D82508803113774E8853B9C592251 /* MCDAvatarView.m in Sources */,
 				49FDBA643B7EB2148454D804924F9886 /* MCDBaseModel.m in Sources */,
 				623835A0E4BC097C04CE27C3255576D0 /* MCDBaseViewController.m in Sources */,
 				73EF986EAB882A5A72E10D57059209E0 /* MCDBaseViewModel.m in Sources */,
+				D72C19EBA4F8B0FA7F010A4861D5E38B /* MCDBorderView.m in Sources */,
+				441F02BB5C55DDC681C38561BE096929 /* MCDButtonFormField.m in Sources */,
+				E97C55E6572274ADBC1BDDE98863C395 /* MCDButtonView.m in Sources */,
 				596965B9114BB345D49F20D326AA1883 /* MCDCloudUserInfo.m in Sources */,
 				912E182FA47B57248A1E9C4140EB420E /* MCDCreateDiaryViewController.m in Sources */,
 				BE3B413439EF2605731F853B9D0A418C /* MCDCustomCell.m in Sources */,
+				7575013524221BD2CD05106A07A3A0A4 /* MCDCustomView.m in Sources */,
 				D8B1C0A782A006F05520469A5AC1E044 /* MCDDetailPetViewController.m in Sources */,
 				0C0DB7D4DA02D4F40BEEFC42BFB2CF32 /* MCDDrawerControllerHelper.m in Sources */,
 				AA6AA023959872F4F72A91B274EA98BA /* MCDHomeViewController.m in Sources */,
@@ -1115,10 +836,12 @@
 				ECB575A6F33272295EF7BFCB71E023EE /* MCDMyPetViewController.m in Sources */,
 				76255706E550D7882DBB25E38FB655F6 /* MCDPlaceHolderTextView.m in Sources */,
 				7F201402D9FF793E31F004B3718F8524 /* MCDPresentImagesViewController.m in Sources */,
+				7BF8180F30B92BE82C632CB88406AEC5 /* MCDRadioFormField.m in Sources */,
 				F50CDA65B6F6E76294C3FBF69D9A859E /* MCDShowImageViewController.m in Sources */,
 				A47B5AF2536BC72C923B289B12F526C6 /* MCDSignupContainerViewController.m in Sources */,
 				B4ADC9BB3955CD6FC060A981D7F1C10D /* MCDSignupContentViewController.m in Sources */,
 				D8884C62E7A6850E4ADF36DC7D0F148F /* MCDSignupContentViewModel.m in Sources */,
+				E546A7373EA53091789944E4A8E32825 /* MCDTextFormField.m in Sources */,
 				04684330D7648B05A995B85EDDBB8830 /* MCDUser.m in Sources */,
 				63EACDD3DB2DB3DD3A17018D983BDA41 /* MCDUserInfoContainerViewController.m in Sources */,
 				A779B9D5AC867B88653DDA206B39F103 /* MCDUserInfoContentViewController.m in Sources */,
@@ -1136,181 +859,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A06DBB07E0ABFF68385F623084E8E7C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				955BFE5C23417495BB53BA3B82B6963A /* MCDiaryTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E87157F44D688D47507BACBC02A2E8CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C7227A9449F1EE5299B75B9F2B66574 /* MCDiaryKitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F772B6D1583C788B78D3CCB1F38E87CF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7FFB4E0AFEF91B3ACB2F8E22ECDA3558 /* MCDAvatarView.m in Sources */,
-				CFD2CE70853D5399B75DF21F1BAA5C98 /* MCDBorderView.m in Sources */,
-				12586F5A9073F95DDE0D99995155BA4B /* MCDButtonFormField.m in Sources */,
-				3309D2C3FC0B5A80FC7B964B47A26C28 /* MCDButtonView.m in Sources */,
-				0762281DFCB5EFE4C669CE4DB964ABDB /* MCDCustomView.m in Sources */,
-				D4E8F5CF6D49828D3ED2D4642276188A /* MCDRadioFormField.m in Sources */,
-				C6D0CA145075DC60D938D7F1013CFF70 /* MCDTextFormField.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		474C3B47B447BEA3A9B27B09EFACD014 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB188EE3215FAED2CD14609373D6DA8A /* MCDiaryKit */;
-			targetProxy = 09ED40BF9779A27D83DFC685391D372E /* PBXContainerItemProxy */;
-		};
-		545F5440BA7FAE995F242BB9E47E7728 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB188EE3215FAED2CD14609373D6DA8A /* MCDiaryKit */;
-			targetProxy = B2E893D9C0C4A7C8097FC43C129BE145 /* PBXContainerItemProxy */;
-		};
-		F30707C0DC78F8A021499BA1FFA265C5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB54D77962F2DF0CAB5ED1B6A9D3E7A9 /* MCDiary */;
-			targetProxy = 0D3039D1D8288127B18925908B9207FA /* PBXContainerItemProxy */;
-		};
-		FD79C6B6B59A0001A3E3F797E32C2003 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB54D77962F2DF0CAB5ED1B6A9D3E7A9 /* MCDiary */;
-			targetProxy = 8DE4959D94EB336CFD98B20C4C029968 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		471161811AA3372D7B6F61E05F0D45BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
-			};
-			name = Release;
-		};
-		4D0EFFAF978DDF0CB189E067B6821A53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MCDiaryKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
-			};
-			name = Debug;
-		};
-		7886B74C128B64F0C8E0F86E14266A48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/MCDiaryKit/build/Debug-iphoneos",
-				);
-				INFOPLIST_FILE = MCDiaryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
-			};
-			name = Release;
-		};
 		7D4135A056922D5B5812DEB86D2B7DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96CD45CAC1B56E1A1726D923CC18406F /* Pods-MCDiary.debug.xcconfig */;
+			baseConfigurationReference = 8DBBDC29AFD1D4F0ADF37C6C8685B9C3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(SRCROOT)/**",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"-ObjC",
-					"-l\"c++\"",
-					"-l\"icucore\"",
-					"-l\"sqlite3\"",
-					"-framework",
-					"\"AVOSCloud\"",
-					"-framework",
-					"\"AVOSCloudCrashReporting\"",
-					"-framework",
-					"\"AVOSCloudIM\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CocoaLumberjack\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreLocation\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"DLRadioButton\"",
-					"-framework",
-					"\"DateTools\"",
-					"-framework",
-					"\"HexColors\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"RSKImageCropper\"",
-					"-framework",
-					"\"ReactiveCocoa\"",
-					"-framework",
-					"\"RegExCategories\"",
-					"-framework",
-					"\"SVProgressHUD\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
+					"$(SRCROOT)/**",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
@@ -1332,9 +910,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1359,150 +939,34 @@
 			};
 			name = Debug;
 		};
-		85E88CE36655FA56C40282ED98450FA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07A199A95DCDA938F9FBF967F53CA52E /* Pods-MCDiaryKit.debug.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MCDiaryKit/MCDiaryKitPrefixHeader.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MCDiaryKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9C637C9321E048006697AEFD7A661833 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/MCDiaryKit/build/Debug-iphoneos",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MCDiaryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCDiary.app/MCDiary";
-			};
-			name = Debug;
-		};
 		F627A58730D6832136C2CC0877E86674 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6E002744A472ABD7656D68619FE8912 /* Pods-MCDiary.release.xcconfig */;
+			baseConfigurationReference = 7A2D42C411E3C675981D3AA048427F00 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(SRCROOT)/**",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/Classes/Supporting Files/MCDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MCDiary/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"-ObjC",
-					"-l\"c++\"",
-					"-l\"icucore\"",
-					"-l\"sqlite3\"",
-					"-framework",
-					"\"AVOSCloud\"",
-					"-framework",
-					"\"AVOSCloudCrashReporting\"",
-					"-framework",
-					"\"AVOSCloudIM\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CocoaLumberjack\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreLocation\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"DLRadioButton\"",
-					"-framework",
-					"\"DateTools\"",
-					"-framework",
-					"\"HexColors\"",
-					"-framework",
-					"\"Masonry\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"RSKImageCropper\"",
-					"-framework",
-					"\"ReactiveCocoa\"",
-					"-framework",
-					"\"RegExCategories\"",
-					"-framework",
-					"\"SVProgressHUD\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
+					"$(SRCROOT)/**",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/** \"${PROJECT_DIR}/Pods\"/**";
-			};
-			name = Release;
-		};
-		F9D13C15E019D385D0B7AD54C605E9B8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90B2D0FCEB476F53931F403E67D47081 /* Pods-MCDiaryKit.release.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MCDiaryKit/MCDiaryKitPrefixHeader.pch;
-				INFOPLIST_FILE = MCDiaryKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.zzdjk6.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1523,9 +987,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1555,38 +1021,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		444DC469660856C10D8E1141F0280FFB /* Build configuration list for PBXNativeTarget "MCDiaryKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4D0EFFAF978DDF0CB189E067B6821A53 /* Debug */,
-				471161811AA3372D7B6F61E05F0D45BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DCDAD4253C744403E6096FE0A0A062AD /* Build configuration list for PBXNativeTarget "MCDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D4135A056922D5B5812DEB86D2B7DAF /* Debug */,
 				F627A58730D6832136C2CC0877E86674 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E6F760307E68CDD662E22BECB81BF5FE /* Build configuration list for PBXNativeTarget "MCDiaryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C637C9321E048006697AEFD7A661833 /* Debug */,
-				7886B74C128B64F0C8E0F86E14266A48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB872252F6B943B8BB1518A2106C2E4F /* Build configuration list for PBXNativeTarget "MCDiaryKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85E88CE36655FA56C40282ED98450FA4 /* Debug */,
-				F9D13C15E019D385D0B7AD54C605E9B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

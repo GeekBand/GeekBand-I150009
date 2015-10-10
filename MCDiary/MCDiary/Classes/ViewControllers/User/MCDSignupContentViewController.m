@@ -8,8 +8,9 @@
 #import "RSKImageCropViewController.h"
 #import "MCDUserInfoContainerViewController.h"
 #import "MMDrawerController.h"
-
-@import MCDiaryKit;
+#import "MCDButtonView.h"
+#import "MCDTextFormField.h"
+#import "MCDAvatarView.h"
 
 @interface MCDSignupContentViewController ()
     <UIImagePickerControllerDelegate,
