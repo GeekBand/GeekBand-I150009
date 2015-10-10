@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.viewModel          = [[MCDUserModifyPasswordViewModel alloc] init];
+    self.viewModel = [[MCDUserModifyPasswordViewModel alloc] init];
 
     [self initBinding];
 }
@@ -157,14 +157,15 @@
     @weakify(self);
 
     // 更改密码按钮
-    [self.confirmChangePasswordButton.buttonPressSignal subscribeNext:^(id x) {
-        @strongify(self);
-        [self.view endEditing:YES];
-        self.viewModel.oldPassword     = self.oldPasswordField.textField.text;
-        self.viewModel.freshPassword   = self.freshPasswordField.textField.text;
-        self.viewModel.confirmPassword = self.confirmPasswordField.textField.text;
-        [self.viewModel changePassword];
-    }];
+    [[self.confirmChangePasswordButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            [self.view endEditing:YES];
+            self.viewModel.oldPassword     = self.oldPasswordField.textField.text;
+            self.viewModel.freshPassword   = self.freshPasswordField.textField.text;
+            self.viewModel.confirmPassword = self.confirmPasswordField.textField.text;
+            [self.viewModel changePassword];
+        }];
 
     // 修改成功
     [self.viewModel.changePasswordSuccessSignal subscribeNext:^(id x) {

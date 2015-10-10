@@ -10,18 +10,7 @@
 
 @implementation MCDButtonView
 
-@synthesize buttonPressSignal = _buttonPressSignal;
-
 #pragma mark - getters & setters
-
-- (RACSignal *)buttonPressSignal
-{
-    if(!_buttonPressSignal){
-        _buttonPressSignal = [self.button rac_signalForControlEvents:UIControlEventTouchUpInside];
-    }
-
-    return _buttonPressSignal;
-}
 
 - (void)setButtonTitle:(NSString *)buttonTitle
 {

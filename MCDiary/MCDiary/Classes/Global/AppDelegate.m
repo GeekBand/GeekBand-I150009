@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MCDCloudUserInfo.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +22,7 @@
 {
     // Override point for customization after application launch.
 
+    [Fabric with:@[[Crashlytics class]]];
 
     // log
     [DDLog addLogger:[DDASLLogger sharedInstance]];

@@ -163,12 +163,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }];
 
     // 注册
-    [self.signupButton.buttonPressSignal subscribeNext:^(id x) {
-        @strongify(self);
-        [self.activeField resignFirstResponder];
-        [self.viewModel validateAndSignup];
-        [SVProgressHUD show];
-    }];
+    [[self.signupButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            [self.activeField resignFirstResponder];
+            [self.viewModel validateAndSignup];
+            [SVProgressHUD show];
+        }];
     [self.viewModel.signUpErrorSignal subscribeNext:^(NSError *error) {
         [SVProgressHUD dismiss];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败"

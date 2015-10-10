@@ -86,12 +86,13 @@
     }];
 
     // 登录按钮
-    [self.loginButton.buttonPressSignal subscribeNext:^(id x) {
-        @strongify(self);
-        [self.activeField resignFirstResponder];
-        [SVProgressHUD show];
-        [self.viewModel validateAndLogin];
-    }];
+    [[self.loginButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            [self.activeField resignFirstResponder];
+            [SVProgressHUD show];
+            [self.viewModel validateAndLogin];
+        }];
     [self.viewModel.loginSuccessSignal subscribeNext:^(id x) {
         [SVProgressHUD dismiss];
         MMDrawerController                 *rootVC     = (MMDrawerController *)[UIApplication sharedApplication].delegate.window.rootViewController;

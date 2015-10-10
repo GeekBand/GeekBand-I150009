@@ -8,10 +8,14 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.1):
     - CocoaLumberjack/Default
+  - Crashlytics (3.3.4)
   - DateTools (1.7.0)
   - DLRadioButton (1.3.5)
+  - Fabric (1.5.5):
+    - Fabric/Base (= 1.5.5)
+  - Fabric/Base (1.5.5)
   - HexColors (2.3.0)
-  - Masonry (0.6.2)
+  - Masonry (0.6.3)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
@@ -39,8 +43,10 @@ PODS:
 DEPENDENCIES:
   - AVOSCloud
   - CocoaLumberjack
+  - Crashlytics
   - DateTools
   - DLRadioButton
+  - Fabric
   - HexColors
   - Masonry
   - MMDrawerController
@@ -53,10 +59,12 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AVOSCloud: 2be1640178facaac8343d67ed4d5348f4dffecd7
   CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
+  Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   DLRadioButton: 817c7cba2a630a658dea90f56d6d9740f544930d
+  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
-  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c

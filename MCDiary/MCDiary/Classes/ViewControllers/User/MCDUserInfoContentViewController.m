@@ -165,7 +165,7 @@
     }];
 }
 
--(void)initAvatarFieldBinding
+- (void)initAvatarFieldBinding
 {
     @weakify(self);
 
@@ -226,7 +226,7 @@
     @weakify(self);
 
     // 保存信息
-    [self.saveInfoButton.buttonPressSignal subscribeNext:^(id x) {
+    [[self.saveInfoButton.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         [self.activeField resignFirstResponder];
         [SVProgressHUD show];
@@ -260,12 +260,13 @@
     @weakify(self);
 
     //修改密码
-    [self.changePasswordButton.buttonPressSignal subscribeNext:^(id x) {
-        @strongify(self);
-        MCDUserModifyPasswordViewController *vc = [self.storyboard
-            instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserModifyPasswordViewController class])];
-        [self presentViewController:vc animated:YES completion:nil];
-    }];
+    [[self.changePasswordButton.button rac_signalForControlEvents:UIControlEventTouchUpInside]
+        subscribeNext:^(id x) {
+            @strongify(self);
+            MCDUserModifyPasswordViewController *vc = [self.storyboard
+                instantiateViewControllerWithIdentifier:NSStringFromClass([MCDUserModifyPasswordViewController class])];
+            [self presentViewController:vc animated:YES completion:nil];
+        }];
 }
 
 #pragma mark - Private

@@ -17,6 +17,4 @@ IB_DESIGNABLE
 
 @property (copy, nonatomic) IBInspectable NSString *buttonTitle;
 
-@property(nonatomic, assign, readonly) RACSignal *buttonPressSignal;
-
 @end
