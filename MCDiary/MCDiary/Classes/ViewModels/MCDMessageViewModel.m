@@ -49,19 +49,17 @@
         if (!self.messageList) {
             NSLog(@"Unarchiver is failed");
         }
-        
-    } else {
-        // 如果不存在，提交网络请求
-        // 启动小菊花
-        if ([self.delegate respondsToSelector:@selector(showWaitingSpinner)]) {
-            [self.delegate showWaitingSpinner];
-        } else {
-            NSLog(@"delegate is not respondsTofuction showWaitingSpinner");
-        }
-        self.request = [[MCDMessageRequest alloc] init];
-        [self.request sendMessagesListRefreshRequestWithDelegate:self];
-        
     }
+    // 提交网络请求
+    // 启动小菊花
+    if ([self.delegate respondsToSelector:@selector(showWaitingSpinner)]) {
+        [self.delegate showWaitingSpinner];
+    } else {
+        NSLog(@"delegate is not respondsTofuction showWaitingSpinner");
+    }
+    self.request = [[MCDMessageRequest alloc] init];
+    [self.request sendMessagesListRefreshRequestWithDelegate:self];
+        
 }
 
 - (void)markAllMessageAsHaveRead {
