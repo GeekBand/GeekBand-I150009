@@ -36,9 +36,7 @@
 		596965B9114BB345D49F20D326AA1883 /* MCDCloudUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */; };
 		60FB302AC98FEB0D3B0F3863E19AA998 /* MCDButtonFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D7740AA7AB0FBCFD0BE3704C4D9493 /* MCDButtonFormField.xib */; };
 		623835A0E4BC097C04CE27C3255576D0 /* MCDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D20AE523D20C554A22BA2D4B15617 /* MCDBaseViewController.m */; };
-		629922A4DF2C94FB32B7A2546BA6EE08 /* MCDMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */; };
 		63EACDD3DB2DB3DD3A17018D983BDA41 /* MCDUserInfoContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5667A28E16E04B88404807E6DFACA9B5 /* MCDUserInfoContainerViewController.m */; };
-		6B972AA040FEFD59FD8FD10F251B1AFB /* MCDMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2048300CEC5EEB5157429822F8F4A1BC /* MCDMessageTableViewCell.m */; };
 		6E6081F29B5326D4BFA64E014E0C2347 /* MCDLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADB6E891AE93565606347D449A38A0 /* MCDLoginViewModel.m */; };
 		73EF986EAB882A5A72E10D57059209E0 /* MCDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83637CBBE652B30AA7B47F1E5F298642 /* MCDBaseViewModel.m */; };
 		75472B56E54632F348523388B028F7DD /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E144F450DA32134E39B7A45AA6345A /* ActionSheetDistancePicker.m */; };
@@ -101,7 +99,6 @@
 /* Begin PBXFileReference section */
 		010F1072AAAFA9BDBD7C8354232D03AD /* MCDUserInfoContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserInfoContentViewController.m; sourceTree = "<group>"; };
 		02751361EC141A047E06C292439605CC /* MCDCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCustomCell.h; sourceTree = "<group>"; };
-		02EB12D4661F0F6C8CADECF9C6989C25 /* MCDMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewController.h; sourceTree = "<group>"; };
 		03DB849FA88BC99C26E0A1656BA6D1E8 /* MCDButtonFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDButtonFormField.h; sourceTree = "<group>"; };
 		07797222FFA0963315C3B4996E8929F6 /* MCDRadioFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDRadioFormField.m; sourceTree = "<group>"; };
 		08937443AD366AEB86F60AEBD777A493 /* MCDCreateDiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCreateDiaryViewController.m; sourceTree = "<group>"; };
@@ -121,7 +118,6 @@
 		1DBB465AF4C218CBF0842AAE97D390C8 /* MCDCloudUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDCloudUserInfo.h; sourceTree = "<group>"; };
 		1DFC213A94E5580985328D26A8FBE22A /* MCDBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBorderView.m; sourceTree = "<group>"; };
 		1F05C2E08C397F38C73B6EEDEB3CEA24 /* MCDTextFormField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDTextFormField.m; sourceTree = "<group>"; };
-		2048300CEC5EEB5157429822F8F4A1BC /* MCDMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewCell.m; sourceTree = "<group>"; };
 		20542579D6272F687DC575AB8E34E54F /* Diary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
 		21A7D9AE4A4D5F325FD6C96492AD449E /* MCDSignupContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContainerViewController.m; sourceTree = "<group>"; };
 		22DCE14A01E72C1A23E1F318CCAAC9A6 /* MCDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseModel.m; sourceTree = "<group>"; };
@@ -145,7 +141,6 @@
 		39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
 		3ADC30AE14C3F47785D95BF00B98AB87 /* MCDMyPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMyPet.m; sourceTree = "<group>"; };
 		3C8F9CDE29741D81F91343CA47BE5EBE /* MCDAreaPickerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDAreaPickerViewModel.h; sourceTree = "<group>"; };
-		3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewController.m; sourceTree = "<group>"; };
 		43610C8BF94E169CE8F42AA832FEBF5A /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		43C13D90065CC5ED0D2F7504FA81BC9D /* MCDHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDHomeViewModel.h; sourceTree = "<group>"; };
 		454C31C368DE8A974ED46995ADDE1545 /* MCDiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDiary.h; sourceTree = "<group>"; };
@@ -204,7 +199,6 @@
 		AC964E1F06CD39AF7B82A2F0D003AEBB /* MCDPresentImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDPresentImagesViewController.m; sourceTree = "<group>"; };
 		ADFDC724C115936972A09B73CAA1AECD /* MCDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDLoginViewController.h; sourceTree = "<group>"; };
 		AEA28D5431799358A09F1A072A468976 /* MCDUserLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocationHelper.m; sourceTree = "<group>"; };
-		B14D80773AE74752A46E6A688A899039 /* MCDMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewCell.h; sourceTree = "<group>"; };
 		B6716A68AF191237D1238F889C98AE92 /* MCDDrawerControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDDrawerControllerHelper.h; sourceTree = "<group>"; };
 		B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDrawerControllerHelper.m; sourceTree = "<group>"; };
 		BF921A7F7D4DE0BD53FDE1C086FD773C /* MCDUserModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserModifyPasswordViewController.m; sourceTree = "<group>"; };
@@ -488,10 +482,6 @@
 		B2572C988AD6C2BB52B69326AA63D6DF /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				B14D80773AE74752A46E6A688A899039 /* MCDMessageTableViewCell.h */,
-				2048300CEC5EEB5157429822F8F4A1BC /* MCDMessageTableViewCell.m */,
-				02EB12D4661F0F6C8CADECF9C6989C25 /* MCDMessageTableViewController.h */,
-				3E1608622DA4D9C6CD5C8E84F530AA2F /* MCDMessageTableViewController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -868,9 +858,7 @@
 				293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */,
 				17BB90D78325355516407758648957AF /* MCDLoginViewController.m in Sources */,
 				6E6081F29B5326D4BFA64E014E0C2347 /* MCDLoginViewModel.m in Sources */,
-				6B972AA040FEFD59FD8FD10F251B1AFB /* MCDMessageTableViewCell.m in Sources */,
 				35F86E2B1BD2C587007DE39F /* MCDMessageRequest.m in Sources */,
-				629922A4DF2C94FB32B7A2546BA6EE08 /* MCDMessageTableViewController.m in Sources */,
 				AD9A2790259D71C6CC3508BBE662A66C /* MCDMessageViewModel.m in Sources */,
 				A39D8BBF715FCC400E9828A63B7B1DF3 /* MCDMyPet.m in Sources */,
 				7AC2B1BC71685984D6AC0B0B8CEACC79 /* MCDMyPetDataModel.m in Sources */,
