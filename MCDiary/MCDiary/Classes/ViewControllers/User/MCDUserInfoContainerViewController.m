@@ -87,7 +87,21 @@
     }];
     [[self.logoutButton rac_signalForControlEvents:UIControlEventTouchUpInside]
         subscribeNext:^(id x) {
-            [[MCDUser currentUser] logout];
+
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确认注销?"
+                                                                                     message:nil
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"注销"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {
+                                                                  [[MCDUser currentUser] logout];
+                                                              }]];
+            [alertController addAction:[UIAlertAction actionWithTitle:@"还不用"
+                                                                style:UIAlertActionStyleCancel
+                                                              handler:nil]];
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
         }
     ];
 

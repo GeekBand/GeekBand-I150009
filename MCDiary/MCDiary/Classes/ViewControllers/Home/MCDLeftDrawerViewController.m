@@ -72,10 +72,23 @@ static const NSUInteger kAboutIndex    = 5;
         return;
     }
     if (row == kLogoutIndex) {
-        [[MCDUser currentUser] logout];
-        UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"User" bundle:nil];
-        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MCDLoginViewController"];
-        [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确认注销?"
+                                                                                 message:nil
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"注销"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
+                                                              [[MCDUser currentUser] logout];
+                                                              UIStoryboard     *storyboard     = [UIStoryboard storyboardWithName:@"User" bundle:nil];
+                                                              UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MCDLoginViewController"];
+                                                              [MCDDrawerControllerHelper setCenterViewController:viewController completion:nil];
+                                                          }]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"还不用"
+                                                            style:UIAlertActionStyleCancel
+                                                          handler:nil]];
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:nil];
         return;
     }
     if (row == kAboutIndex) {

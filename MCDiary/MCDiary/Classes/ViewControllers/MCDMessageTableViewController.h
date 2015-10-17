@@ -10,4 +10,6 @@
 
 @interface IZMessageTableViewController : UITableViewController
 
+@property (strong, nonatomic) UIActivityIndicatorView *spinner;
+
 @end
