@@ -12,7 +12,6 @@
 		0760BE0D3A03A55C27F43059604EFFAC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D480F53D1B3754EB44A295A539BB21EA /* AbstractActionSheetPicker.m */; };
 		0B382B038DA2F79AAB71DA688C9D4A8E /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DFF8C736003F3A6FF640FB59B905A /* ActionSheetDatePicker.m */; };
 		0C0DB7D4DA02D4F40BEEFC42BFB2CF32 /* MCDDrawerControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A1C834CAC080627FF9C9499D1245B7 /* MCDDrawerControllerHelper.m */; };
-		0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */; };
 		12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB645FEE0637753C83582F30CEFD81A4 /* LaunchScreen.xib */; };
 		15B9FE759F6F73A6C1312108CD833E1F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5C6E155F616EC7022C7CDADCAE9DF294 /* Podfile */; };
 		175062DED311ACCD98C384A85779FC3C /* MCDUserModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF921A7F7D4DE0BD53FDE1C086FD773C /* MCDUserModifyPasswordViewController.m */; };
@@ -21,6 +20,7 @@
 		2857D38FA6DF2990721292330AA42946 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9C693EAC1928F09EAE948F0BD37405 /* DistancePickerView.m */; };
 		293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B8DCD28C97320C51C9F2EC4210BDDE /* MCDLeftDrawerViewController.m */; };
 		2D67A6C0D74CF6795A963DA9F055A3D6 /* MCDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88DB424BBC9837EF7390CD9FDD35EDDB /* MCDiaryTableViewCell.m */; };
+		35F86E221BD2C1B3007DE39F /* MCDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35F86E211BD2C1B3007DE39F /* MCDConfig.plist */; };
 		3C4509D0645E02EE7541EBC964EFB87B /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13AC8C98AB7655FA6220ADFC98DFA353 /* MCDBorderView.xib */; };
 		420271320B7E021261CB17CB1D159977 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 43610C8BF94E169CE8F42AA832FEBF5A /* SWActionSheet.m */; };
 		441F02BB5C55DDC681C38561BE096929 /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D712DD2C7F72E13F69CC7FA3D9B388AC /* MCDButtonFormField.m */; };
@@ -126,7 +126,6 @@
 		22DCE14A01E72C1A23E1F318CCAAC9A6 /* MCDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBaseModel.m; sourceTree = "<group>"; };
 		25CD0B32BD45175F7A1C4B8359B9AF00 /* MCDDetailPetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDDetailPetViewController.m; sourceTree = "<group>"; };
 		25E144F450DA32134E39B7A45AA6345A /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCDConfig.plist; sourceTree = "<group>"; };
 		29CEC8F0BAC6111C81C1A9854127F3F2 /* MCDHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDHomeViewModel.m; sourceTree = "<group>"; };
 		2BA7D303A7C061C4F8787B3DCC2A07AF /* MCDSignupContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDSignupContentViewModel.m; sourceTree = "<group>"; };
 		2E530FFD82033A4D091019422B0A1FAD /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
@@ -134,6 +133,7 @@
 		30015BF332BFA8E89A2C5313598D064D /* MCDUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUserLocation.m; sourceTree = "<group>"; };
 		301E00AEC66E27F3290E9F22AB097DFF /* MCDMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageItem.m; sourceTree = "<group>"; };
 		318CDA9733FB5FF336995DFD3E5B96F9 /* MCDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBaseViewModel.h; sourceTree = "<group>"; };
+		35F86E211BD2C1B3007DE39F /* MCDConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCDConfig.plist; sourceTree = "<group>"; };
 		361162CF61DD26BEAE56B58836C3DFEC /* MCDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUser.m; sourceTree = "<group>"; };
 		36B50923931CD17487C890E4AD900DDE /* MCDUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocation.h; sourceTree = "<group>"; };
 		39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				C7BCF146E5F5F0FB9035D73C5C2BAE32 /* Area.plist */,
-				27A6FA3F925DC7476294E70E458A3E3E /* MCDConfig.plist */,
+				35F86E211BD2C1B3007DE39F /* MCDConfig.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -725,12 +725,12 @@
 				06C04868CA36BA09AF7E662D80C19434 /* Area.plist in Resources */,
 				ABAA0941EABFC7CCC2600B88C5116126 /* Diary.storyboard in Resources */,
 				882204B07ECA163074F3F1B899307202 /* Images.xcassets in Resources */,
+				35F86E221BD2C1B3007DE39F /* MCDConfig.plist in Resources */,
 				12458536D96A79ADB7A4739EC296695C /* LaunchScreen.xib in Resources */,
 				45ADD37B0A4E95299F470041D0ADC0B0 /* MCDAvatarView.xib in Resources */,
 				3C4509D0645E02EE7541EBC964EFB87B /* MCDBorderView.xib in Resources */,
 				60FB302AC98FEB0D3B0F3863E19AA998 /* MCDButtonFormField.xib in Resources */,
 				9A713CAC875B69B69043E39C1BBA193C /* MCDButtonView.xib in Resources */,
-				0D74FE243C2E30F456BA1CE7AA08D357 /* MCDConfig.plist in Resources */,
 				54827AE4C625159A157B839F55290711 /* MCDRadioFormField.xib in Resources */,
 				9B9B765A044C59A8802C1D1254A72D4D /* MCDTextFormField.xib in Resources */,
 				7F1FA4D4249223C1124F27C253081175 /* Main.storyboard in Resources */,
@@ -744,6 +744,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		030B64577829001011EDC4539FDB49B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" b3e8f7d313d2586bd5561c85b780543c608e58a7 014b4db458c2033f8677eb251be94c77821ab25f89ee54bcd9f6a17e8c3f586f";
+		};
 		0A3C57742040A46FA330B8E42B628D18 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -788,19 +801,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
-		};
-		030B64577829001011EDC4539FDB49B8 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" b3e8f7d313d2586bd5561c85b780543c608e58a7 014b4db458c2033f8677eb251be94c77821ab25f89ee54bcd9f6a17e8c3f586f";
 		};
 /* End PBXShellScriptBuildPhase section */
 
