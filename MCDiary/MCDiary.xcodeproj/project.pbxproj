@@ -24,6 +24,9 @@
 		35F86E251BD2C4C8007DE39F /* MCDMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E241BD2C4C8007DE39F /* MCDMessageModel.m */; };
 		35F86E2A1BD2C587007DE39F /* MCDMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E271BD2C587007DE39F /* MCDMessageParser.m */; };
 		35F86E2B1BD2C587007DE39F /* MCDMessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E291BD2C587007DE39F /* MCDMessageRequest.m */; };
+		35F86E351BD2C6E0007DE39F /* MCDMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E301BD2C6E0007DE39F /* MCDMessageTableViewCell.m */; };
+		35F86E361BD2C6E0007DE39F /* MCDMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E321BD2C6E0007DE39F /* MCDMessageTableViewController.m */; };
+		35F86E371BD2C6E0007DE39F /* MCDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F86E341BD2C6E0007DE39F /* MCDWebViewController.m */; };
 		3C4509D0645E02EE7541EBC964EFB87B /* MCDBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13AC8C98AB7655FA6220ADFC98DFA353 /* MCDBorderView.xib */; };
 		420271320B7E021261CB17CB1D159977 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 43610C8BF94E169CE8F42AA832FEBF5A /* SWActionSheet.m */; };
 		441F02BB5C55DDC681C38561BE096929 /* MCDButtonFormField.m in Sources */ = {isa = PBXBuildFile; fileRef = D712DD2C7F72E13F69CC7FA3D9B388AC /* MCDButtonFormField.m */; };
@@ -136,6 +139,12 @@
 		35F86E271BD2C587007DE39F /* MCDMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageParser.m; sourceTree = "<group>"; };
 		35F86E281BD2C587007DE39F /* MCDMessageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageRequest.h; sourceTree = "<group>"; };
 		35F86E291BD2C587007DE39F /* MCDMessageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageRequest.m; sourceTree = "<group>"; };
+		35F86E2F1BD2C6E0007DE39F /* MCDMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewCell.h; sourceTree = "<group>"; };
+		35F86E301BD2C6E0007DE39F /* MCDMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewCell.m; sourceTree = "<group>"; };
+		35F86E311BD2C6E0007DE39F /* MCDMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDMessageTableViewController.h; sourceTree = "<group>"; };
+		35F86E321BD2C6E0007DE39F /* MCDMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDMessageTableViewController.m; sourceTree = "<group>"; };
+		35F86E331BD2C6E0007DE39F /* MCDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDWebViewController.h; sourceTree = "<group>"; };
+		35F86E341BD2C6E0007DE39F /* MCDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDWebViewController.m; sourceTree = "<group>"; };
 		361162CF61DD26BEAE56B58836C3DFEC /* MCDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDUser.m; sourceTree = "<group>"; };
 		36B50923931CD17487C890E4AD900DDE /* MCDUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDUserLocation.h; sourceTree = "<group>"; };
 		39369E5F952E2E0A782CD29A39A51B6B /* MCDCloudUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDCloudUserInfo.m; sourceTree = "<group>"; };
@@ -318,6 +327,19 @@
 			name = Requests;
 			sourceTree = "<group>";
 		};
+		35F86E381BD2C6E9007DE39F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				35F86E2F1BD2C6E0007DE39F /* MCDMessageTableViewCell.h */,
+				35F86E301BD2C6E0007DE39F /* MCDMessageTableViewCell.m */,
+				35F86E311BD2C6E0007DE39F /* MCDMessageTableViewController.h */,
+				35F86E321BD2C6E0007DE39F /* MCDMessageTableViewController.m */,
+				35F86E331BD2C6E0007DE39F /* MCDWebViewController.h */,
+				35F86E341BD2C6E0007DE39F /* MCDWebViewController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
 		3AAA3A9945377A510B5CB71112F56384 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,13 +501,6 @@
 			path = MyPet;
 			sourceTree = "<group>";
 		};
-		B2572C988AD6C2BB52B69326AA63D6DF /* Message */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
 		B75078E517C418E5B9719202E25D5497 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,10 +535,10 @@
 		BD6497A2F39DBBDB61C893AB9C97838A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				35F86E381BD2C6E9007DE39F /* Message */,
 				BD4A48DAB7424C7BE5FA144FA45FB056 /* Base */,
 				32C5C00CDA9E9EE86B6414ACC646FB93 /* Diary */,
 				05BE1AEE12F0F1982A90B90D0D781AD6 /* Home */,
-				B2572C988AD6C2BB52B69326AA63D6DF /* Message */,
 				D97D1C44C9FC37EC763C367A5B4D066F /* MyPet */,
 				F0FA02AED43340E433B7C1C4A147C488 /* User */,
 			);
@@ -846,6 +861,7 @@
 				441F02BB5C55DDC681C38561BE096929 /* MCDButtonFormField.m in Sources */,
 				E97C55E6572274ADBC1BDDE98863C395 /* MCDButtonView.m in Sources */,
 				596965B9114BB345D49F20D326AA1883 /* MCDCloudUserInfo.m in Sources */,
+				35F86E371BD2C6E0007DE39F /* MCDWebViewController.m in Sources */,
 				912E182FA47B57248A1E9C4140EB420E /* MCDCreateDiaryViewController.m in Sources */,
 				BE3B413439EF2605731F853B9D0A418C /* MCDCustomCell.m in Sources */,
 				7575013524221BD2CD05106A07A3A0A4 /* MCDCustomView.m in Sources */,
@@ -856,6 +872,7 @@
 				35F86E2A1BD2C587007DE39F /* MCDMessageParser.m in Sources */,
 				82BB26BA7C5E8AA779F6D71A845DFE03 /* MCDHomeViewModel.m in Sources */,
 				293B17F4F2B44BA8E06982FE738CE293 /* MCDLeftDrawerViewController.m in Sources */,
+				35F86E351BD2C6E0007DE39F /* MCDMessageTableViewCell.m in Sources */,
 				17BB90D78325355516407758648957AF /* MCDLoginViewController.m in Sources */,
 				6E6081F29B5326D4BFA64E014E0C2347 /* MCDLoginViewModel.m in Sources */,
 				35F86E2B1BD2C587007DE39F /* MCDMessageRequest.m in Sources */,
@@ -885,6 +902,7 @@
 				420271320B7E021261CB17CB1D159977 /* SWActionSheet.m in Sources */,
 				AE6DB083C43D8FC0617C16E9EFED98ED /* UIColor+MCDiary.m in Sources */,
 				ED6737D6E5569A7A693EE8872EA9F1CF /* main.m in Sources */,
+				35F86E361BD2C6E0007DE39F /* MCDMessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
